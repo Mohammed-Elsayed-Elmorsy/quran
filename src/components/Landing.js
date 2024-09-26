@@ -14,6 +14,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 const Landing = () => {
     return (
         <div className=' md:h-[100vh] z-50 landing flex justify-center items-center'>
+
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 spaceBetween={50}

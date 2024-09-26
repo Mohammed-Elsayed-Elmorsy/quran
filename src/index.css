@@ -736,3 +736,92 @@ align-items: center;
   -ms-transform: translate(-50%,-50%);
   -o-transform: translate(-50%,-50%);
 }
+
+.overlay{
+  position: fixed;
+  width: 0%;
+  height:0%;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 10px;
+  z-index: 1005;
+  box-shadow: 0 0 10px rgb(185, 185, 185);
+  background-color: rgb(240, 240, 240);
+  border-radius: 8px;
+  animation:show-message 2s 1s 1  forwards ease ;
+  -webkit-animation:show-message 2s 1s 1  forwards ease ;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.overlay.hide{
+  animation: hide-message 0.5s  1 forwards ease;
+  -webkit-animation: hide-message 0.5s  1 forwards ease;
+}
+.overlay.show{
+  animation: show-message 0.5s  1 forwards ease;
+  -webkit-animation: show-message 0.5s  1 forwards ease;
+}
+.show-message{
+  position: fixed;
+  right: 20px;
+  transition: .3s;
+  top: 90vh;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-color);
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1006;
+  font-size: 25px;
+  background-image:linear-gradient(rgb(37, 100, 102),rgb(13, 54, 65));
+  color: white;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+}
+.show-message:hover{
+  background-image:linear-gradient(rgb(174, 223, 40),rgb(100, 22, 124));
+
+}
+@keyframes show-message {
+  from{
+      right:40px;
+  width:0px ;
+  height: 0px;
+  top: 90%;
+  }
+  to{
+    right: 100px;
+    top: 20%;
+    height: 500px;
+    width: 420px;
+  }
+  
+}
+@keyframes hide-message {
+  to{
+    right: 40px;
+ width:0px ;
+height: 0px;
+top: 95%;
+  }
+  from{
+    right: 100px;
+    top: 20%;
+    height: 500px;
+    width: 420px;
+  }
+  
+}

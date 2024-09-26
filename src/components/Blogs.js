@@ -1,6 +1,7 @@
 import React from 'react'
 import { blogs } from '../utils/data'
 import { FaCheck } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Blogs = () => {
     return (
@@ -24,9 +25,11 @@ const Blogs = () => {
                                     <p>
                                         {item.desc}
                                     </p>
-                                    <button className=' btn-pri'>
-                                        read more
-                                    </button>
+                                    <Link to={`/blogs/${item.id}`}>
+                                        <button onClick={() => console.log('gfff')} className=' btn-pri'>
+                                            read more
+                                        </button>
+                                    </Link>
                                 </div>
                             )
                         })}

@@ -23,6 +23,9 @@ const PricingComp = () => {
                                     {item.features.map(feat => (<li className='' key={feat}>{feat}</li>))}
                                 </ul>
                             </div>
+                            <span className=' font-bold capitalize text-[25px]'>
+                                {item.price}
+                            </span>
                             <div className=' flex justify-between items-center'>
                                 <Link to={'/contact'}>
                                     <button className=' btn-pri'>contact us</button>

@@ -23,7 +23,7 @@ const PopUp = ({ isVisible, setIsVisible }) => {
                 <span className=' flex justify-center items-center gap-2 text-[20px]'>
                     <FaEnvelope /> sallealmohammed@gmail.com
                 </span>
-                <Link to={'/register'} className=' flex'>
+                <Link to={''} className=' flex'>
                     <button className=' flex-grow btn-pri'>register now</button>
                 </Link>
             </div>

@@ -54,6 +54,10 @@ export const links = [
         ]
     },
     {
+        id: 7,
+        text: 'pricing'
+    },
+    {
         id: 5,
         text: 'contact '
     },
@@ -62,10 +66,6 @@ export const links = [
         text: 'teachers'
     },
 
-    {
-        id: 7,
-        text: 'pricing'
-    }
 ]
 
 export const choose = [
@@ -320,7 +320,7 @@ export const pricing = [
             '30-minute sessions',
             'Basic Tajweed rules'
         ],
-        price: '50usd/month'
+        price: '50$/month'
     },
     {
         id: 2,
@@ -332,7 +332,7 @@ export const pricing = [
             'Detailed Tajweed rules and practice',
             'Quran memorization tips'
         ],
-        price: '100usd/month',
+        price: '100$/month',
         desc: 'Ideal for students who can read but need to improve their recitation.'
     },
     {
@@ -344,7 +344,7 @@ export const pricing = [
             '60-minute sessions',
             'advanced Tajweed rules'
         ],
-        price: '150usd/month',
+        price: '150$/month',
         desc: 'Best for those aiming to perfect recitation or memorize the Quran.'
     },
     {
@@ -355,7 +355,7 @@ export const pricing = [
             'Personalized curriculum',
             'Recitation improvement and memorization help'
         ],
-        price: '200usd/month',
+        price: '200$/month',
         title: 'One-on-One Sessions:',
         desc: ' Tailored lessons focusing on individual progress.'
     }

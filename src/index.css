@@ -39,11 +39,11 @@ header nav ul li a:hover{
 }
 .btn-pri{
   color: #ffffff;
-  background-image: linear-gradient(to right , rgb(201, 199, 199) ,var(--main-color));
+  background: var(--main-color);
   
 }
 .btn-pri:hover{
-  background-image: linear-gradient(to right , var(--main-color) , rgb(201, 199, 199));
+  background: rgb(214, 214, 214);
   color: black;
 }
 .btn-sec{
@@ -52,8 +52,7 @@ header nav ul li a:hover{
 }
 .btn-sec:hover{
   color: #ffffff;
-
-  background-image: linear-gradient(to right , rgb(201, 199, 199) ,var(--main-color));
+  background:var(--main-color) ;
 }
 span.hide-text{
   animation: animate-logo 0.7s 1  forwards ease;
@@ -553,7 +552,7 @@ align-items: center;
   position: relative;
   z-index: 0;
 }
-.teachers::before , .Programms::before{
+.teachers::before , .Programms::before , .pricing::before{
   position: absolute;
   content: '';
   background-image: linear-gradient(to left , rgb(230, 230, 230)  ,rgb(253, 253, 253) );
@@ -561,7 +560,7 @@ align-items: center;
   height: 100%; 
   z-index: -1;
 }
-.teachers .content >div{
+.teachers .content >div , .pricing .content >div{
   position: relative;
   z-index: 0;
   overflow: hidden;
@@ -768,6 +767,7 @@ align-items: center;
   position: fixed;
   width: 0%;
   height:0%;
+  right: -424px;
   width: 420px;
   height: 540px;
   padding: 10px;
@@ -784,39 +784,10 @@ align-items: center;
   -webkit-animation: hide-message 0.5s  1 forwards ease;
 }
 .overlay.show{
-  animation: show-message 0.5s  1 forwards ease;
-  -webkit-animation: show-message 0.5s  1 forwards ease;
+  animation: show-message .5s 10s  1 forwards ease;
+  -webkit-animation: show-message .5s 10s  1 forwards ease;
 }
-.show-message{
-  position: fixed;
-  right: 20px;
-  transition: .3s;
-  top: 90vh;
-  width: 55px;
-  height: 55px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--main-color);
-  border-radius: 6px;
-  cursor: pointer;
-  z-index: 1006;
-  font-size: 25px;
-  background-image:linear-gradient(rgb(37, 100, 102),rgb(13, 54, 65));
-  color: white;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  -ms-transition: .3s;
-  -o-transition: .3s;
-}
-.show-message:hover{
-  background-image:linear-gradient(rgb(174, 223, 40),rgb(100, 22, 124));
 
-}
 .FaAngleLeft{
   z-index: 10000;
 }
@@ -854,4 +825,8 @@ align-items: center;
 .register{
   background-image: linear-gradient(to left , rgb(230, 230, 230)  ,rgb(253, 253, 253) );
 
+}
+
+.pricing .list{
+  list-style:square !important;
 }

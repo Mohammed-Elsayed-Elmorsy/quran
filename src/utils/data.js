@@ -61,6 +61,11 @@ export const links = [
         id: 6,
         text: 'teachers'
     },
+
+    {
+        id: 7,
+        text: 'pricing'
+    }
 ]
 
 export const choose = [
@@ -301,5 +306,57 @@ export const progs = [
         image: image8,
         title: '6.Quranic Arabic Course',
         desc: 'A course that helps students understand the language of the Quran by teaching them Quranic Arabic grammar, vocabulary, and sentence structure.'
+    }
+]
+
+export const pricing = [
+    {
+        id: 1,
+        image: image1,
+        title: 'Basic Package: ',
+        desc: 'Perfect for beginners. Introduction to Quran reading with proper pronunciation.',
+        features: [
+            '2 sessions per week',
+            '30-minute sessions',
+            'Basic Tajweed rules'
+        ],
+        price: '50usd/month'
+    },
+    {
+        id: 2,
+        image: image4,
+        title: 'Intermediate Package:',
+        features: [
+            '3 sessions per week',
+            '45-minute sessions',
+            'Detailed Tajweed rules and practice',
+            'Quran memorization tips'
+        ],
+        price: '100usd/month',
+        desc: 'Ideal for students who can read but need to improve their recitation.'
+    },
+    {
+        id: 3,
+        image: image3,
+        title: 'Advanced Package:',
+        features: [
+            '5 sessions per week',
+            '60-minute sessions',
+            'advanced Tajweed rules'
+        ],
+        price: '150usd/month',
+        desc: 'Best for those aiming to perfect recitation or memorize the Quran.'
+    },
+    {
+        id: 4,
+        image: image2,
+        features: [
+            'Flexible scheduling',
+            'Personalized curriculum',
+            'Recitation improvement and memorization help'
+        ],
+        price: '200usd/month',
+        title: 'One-on-One Sessions:',
+        desc: ' Tailored lessons focusing on individual progress.'
     }
 ]

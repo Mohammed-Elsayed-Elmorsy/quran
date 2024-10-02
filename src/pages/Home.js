@@ -10,15 +10,12 @@ import Contact from '../components/Contact'
 import Blogs from '../components/Blogs'
 import TopNav from '../components/TopNav'
 import PopUp from '../components/PopUp'
-import { FaMessage } from 'react-icons/fa6'
+import PricingComp from '../components/PricingComp'
 
 const Home = () => {
     const [isVisible, setIsVisible] = useState(true);
     return (
         <div>
-            {/* <span className=' show-message' onClick={() => setIsVisible(!isVisible)}>
-                <FaMessage />
-            </span> */}
             <PopUp isVisible={isVisible} setIsVisible={setIsVisible} />
             <TopNav />
             <Header />
@@ -28,6 +25,7 @@ const Home = () => {
             <Teachers />
             <Blogs />
             <Reviews />
+            <PricingComp />
             <Contact />
             <Footer />
         </div>

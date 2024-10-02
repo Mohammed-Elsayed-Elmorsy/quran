@@ -26,7 +26,7 @@ const Programms = () => {
                             <h2 className=' title' style={{ fontSize: '20px' }}>{item.title}</h2>
                             <p className=' h-[110px]' data-aos="fade-up">{item.desc}</p>
                             <div className=' flex justify-between items-center ' style={{ zIndex: '1000', position: 'relative' }}>
-                                <Link to={'/register'}>
+                                <Link to={''}>
                                     <button className=' btn-pri'>register now</button>
                                 </Link>
                                 <Link to={'/contact'}>

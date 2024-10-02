@@ -7,8 +7,8 @@ const PopUp = ({ isVisible, setIsVisible }) => {
 
     return (
 
-        <div className={` ${isVisible ? ' show' : ' hide'} 
-        flex gap-4 flex-col justify-between overlay text-center bg-white`}>
+        <div className={` ${isVisible ? ' show' : ' hide'} hidden md:flex
+         gap-4 flex-col justify-between overlay text-center bg-white`}>
             <img src={image} alt='' className='mt-[-0px] mx-auto object-cover ' />
             <h2 className=' text-[22px] capitalize mt-[-70px] font-bold' style={{ color: 'var(--main-color)' }}>
                 "Welcome! Start your journey in learning the Quran today with personalized lessons!"
@@ -32,12 +32,12 @@ const PopUp = ({ isVisible, setIsVisible }) => {
             right-[10px] cursor-pointer w-[45px] h-[45px]'>
                 <FaXmark />
             </span>
-            {!isVisible && <span onClick={() => setIsVisible(true)}
+            {/* {!isVisible && <span onClick={() => setIsVisible(true)}
                 className=' FaAngleLeft flex justify-center items-center  hover:bg-slate-300 transition 
                 bg-slate-200 absolute top-[-1px] text-[20px] 
             left-[-48px] cursor-pointer w-[45px] h-[45px]'>
                 <FaAngleLeft />
-            </span>}
+            </span>} */}
 
         </div>
     )

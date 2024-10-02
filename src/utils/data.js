@@ -1,9 +1,15 @@
-import image1 from '../static/teacher-removebg-preview.png'
+import image1 from '../static/read7.jpg'
 import image2 from '../static/seven.png'
-import image3 from '../static/learn.jpg'
+import image3 from '../static/quran4.jpg'
 import image4 from '../static/interactive.png'
 import image5 from '../static/six (1).png'
 import image6 from '../static/supportive-removebg-preview.png'
+import image7 from '../static/quran1.jpg'
+import image8 from '../static/supportive-removebg-preview.png'
+import image9 from '../static/read7.jpg'
+import image10 from '../static/quran4.jpg'
+import image11 from '../static/quran111.jpg'
+import image12 from '../static/seven.png'
 import { FaEnvelope, FaFacebook, FaGithub, FaGlobe, FaInstagram, FaLinkedin, FaPhone, FaWhatsapp, FaYoutube }
     from 'react-icons/fa'
 
@@ -24,9 +30,27 @@ export const links = [
         id: 4,
         text: 'programms',
         chilren: [
-            'course one',
-            'course two',
-            'coures three'
+            {
+                path: 'Tafseer',
+                text: 'Quran Tafseer'
+            },
+            {
+                path: 'Tajweed',
+                text: 'Quran(Tajweed)'
+            },
+            {
+                path: 'Revision',
+                text: 'Quran Revision '
+            },
+            {
+                path: 'Islamic-Studies',
+                text: 'Islamic Studies'
+            }
+            ,
+            {
+                path: 'programms',
+                text: 'all programms'
+            }
         ]
     },
     {
@@ -92,6 +116,13 @@ export const teaches = [
         id: 3,
         image: image3,
         name: 'osama elsayed',
+        desc: '[Teachers Name holds certifications in Quranic studies and Tajweed, ensuring that each student receives authentic and accurate teachings. With a commitment to preserving the sacred tradition of Quranic recitation, .'
+    }
+    ,
+    {
+        id: 4,
+        image: image5,
+        name: 'ahmed elgammal',
         desc: '[Teachers Name holds certifications in Quranic studies and Tajweed, ensuring that each student receives authentic and accurate teachings. With a commitment to preserving the sacred tradition of Quranic recitation, .'
     }
 ]
@@ -231,5 +262,44 @@ export const blogs = [
         image: image6,
         title: 'How to Balance Quran Study with a Busy Schedule',
         desc: 'Offer advice for students and professionals who struggle to find time for Quran study. Share tips on setting small goals, using mobile apps for recitation and memorization, and taking advantage of free time.'
+    }
+]
+
+export const progs = [
+    {
+        id: 1,
+        image: image7,
+        title: '1. Quran Memorization Program (Hifz) ',
+        desc: ' A foundational course for students who are new to Quran reading or want to improve their fluency. Focuses on learning to recite the Quran with proper pronunciation (Tajweed) rules.'
+    },
+    {
+        id: 2,
+        image: image12,
+        title: '2.Quran (Tajweed) for Beginners',
+        desc: 'Write about the significance of Tajweed (the rules of proper pronunciation in Quranic recitation). Explain why it’s essential for Muslims to recite the Quran correctly and provide some simple rules to follow.'
+    },
+    {
+        id: 3,
+        image: image9,
+        title: '3.Quran Tafseer ',
+        desc: ' A comprehensive course focused on understanding the meanings and interpretations (Tafseer) of the Quran. This program delves into the context, history, and wisdom behind each verse.'
+    },
+    {
+        id: 4,
+        image: image11,
+        title: '4.Short Courses for Specific Surahs',
+        desc: ' Short-term courses focused on memorizing and understanding specific chapters (Surahs) of the Quran, such as Surah Al-Fatiha, Surah Al-Baqarah, or Juz Amma.'
+    },
+    {
+        id: 5,
+        image: image10,
+        title: '5.Islamic Studies Program',
+        desc: 'A program designed to teach the basic etiquettes of interacting with the Quran and Islamic teachings, including proper manners of handling and reciting the Quran.'
+    },
+    {
+        id: 6,
+        image: image8,
+        title: '6.Quranic Arabic Course',
+        desc: 'A course that helps students understand the language of the Quran by teaching them Quranic Arabic grammar, vocabulary, and sentence structure.'
     }
 ]

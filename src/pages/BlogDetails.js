@@ -11,12 +11,13 @@ const BlogDetails = () => {
     useEffect(() => {
         const specificBlog = blogs.find(i => i.id.toString() === id)
         setBlog(specificBlog)
+        window.scrollTo(0, 0);
     }, [id])
     return (
         <div >
             <TopNav />
             <Header />
-            <div className=' container px-5  mx-auto pb-[70px]'>
+            <div className=' container px-7  mx-auto pb-[70px]'>
                 <h2 className=' title '>{blog?.title}</h2>
                 <p className=' text-[20px]'>{blog?.desc}
                     Lorem, ipsum dolor sit amet consectetur

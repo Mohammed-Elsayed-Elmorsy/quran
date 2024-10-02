@@ -3,10 +3,10 @@ import { medias } from '../utils/data'
 import { Link } from 'react-router-dom'
 import { FaCheck } from 'react-icons/fa'
 
-const Contact = () => {
+const ContactComp = () => {
     return (
         <div className='Contact pb-[70px]'>
-            <div className=' container mx-auto px-5'>
+            <div className=' container mx-auto px-7'>
                 <h2 className='title'>contact us<FaCheck /></h2>
                 <div>
                     <div className=' container mx-auto gap-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:p-0 p-4'>
@@ -34,4 +34,4 @@ const Contact = () => {
     )
 }
 
-export default Contact
+export default ContactComp

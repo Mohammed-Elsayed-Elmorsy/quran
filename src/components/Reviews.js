@@ -5,7 +5,7 @@ import image from '../static/last.png'
 const Reviews = () => {
     return (
         <div className='Reviews' style={{ background: '#eee' }}>
-            <div className=' container mx-auto px-5 pb-[70px]'>
+            <div className=' container mx-auto px-7 pb-[70px]'>
                 <h2 className='title'>
                     students Reviews
                     <FaCheck />

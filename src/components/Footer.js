@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
     return (
         <div className=' footer pt-[40px]'>
-            <footer className=' container mx-auto px-5 pb-0'>
+            <footer className=' container mx-auto px-7 pb-0'>
                 <div className="footer-container justify-between  flex-wrap   flex gap-5 ">
                     <div className=" text-slate-200 flex flex-col  gap-4">
                         <h4 className=' text-[25px]'>Contact Us</h4>
@@ -72,7 +72,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div class="footer-bottom mt-5 p-10">
+                <div className="footer-bottom mt-5 p-10">
                     <p className=''>&copy; <span id="current-year"></span> MOHAMMED ELMORSY. All rights reserved.</p>
                 </div>
             </footer>

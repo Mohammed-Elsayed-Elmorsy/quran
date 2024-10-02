@@ -3,16 +3,16 @@ import { blogs } from '../utils/data'
 import { FaCheck } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
-const Blogs = () => {
+const BlogsComp = () => {
     return (
         <div className=' blogs pb-[70px]'>
-            <div className=' mx-auto px-5 container'>
+            <div className=' mx-auto px-7 container'>
                 <div>
                     <h2 className='title ' >
                         Our Blogs
                         <FaCheck />
                     </h2>
-                    <div className=' container mx-auto gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:p-0 p-4'>
+                    <div className=' container content mx-auto gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  md:p-0 p-4'>
                         {blogs.map(item => {
                             return (
                                 <div data-aos='fade-up'
@@ -40,4 +40,4 @@ const Blogs = () => {
     )
 }
 
-export default Blogs
+export default BlogsComp

@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { teaches } from '../utils/data'
 import { FaCheck } from 'react-icons/fa6'
 
-const Teachers = () => {
+const TeachersComp = () => {
+
     return (
         <div className=' teachers pb-[70px]'>
-            <div className=' container px-5 mx-auto'>
+            <div className=' container px-7 mx-auto'>
                 <h2 className=' title  flex items-center gap-2'>
                     Our Teachers
                     <FaCheck />
                 </h2>
-                <div className=' content grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-6'>
+                <div className=' content grid md:grid-cols-2 lg:grid-cols-3  grid-cols-1 gap-6'>
                     {teaches.map(item =>
                         <div data-aos="zoom-in" key={item.id} className=' relative p-2 flex flex-col gap-4'>
                             <img src={item.image} alt="" className=' object-cover h-[150px]' />
@@ -27,4 +28,4 @@ const Teachers = () => {
     )
 }
 
-export default Teachers
+export default TeachersComp

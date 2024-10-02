@@ -17,7 +17,7 @@ const Choose = () => {
                 why choose us
                 <FaCheck />
             </h2>
-            <div className=' container mx-auto px-5'>
+            <div className=' container mx-auto px-7'>
                 {choose.map(item => <div className='item ' key={item.id} data-aos={item.aos}>
                     <img src={item.image} alt="" />
                     <h2 className=' title' style={{ fontSize: '20px' }}>{item.title}</h2>

@@ -16,10 +16,10 @@ const Home = () => {
     const [isVisible, setIsVisible] = useState(true);
     return (
         <div>
-            <span className=' show-message' onClick={() => setIsVisible(!isVisible)}>
+            {/* <span className=' show-message' onClick={() => setIsVisible(!isVisible)}>
                 <FaMessage />
-            </span>
-            <PopUp isVisible={isVisible} />
+            </span> */}
+            <PopUp isVisible={isVisible} setIsVisible={setIsVisible} />
             <TopNav />
             <Header />
             <Landing />

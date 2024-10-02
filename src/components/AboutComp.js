@@ -3,6 +3,7 @@ import image from '../static/five.png'
 import aos from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
+import { Link } from 'react-router-dom'
 const AboutComp = () => {
     useEffect(() => {
         aos.init({
@@ -40,7 +41,8 @@ const AboutComp = () => {
             </div>
             <div className=' container items-center mx-auto px-5 mt-[20px] flex gap-4 justify-between"'>
                 <button className='btn-pri'>Learn More</button>
-                <button className='btn-sec'>Our Programms</button>
+                <Link to={'/programms'}>
+                    <button className='btn-sec'>Our Programms</button></Link>
             </div>
         </div>
     )

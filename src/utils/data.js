@@ -10,41 +10,47 @@ import image9 from '../static/read7.jpg'
 import image10 from '../static/quran4.jpg'
 import image11 from '../static/quran111.jpg'
 import image12 from '../static/seven.png'
-import { FaEnvelope, FaFacebook, FaGithub, FaGlobe, FaInstagram, FaLinkedin, FaPhone, FaWhatsapp, FaYoutube }
+import {
+    FaCheckCircle, FaCrown,
+    FaEnvelope, FaFacebook, FaGithub,
+    FaGlobe, FaLinkedin, FaPhone,
+    FaMedal, FaRocket, FaWhatsapp, FaYoutube
+}
     from 'react-icons/fa'
 
 export const links = [
     {
         id: 1,
-        text: '/'
+        text: '/', to: '/'
     },
     {
         id: 2,
-        text: 'about '
+        text: 'about', to: 'about'
     },
     {
         id: 3,
-        text: 'blogs'
+        text: 'blogs', to: 'blogs'
     },
     {
         id: 4,
         text: 'programms',
+
         chilren: [
             {
                 path: 'Tafseer',
-                text: 'Quran Tafseer'
+                text: 'Quran Tafseer', to: 'Tafseer'
             },
             {
                 path: 'Tajweed',
-                text: 'Quran(Tajweed)'
+                text: 'Quran(Tajweed)', to: 'Tajweed',
             },
             {
                 path: 'Revision',
-                text: 'Quran Revision '
+                text: 'Quran Revision ', to: 'Revision'
             },
             {
                 path: 'Islamic-Studies',
-                text: 'Islamic Studies'
+                text: 'Islamic Studies', to: 'Islamic-Studies'
             }
             ,
             {
@@ -55,19 +61,75 @@ export const links = [
     },
     {
         id: 7,
-        text: 'pricing'
+        text: 'pricing',
+        to: 'pricing'
     },
     {
         id: 5,
-        text: 'contact '
+        text: 'contact',
+        to: 'contact'
     },
     {
         id: 6,
-        text: 'teachers'
+        text: 'teachers',
+        to: 'teachers'
     },
 
 ]
+export const linksarabic = [
+    {
+        id: 1,
+        text: 'الصفحة الرئيسية', to: '/'
+    },
+    {
+        id: 2,
+        text: 'اقرا عنا', to: 'about'
+    },
+    {
+        id: 3, to: 'blogs',
+        text: 'المدونات'
+    },
+    {
+        id: 4, to: 'programms',
+        text: '  البرامج المتنوعة',
+        chilren: [
+            {
+                path: 'Tafseer', to: 'Tafseer',
+                text: 'تفسير'
+            },
+            {
+                path: 'Tajweed', to: 'Tajweed',
+                text: 'تجويد'
+            },
+            {
+                path: 'Revision', to: 'Revision',
+                text: 'مراجعة '
+            },
+            {
+                path: 'Islamic-Studies', to: 'Islamic-Studies',
+                text: 'دراسات اسلامية'
+            }
+            ,
+            {
+                path: 'programms', to: 'programms',
+                text: 'كل البرامج'
+            }
+        ]
+    },
+    {
+        id: 7,
+        text: 'الباقات', to: 'pricing',
+    },
+    {
+        id: 5, to: 'contact',
+        text: 'تواصل معنا'
+    },
+    {
+        id: 6, to: 'teachers',
+        text: 'المعلمين'
+    },
 
+]
 export const choose = [
     {
         image: image1,
@@ -103,7 +165,41 @@ export const choose = [
         text: 'I believe that learning the Quran should be a rewarding and spiritual journey. I provide a supportive and encouraging environment where students feel comfortable asking questions and progressing at their own pace.'
     },
 ]
-
+export const chooseArabic = [
+    {
+        image: image1,
+        aos: 'fade-up',
+        id: 1,
+        title: 'معلمين ذو خبرة عالة',
+        text: 'بفضل خبرتي التي اكتسبتها على مدار سنوات في تدريس القرآن الكريم، أقدم دروسًا منظمة ومخصصة مصممة لتناسب وتيرة التعلم وأسلوبك. سواء كنت مبتدئًا أو تتطلع إلى تحسين تلاوتك، فأنا أقوم بتخصيص المحتوى لتلبية احتياجاتك المحددة'
+    },
+    {
+        id: 6,
+        image: image2, aos: 'fade-up',
+        title: 'التركيز على التجويد والقراءة',
+        text: 'كل طالب فريد من نوعه، وكذلك أهدافه التعليمية. أقوم بإنشاء خطط دراسية مخصصة بناءً على مستواك الحالي، سواء كنت تتعلم التلاوة أو الحفظ أو دراسة القرآن الكريم بعمق'
+    },
+    {
+        id: 2, image: image3, aos: 'fade-up',
+        title: 'اسلوب مرن ومقنع ف التعليم',
+        text: 'نحن نقدم دروسًا مرنة عبر الإنترنت تناسب جدولك الزمني. سواء كنت محترفًا مشغولًا أو والدًا أو طالبًا، يمكنك تعلم القرآن الكريم من راحة منزلك في الوقت الذي يناسبك.'
+    },
+    {
+        id: 3, image: image4, aos: 'fade-up',
+        title: 'طرق تفاعلية فى التدريس',
+        text: 'أسلوبي في التدريس تفاعلي، مما يجعل الدروس شيقة ومحفزة. أستخدم مجموعة متنوعة من الموارد لإبقاء تجربة التعلم ممتعة، من تمارين التلاوة إلى التطبيقات العملية للتعاليم القرآنية.'
+    },
+    {
+        id: 4, image: image5, aos: 'fade-up',
+        title: 'خطط متخصصة ف التعليم',
+        text: 'كل طالب فريد من نوعه، وكذلك أهدافه التعليمية. أقوم بإنشاء خطط دراسية مخصصة بناءً على مستواك الحالي، سواء كنت تتعلم التلاوة أو الحفظ أو دراسة القرآن الكريم بعمق.'
+    },
+    {
+        id: 5, image: image6, aos: 'fade-up',
+        title: 'بيئة تعليمية مناسبة',
+        text: 'أعتقد أن تعلم القرآن الكريم يجب أن يكون رحلة مجزية وروحية. فأنا أقدم بيئة داعمة ومشجعة حيث يشعر الطلاب بالراحة في طرح الأسئلة والتقدم بالسرعة التي تناسبهم.'
+    },
+]
 export const teaches = [
     {
         id: 1,
@@ -131,7 +227,33 @@ export const teaches = [
         desc: '[Teachers Name holds certifications in Quranic studies and Tajweed, ensuring that each student receives authentic and accurate teachings. With a commitment to preserving the sacred tradition of Quranic recitation, .'
     }
 ]
-
+export const teachersArabic = [
+    {
+        id: 1,
+        image: image1,
+        name: 'محمد المرسي ',
+        desc: 'يحمل المعلمون شهادات في الدراسات القرآنية والتجويد، مما يضمن حصول كل طالب على تعاليم أصيلة ودقيقة. مع الالتزام بالحفاظ على التقليد المقدس لتلاوة القرآن الكريم'
+    },
+    {
+        id: 2,
+        image: image4,
+        name: 'محمد قرمد',
+        desc: 'يحمل مدرسو اسم المعلم شهادات في الدراسات القرآنية والتجويد، مما يضمن حصول كل طالب على تعاليم أصيلة ودقيقة. مع الالتزام بالحفاظ على التقليد المقدس لتلاوة القرآن الكريم,.'
+    },
+    {
+        id: 3,
+        image: image3,
+        name: 'اسامة السيد',
+        desc: 'يحمل مدرسو اسم المعلم شهادات في الدراسات القرآنية والتجويد، مما يضمن حصول كل طالب على تعاليم أصيلة ودقيقة. مع الالتزام بالحفاظ على التقليد المقدس لتلاوة القرآن الكريم'
+    }
+    ,
+    {
+        id: 4,
+        image: image5,
+        name: 'محمد الجمال',
+        desc: 'يحمل مدرسو اسم المعلم شهادات في الدراسات القرآنية والتجويد، مما يضمن حصول كل طالب على تعاليم أصيلة ودقيقة. مع الالتزام بالحفاظ على التقليد المقدس لتلاوة القرآن الكريم'
+    }
+]
 export const testmonials = [
     {
         id: 1,
@@ -174,7 +296,48 @@ export const testmonials = [
         content: 'Dr. Elmorsy is a fantastic doctor. He listens to his patients and provides the best possible care. Highly recommended!',
     }
 ]
-
+export const testmonialsArabic = [
+    {
+        id: 1,
+        name: 'Sarah Johnson',
+        content: 'كان الأستاذ محمد المرسي ​​مدرسًا رائعًا للقرآن الكريم. أسلوبه في التدريس واضح ومتعاطف ومحفز. لقد تعلمت الكثير من دروسه، ليس فقط في قراءة القرآن الكريم ولكن أيضًا في فهم معانيه بعمق. صبره وتفانيه يجعلان التعلم ممتعًا وفعالًا!',
+    },
+    {
+        id: 2,
+        name: 'David Brown',
+        content: 'لقد كان تعلم القرآن الكريم مع الشيخ محمد تجربة غيرت حياتي. فهو يخصص الوقت لشرح الدروس ويضمن تقدم كل طالب بالوتيرة التي تناسبه. إن شغفه بالتدريس ملهم حقًا.',
+    },
+    {
+        id: 3,
+        name: 'Emily Davis',
+        content: 'لقد تحسنت مهاراتي في التجويد بشكل كبير تحت إشراف الأستاذ محمد. دروسه منظمة وجذابة ومليئة بالأمثلة العملية التي تساعدك على حفظ وفهم القرآن الكريم بشكل أفضل'
+    },
+    {
+        id: 4,
+        name: ' Michael Wilson',
+        content: 'لقد كان تعلم القرآن الكريم مع الشيخ محمد تجربة غيرت حياتي. فهو يخصص الوقت لشرح الدروس ويضمن تقدم كل طالب بالوتيرة التي تناسبه. إن شغفه بالتدريس ملهم حقًا',
+    },
+    {
+        id: 5,
+        name: '  John Harris',
+        content: 'إن الطريقة التي يعلم بها الأستاذ محمد القرآن الكريم ملهمة ومؤثرة في نفس الوقت. فهو يجعل الدروس تفاعلية وشخصية، مما يساعدني على التواصل بشكل عميق مع القرآن الكريم. إن شغفه بالتدريس معدٍ',
+    },
+    {
+        id: 6,
+        name: ' Karen White',
+        content: 'لقد تحسنت مهاراتي في التجويد بشكل كبير تحت إشراف الأستاذ محمد. دروسه منظمة وجذابة ومليئة بالأمثلة العملية التي تساعدك على حفظ وفهم القرآن الكريم بشكل أفضل',
+    },
+    {
+        id: 7,
+        name: 'Hamed Elzayat',
+        content: 'الشيخ محمد المرسي ​​هو مدرس قرآن رائع يجلب فهمًا عميقًا للقرآن في كل درس. حماسته ووضوحه يجعلان حتى الموضوعات المعقدة أسهل في الفهم. يوصى به بشدة لأي شخص يتطلع إلى تعميق دراساته القرآنية!',
+    },
+    {
+        id: 8,
+        name: 'Mohammed Elsayed',
+        content: 'لقد تحسنت مهاراتي في التجويد بشكل كبير تحت إشراف الأستاذ محمد. دروسه منظمة وجذابة ومليئة بالأمثلة العملية التي تساعدك على حفظ وفهم القرآن الكريم بشكل أفضل',
+    }
+]
 export const medias = [
     {
         id: 1,
@@ -269,7 +432,44 @@ export const blogs = [
         desc: 'Offer advice for students and professionals who struggle to find time for Quran study. Share tips on setting small goals, using mobile apps for recitation and memorization, and taking advantage of free time.'
     }
 ]
-
+export const blogsArabic = [
+    {
+        id: 1,
+        image: image1,
+        title: 'نصائح لحفظ القرآن الكريم بشكل فعال',
+        desc: 'شارك نصائح عملية للطلاب حول كيفية حفظ القرآن الكريم بشكل فعال. ناقش تقنيات مثل التكرار، ووضع جدول زمني، واستخدام الوسائل البصرية والصوتية، والحفاظ على الاتساق.'
+    },
+    {
+        id: 2,
+        image: image4,
+        title: 'أهمية التجويد في تلاوة القرآن الكريم',
+        desc: 'اكتب عن أهمية التجويد (قواعد النطق الصحيح في تلاوة القرآن الكريم). اشرح لماذا من الضروري للمسلمين تلاوة القرآن الكريم بشكل صحيح وقدم بعض القواعد البسيطة التي يجب اتباعها.'
+    },
+    {
+        id: 3,
+        image: image3,
+        title: 'فهم معاني السور الأساسية',
+        desc: 'تقديم تفسيرات وتفسيرات لأهم سور القرآن الكريم، بحيث تكون في متناول المبتدئين ومفهومة لهم. مناقشة دروسهم وأهميتها في الحياة اليومية'
+    },
+    {
+        id: 4,
+        image: image2,
+        title: 'كيف تبني علاقة قوية مع القرآن الكريم',
+        desc: 'مناقشة الطرق التي يمكن للمسلمين من خلالها تعزيز علاقتهم بالقرآن الكريم، وتقديم التوجيهات بشأن تلاوة القرآن الكريم يوميًا، والتدبر، وتطبيق تعاليم القرآن الكريم في الحياة اليومية.'
+    },
+    {
+        id: 5,
+        image: image5,
+        title: 'فوائد تعلم القرآن الكريم في الصغر',
+        desc: 'التأكيد على فوائد البدء بالتعليم القرآني في وقت مبكر من الحياة، مثل بناء أسس أخلاقية قوية، وتحسين التركيز، وتنمية الوعي الروحي.'
+    },
+    {
+        id: 6,
+        image: image6,
+        title: 'كيفية تحقيق التوازن بين دراسة القرآن الكريم وجدول الأعمال المزدحم',
+        desc: 'تقديم النصائح للطلاب والمهنيين الذين يجدون صعوبة في إيجاد الوقت لدراسة القرآن الكريم. شارك نصائح حول تحديد أهداف صغيرة، واستخدام تطبيقات الهاتف المحمول للتلاوة والحفظ، والاستفادة من وقت الفراغ.'
+    }
+]
 export const progs = [
     {
         id: 1,
@@ -308,12 +508,50 @@ export const progs = [
         desc: 'A course that helps students understand the language of the Quran by teaching them Quranic Arabic grammar, vocabulary, and sentence structure.'
     }
 ]
-
+export const progsArabic = [
+    {
+        id: 1,
+        image: image7,
+        title: 'برنامج حفظ القرآن الكريم (حفظ)',
+        desc: ' دورة تأسيسية للطلاب الجدد في قراءة القرآن الكريم أو الراغبين في تحسين إتقانهم له، تركز على تعلم تلاوة القرآن الكريم بقواعد النطق السليم (التجويد).'
+    },
+    {
+        id: 2,
+        image: image12,
+        title: 'تجويد القرآن الكريم للمبتدئين',
+        desc: 'اكتب عن أهمية التجويد (قواعد النطق الصحيح في تلاوة القرآن الكريم). اشرح لماذا من الضروري للمسلمين تلاوة القرآن الكريم بشكل صحيح وقدم بعض القواعد البسيطة التي يجب اتباعها'
+    },
+    {
+        id: 3,
+        image: image9,
+        title: 'تفسير القرآن',
+        desc: ' دورة شاملة تركز على فهم معاني وتفسير القرآن الكريم، ويتناول هذا البرنامج السياق والتاريخ والحكمة وراء كل آية.'
+    },
+    {
+        id: 4,
+        image: image11,
+        title: 'دورات قصيرة لسور معينة',
+        desc: ' دورات قصيرة تركز على حفظ وفهم سور محددة من القرآن الكريم، مثل سورة الفاتحة، أو سورة البقرة، أو جزء عم.'
+    },
+    {
+        id: 5,
+        image: image10,
+        title: 'برنامج الدراسات الاسلامية',
+        desc: 'برنامج يهدف إلى تعليم الآداب الأساسية للتعامل مع القرآن الكريم والتعاليم الإسلامية، بما في ذلك آداب التعامل مع القرآن الكريم وتلاوته.'
+    },
+    {
+        id: 6,
+        image: image8,
+        title: 'دورة اللغة العربية القرآنية',
+        desc: 'دورة تساعد الطلاب على فهم لغة القرآن الكريم من خلال تعليمهم قواعد اللغة العربية القرآنية والمفردات وبناء الجملة.'
+    }
+]
 export const pricing = [
     {
         id: 1,
         image: image1,
-        title: 'Basic Package: ',
+        title: 'Basic Package',
+        icon: <FaCheckCircle className=' text-green-500 text-[50px] mt-[-20px]' />,
         desc: 'Perfect for beginners. Introduction to Quran reading with proper pronunciation.',
         features: [
             '2 sessions per week',
@@ -325,7 +563,8 @@ export const pricing = [
     {
         id: 2,
         image: image4,
-        title: 'Intermediate Package:',
+        title: 'Intermediate Package',
+        icon: <FaMedal className=' text-[50px] mt-[-20px]' style={{ color: '#CD7F32' }} />,
         features: [
             '3 sessions per week',
             '45-minute sessions',
@@ -338,7 +577,8 @@ export const pricing = [
     {
         id: 3,
         image: image3,
-        title: 'Advanced Package:',
+        icon: <FaCrown className=' text-[50px] mt-[-20px]' style={{ color: '#FFD700' }} />,
+        title: 'Advanced Package',
         features: [
             '5 sessions per week',
             '60-minute sessions',
@@ -350,13 +590,66 @@ export const pricing = [
     {
         id: 4,
         image: image2,
+        icon: <FaRocket className=' text-[50px] text-blue-500 mt-[-20px]' />,
         features: [
             'Flexible scheduling',
             'Personalized curriculum',
             'Recitation improvement and memorization help'
         ],
         price: '200$/month',
-        title: 'One-on-One Sessions:',
+        title: 'One-on-One Sessions',
         desc: ' Tailored lessons focusing on individual progress.'
+    }
+]
+
+export const pricingArabic = [
+    {
+        id: 1,
+        image: image1,
+        title: 'الباقة الأساسية',
+        desc: 'مناسب للمبتدئين، مقدمة لقراءة القرآن الكريم مع النطق الصحيح.',
+        features: [
+            'جلستين في الاسبوع',
+            'جلسات مدتها 30 دقيقة',
+            'قواعد التجويد الأساسية'
+        ],
+        price: '50 دولارا شهريا'
+    },
+    {
+        id: 2,
+        image: image4,
+        title: 'الباقة المتوسطة',
+        features: [
+            ' جلسات في الاسبوع',
+            'جلسات مدتها 45 دقيقة',
+            'قواعد التجويد التفصيلية وممارسة التجويد',
+            'نصائح لحفظ القرآن الكريم'
+        ],
+        price: '100 دولار شهريا',
+        desc: 'مثالي للطلاب الذين يستطيعون القراءة ولكنهم بحاجة إلى تحسين تلاوتهم.'
+    },
+    {
+        id: 3,
+        image: image3,
+        title: 'الحزمة المتقدمة',
+        features: [
+            '5 جلسات في الاسبوع',
+            'جلسات مدتها 60 دقيقة',
+            'قواعد التجويد المتقدمة'
+        ],
+        price: '150 دولار شهريا',
+        desc: 'مناسب لمن يرغب في إتقان التلاوة أو حفظ القرآن الكريم.'
+    },
+    {
+        id: 4,
+        image: image2,
+        features: [
+            'جدولة مرنة',
+            'مناهج دراسية مخصصة',
+            'مساعدة في تحسين التلاوة والحفظ'
+        ],
+        price: '200 دولار شهريا',
+        title: 'جلسات فردية',
+        desc: 'دروس مصممة خصيصًا تركز على التقدم الفردي.'
     }
 ]

@@ -1,10 +1,13 @@
 import React from 'react'
-import { choose } from '../utils/data'
+import { choose, chooseArabic } from '../utils/data'
 import { FaCheck } from 'react-icons/fa'
 import aos from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 const Choose = () => {
+    const lang = useSelector(state => state.lang.arabic)
+    const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     useEffect(() => {
         aos.init({
             duration: 1000,
@@ -14,13 +17,17 @@ const Choose = () => {
     return (
         <div className='choose pb-[70px]' >
             <h2 className='title ' >
-                why choose us
+                {!state ? 'why choose us' : 'لماذا تختارنا'}
                 <FaCheck />
             </h2>
             <div className=' container mx-auto px-7'>
-                {choose.map(item => <div className='item ' key={item.id} data-aos={item.aos}>
-                    <img src={item.image} alt="" />
-                    <h2 className=' title' style={{ fontSize: '20px' }}>{item.title}</h2>
+                {state ? chooseArabic.map(item => <div className='item ' key={item.id} data-aos={item.aos}>
+                    <img className=' mb-4 pb-4' src={item.image} alt="" />
+                    <h2 className='my-6 title' style={{ fontSize: '20px' }}>{item.title}</h2>
+                    <p data-aos="fade-up">{item.text}</p>
+                </div>) : choose.map(item => <div className='item ' key={item.id} data-aos={item.aos}>
+                    <img className=' mb-4 pb-4' src={item.image} alt="" />
+                    <h2 className='my-6 title' style={{ fontSize: '20px' }}>{item.title}</h2>
                     <p data-aos="fade-up">{item.text}</p>
                 </div>)}
             </div>

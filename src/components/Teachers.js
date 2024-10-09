@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { teachersArabic, teaches } from '../utils/data'
 import { FaCheck } from 'react-icons/fa6'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const TeachersComp = () => {
     const lang = useSelector(state => state.lang.arabic)
@@ -15,13 +16,14 @@ const TeachersComp = () => {
                 </h2>
                 <div className=' content grid md:grid-cols-2 lg:grid-cols-3  grid-cols-1 gap-6'>
                     {!state ? teaches.map(item =>
-                        <div data-aos="zoom-in" key={item.id} className=' relative  flex flex-col gap-4'>
+                        <div data-aos="zoom-in" key={item.id} className=' relative justify-between flex flex-col gap-4'>
                             <img src={item.image} alt="" className=' object-cover h-[150px]' />
                             <h2 className=''>{item.name}</h2>
-                            <p className=' text-[20px]'>{item.desc}</p>
+                            <p className=' text-[18px]'>{item.desc}</p>
                             <div className=' flex gap-2 items-center'>
-                                <button className='flex-1 btn-pri'>read more</button>
-                                <button className=' btn-sec flex-1'>select </button>
+                                <Link className=' w-full' to={'/teachers/' + item.id}>
+                                    <button className='w-full btn-pri'>read more</button>
+                                </Link>
                             </div>
                         </div>) : teachersArabic.map(item =>
                             <div data-aos="zoom-in" key={item.id} className=' relative  flex flex-col gap-4'>
@@ -29,14 +31,11 @@ const TeachersComp = () => {
                                 <h2 className=''>{item.name}</h2>
                                 <p>{item.desc}</p>
                                 <div className=' flex gap-2 items-center'>
-                                    <button className='flex-1 btn-pri'>
+                                    <Link className=' block w-full' to={'/teachers/' + item.id}>
+                                        <button className='w-full btn-pri'>
 
-                                        {!state ? 'read more' : 'اقرا المزيد'}
-                                    </button>
-                                    <button className=' btn-sec flex-1'>
-
-                                        {!state ? 'select' : ' اختار المعلم'}
-                                    </button>
+                                            اقرا المزيد
+                                        </button></Link>
                                 </div>
                             </div>)}
                 </div>

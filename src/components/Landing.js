@@ -1,6 +1,6 @@
-import image from '../static/supportive-removebg-preview.png'
+import image from '../static/quran1.jpg'
 import image2 from '../static/new5.jpg'
-import image3 from '../static/new3.avif'
+import image3 from '../static/read12.avif'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -12,15 +12,23 @@ import 'swiper/css/pagination';
 // Import Swiper modules
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { useSelector } from 'react-redux';
+import { useState } from 'react';
 const Landing = () => {
+    const [change, setChange] = useState(false)
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
+    const changebgoflanding = () => {
+        setTimeout(() => {
+            setChange(!change)
+        }, 5000);
+    }
+    changebgoflanding()
     return (
-        <div className=' md:h-[100vh] z-50 landing flex justify-center items-center'>
+        <div className={` md:h-[100vh] z-50 landing ${change ? 'bg-change' : ''} flex justify-center items-center`}>
 
             {!state && <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
-                spaceBetween={50}
+                spaceBetween={40}
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
@@ -41,9 +49,9 @@ const Landing = () => {
                             <button className='mt-3 btn-pri'>learn more</button>
 
                         </div>
-                        <div className=' hidden lg:block flex-1' id='image'>
+                        {/* <div className=' hidden lg:block flex-1' id='image'>
                             <img src={image} alt="" />
-                        </div>
+                        </div> */}
                     </div>
                 </SwiperSlide>
                 <SwiperSlide >
@@ -56,9 +64,9 @@ const Landing = () => {
                                 to make the learning process smooth."</p>
                             <button className='mt-3 btn-pri'>learn more</button>
                         </div>
-                        <div className=' hidden lg:block flex-1' id='image'>
+                        {/* <div className=' hidden lg:block flex-1' id='image'>
                             <img src={image2} alt="" />
-                        </div>
+                        </div> */}
                     </div>
                 </SwiperSlide>
                 <SwiperSlide >
@@ -71,16 +79,16 @@ const Landing = () => {
                             <button className='mt-3 btn-pri'>learn more</button>
 
                         </div>
-                        <div className=' hidden lg:block flex-1' id='image'>
+                        {/* <div className=' hidden lg:block flex-1' id='image'>
                             <img src={image3} alt="" />
-                        </div>
+                        </div> */}
                     </div>
                 </SwiperSlide>
             </Swiper>}
 
             {state && <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
-                spaceBetween={50}
+                spaceBetween={40}
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
@@ -101,9 +109,9 @@ const Landing = () => {
                             <button className='mt-3 btn-pri'>اقرا المزيد</button>
 
                         </div>
-                        <div className=' hidden lg:block flex-1' id='image'>
+                        {/* <div className=' hidden lg:block flex-1' id='image'>
                             <img src={image} alt="" />
-                        </div>
+                        </div> */}
                     </div>
                 </SwiperSlide>
                 <SwiperSlide >
@@ -116,9 +124,9 @@ const Landing = () => {
                                 لجعل عملية التعلم سلسة."</p>
                             <button className='mt-3 btn-pri'>اقرا المزيد</button>
                         </div>
-                        <div className=' hidden lg:block flex-1' id='image'>
+                        {/* <div className=' hidden lg:block flex-1' id='image'>
                             <img src={image2} alt="" />
-                        </div>
+                        </div> */}
                     </div>
                 </SwiperSlide>
                 <SwiperSlide >
@@ -131,9 +139,9 @@ const Landing = () => {
                             <button className='mt-3 btn-pri'>اقرا المزيد</button>
 
                         </div>
-                        <div className=' hidden lg:block flex-1' id='image'>
+                        {/* <div className=' hidden lg:block flex-1' id='image'>
                             <img src={image3} alt="" />
-                        </div>
+                        </div> */}
                     </div>
                 </SwiperSlide>
             </Swiper>}

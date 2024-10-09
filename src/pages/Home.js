@@ -18,12 +18,11 @@ const Home = () => {
         window.scrollTo(0, 0);
     }, []);
     const [isVisible, setIsVisible] = useState(true);
-    const [arabic, setArabic] = useState(false)
     return (
-        <div className={`${arabic ? 'arabic' : ''}`}>
+        <div >
             <PopUp isVisible={isVisible} setIsVisible={setIsVisible} />
             <TopNav />
-            <Header setArabic={setArabic} arabic={arabic} />
+            <Header />
             <Landing />
             <About />
             <Choose />

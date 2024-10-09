@@ -18,16 +18,16 @@ const PricingComp = () => {
             <div className=' container mx-auto px-7 '>
                 <div className=' content grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  grid-cols-1 gap-6'>
                     {!state ? pricing.map(item =>
-                        <div data-aos="zoom-in" key={item.id} className=' relative p-2 flex flex-col justify-between gap-4'>
+                        <div data-aos="zoom-in" key={item.id} className='rounded-md relative p-2 flex flex-col justify-between gap-4'>
                             <img src={item.image} alt="" className=' object-cover h-[180px]' />
                             <h2 className=' font-bold capitalize text-[22px]'>{item.title}</h2>
-                            <p className='text-[20px] mt-[-10px]'>{item.desc}</p>
+                            <p className='text-[19px] mt-[-10px]'>{item.desc}</p>
                             <div>
-                                <h3 className=' text-[22px] capitalize'>
-                                    {state ? 'المميزات :' : 'features :'}
+                                <h3 className=' text-[21px] capitalize'>
+                                    {state ? 'المميزات ' : 'features '}
                                 </h3>
                                 <ul className='list-[square] p-5 h-[120px]'>
-                                    {item.features.map(feat => (<li className=' text-[19px]' key={feat}>{feat}</li>))}
+                                    {item.features.map(feat => (<li className=' text-[17px]' key={feat}>{feat}</li>))}
                                 </ul>
                             </div>
                             <span className=' font-bold capitalize text-[25px]'>
@@ -39,17 +39,17 @@ const PricingComp = () => {
                                 </Link>
                                 <button className=' flex-1 btn-sec'>select</button>
                             </div>
-                            <div className=' after absolute top-0 left-0 h-[160px] w-[100%] bg-slate-400'>
+                            <div className=' after absolute top-0 left-0 h-[160px] w-[100%]  bg-slate-400'>
 
                             </div>
                         </div>) : pricingArabic.map(item =>
-                            <div data-aos="zoom-in" key={item.id} className=' relative p-2 flex flex-col justify-between gap-4'>
+                            <div data-aos="zoom-in" key={item.id} className='rounded-md relative p-2 flex flex-col justify-between gap-4'>
                                 <img src={item.image} alt="" className=' object-cover h-[180px]' />
                                 <h2 className=' font-bold capitalize text-[22px]'>{item.title}</h2>
                                 <p className='text-[20px] mt-[-10px]'>{item.desc}</p>
                                 <div>
                                     <h3 className=' text-[22px] capitalize'>
-                                        features :
+                                        المميزات
                                     </h3>
                                     <ul className='list-[square] p-5 h-[120px]'>
                                         {item.features.map(feat => (<li className=' text-[19px]' key={feat}>{feat}</li>))}

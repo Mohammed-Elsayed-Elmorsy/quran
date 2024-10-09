@@ -22,12 +22,12 @@ const Choose = () => {
             </h2>
             <div className=' container mx-auto px-7'>
                 {state ? chooseArabic.map(item => <div className='item ' key={item.id} data-aos={item.aos}>
-                    <img className=' mb-4 pb-4' src={item.image} alt="" />
-                    <h2 className='my-6 title' style={{ fontSize: '20px' }}>{item.title}</h2>
+                    <img className='' src={item.image} alt="" />
+                    <h2 className=''>{item.title}</h2>
                     <p data-aos="fade-up">{item.text}</p>
                 </div>) : choose.map(item => <div className='item ' key={item.id} data-aos={item.aos}>
-                    <img className=' mb-4 pb-4' src={item.image} alt="" />
-                    <h2 className='my-6 title' style={{ fontSize: '20px' }}>{item.title}</h2>
+                    <img className='' src={item.image} alt="" />
+                    <h2 className=' '>{item.title}</h2>
                     <p data-aos="fade-up">{item.text}</p>
                 </div>)}
             </div>

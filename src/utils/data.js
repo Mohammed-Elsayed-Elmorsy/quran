@@ -1,20 +1,22 @@
 import image1 from '../static/read7.jpg'
 import image2 from '../static/seven.png'
-import image3 from '../static/quran4.jpg'
+import image3 from '../static/read1.jpg'
 import image4 from '../static/interactive.png'
 import image5 from '../static/six (1).png'
-import image6 from '../static/supportive-removebg-preview.png'
+import image6 from '../static/read1.jpg'
 import image7 from '../static/quran1.jpg'
-import image8 from '../static/supportive-removebg-preview.png'
+import image8 from '../static/read11.jpg'
 import image9 from '../static/read7.jpg'
-import image10 from '../static/quran4.jpg'
+import image10 from '../static/read9.jpg'
 import image11 from '../static/quran111.jpg'
 import image12 from '../static/seven.png'
+import image13 from '../static/read11.jpg'
 import {
     FaCheckCircle, FaCrown,
     FaEnvelope, FaFacebook, FaGithub,
     FaGlobe, FaLinkedin, FaPhone,
-    FaMedal, FaRocket, FaWhatsapp, FaYoutube
+    FaMedal, FaRocket, FaWhatsapp, FaYoutube,
+    FaTelegram
 }
     from 'react-icons/fa'
 
@@ -37,25 +39,25 @@ export const links = [
 
         chilren: [
             {
-                path: 'Tafseer',
+                path: 'Tafseer', id: 1,
                 text: 'Quran Tafseer', to: 'Tafseer'
             },
             {
-                path: 'Tajweed',
+                path: 'Tajweed', id: 2,
                 text: 'Quran(Tajweed)', to: 'Tajweed',
             },
             {
-                path: 'Revision',
+                path: 'Revision', id: 3,
                 text: 'Quran Revision ', to: 'Revision'
             },
             {
-                path: 'Islamic-Studies',
+                path: 'Islamic-Studies', id: 4,
                 text: 'Islamic Studies', to: 'Islamic-Studies'
             }
             ,
             {
                 path: 'programms',
-                text: 'all programms'
+                text: 'all programms', to: 'programms',
             }
         ]
     },
@@ -94,19 +96,19 @@ export const linksarabic = [
         text: '  البرامج المتنوعة',
         chilren: [
             {
-                path: 'Tafseer', to: 'Tafseer',
-                text: 'تفسير'
+                path: 'Tafseer', to: 'Tafseer', id: 1,
+                text: 'تفسير القران'
             },
             {
-                path: 'Tajweed', to: 'Tajweed',
-                text: 'تجويد'
+                path: 'Tajweed', to: 'Tajweed', id: 2,
+                text: 'تجويد القران'
             },
             {
-                path: 'Revision', to: 'Revision',
-                text: 'مراجعة '
+                path: 'Revision', to: 'Revision', id: 3,
+                text: 'حفظ القران '
             },
             {
-                path: 'Islamic-Studies', to: 'Islamic-Studies',
+                path: 'Islamic-Studies', to: 'Islamic-Studies', id: 4,
                 text: 'دراسات اسلامية'
             }
             ,
@@ -340,55 +342,112 @@ export const testmonialsArabic = [
 ]
 export const medias = [
     {
-        id: 1,
+        id: 1, color: '#1e8af0', back: '#1e8af03a',
         title: 'Facebook',
         content: ' Facebook profile',
         to: 'https://www.facebook.com/profile.php?id=100079764606912',
         icon: <FaFacebook />
     },
     {
-        id: 2,
+        id: 2, color: 'green', back: '#0080002a',
         title: 'WhatsApp',
         content: '+20 012 1265 9525',
         to: 'https://wa.me/201212659525',
         icon: <FaWhatsapp />
     },
     {
-        id: 3,
+        id: 3, color: '#035eb4', back: '#035eb431',
         title: 'Linkendin',
         content: 'linkedin/mohammed-elmorsy',
         to: 'https://www.linkedin.com/in/mohammed-elmorsy-018378258/',
         icon: <FaLinkedin />
     },
     {
-        id: 4,
+        id: 4, color: '#fd7403', back: '#fd74034b',
         title: 'Githup',
         content: 'github/Mohammed-Elmorsy',
         to: 'https://github.com/Mohammed-Elsayed-Elmorsy',
         icon: <FaGithub />
     },
     {
-        id: 5,
+        id: 5, color: 'black', back: '#0202022a',
         title: 'Email',
         content: 'sallealamohammed@gmail.com',
         to: 'mailto:sallealamohammed@gmail.com',
         icon: <FaEnvelope />
     },
     {
-        id: 6,
-        title: 'Address',
-        content: 'Mit Ghamer Adqhlia',
-        icon: <FaGlobe />
+        id: 6, color: '#006797', back: '#035eb423',
+        title: 'Telegram',
+        content: 'Muhammad_550',
+        icon: <FaTelegram />,
+        to: 'https://t.me/Muhammad_550'
     },
     {
-        id: 7,
+        id: 7, color: '#0490a8', back: '#048fa82c',
         title: 'Phone',
         content: '01554701926',
         icon: <FaPhone />
     },
     {
-        id: 8,
+        id: 8, color: 'red', back: '#ff000027',
         title: 'Youtube',
+        content: 'Youtube',
+        icon: <FaYoutube />
+    },
+]
+export const mediasarab = [
+    {
+        id: 1, color: '#1e8af0', back: '#1e8af03a',
+        title: 'الفيسبوك',
+        content: ' Facebook profile',
+        to: 'https://www.facebook.com/profile.php?id=100079764606912',
+        icon: <FaFacebook />
+    },
+    {
+        id: 2, color: 'green', back: '#0080002a',
+        title: 'واتساب',
+        content: '+20 012 1265 9525',
+        to: 'https://wa.me/201212659525',
+        icon: <FaWhatsapp />
+    },
+    {
+        id: 3, color: '#035eb4', back: '#035eb431',
+        title: 'لينكدان',
+        content: 'linkedin/mohammed-elmorsy',
+        to: 'https://www.linkedin.com/in/mohammed-elmorsy-018378258/',
+        icon: <FaLinkedin />
+    },
+    {
+        id: 4, color: '#fd7403', back: '#ff44006b',
+        title: 'حيت هاب',
+        content: 'github/Mohammed-Elmorsy',
+        to: 'https://github.com/Mohammed-Elsayed-Elmorsy',
+        icon: <FaGithub />
+    },
+    {
+        id: 5, color: 'black', back: '#0202022a',
+        title: 'الجميل',
+        content: 'sallealamohammed@gmail.com',
+        to: 'mailto:sallealamohammed@gmail.com',
+        icon: <FaEnvelope />
+    },
+    {
+        id: 6, color: '#006797', back: '#035eb423',
+        title: 'التلجرام',
+        content: 'Muhammad_550',
+        icon: <FaTelegram />,
+        to: 'https://t.me/Muhammad_550'
+    },
+    {
+        id: 7, color: '#0490a8', back: '#048fa82c',
+        title: 'التلفون',
+        content: '01554701926',
+        icon: <FaPhone />
+    },
+    {
+        id: 8, color: 'red', back: '#ff000027',
+        title: 'اليوتيوب',
         content: 'Youtube',
         icon: <FaYoutube />
     },
@@ -472,45 +531,45 @@ export const blogsArabic = [
 ]
 export const progs = [
     {
-        id: 1,
+        id: 3,
         image: image7,
-        title: '1. Quran Memorization Program (Hifz) ',
+        title: 'Quran Memorization Program (Hifz) ',
         desc: ' A foundational course for students who are new to Quran reading or want to improve their fluency. Focuses on learning to recite the Quran with proper pronunciation (Tajweed) rules.'
     },
     {
         id: 2,
         image: image12,
-        title: '2.Quran (Tajweed) for Beginners',
+        title: 'Quran (Tajweed) for Beginners',
         desc: 'Write about the significance of Tajweed (the rules of proper pronunciation in Quranic recitation). Explain why it’s essential for Muslims to recite the Quran correctly and provide some simple rules to follow.'
     },
     {
-        id: 3,
+        id: 1,
         image: image9,
-        title: '3.Quran Tafseer ',
+        title: 'Quran Tafseer ',
         desc: ' A comprehensive course focused on understanding the meanings and interpretations (Tafseer) of the Quran. This program delves into the context, history, and wisdom behind each verse.'
     },
     {
         id: 4,
-        image: image11,
-        title: '4.Short Courses for Specific Surahs',
-        desc: ' Short-term courses focused on memorizing and understanding specific chapters (Surahs) of the Quran, such as Surah Al-Fatiha, Surah Al-Baqarah, or Juz Amma.'
+        image: image10,
+        title: 'Islamic Studies Program',
+        desc: 'A program designed to teach the basic etiquettes of interacting with the Quran and Islamic teachings, including proper manners of handling and reciting the Quran.'
     },
     {
         id: 5,
-        image: image10,
-        title: '5.Islamic Studies Program',
-        desc: 'A program designed to teach the basic etiquettes of interacting with the Quran and Islamic teachings, including proper manners of handling and reciting the Quran.'
+        image: image11,
+        title: 'Short Courses for Specific Surahs',
+        desc: ' Short-term courses focused on memorizing and understanding specific chapters (Surahs) of the Quran, such as Surah Al-Fatiha, Surah Al-Baqarah, or Juz Amma.'
     },
     {
         id: 6,
         image: image8,
-        title: '6.Quranic Arabic Course',
+        title: 'Quranic Arabic Course',
         desc: 'A course that helps students understand the language of the Quran by teaching them Quranic Arabic grammar, vocabulary, and sentence structure.'
     }
 ]
 export const progsArabic = [
     {
-        id: 1,
+        id: 3,
         image: image7,
         title: 'برنامج حفظ القرآن الكريم (حفظ)',
         desc: ' دورة تأسيسية للطلاب الجدد في قراءة القرآن الكريم أو الراغبين في تحسين إتقانهم له، تركز على تعلم تلاوة القرآن الكريم بقواعد النطق السليم (التجويد).'
@@ -522,22 +581,22 @@ export const progsArabic = [
         desc: 'اكتب عن أهمية التجويد (قواعد النطق الصحيح في تلاوة القرآن الكريم). اشرح لماذا من الضروري للمسلمين تلاوة القرآن الكريم بشكل صحيح وقدم بعض القواعد البسيطة التي يجب اتباعها'
     },
     {
-        id: 3,
+        id: 1,
         image: image9,
         title: 'تفسير القرآن',
         desc: ' دورة شاملة تركز على فهم معاني وتفسير القرآن الكريم، ويتناول هذا البرنامج السياق والتاريخ والحكمة وراء كل آية.'
     },
     {
         id: 4,
-        image: image11,
-        title: 'دورات قصيرة لسور معينة',
-        desc: ' دورات قصيرة تركز على حفظ وفهم سور محددة من القرآن الكريم، مثل سورة الفاتحة، أو سورة البقرة، أو جزء عم.'
-    },
-    {
-        id: 5,
         image: image10,
         title: 'برنامج الدراسات الاسلامية',
         desc: 'برنامج يهدف إلى تعليم الآداب الأساسية للتعامل مع القرآن الكريم والتعاليم الإسلامية، بما في ذلك آداب التعامل مع القرآن الكريم وتلاوته.'
+    },
+    {
+        id: 5,
+        image: image11,
+        title: 'دورات قصيرة لسور معينة',
+        desc: ' دورات قصيرة تركز على حفظ وفهم سور محددة من القرآن الكريم، مثل سورة الفاتحة، أو سورة البقرة، أو جزء عم.'
     },
     {
         id: 6,
@@ -562,7 +621,7 @@ export const pricing = [
     },
     {
         id: 2,
-        image: image4,
+        image: image13,
         title: 'Intermediate Package',
         icon: <FaMedal className=' text-[50px] mt-[-20px]' style={{ color: '#CD7F32' }} />,
         features: [

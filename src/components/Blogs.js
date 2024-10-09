@@ -20,16 +20,16 @@ const BlogsComp = () => {
                             return (
                                 <div data-aos='fade-up'
                                     key={item.id}
-                                    className='blog-item flex flex-col gap-2 bg-white p-2'>
+                                    className='blog-item flex flex-col rounded-md  justify-between gap-2 bg-white p-2'>
                                     <img src={item.image} alt="" />
                                     <h2>
                                         {item.title}
                                     </h2>
-                                    <p>
+                                    <p className=''>
                                         {item.desc}
                                     </p>
-                                    <Link to={`/blogs/${item.id}`}>
-                                        <button onClick={() => console.log('gfff')} className=' btn-pri'>
+                                    <Link className=' flex' to={`/blogs/${item.id}`}>
+                                        <button onClick={() => console.log('gfff')} className=' flex-1 btn-pri'>
                                             read more
                                         </button>
                                     </Link>
@@ -39,16 +39,16 @@ const BlogsComp = () => {
                             return (
                                 <div data-aos='fade-up'
                                     key={item.id}
-                                    className='blog-item flex flex-col gap-2 bg-white p-2'>
+                                    className='blog-item flex flex-col  rounded-md gap-2 justify-between bg-white p-2'>
                                     <img src={item.image} alt="" />
                                     <h2>
                                         {item.title}
                                     </h2>
-                                    <p className=' text-[20px]'>
+                                    <p className=''>
                                         {item.desc}
                                     </p>
-                                    <Link to={`/blogs/${item.id}`}>
-                                        <button onClick={() => console.log('gfff')} className=' btn-pri'>
+                                    <Link className=' flex' to={`/blogs/${item.id}`}>
+                                        <button onClick={() => console.log('gfff')} className=' flex-1 btn-pri'>
                                             {state ? 'اقرا المزيد' : 'read more'}
                                         </button>
                                     </Link>

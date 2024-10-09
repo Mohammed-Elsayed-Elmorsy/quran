@@ -1,5 +1,5 @@
 import { FaCheck } from 'react-icons/fa'
-import image from '../static/five.png'
+import image from '../static/quran111.jpg'
 import aos from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
@@ -46,7 +46,8 @@ const AboutComp = () => {
                             . سواء كنت مبتدئًا أو تتطلع إلى إتقان تلاوتك، فأنا هنا لمساعدتك.
                         </p>}
                 </div>
-                <div data-aos={state ? 'fade-right' : 'fade-left'} className='image hidden lg:block relative  right-[-50px]'>
+                <div data-aos={state ? 'fade-right' : 'fade-left'}
+                    className={`image hidden lg:block relative ${state ? 'left-[0px]' : 'right-[0px]'} `}>
                     <img src={image} alt="" />
                 </div>
             </div>

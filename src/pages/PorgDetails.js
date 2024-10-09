@@ -2,20 +2,20 @@ import React, { useEffect, useState } from 'react'
 import TopNav from '../components/TopNav'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import { blogs, blogsArabic, medias, mediasarab } from '../utils/data'
-import { Link, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
+import { medias, mediasarab, progs, progsArabic } from '../utils/data'
+import { Link, useParams } from 'react-router-dom'
 import LinksOfDetails from '../components/LinksOfDetails'
 
-const BlogDetails = () => {
+const PorgDetails = () => {
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     const { id } = useParams()
-    const [blog, setBlog] = useState(null)
+    const [prog, setProg] = useState(null)
     useEffect(() => {
-        const specificBlog = !state ? blogs.find(i => i.id.toString() === id) :
-            blogsArabic.find(i => i.id.toString() === id)
-        setBlog(specificBlog)
+        const specificprog = !state ? progs.find(i => i.id.toString() === id) :
+            progsArabic.find(i => i.id.toString() === id)
+        setProg(specificprog)
         window.scrollTo(0, 0);
     }, [id])
     return (
@@ -23,8 +23,8 @@ const BlogDetails = () => {
             <TopNav />
             <Header />
             <div className=' container px-7  mx-auto pb-[70px]'>
-                <h2 className=' title '>{blog?.title}</h2>
-                <p className=' text-[20px]'>{blog?.desc}
+                <h2 className=' title '>{prog?.title}</h2>
+                <p className=' text-[20px]'>{prog?.desc}
                     Lorem, ipsum dolor sit amet consectetur
                     adipisicing elit. Odit libero minus vel ratione
                     repellat modi veritatis laboriosam dicta? Pariatur, aliquam.
@@ -38,27 +38,22 @@ const BlogDetails = () => {
                     Dolorum qui sit laborum corrupti, obcaecati voluptates eveniet quaerat, magni veritatis
                     fuga, saepe vero. Obcaecati totam,
                     exercitationem repellendus unde et eos dolores.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, porro.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, aut.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, iste?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, iste?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, iste?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, iste?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, iste?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, iste?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, iste?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, iste?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, iste?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, iste?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, iste?
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat, iste?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquid necessitatibus,
+                    quisquam ipsam facilis
+                    assumenda!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, deserunt!
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, quod?
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, quasi?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sint non
+                    praesentium enim totam, modi culpa necessitatibus perspiciatis illum adipisci
+                    pariatur aut. Dolorem officia, aliquid vitae aut
+                    totam sunt nisi.
                 </p>
                 <LinksOfDetails />
             </div>
             <Footer />
-
-        </div >
+        </div>
     )
 }
 
-export default BlogDetails
+export default PorgDetails

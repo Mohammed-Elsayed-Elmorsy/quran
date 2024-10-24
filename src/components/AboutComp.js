@@ -20,7 +20,7 @@ const AboutComp = () => {
                 {!state ? ' about us' : 'اقرا عنا'}
                 <FaCheck />
             </h2>
-            <div className="container items-center mx-auto px-5 flex justify-between">
+            <div className="container items-center mx-auto px-5 md:px-[80px] lg:px-[120px] flex justify-between">
                 <div className='w-full lg:w-[60%] text' data-aos={state ? 'fade-left' : 'fade-right'}>
                     <h2 className=' text-[25px] font-bold'>
                         {!state ? ' Assalamu Alaikum!' : 'السلام عليكم'}
@@ -51,7 +51,7 @@ const AboutComp = () => {
                     <img src={image} alt="" />
                 </div>
             </div>
-            <div className=' container items-center mx-auto px-5 mt-[20px] flex gap-4 justify-between"'>
+            <div className=' container items-center mx-auto px-5 md:px-[80px] lg:px-[120px] mt-[20px] flex gap-4 justify-between"'>
                 <button className='btn-pri'>{!state ? 'Learn More' : 'اقرا المزيد'}</button>
                 <Link to={'/programms'}>
                     <button className='btn-sec'>{!state ? 'Our programms' : ' برامجنا المختلفة'}</button></Link>

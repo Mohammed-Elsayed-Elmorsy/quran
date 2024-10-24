@@ -9,7 +9,7 @@ const BlogsComp = () => {
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     return (
         <div className=' blogs pb-[70px]'>
-            <div className=' mx-auto px-7 container'>
+            <div className=' mx-auto px-7 md:px-[80px] lg:px-[120px] container'>
                 <div>
                     <h2 className='title ' >
                         {state ? 'المدونات' : 'Our Blogs'}
@@ -26,7 +26,7 @@ const BlogsComp = () => {
                                         {item.title}
                                     </h2>
                                     <p className=''>
-                                        {item.desc}
+                                        {item.desc.substring(0, 190)}
                                     </p>
                                     <Link className=' flex' to={`/blogs/${item.id}`}>
                                         <button onClick={() => console.log('gfff')} className=' flex-1 btn-pri'>
@@ -45,7 +45,7 @@ const BlogsComp = () => {
                                         {item.title}
                                     </h2>
                                     <p className=''>
-                                        {item.desc}
+                                        {item.desc.substring(0, 180)}
                                     </p>
                                     <Link className=' flex' to={`/blogs/${item.id}`}>
                                         <button onClick={() => console.log('gfff')} className=' flex-1 btn-pri'>

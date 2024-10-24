@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { Link, useLocation, useParams } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import image from '../static/q2.png'
 import imagelang from '../static/united-states.png'
 import imagearab from '../static/flag.png'
 import { links, linksarabic } from '../utils/data'
-import { FaAngleLeft, FaAngleRight, FaBars } from 'react-icons/fa'
+import { FaAngleRight, FaBars } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
 const Header = () => {
     const lang = useSelector(state => state.lang.arabic)
@@ -12,11 +12,9 @@ const Header = () => {
     const dispatch = useDispatch()
     const location = useLocation();
     const [bgToHeader, setBgToHeader] = useState(false)
-    const [id, setId] = useState(null)
     const [hidetext, setHidetext] = useState(false)
     const [minmizelogo, setMinmizelogo] = useState(false)
     const [showMenu, setShowMenu] = useState(false)
-    const [showlang, setShowLang] = useState(false)
     const addBgToHeader = () => {
         if (window.scrollY > 100) {
             setBgToHeader(true)
@@ -35,19 +33,6 @@ const Header = () => {
             setMinmizelogo(false)
         }
     }
-    const setidFunction = (id) => {
-        setId(id)
-        console.log(id);
-
-    }
-    const changetoaranbic = () => {
-        setShowLang(false)
-        dispatch({ type: 'ARABIC' })
-    }
-    const changetoEnglish = () => {
-        setShowLang(false)
-        dispatch({ type: 'ENGLISH' })
-    }
     const showlangover = () => {
         dispatch({ type: 'SHOW' })
     }
@@ -60,10 +45,10 @@ const Header = () => {
 
                 <div className="logo w-[200px]">
                     <Link to={'/'} className='  flex gap-1 items-center'>
-                        <img src={image} alt="logo" className={`${minmizelogo ? 'md:w-[120px] ' : ' md:w-[120px]'} w-[90px]`} />
+                        <img src={image} alt="logo" className={`${minmizelogo ? '' : ''} w-[100px]`} />
                         <span className={` md:text-[22px] text-[18px]  
                         ${hidetext ? 'hide-text' : 'show-text'}  
-                        font-bold text-[20px] mt-[10px] ml-[5px]  relative`}>
+                        font-bold text-[20px] relative`}>
 
                             {!state ? ' Quran way' : 'طريق القرآن'}
                         </span>
@@ -74,7 +59,7 @@ const Header = () => {
                         {state ? linksarabic.map(link =>
                             <li key={link.id}>
                                 <Link
-                                    onClick={() => setidFunction(link.id)}
+
                                     className={` ${link.chilren ? 'dropdown ' : ''} 
                                     ${location.pathname === (link.to === '/' ? '/' : '/' + link.to) ? 'active' : ''} 
                                     relative  transition capitalize flex items-center  text-[20px]`}
@@ -97,7 +82,6 @@ const Header = () => {
                         ) : links.map(link =>
                             <li key={link.id}>
                                 <Link
-                                    onClick={() => setidFunction(link.id)}
                                     className={` ${link.chilren ? 'dropdown ' : ''} 
                                     ${location.pathname === (link.to === '/' ? '/' : '/' + link.to) ? 'active' : ''} 
                                     relative  transition capitalize flex items-center  text-[20px]`}
@@ -119,7 +103,8 @@ const Header = () => {
                             </li>
                         )}
                         <div className='languages'>
-                            <span className='p-2 block w-[50px] h-[50px] cursor-pointer hover:bg-slate-200' onClick={() => showlangover()}>
+                            <span className='p-2 block w-[50px] h-[50px] cursor-pointer hover:bg-slate-200'
+                                onClick={() => showlangover()}>
                                 {state ?
                                     <img src={imagearab} style={{ width: '50px' }} alt="" /> :
                                     <img src={imagelang} style={{ width: '50px' }} alt="" />}
@@ -129,7 +114,7 @@ const Header = () => {
                 </nav>
                 <div onClick={() => setShowMenu(!showMenu)} className='bars relative lg:hidden block'>
                     <FaBars />
-                    <nav className={` ${state ? 'nav-in-small-arabic' : 'nav-in-small'} ${showMenu ? 'show' : ''} lg:hidden right-[0]`}>
+                    <nav className={`nav-in-small ${showMenu ? 'show' : ''} lg:hidden right-[0]`}>
                         <ul className=' flex flex-col items-center'>
                             {state ? linksarabic.map(link => <li key={link.id}>
                                 <Link className={``} to={link.to == '/' ? '/' : '/' + link.to}>
@@ -144,7 +129,8 @@ const Header = () => {
                     </nav>
                 </div>
                 <div className={`lg:hidden block ${state ? '' : ''}`}>
-                    <span className='p-2 block w-[50px] h-[50px] cursor-pointer hover:bg-slate-200' onClick={() => showlangover()}>
+                    <span className='p-2 block w-[50px] h-[50px] cursor-pointer hover:bg-slate-200'
+                        onClick={() => showlangover()}>
                         {state ?
                             <img src={imagearab} style={{ width: '50px' }} alt="" /> :
                             <img src={imagelang} style={{ width: '50px' }} alt="" />}

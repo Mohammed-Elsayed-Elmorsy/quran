@@ -15,7 +15,7 @@ const PricingComp = () => {
 
                 <FaCheck />
             </h2>
-            <div className=' container mx-auto px-7 '>
+            <div className=' container mx-auto px-7 md:px-[80px] lg:px-[120px] '>
                 <div className=' content grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  grid-cols-1 gap-6'>
                     {!state ? pricing.map(item =>
                         <div data-aos="zoom-in" key={item.id} className='rounded-md relative p-2 flex flex-col justify-between gap-4'>

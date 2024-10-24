@@ -20,7 +20,7 @@ const FreeTrial = () => {
     const lang = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : state
     return (
         <div
-            className={`free-trail fixed ${!showFreeTrial ? 'hide' : ''} fixed flex gap-3 justify-center items-center bottom-0 left-0 right-0 bg-slate-400`}>
+            className={`free-trail fixed ${!showFreeTrial ? 'hide' : ''}  fixed flex gap-3 justify-center items-center bottom-0 left-0 right-0 bg-slate-400`}>
             {lang ? <button className=' text-[22px] font-bold  hover:text-black hover:bg-white transition rounded-md p-3 cursor-pointer bg-blue-500 text-white'>
                 ابدا التجربة المجانية
             </button> : <button className=' capitalize text-[22px] font-bold rounded-md  hover:text-black hover:bg-white transition p-3 cursor-pointer bg-blue-500 text-white'>

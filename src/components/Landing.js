@@ -24,7 +24,7 @@ const Landing = () => {
     }
     changebgoflanding()
     return (
-        <div className={` md:h-[100vh] z-50 landing ${change ? 'bg-change' : ''} flex justify-center items-center`}>
+        <div className={`  z-50 landing ${change ? 'bg-change' : ''} flex justify-center items-center`}>
 
             {!state && <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
@@ -41,7 +41,7 @@ const Landing = () => {
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial flex-1">
-                            <h2 className=' md:text-[35px]'> Islamic Studies</h2>
+                            <h2 className=' md:text-[35px] text-[30px]'> Islamic Studies</h2>
                             <p className=' md:text-[25px]'>"Broaden your knowledge of Islamic teachings and principles
                                 through our comprehensive Islamic Studies program. Learn about the Quran,
                                 Hadith, Fiqh, and other essential aspects of Islam in a
@@ -57,7 +57,7 @@ const Landing = () => {
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial  flex-1">
-                            <h2 className=' md:text-[35px] '> Tajweed Rules Mastery</h2>
+                            <h2 className=' md:text-[35px] text-[30px]'> Tajweed Rules Mastery</h2>
                             <p>"Learn the intricate rules of Tajweed in a simplified manner. Our
                                 Tajweed courses are designed for all levels, whether you're a beginner or
                                 looking to refine your skills. We focus on clarity and
@@ -72,7 +72,7 @@ const Landing = () => {
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial  flex-1">
-                            <h2 className=' md:text-[35px]'>Quran Recitation Classes</h2>
+                            <h2 className=' md:text-[35px] text-[30px]'>Quran Recitation Classes</h2>
                             <p>"Master the art of Quran recitation with our expert instructors.
                                 We provide personalized lessons to help you perfect your pronunciation and Tajweed rules,
                                 ensuring you recite the Quran accurately and confidently."</p>
@@ -101,7 +101,7 @@ const Landing = () => {
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial flex-1">
-                            <h2 className=' md:text-[35px]'> الدراسات الاسلامية</h2>
+                            <h2 className=' md:text-[35px] text-[30px]'> الدراسات الاسلامية</h2>
                             <p className=' md:text-[25px]'>"توسيع معرفتك بالتعاليم والمبادئ الإسلامية
                                 من خلال برنامج الدراسات الإسلامية الشامل لدينا. تعرف على القرآن,
                                 الحديث والفقه وغيرها من الجوانب الأساسية للإسلام في أ
@@ -117,7 +117,7 @@ const Landing = () => {
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial  flex-1">
-                            <h2 className=' md:text-[35px] '> اجادة قواعد التجويد</h2>
+                            <h2 className=' md:text-[35px] text-[30px]'> اجادة قواعد التجويد</h2>
                             <p>"تعلم قواعد التجويد المعقدة بطريقة مبسطة. ملكنا
                                 دورات التجويد مصممة لجميع المستويات، سواء كنت مبتدئًا أو
                                 تتطلع إلى صقل مهاراتك. نحن نركز على الوضوح و
@@ -132,7 +132,7 @@ const Landing = () => {
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial  flex-1">
-                            <h2 className=' md:text-[35px]'>دروس التلاوة</h2>
+                            <h2 className=' md:text-[35px] text-[30px]'>دروس التلاوة</h2>
                             <p>"أتقن فن تلاوة القرآن الكريم مع مدربينا الخبراء.
                                 نحن نقدم دروسًا مخصصة لمساعدتك على إتقان النطق وقواعد التجويد،
                                 ضمان قراءة القرآن بدقة وثقة."</p>

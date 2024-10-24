@@ -31,7 +31,7 @@ function App() {
   const state = useSelector(state => state.lang.arabic)
   const lang = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : state
   return (
-    <div className={lang ? 'arabic' : 'en'}>
+    <div className={`${lang ? 'arabic' : 'en'}`}>
       <LangOverlay />
       <FreeTrial />
       <HashRouter>

@@ -10,18 +10,18 @@ const LangOverlay = () => {
 
     }
     const changetoEnglish = () => {
+        localStorage.setItem('lang', 'false')
         window.location = '/'
         setTimeout(() => {
             dispatch({ type: 'ENGLISH' })
         }, 100);
-        localStorage.setItem('lang', 'false')
     }
     const changetoAranbic = () => {
+        localStorage.setItem('lang', 'true')
         window.location = '/'
         setTimeout(() => {
             dispatch({ type: 'ARABIC' })
-        }, 500);
-        localStorage.setItem('lang', 'true')
+        }, 100);
     }
     return (
         <div
@@ -33,7 +33,7 @@ const LangOverlay = () => {
             <div
                 onClick={(e) => e.stopPropagation()}
                 className='p-3 flex flex-col justify-between inner-overlay 
-                           w-[350px] h-[170px] bg-white shadow-lg  rounded-md' >
+                           w-[320px] h-[170px] bg-white shadow-lg  rounded-md' >
                 <h2 className=' text-center font-bold capitalize text-[25px] my-2'>
                     change the language
                 </h2>

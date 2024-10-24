@@ -9,7 +9,7 @@ const ContactComp = () => {
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     return (
         <div className='Contact pb-[70px]'>
-            <div className=' container mx-auto px-7'>
+            <div className=' container mx-auto px-7 md:px-[80px] lg:px-[120px]'>
                 <h2 className='title'>
 
                     {state ? ' تواصل معنا' : 'contact us '}

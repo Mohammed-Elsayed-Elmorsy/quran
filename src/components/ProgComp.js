@@ -14,7 +14,7 @@ const ProgComp = () => {
                 {state ? ' برامجنا المختلفة' : 'our programms'}
                 <FaCheck />
             </h2>
-            <div className=' container mx-auto px-7'>
+            <div className=' container mx-auto px-7 md:px-[80px] lg:px-[120px]'>
                 {!state ? progs.map(item =>
                     <div className='item justify-between rounded-md' key={item.id} data-aos={item.aos}>
                         <img src={item.image} alt="" className={` h-[250px] ${item.id === 4 ? 'mb-[20px] pb-5' : ''}  object-cover`} />

@@ -7,7 +7,7 @@ const LinksOfDetails = () => {
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     return (
-        <div className=' flex gap-2 flex-wrap justify-center pb-2 mt-[50px] border-b'>
+        <div className=' flex gap-2 flex-wrap justify-center pb-2 mt-[50px] border-b border-gray-300'>
             {state ? mediasarab.map(
                 i => <Link
                     target='_blank '

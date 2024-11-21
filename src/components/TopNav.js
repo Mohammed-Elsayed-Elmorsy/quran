@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaEnvelope, FaFacebook, FaPhone, FaWhatsapp } from 'react-icons/fa'
+import { FaEnvelope, FaEnvelopeSquare, FaFacebook, FaPhone, FaWhatsapp } from 'react-icons/fa'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
@@ -10,19 +10,19 @@ const TopNav = () => {
     <div className='p-2 bg-blue-500 upper-header'>
       <div className="container mx-auto px-5  py-2 flex justify-between items-center">
         <Link to={''}>
-          <span className=' rounded-md capitalize bg-orange-400 block p-3 text-slate-100'>
-            {state ? 'ابدا معنا الان' : 'start with us now'}
+          <span className=' hover:bg-white hover:text-black transition-all  bg-slate-500 rounded shadow-md block p-3 text-[20px] text-slate-100'>
+            {state ? 'ابدا معنا الان' : 'Start with us now'}
           </span>
         </Link>
         <div className=' flex gap-3 items-center text-[25px] upper-span'>
-          <a href="https://wa.me/201212659525" target=' _blank'>
+          <a className=' hover:bg-white hover:text-black p-[4px] transition-all rounded' href="https://wa.me/201212659525" target=' _blank'>
             <FaWhatsapp />
           </a>
-          <a href="https://www.facebook.com/yourprofile" target=' _blank'>
+          <a className=' hover:bg-white hover:text-black p-[4px] transition-all rounded' href="https://www.facebook.com/yourprofile" target=' _blank'>
             <FaFacebook />
           </a>
-          <a href="mailto:sallealamohammed@gmail.com" target=' _blank'>
-            <FaEnvelope />
+          <a className=' hover:bg-white hover:text-black p-[4px] transition-all rounded' href="mailto:sallealamohammed@gmail.com" target=' _blank'>
+            <FaEnvelopeSquare />
           </a>
         </div>
       </div>

@@ -16,17 +16,17 @@ const PricingComp = () => {
                 <FaCheck />
             </h2>
             <div className=' container mx-auto px-7 md:px-[80px] lg:px-[120px] '>
-                <div className=' content grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  grid-cols-1 gap-6'>
+                <div className=' content grid md:grid-cols-2 xl:grid-cols-3  grid-cols-1 gap-6'>
                     {!state ? pricing.map(item =>
                         <div data-aos="zoom-in" key={item.id} className='rounded-md relative p-2 flex flex-col justify-between gap-4'>
-                            <img src={item.image} alt="" className=' object-cover h-[180px]' />
-                            <h2 className=' font-bold capitalize text-[22px]'>{item.title}</h2>
+                            <img src={item.image} alt="" className=' object-cover h-[190px]' />
+                            <h2 className=' mt-[-10px] font-bold capitalize text-[22px]'>{item.title}</h2>
                             <p className='text-[19px] mt-[-10px]'>{item.desc}</p>
                             <div>
-                                <h3 className=' text-[21px] capitalize'>
+                                <h3 className='mt-[-8px] text-[22px] capitalize font-bold'>
                                     {state ? 'المميزات ' : 'features '}
                                 </h3>
-                                <ul className='list-[square] p-5 h-[120px]'>
+                                <ul className='list-[square] px-5 h-[100px]'>
                                     {item.features.map(feat => (<li className=' text-[17px]' key={feat}>{feat}</li>))}
                                 </ul>
                             </div>
@@ -35,7 +35,7 @@ const PricingComp = () => {
                             </span>
                             <div className=' flex gap-2 items-center'>
                                 <Link to={'/contact'} className=' flex-1'>
-                                    <button className='w-full btn-pri'>contact us</button>
+                                    <button className='w-full btn-pri'>contact </button>
                                 </Link>
                                 <button className=' flex-1 btn-sec'>select</button>
                             </div>
@@ -43,15 +43,15 @@ const PricingComp = () => {
 
                             </div>
                         </div>) : pricingArabic.map(item =>
-                            <div data-aos="zoom-in" key={item.id} className='rounded-md relative p-2 flex flex-col justify-between gap-4'>
-                                <img src={item.image} alt="" className=' object-cover h-[180px]' />
-                                <h2 className=' font-bold capitalize text-[22px]'>{item.title}</h2>
-                                <p className='text-[20px] mt-[-10px]'>{item.desc}</p>
+                            <div data-aos="zoom-in" key={item.id} className='rounded-md relative p-2 flex flex-col justify-between gap-3'>
+                                <img src={item.image} alt="" className=' object-cover h-[190px]' />
+                                <h2 className=' font-bold capitalize text-[22px] mt-[-15px]'>{item.title}</h2>
+                                <p className='text-[20px]'>{item.desc}</p>
                                 <div>
-                                    <h3 className=' text-[22px] capitalize'>
+                                    <h3 className=' text-[22px] capitalize font-bold'>
                                         المميزات
                                     </h3>
-                                    <ul className='list-[square] p-5 h-[120px]'>
+                                    <ul className='list-[square] px-5 h-[110px]'>
                                         {item.features.map(feat => (<li className=' text-[19px]' key={feat}>{feat}</li>))}
                                     </ul>
                                 </div>

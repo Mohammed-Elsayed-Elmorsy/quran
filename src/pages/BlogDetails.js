@@ -6,6 +6,7 @@ import { blogs, blogsArabic, medias, mediasarab } from '../utils/data'
 import { Link, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import LinksOfDetails from '../components/LinksOfDetails'
+import { FaCopy, FaFacebook, FaShare } from 'react-icons/fa'
 
 const BlogDetails = () => {
     const lang = useSelector(state => state.lang.arabic)
@@ -23,12 +24,27 @@ const BlogDetails = () => {
             <TopNav />
             <Header />
             <div className=' details-page-content'>
-                <div className=' container px-7  mx-auto pb-[70px]'>
+                <div className=' container px-7 md:px-[120px] mx-auto pb-[70px]'>
                     <h2 className=' title mb-[-70px]'>
                         {blog?.title}
                     </h2>
-                    <div className=' flex justify-between items-center'>
+                    <div className=' flex justify-between flex-col items-center'>
+                        {/* <div className=' flex justify-between items-center w-1/2 mx-auto mb-[-100px] py-[30px]'>
+                            <span className=' flex items-center gap-3'>
+                                <img src={blog?.image} className=' w-[50px] h-[50px] rounded-full' alt="" />
+                                <div>
+                                    <h3>name</h3>
+                                    <p>date</p>
+                                </div>
+                            </span>
+                            <span className=' flex items-center gap-3'>
+                                <FaShare />
+                                <FaFacebook />
+                                <FaCopy />
+                            </span>
+                        </div> */}
                         <img className='' src={blog?.image} alt="" />
+
                         <div className=' flex items-start'>
                             <p className=' text-[20px] w-full'>
                                 {blog?.desc}{blog?.desc}{blog?.desc}{blog?.desc}

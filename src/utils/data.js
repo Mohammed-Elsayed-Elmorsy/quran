@@ -618,7 +618,7 @@ export const pricing = [
         image: image1,
         title: 'Basic Package',
         icon: <FaCheckCircle className=' text-green-500 text-[50px] mt-[-20px]' />,
-        desc: 'Perfect for beginners. Introduction to Quran reading with proper pronunciation.',
+        desc: 'Perfect for beginners. Quran reading with proper pronunciation.',
         features: [
             '2 sessions per week',
             '30-minute sessions',
@@ -634,7 +634,7 @@ export const pricing = [
         features: [
             '3 sessions per week',
             '45-minute sessions',
-            'Detailed Tajweed rules and practice',
+            ' Tajweed rules and practice',
             'Quran memorization tips'
         ],
         price: '100$/month',

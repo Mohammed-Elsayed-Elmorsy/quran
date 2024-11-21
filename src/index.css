@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400..700&display=swap');
 :root{
   --main-color:#3D4E5E;
   --second-color:#adb6c2;
@@ -31,6 +32,7 @@
 .arabic{
   direction: rtl;
   font-family: 'Amiri', sans-serif;
+  font-family: "Noto Naskh Arabic", serif;
 }
 
 header nav ul li a.active{
@@ -39,9 +41,8 @@ header nav ul li a.active{
 }
 
 body{
+  font-family: 'open sans','Inter', sans-serif;
   font-family: 'Ubuntu', sans-serif;
-  font-family: 'Inter', sans-serif;
-  /* font-family: "Edu AU VIC WA NT Guides", 'cursive';; */
   overflow-x: hidden !important;
  
 }
@@ -207,7 +208,7 @@ body{
 header{
     user-select: none;
     position: sticky;
-    top: 0;
+    top: -1px;
     z-index: 1000;
     left: 0;
     width: 100%;
@@ -310,8 +311,8 @@ header .logo img{
   padding-left: 5px !important;
 }
 header ul li a{
-  text-transform: capitalize;
-    padding:14px;
+    text-transform: capitalize;
+    padding:10px 7px;
     position: relative;
     color: var(--main-color) !important;
     font-weight: bold;
@@ -924,7 +925,7 @@ div.overlay{
   background-color: var(--main-color);
   width: 100%;
   animation: animate-free-trail 0.3s 6s  1 forwards ease;
-  -webkit-animation: animate-free-trail 0.3s 6s  1 forwards ease;
+  -webkit-animation: animate-free-trail 0.3s 8s  1 forwards ease;
 }
 @keyframes animate-free-trail {
   from{

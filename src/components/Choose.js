@@ -15,7 +15,7 @@ const Choose = () => {
         })
     }, [])
     return (
-        <div className='choose bg-slate-200 pb-[70px]' >
+        <div className='choose bg-tertiary pb-[70px]' >
             <h2 className='title ' >
                 {!state ? 'why choose us' : 'لماذا تختارنا'}
                 <FaCheck />

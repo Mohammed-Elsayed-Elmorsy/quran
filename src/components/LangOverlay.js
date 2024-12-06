@@ -33,8 +33,8 @@ const LangOverlay = () => {
             <div
                 onClick={(e) => e.stopPropagation()}
                 className='p-3 flex flex-col justify-between inner-overlay 
-                           w-[320px] h-[170px] bg-white shadow-lg  rounded-md' >
-                <h2 className=' text-center font-bold capitalize text-[25px] my-2'>
+                           w-[320px] h-[150px] bg-white shadow-lg  rounded-md' >
+                <h2 className=' text-primary text-center font-bold capitalize text-[25px] my-2'>
                     change the language
                 </h2>
                 <div className='flex gap-3 items-center'>

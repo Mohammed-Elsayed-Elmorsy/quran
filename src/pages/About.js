@@ -29,7 +29,7 @@ const About = () => {
         <div>
             <TopNav />
             <Header />
-            <div style={{ background: '#f5f5f5' }}>
+            <div className=' bg-tertiary'>
                 <div className='py-[30px] container mx-auto px-5 md:px-[80px] lg:px-[120px]'>
                     {state &&
                         <div className=' flex flex-col gap-5 text-[20px]'>

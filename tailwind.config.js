@@ -8,6 +8,8 @@ module.exports = {
       colors: {
         primary: '#143d59',
         secondary: '#f4b42a',
+        tertiary: '#f4b42a48',
+        quaternary: '#143d592d',
       }
     },
     plugins: [],

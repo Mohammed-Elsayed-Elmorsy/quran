@@ -421,7 +421,7 @@ export const medias = [
     {
         id: 1, color: '#1e8af0', back: '#1e8af03a',
         title: 'Facebook',
-        content: ' Facebook profile',
+        content: ' Mohammed Elmorsy',
         to: 'https://www.facebook.com/profile.php?id=100079764606912',
         icon: <FaFacebook />
     },
@@ -449,7 +449,7 @@ export const medias = [
     {
         id: 5, color: 'black', back: '#0202022a',
         title: 'Email',
-        content: 'sallealamohammed@gmail.com',
+        content: 'sallealamohammed@gmail',
         to: 'mailto:sallealamohammed@gmail.com',
         icon: <FaEnvelope />
     },
@@ -477,7 +477,7 @@ export const mediasarab = [
     {
         id: 1, color: '#1e8af0', back: '#1e8af03a',
         title: 'الفيسبوك',
-        content: ' Facebook profile',
+        content: ' Mohammed-Elmorsy',
         to: 'https://www.facebook.com/profile.php?id=100079764606912',
         icon: <FaFacebook />
     },
@@ -505,7 +505,7 @@ export const mediasarab = [
     {
         id: 5, color: 'black', back: '#0202022a',
         title: 'الجميل',
-        content: 'sallealamohammed@gmail.com',
+        content: 'sallealamohammed@gmail',
         to: 'mailto:sallealamohammed@gmail.com',
         icon: <FaEnvelope />
     },

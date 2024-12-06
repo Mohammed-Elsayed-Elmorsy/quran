@@ -7,7 +7,7 @@ const Reviews = () => {
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     return (
-        <div className='Reviews bg-slate-200' style={{ background: '#eee' }}>
+        <div className='Reviews bg-tertiary'>
             <div className=' container mx-auto px-3 md:px-[70px] lg:px-[120px] pb-[70px]'>
                 <h2 className='title'>
 

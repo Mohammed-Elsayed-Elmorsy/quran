@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home'
 import About from './pages/About'
@@ -33,12 +33,17 @@ function App() {
   const lang = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : state
   return (
     <div className={`${lang ? 'arabic' : 'en'}`}>
-      <span className=' start-chat fixed text-[30px] cursor-pointer z-50 bottom-2 right-2'>
-        <FaWhatsapp />
-      </span>
-      <LangOverlay />
-      <FreeTrial />
       <HashRouter>
+        <Link to={'https://wa.me/201212659525'} target='_blank'
+          className=' start-chat bg-primary block rounded-md hover:bg-secondary hover:text-white
+      py-3 px-5 text-secondary fixed text-[30px] cursor-pointer z-50 bottom-10 right-10'>
+          <FaWhatsapp />
+          <span className='start-chat-hover capitalize'>
+            {lang ? 'تواصل معنا الان ' : 'start chat now'}
+          </span>
+        </Link>
+        <LangOverlay />
+        {/* <FreeTrial /> */}
         <Toaster />
         <Routes>
           <Route path='/' element={<Home />}></Route>

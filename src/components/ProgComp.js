@@ -8,7 +8,7 @@ const ProgComp = () => {
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     return (
-        <div className='choose Programms pb-[70px]'>
+        <div className='choose bg-tertiary Programms pb-[70px]'>
             <h2 className='title ' >
 
                 {state ? ' برامجنا المختلفة' : 'our programms'}

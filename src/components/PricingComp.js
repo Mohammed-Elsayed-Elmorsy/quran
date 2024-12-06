@@ -9,7 +9,7 @@ const PricingComp = () => {
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     return (
-        <div className=' pricing pb-[70px] bg-slate-200' >
+        <div className=' pricing pb-[70px] bg-tertiary ' >
             <h2 className=' title'>
 
                 {state ? 'اختار باقتك ' : 'pricing'}

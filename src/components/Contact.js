@@ -34,7 +34,7 @@ const ContactComp = () => {
     };
     console.log(phoneNumber);
     return (
-        <div className='Contact pb-[70px]'>
+        <div className='Contact pb-[70px] bg-tertiary'>
 
             <div className=' container mx-auto px-3 md:px-[70px] lg:px-[120px]'>
                 <h2 className='title'>
@@ -42,7 +42,7 @@ const ContactComp = () => {
                     <FaCheck />
                 </h2>
                 <div class="form-container">
-                    <form className='' onSubmit={handleSubmit}>
+                    <form className=' ' onSubmit={handleSubmit}>
                         <div class="form-group">
                             <label for="firstName">First Name</label>
                             <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required />
@@ -115,7 +115,7 @@ const ContactComp = () => {
                     </form>
                 </div>
                 <div>
-                    <h2 className=' text-[25px] text-center capitalize pb-5'> {state ? 'معلومات الاتصال' : 'contact information'}</h2>
+                    <h2 className='title text-[25px] text-center capitalize pb-5'> {state ? 'معلومات الاتصال' : 'contact information'}</h2>
                     <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:p-0 p-4'>
                         {medias.map(item => {
                             return (
@@ -128,7 +128,7 @@ const ContactComp = () => {
                                             className='text-[50px]'>
                                             {item.icon}
                                         </span>
-                                        <h3 style={{ color: 'var(--main-color)' }} className=' font-bold'>
+                                        <h3 style={{ color: 'var(--second-color)' }} className=' font-bold'>
                                             {item.title}
                                         </h3>
                                         {item.content}

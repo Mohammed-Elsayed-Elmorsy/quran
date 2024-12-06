@@ -13,7 +13,7 @@ const Blogs = () => {
         <div>
             <TopNav />
             <Header />
-            <BlogsCOMP />
+            <BlogsCOMP slider={false} />
             <Footer />
 
         </div>

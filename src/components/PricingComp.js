@@ -1,82 +1,54 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { Link, useParams } from 'react-router-dom'
 import { pricing, pricingArabic } from '../utils/data'
-import { FaCheck } from 'react-icons/fa'
+import { FaCheck, FaCheckCircle } from 'react-icons/fa'
 import { useSelector } from 'react-redux'
-
+import LinksOfDetails from './LinksOfDetails'
 const PricingComp = () => {
+    const [currentid, setCurrentid] = useState(1)
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     return (
-        <div className=' pricing pb-[70px]'>
+        <div className=' pricing pb-[70px] bg-slate-200' >
             <h2 className=' title'>
 
-                {state ? 'اختار باقتك  :' : 'choose your plan '}
+                {state ? 'اختار باقتك ' : 'pricing'}
 
                 <FaCheck />
             </h2>
-            <div className=' container mx-auto px-7 md:px-[80px] lg:px-[120px] '>
-                <div className=' content grid md:grid-cols-2 xl:grid-cols-3  grid-cols-1 gap-6'>
-                    {!state ? pricing.map(item =>
-                        <div data-aos="zoom-in" key={item.id} className='rounded-md relative p-2 flex flex-col justify-between gap-4'>
-                            <img src={item.image} alt="" className=' object-cover h-[190px]' />
-                            <h2 className=' mt-[-10px] font-bold capitalize text-[22px]'>{item.title}</h2>
-                            <p className='text-[19px] mt-[-10px]'>{item.desc}</p>
-                            <div>
-                                <h3 className='mt-[-8px] text-[22px] capitalize font-bold'>
-                                    {state ? 'المميزات ' : 'features '}
-                                </h3>
-                                <ul className='list-[square] px-5 h-[100px]'>
-                                    {item.features.map(feat => (<li className=' text-[17px]' key={feat}>{feat}</li>))}
-                                </ul>
-                            </div>
-                            <span className=' font-bold capitalize text-[25px]'>
-                                {item.price}
-                            </span>
-                            <div className=' flex gap-2 items-center'>
-                                <Link to={'/contact'} className=' flex-1'>
-                                    <button className='w-full btn-pri'>contact </button>
-                                </Link>
-                                <button className=' flex-1 btn-sec'>select</button>
-                            </div>
-                            <div className=' after absolute top-0 left-0 h-[160px] w-[100%]  bg-slate-400'>
+            <div className=' container mx-auto px-3 md:px-[70px] lg:px-[120px] '>
+                <div>
+                    <div className='flex justify-between gap-5 mb-6'>
+                        {!state && pricing.map(item =>
+                            <Link id={item.id} onClick={(e) => setCurrentid((Number(e.target.id))
+                            )}
+                                className={` p-2 ${item.id === currentid ? 'bg-secondary text-white' : ' bg-white text-primary'}
+                            border capitalize font-bold 
+                             flex-1 text-center text-[20px]
+                             transition-all duration-300 ease-in-out`}
+                            >
+                                {item.plan}
+                            </Link>
+                        )}
+                    </div>
+                    <h2 className=' text-primary w-fit px-2 p-1 mx-auto font-bold md:text-[25px] lg:text-[30px] text-[22px] mb-6' >
+                        <span>{pricing[currentid - 1].plan}</span>
+                    </h2>
+                    <div className='  grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  grid-cols-1 gap-4'>
+                        {pricing[currentid - 1].classes.map(item =>
+                            <div key={item.id}
+                                className={` ${currentid === 1 ? 'pricing-1' : currentid === 2 ? 'pricing-2' : 'pricing-3'}  gap-2 flex-col flex gap border  bg-white p-2`}>
+                                <h3 className=' font-bold capitalize text-[20px] p-3 py-3 bg-primary text-white'>{item.numberperweek}</h3>
+                                <p className='text-[18px] bg-secondary text-white p-3'>{item.cost}</p>
 
-                            </div>
-                        </div>) : pricingArabic.map(item =>
-                            <div data-aos="zoom-in" key={item.id} className='rounded-md relative p-2 flex flex-col justify-between gap-3'>
-                                <img src={item.image} alt="" className=' object-cover h-[190px]' />
-                                <h2 className=' font-bold capitalize text-[22px] mt-[-15px]'>{item.title}</h2>
-                                <p className='text-[20px]'>{item.desc}</p>
-                                <div>
-                                    <h3 className=' text-[22px] capitalize font-bold'>
-                                        المميزات
-                                    </h3>
-                                    <ul className='list-[square] px-5 h-[110px]'>
-                                        {item.features.map(feat => (<li className=' text-[19px]' key={feat}>{feat}</li>))}
-                                    </ul>
-                                </div>
-                                <span className=' font-bold capitalize text-[25px]'>
-                                    {item.price}
-                                </span>
-                                <div className=' flex gap-2 items-center'>
-                                    <Link to={'/contact'} className=' flex-1'>
-                                        <button className='w-full btn-pri'>
-
-                                            {state ? ' تواصل معنا  ' : 'contact us'}
-                                        </button>
-                                    </Link>
-                                    <button className=' flex-1 btn-sec'>
-
-                                        {state ? 'اختار الباقة ' : 'select'}
-                                    </button>
-                                </div>
-                                <div className=' after absolute top-0 left-0 h-[160px] w-[100%] bg-slate-400'>
-
-                                </div>
+                                <span style={{ backgroundColor: '#eee' }} className='capitalize block p-3 text-[18px]'>{item.numberpermonth}</span>
+                                <p style={{ backgroundColor: '#eee' }} className='capitalize p-3 text-[18px]'>{item.costforclass}</p>
                             </div>)}
+                    </div>
                 </div>
             </div>
-        </div>
+            <LinksOfDetails />
+        </div >
     )
 }
 

@@ -1,6 +1,4 @@
-import image from '../static/quran1.jpg'
-import image2 from '../static/new5.jpg'
-import image3 from '../static/read12.avif'
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -32,7 +30,7 @@ const Landing = () => {
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
-                autoplay={{ delay: 5000 }}
+                autoplay={{ delay: 7000 }}
                 loop={true}
                 className='mySwiper' style={{ zIndex: '1000' }}
             >
@@ -42,10 +40,9 @@ const Landing = () => {
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial flex-1">
                             <h2 className=' md:text-[35px] text-[30px]'> Islamic Studies</h2>
-                            <p className=' md:text-[25px]'>"Broaden your knowledge of Islamic teachings and principles
-                                through our comprehensive Islamic Studies program. Learn about the Quran,
-                                Hadith, Fiqh, and other essential aspects of Islam in a
-                                way that connects deeply with your daily life."</p>
+                            <p className=' md:text-[25px]'>Study the Islamic rulings related to daily practices and the
+                                essentials that every Muslim must know,
+                                with enjoyable, easy, and engaging lessons suitable for both children and adults</p>
                             <button className='mt-3 btn-pri'>learn more</button>
 
                         </div>
@@ -57,25 +54,23 @@ const Landing = () => {
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial  flex-1">
-                            <h2 className=' md:text-[35px] text-[30px]'> Tajweed Rules Mastery</h2>
-                            <p>"Learn the intricate rules of Tajweed in a simplified manner. Our
-                                Tajweed courses are designed for all levels, whether you're a beginner or
-                                looking to refine your skills. We focus on clarity and
-                                to make the learning process smooth."</p>
+                            <h2 className=' md:text-[35px] text-[30px]'>Mastering Tajweed and Qur'an Recitation</h2>
+                            <p>Learn to read the Qur'an with proper Tajweed in a simple and effective way,
+                                with specialized teachers. Our recitation sessions help you
+                                practice correct pronunciation and apply the rules of Tajweed
+                            </p>
                             <button className='mt-3 btn-pri'>learn more</button>
                         </div>
-                        {/* <div className=' hidden lg:block flex-1' id='image'>
-                            <img src={image2} alt="" />
-                        </div> */}
                     </div>
                 </SwiperSlide>
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial  flex-1">
-                            <h2 className=' md:text-[35px] text-[30px]'>Quran Recitation Classes</h2>
-                            <p>"Master the art of Quran recitation with our expert instructors.
-                                We provide personalized lessons to help you perfect your pronunciation and Tajweed rules,
-                                ensuring you recite the Quran accurately and confidently."</p>
+                            <h2 className=' md:text-[35px] text-[30px]'>Arabic Language</h2>
+                            <p>At Quran Way Academy, we offer you the opportunity to learn and
+                                practice the Arabic language,
+                                including reading, writing, listening, and speaking
+                            </p>
                             <button className='mt-3 btn-pri'>learn more</button>
 
                         </div>
@@ -92,56 +87,41 @@ const Landing = () => {
                 slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
-                autoplay={{ delay: 5000 }}
+                autoplay={{ delay: 7000 }}
                 loop={true}
                 className='mySwiper' style={{ zIndex: '1000' }}
             >
-
 
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial flex-1">
                             <h2 className=' md:text-[35px] text-[30px]'> الدراسات الاسلامية</h2>
-                            <p className=' md:text-[25px]'>"توسيع معرفتك بالتعاليم والمبادئ الإسلامية
-                                من خلال برنامج الدراسات الإسلامية الشامل لدينا. تعرف على القرآن,
-                                الحديث والفقه وغيرها من الجوانب الأساسية للإسلام في أ
-                                الطريقة التي ترتبط بعمق مع حياتك اليومية."</p>
+                            <p className=' md:text-[25px]'>دراسة الأحكام الشرعية المتعلقة بالممارسات اليومية
+                                وما يجب على كل مسلم معرفته، من خلال دروس ممتعة وسهلة مناسبة للصغار والكبار</p>
                             <button className='mt-3 btn-pri'>اقرا المزيد</button>
 
                         </div>
-                        {/* <div className=' hidden lg:block flex-1' id='image'>
-                            <img src={image} alt="" />
-                        </div> */}
                     </div>
                 </SwiperSlide>
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial  flex-1">
-                            <h2 className=' md:text-[35px] text-[30px]'> اجادة قواعد التجويد</h2>
-                            <p>"تعلم قواعد التجويد المعقدة بطريقة مبسطة. ملكنا
-                                دورات التجويد مصممة لجميع المستويات، سواء كنت مبتدئًا أو
-                                تتطلع إلى صقل مهاراتك. نحن نركز على الوضوح و
-                                لجعل عملية التعلم سلسة."</p>
+                            <h2 className=' md:text-[35px] text-[30px]'> اتقان التجويد وتلاوة القرآن  </h2>
+                            <p>تعلم قراءة القرآن الكريم بتجويد صحيح بطريقة بسيطة وفعّالة
+                                ، مع معلمين متخصصين. جلسات التلاوة
+                                تساعدك على ممارسة النطق السليم وتطبيق قواعد التجويد</p>
                             <button className='mt-3 btn-pri'>اقرا المزيد</button>
                         </div>
-                        {/* <div className=' hidden lg:block flex-1' id='image'>
-                            <img src={image2} alt="" />
-                        </div> */}
                     </div>
                 </SwiperSlide>
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial  flex-1">
-                            <h2 className=' md:text-[35px] text-[30px]'>دروس التلاوة</h2>
-                            <p>"أتقن فن تلاوة القرآن الكريم مع مدربينا الخبراء.
-                                نحن نقدم دروسًا مخصصة لمساعدتك على إتقان النطق وقواعد التجويد،
-                                ضمان قراءة القرآن بدقة وثقة."</p>
+                            <h2 className=' md:text-[35px] text-[30px]'>اللغة العربية</h2>
+                            <p>"في أكاديمية قرآن واي، نوفر لك الفرصة لتعلم وممارسة اللغة العربية، بما في ذلك القراءة، الكتابة، الاستماع، والمحادثة."</p>
                             <button className='mt-3 btn-pri'>اقرا المزيد</button>
 
                         </div>
-                        {/* <div className=' hidden lg:block flex-1' id='image'>
-                            <img src={image3} alt="" />
-                        </div> */}
                     </div>
                 </SwiperSlide>
             </Swiper>}

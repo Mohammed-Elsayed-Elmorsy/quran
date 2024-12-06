@@ -9,7 +9,6 @@ import Reviews from '../components/Reviews'
 import Contact from '../components/Contact'
 import Blogs from '../components/Blogs'
 import TopNav from '../components/TopNav'
-import PopUp from '../components/PopUp'
 import PricingComp from '../components/PricingComp'
 import ProgComp from '../components/ProgComp'
 
@@ -17,17 +16,15 @@ const Home = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-    const [isVisible, setIsVisible] = useState(true);
     return (
         <div >
-            <PopUp isVisible={isVisible} setIsVisible={setIsVisible} />
             <TopNav />
             <Header />
             <Landing />
-            <About />
+            <About more={true} />
             <Choose />
             <Teachers />
-            <Blogs />
+            <Blogs slider={true} />
             <ProgComp />
             <PricingComp />
             <Reviews />

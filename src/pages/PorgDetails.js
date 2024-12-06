@@ -22,33 +22,37 @@ const PorgDetails = () => {
         <div className='details-page'>
             <TopNav />
             <Header />
-            <div className=' container px-7  mx-auto pb-[70px]'>
-                <h2 className=' title '>{prog?.title}</h2>
-                <p className=' text-[20px]'>{prog?.desc}
-                    Lorem, ipsum dolor sit amet consectetur
-                    adipisicing elit. Odit libero minus vel ratione
-                    repellat modi veritatis laboriosam dicta? Pariatur, aliquam.
-                    Eligendi consectetur error ullam
-                    perferendis quidem alias voluptatibus iure sit.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Fugit harum necessitatibus dolor. A doloremque inventore quaerat rem,
-                    suscipit alias! Minima in, consequuntur libero fugiat eveniet ipsa earum totam expedita, ipsum,
-                    assumenda debitis hic eius vel explicabo iusto ipsam dolorum omnis.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Dolorum qui sit laborum corrupti, obcaecati voluptates eveniet quaerat, magni veritatis
-                    fuga, saepe vero. Obcaecati totam,
-                    exercitationem repellendus unde et eos dolores.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquid necessitatibus,
-                    quisquam ipsam facilis
-                    assumenda!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, deserunt!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, quod?
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, quasi?
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sint non
-                    praesentium enim totam, modi culpa necessitatibus perspiciatis illum adipisci
-                    pariatur aut. Dolorem officia, aliquid vitae aut
-                    totam sunt nisi.
-                </p>
+            <div className='details-page-content'>
+                <div className=' container px-7  mx-auto pb-[70px]'>
+                    <h2 className=' title '>{prog?.title}</h2>
+                    <p className=' text-[20px]'>{prog?.desc}
+                        Lorem, ipsum dolor sit amet consectetur
+                        adipisicing elit. Odit libero minus vel ratione
+                        repellat modi veritatis laboriosam dicta? Pariatur, aliquam.
+                        Eligendi consectetur error ullam
+                        perferendis quidem alias voluptatibus iure sit.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Fugit harum necessitatibus dolor. A doloremque inventore quaerat rem,
+                        suscipit alias! Minima in, consequuntur libero fugiat eveniet ipsa earum totam expedita, ipsum,
+                        assumenda debitis hic eius vel explicabo iusto ipsam dolorum omnis.
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Dolorum qui sit laborum corrupti, obcaecati voluptates eveniet quaerat, magni veritatis
+                        fuga, saepe vero. Obcaecati totam,
+                        exercitationem repellendus unde et eos dolores.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquid necessitatibus,
+                        quisquam ipsam facilis
+                        assumenda!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, deserunt!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, quod?
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, quasi?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sint non
+                        praesentium enim totam, modi culpa necessitatibus perspiciatis illum adipisci
+                        pariatur aut. Dolorem officia, aliquid vitae aut
+                        totam sunt nisi.
+                    </p>
+                </div>
+            </div>
+            <div className=' pb-[70px]'>
                 <LinksOfDetails />
             </div>
             <Footer />

@@ -10,7 +10,7 @@ const Footer = () => {
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     return (
         <div className=' footer pt-[40px] pb-[70px]'>
-            <footer className=' container mx-auto px-7 md:px-[80px] lg:px-[120px] pb-0'>
+            <footer className=' container mx-auto px-3 md:px-[70px] lg:px-[120px] pb-0'>
                 <div className="footer-container justify-between  flex-wrap   flex gap-5 ">
                     <div className=" text-slate-200 flex flex-col  gap-4">
                         {state ? <h4 className=' text-[25px]'> تواصل معنا</h4> :

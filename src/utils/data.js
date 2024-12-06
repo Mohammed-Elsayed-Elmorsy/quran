@@ -1,24 +1,52 @@
-import image1 from '../static/read7.jpg'
-import image2 from '../static/seven.png'
-import image3 from '../static/read1.jpg'
-import image4 from '../static/interactive.png'
-import image5 from '../static/six (1).png'
-import image6 from '../static/read1.jpg'
-import image7 from '../static/quran1.jpg'
-import image8 from '../static/read11.jpg'
-import image9 from '../static/read7.jpg'
-import image10 from '../static/read9.jpg'
-import image11 from '../static/quran111.jpg'
-import image12 from '../static/seven.png'
-import image13 from '../static/read11.jpg'
+import image1 from '../static/12.png'
+import image2 from '../static/37.png'
+import image3 from '../static/35.png'
+import image4 from '../static/9.png'
+import image5 from '../static/4.png'
+import image6 from '../static/14.png'
+import image7 from '../static/44.png'
+import image8 from '../static/3.png'
+import image9 from '../static/11.png'
+import image10 from '../static/41.png'
+import image11 from '../static/17.png'
+import image12 from '../static/18.png'
+import image54 from '../static/54.png'
+import image47 from '../static/47.png'
+import image48 from '../static/48.png'
+import image49 from '../static/49.png'
+import image50 from '../static/50.png'
+import image51 from '../static/51.png'
+import image55 from '../static/55.png'
+import image56 from '../static/56.png'
 import {
     FaCheckCircle, FaCrown,
     FaEnvelope, FaFacebook, FaGithub,
-    FaGlobe, FaLinkedin, FaPhone,
+    FaLinkedin, FaPhone,
     FaMedal, FaRocket, FaWhatsapp, FaYoutube,
     FaTelegram
 }
     from 'react-icons/fa'
+export const SliderSett = {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    breakpoints: {
+        500: {
+            slidesPerView: 1
+        },
+        600: {
+            slidesPerView: 1
+        },
+        750: {
+            slidesPerView: 2
+        },
+        1100: {
+            slidesPerView: 3
+        },
+        1200: {
+            slidesPerView: 3
+        }
+    }
+}
 
 export const links = [
     {
@@ -40,24 +68,24 @@ export const links = [
         chilren: [
             {
                 path: 'Tafseer', id: 1,
-                text: 'Quran Tafseer', to: 'Tafseer'
+                text: ' Reading', to: 'Tafseer'
             },
             {
                 path: 'Tajweed', id: 2,
-                text: 'Quran(Tajweed)', to: 'Tajweed',
+                text: 'memorization', to: 'Tajweed',
             },
             {
                 path: 'Revision', id: 3,
-                text: 'Quran Revision ', to: 'Revision'
+                text: ' Tajweed ', to: 'Revision'
             },
             {
                 path: 'Islamic-Studies', id: 4,
-                text: 'Islamic Studies', to: 'Islamic-Studies'
+                text: 'arabic course', to: 'Islamic-Studies'
             }
             ,
             {
                 path: 'programms',
-                text: 'all programms', to: 'programms',
+                text: 'all ', to: 'programms',
             }
         ]
     },
@@ -97,11 +125,11 @@ export const linksarabic = [
         chilren: [
             {
                 path: 'Tafseer', to: 'Tafseer', id: 1,
-                text: 'تفسير القران'
+                text: 'مهارات القراءة'
             },
             {
                 path: 'Tajweed', to: 'Tajweed', id: 2,
-                text: 'تجويد القران'
+                text: ' دراسات اسلامية'
             },
             {
                 path: 'Revision', to: 'Revision', id: 3,
@@ -109,7 +137,7 @@ export const linksarabic = [
             },
             {
                 path: 'Islamic-Studies', to: 'Islamic-Studies', id: 4,
-                text: 'دراسات اسلامية'
+                text: 'تجويد  '
             }
             ,
             {
@@ -132,76 +160,125 @@ export const linksarabic = [
     },
 
 ]
-export const choose = [
-    {
-        image: image1,
-        aos: 'fade-up',
-        id: 1,
-        title: 'Experienced Quran Teacher',
-        text: 'With years of experience teaching the Quran, I provide structured and personalized lessons designed to suit your learning pace and style. Whether youre a beginner or looking to improve your recitation, I tailor the content to meet your specific needs'
-    },
-    {
-        id: 6,
-        image: image2, aos: 'fade-up',
-        title: 'Focus on Tajweed and Recitation',
-        text: 'Every student is unique, and so are their learning goals. I create customized lesson plans based on your current level, whether you are learning to recite, memorize, or study the Quran in depth.'
-    },
-    {
-        id: 2, image: image3, aos: 'fade-up',
-        title: 'Flexible and Convenient Learning',
-        text: 'We offer flexible online classes that fit into your schedule. Whether youre a busy professional, a parent, or a student, you can learn the Quran from the comfort of your home at a time that works best for you.'
-    },
-    {
-        id: 3, image: image4, aos: 'fade-up',
-        title: 'Interactive Teaching Methods',
-        text: 'My teaching style is interactive, making lessons engaging and motivating. I use a variety of resources to keep the learning experience enjoyable, from recitation exercises to practical applications of Quranic teachings.'
-    },
-    {
-        id: 4, image: image5, aos: 'fade-up',
-        title: 'Personalized Learning Plans',
-        text: 'Every student is unique, and so are their learning goals. I create customized lesson plans based on your current level, whether you are learning to recite, memorize, or study the Quran in depth.'
-    },
-    {
-        id: 5, image: image6, aos: 'fade-up',
-        title: 'Supportive Learning Environment',
-        text: 'I believe that learning the Quran should be a rewarding and spiritual journey. I provide a supportive and encouraging environment where students feel comfortable asking questions and progressing at their own pace.'
-    },
-]
+export const choose =
+    [
+        {
+            image: image51,
+            aos: "fade-up",
+            id: 1,
+            title: "Expert Male and Female Tutors",
+            text: "Our tutors are graduates of Al-Azhar University and certified with Ijazah in the narration of Hafs and Shu’ba from Asem. We ensure high teaching standards by selecting the most qualified educators."
+        },
+        {
+            image: image47,
+            aos: "fade-up",
+            id: 2,
+            title: "Unique Curriculum",
+            text: "Our curriculum is carefully designed to be adjustable for different learning needs, ensuring a personalized educational journey for every student."
+        },
+        {
+            image: image48,
+            aos: "fade-up",
+            id: 3,
+            title: "Wide Range of Experience",
+            text: "All our tutors have at least 4 years of experience teaching Quran, Tajweed, and Islamic Studies, both online and offline."
+        },
+        {
+            image: image56,
+            aos: "fade-up",
+            id: 4,
+            title: "One-To-One Classes",
+            text: "Enjoy private, one-on-one sessions tailored to your goals, maximizing your learning experience and individual attention."
+        },
+        {
+            image: image55,
+            aos: "fade-up",
+            id: 5,
+            title: "Free Trial",
+            text: "Try a free class to discover the perfect course and teaching style that matches your needs."
+        },
+        {
+            image: image49,
+            aos: "fade-up",
+            id: 6,
+            title: "Affordable Fees",
+            text: "Our services are accessible to everyone with competitive and affordable pricing plans."
+        },
+        {
+            image: image50,
+            aos: "fade-up",
+            id: 7,
+            title: "Progress Reports and Certificates",
+            text: "Receive detailed progress reports and certificates of completion as you advance through each level."
+        },
+        {
+            image: image54,
+            aos: "fade-up",
+            id: 8,
+            title: "24/7 Support",
+            text: "Our dedicated support team is available around the clock to assist you with any inquiries or needs."
+        }
+    ]
+
 export const chooseArabic = [
     {
-        image: image1,
-        aos: 'fade-up',
+        image: image51,
+        aos: "fade-up",
         id: 1,
-        title: 'معلمين ذو خبرة عالة',
-        text: 'بفضل خبرتي التي اكتسبتها على مدار سنوات في تدريس القرآن الكريم، أقدم دروسًا منظمة ومخصصة مصممة لتناسب وتيرة التعلم وأسلوبك. سواء كنت مبتدئًا أو تتطلع إلى تحسين تلاوتك، فأنا أقوم بتخصيص المحتوى لتلبية احتياجاتك المحددة'
+        title: "معلمون ومعلمات خبراء من الناطقين باللغة العربية",
+        text: "معلمونا خريجو جامعة الأزهر ومعتمدون بشهادة الإجازة في روايتي حفص وشعبة عن عاصم. نضمن لك أعلى معايير التدريس من خلال اختيار أفضل المعلمين."
     },
     {
+        image: image47,
+        aos: "fade-up",
+        id: 2,
+        title: "منهج فريد",
+        text: "تم تصميم مناهجنا بعناية لتكون قابلة للتكيف مع احتياجات التعلم المختلفة، مما يضمن تجربة تعليمية مخصصة لكل طالب."
+    },
+    {
+        image: image48,
+        aos: "fade-up",
+        id: 3,
+        title: "خبرة واسعة",
+        text: "جميع معلمينا يتمتعون بخبرة لا تقل عن 4 سنوات في تدريس القرآن الكريم، التجويد، والدراسات الإسلامية، سواء عبر الإنترنت أو على أرض الواقع."
+    },
+    {
+        image: image56,
+        aos: "fade-up",
+        id: 4,
+        title: "حصص فردية",
+        text: "استمتع بجلسات فردية خاصة مصممة لتناسب أهدافك، مما يعزز من تجربتك التعليمية ويوفر لك الاهتمام الفردي."
+    },
+    {
+        image: image55,
+        aos: "fade-up",
+        id: 5,
+        title: "تجربة مجانية",
+        text: "جرّب حصة مجانية لتتعرف على الدورة وأسلوب التدريس المناسب لك."
+    },
+    {
+        image: image49,
+        aos: "fade-up",
         id: 6,
-        image: image2, aos: 'fade-up',
-        title: 'التركيز على التجويد والقراءة',
-        text: 'كل طالب فريد من نوعه، وكذلك أهدافه التعليمية. أقوم بإنشاء خطط دراسية مخصصة بناءً على مستواك الحالي، سواء كنت تتعلم التلاوة أو الحفظ أو دراسة القرآن الكريم بعمق'
+        title: "رسوم ميسورة",
+        text: "نقدم خدماتنا بأسعار تنافسية ومناسبة للجميع لجعل التعليم في متناول الجميع."
     },
     {
-        id: 2, image: image3, aos: 'fade-up',
-        title: 'اسلوب مرن ومقنع ف التعليم',
-        text: 'نحن نقدم دروسًا مرنة عبر الإنترنت تناسب جدولك الزمني. سواء كنت محترفًا مشغولًا أو والدًا أو طالبًا، يمكنك تعلم القرآن الكريم من راحة منزلك في الوقت الذي يناسبك.'
+        image: image50,
+        aos: "fade-up",
+        id: 7,
+        title: "تقارير تقدم وشهادات",
+        text: "احصل على تقارير تفصيلية عن تقدمك وشهادات عند إكمال كل مستوى من مستويات الدراسة."
     },
     {
-        id: 3, image: image4, aos: 'fade-up',
-        title: 'طرق تفاعلية فى التدريس',
-        text: 'أسلوبي في التدريس تفاعلي، مما يجعل الدروس شيقة ومحفزة. أستخدم مجموعة متنوعة من الموارد لإبقاء تجربة التعلم ممتعة، من تمارين التلاوة إلى التطبيقات العملية للتعاليم القرآنية.'
-    },
-    {
-        id: 4, image: image5, aos: 'fade-up',
-        title: 'خطط متخصصة ف التعليم',
-        text: 'كل طالب فريد من نوعه، وكذلك أهدافه التعليمية. أقوم بإنشاء خطط دراسية مخصصة بناءً على مستواك الحالي، سواء كنت تتعلم التلاوة أو الحفظ أو دراسة القرآن الكريم بعمق.'
-    },
-    {
-        id: 5, image: image6, aos: 'fade-up',
-        title: 'بيئة تعليمية مناسبة',
-        text: 'أعتقد أن تعلم القرآن الكريم يجب أن يكون رحلة مجزية وروحية. فأنا أقدم بيئة داعمة ومشجعة حيث يشعر الطلاب بالراحة في طرح الأسئلة والتقدم بالسرعة التي تناسبهم.'
-    },
+        image: image54,
+        aos: "fade-up",
+        id: 8,
+        title: "دعم متواصل على مدار الساعة",
+        text: "فريق الدعم المخصص لدينا متاح على مدار 24/7 للإجابة على جميع استفساراتك وتلبية احتياجاتك."
+    }
 ]
+
 export const teaches = [
     {
         id: 1,
@@ -457,215 +534,412 @@ export const blogs = [
     {
         id: 1,
         image: image1,
-        title: 'Tips for Effective Quran Memorization (Hifz) ',
-        desc: 'Share practical tips for students on how to memorize the Quran effectively. Discuss techniques like repetition, setting a schedule, using visual and audio aids, and keeping consistent.'
+        title: 'The Virtue of the Quran ',
+        desc: 'The Quran is the word of Allah, revealed to the heart of His Prophet Muhammad (PBUH) by the trustworthy Gabriel. It is revered for its recitation, miraculous in its wording and meaning, starting with Surah Al-Fatiha and ending with Surah An-Nas.It is the book that no falsehood comes to from before or behind it, a revelation from the Most Wise, the Most Praiseworthy, and the source of guidance and light for the believers .'
     },
     {
         id: 2,
-        image: image4,
-        title: 'The Importance of Tajweed in Quran Recitation',
-        desc: 'Write about the significance of Tajweed (the rules of proper pronunciation in Quranic recitation). Explain why it’s essential for Muslims to recite the Quran correctly and provide some simple rules to follow.'
+        image: image2,
+        title: 'Definition of the Quran',
+        desc: 'In the Arabic language, the word "Quran" is derived from "Qara’a," which means to gather or combine, as Allah says: "Indeed, upon Us is its collection and its recitation." (Al-Qiyama: 17), referring to combining the letters and words together.In its technical sense, the Quran is the word of Allah revealed to His Messenger Muhammad (PBUH), which is recited and preserved in its original form, passed down to us through authentic transmission, and challenged with producing even the shortest chapter from it, all written in the Mushafs.'
     },
     {
         id: 3,
         image: image3,
-        title: 'Understanding the Meaning of Key Surahs',
-        desc: 'Provide explanations or tafsir (interpretation) of key Surahs (chapters) from the Quran, making them accessible and understandable for beginners. Discuss their lessons and relevance in everyday life.'
+        title: 'The Status of the Quran in Islam',
+        desc: '•	The Eternal Miracle:The Quran is the enduring miracle of Islam, which Allah challenged both humans and jinn with. Allah says: "Bring forth a surah like it." (Yunus: 38).the Quran is the revelation of the Lord of the worlds'
     },
     {
         id: 4,
-        image: image2,
-        title: ' How to Build a Strong Connection with the Quran',
-        desc: 'Discuss ways in which Muslims can strengthen their relationship with the Quran. Offer guidance on daily Quran recitation, reflection (Tadabbur), and applying the Quran’s teachings in daily life.'
+        image: image4,
+        title: 'Quran The Key to Happiness & Success',
+        desc: 'The Quran is not just a book to be recited; it is a way of life to be followed, and it is the foundation of happiness in both this world and the Hereafter. Allah says: "Whoever does righteous deeds, whether male or female, while being a believer, We will surely give him a good life." (An-Nahl: 97).'
     },
     {
         id: 5,
         image: image5,
-        title: 'Benefits of Learning Quran at a Young Age',
-        desc: 'Emphasize the advantages of starting Quranic education early in life, such as building strong moral foundations, improving focus, and developing spiritual awareness.'
+        title: 'A Call to Hold Fast to the Quran',
+        desc: 'let the Quran be your companion in life .Implement its rulings, for it is the straight path of Allah Allah says: "Indeed, this Quran guides to that which is most suitable." (Al-Isra: 9)'
     },
     {
         id: 6,
         image: image6,
-        title: 'How to Balance Quran Study with a Busy Schedule',
-        desc: 'Offer advice for students and professionals who struggle to find time for Quran study. Share tips on setting small goals, using mobile apps for recitation and memorization, and taking advantage of free time.'
+        title: 'Make the Quran the light of your life',
+        desc: 'The Quran is the great blessing that Allah has given us, and it is the path to happiness and success in this world and the Hereafter. Learning it and teaching it is a great honor, and living by it brings light and blessings into your life.'
     }
 ]
 export const blogsArabic = [
     {
         id: 1,
         image: image1,
-        title: 'نصائح لحفظ القرآن الكريم بشكل فعال',
-        desc: 'شارك نصائح عملية للطلاب حول كيفية حفظ القرآن الكريم بشكل فعال. ناقش تقنيات مثل التكرار، ووضع جدول زمني، واستخدام الوسائل البصرية والصوتية، والحفاظ على الاتساق.'
+        title: 'أهمية وفضل القرآن الكريم',
+        desc: `
+        :
+القرآن الكريم هو النور الذي أخرج البشرية من ظلمات الجهل إلى نور الإيمان. قال تعالى: "يَهْدِي بِهِ اللَّهُ مَنِ اتَّبَعَ رِضْوَانَهُ سُبُلَ السَّلَامِ" (المائدة: 16).
+2.	الشفاء والرحمة:
+وهو سبيلنا إلى النجاة والفلاح. فلنحرص على تعلمه وتعليمه
+هو شفاء للأرواح والقلوب من الشبهات والشهوات.
+        `
     },
     {
         id: 2,
-        image: image4,
-        title: 'أهمية التجويد في تلاوة القرآن الكريم',
-        desc: 'اكتب عن أهمية التجويد (قواعد النطق الصحيح في تلاوة القرآن الكريم). اشرح لماذا من الضروري للمسلمين تلاوة القرآن الكريم بشكل صحيح وقدم بعض القواعد البسيطة التي يجب اتباعها.'
+        image: image2,
+        title: 'القرآن الكريم: شرف وكرامة',
+        desc: `
+•	الشرف كل الشرف:
+القرآن الكريم هو مصدر التشريف لمن حمله في قلبه، أو تعلمه وعلَّمه. قال النبي صلى الله عليه وسلم: "خيركم من تعلم القرآن وعلَّمه" (رواه البخاري).
+يتشرف كل من سمعه، أو ساهم في تعليمه ونشره، سواء بالجهد أو الوقت أو المال، فيناله نصيب من نور القرآن وبركاته
+`
     },
     {
         id: 3,
-        image: image3,
-        title: 'فهم معاني السور الأساسية',
-        desc: `تقديم  القرآن هو كلام الله المنزل على النبي محمد ﷺ، وهو كتاب الهداية والتوجيه لكل مسلم
-        . لذلك، يعد فهم معانيه ركيزة أساسية لفهم العقيدة والشريعة الإسلامية.
-                يسا الفهم الصحيح للقرآن في تفعيل دوره في الحياة اليومية، سواء كان ذلك في العبادات، 
-   
+        image: image5,
+        title: 'تعريف القرآن الكريم',
+        desc: `لغةً، مشتق من "قرأ" بمعنى جمع وضم، كما في قوله تعالى: "إِنَّ عَلَيْنَا جَمْعَهُ وَقُرْآنَهُ" (القيامة: 17)، أي ضم الحروف والكلمات بعضها إلى بعض.
+اصطلاحًا، هو كلام الله المنزل على رسوله محمد صلى الله عليه وسلم، المتعبد بتلاوته، المنقول إلينا بالتواتر، والمتحدى بأقصر سورة منه، والمحفوظ في المصاحف.
+
      `
     },
     {
         id: 4,
-        image: image2,
-        title: 'كيف تبني علاقة قوية مع القرآن الكريم',
-        desc: `مناقشة الطرق التي يمكن للمسلمين من خلالها تعزيز علاقتهم بالقرآن الكريم،
-        وتقديم التوجيهات بشأن تلاوة القرآن الكريم يوميًا، والتدبر،
-        وتطبيق تعاليم القرآن الكريم في الحياة اليومية.ليس من الضروري فهم جميع السور مرة واحدة
+        image: image3,
+        title: 'مكانة القرآن الكريم في الإسلام',
+        desc: `
+•	حفظ اللغة العربية:
+القرآن الكريم هو المرجع الأول للغة العربية، حفظها من الاندثار والتحريف عبر العصور.
+•	دستور للأمة:
+القرآن الكريم هو النعمة العظمى التي منحنا الله إياها
+هو صراط الله المستقيم ودستوره القويم، ينظم حياة الفرد والمجتمع ويحقق العدل والإحسان.
+•
+
 `
     },
     {
         id: 5,
-        image: image5,
-        title: 'فوائد تعلم القرآن الكريم في الصغر',
-        desc: 'التأكيد على فوائد البدء بالتعليم القرآني في وقت مبكر من الحياة، مثل بناء أسس أخلاقية قوية، وتحسين التركيز، وتنمية الوعي الروحي.'
+        image: image4,
+        title: 'العمل بالقرآن: مفتاح السعادة والفلاح',
+        desc: `القرآن ليس مجرد كتاب يُتلى، بل منهج حياة يُعمل به، وهو أساس السعادة في الدنيا والآخرة. قال تعالى: "مَنْ عَمِلَ صَالِحًا مِّن ذَكَرٍ أَوْ أُنثَىٰ وَهُوَ مُؤْمِنٌ فَلَنُحْيِيَنَّهُ حَيَاةً طَيِّبَةً" (النحل: 97).
+ اللهم اجعل القرآن العظيم ربيع قلوبنا، ونور صدورنا، وجلاء أحزاننا، وذهاب همومنا. آمين
+        `
     },
     {
         id: 6,
         image: image6,
-        title: '  التوازن بين دراسة القرآن  وجدول الأعمال ',
-        desc: 'تقديم النصائح للطلاب والمهنيين الذين يجدون صعوبة في إيجاد الوقت لدراسة القرآن الكريم. شارك نصائح حول تحديد أهداف صغيرة، واستخدام تطبيقات الهاتف المحمول للتلاوة والحفظ، والاستفادة من وقت الفراغ.'
+        title: 'دعوة إلى التمسك بالقرآن',
+        desc: ` 
+أيها المسلم، اجعل القرآن الكريم رفيقك في حياتك:
+•	احرص على تلاوته يوميًا وتدبر آياته.
+•	احفظ ما استطعت منه، فالحفظ نور وبركة.
+•	اعمل بما فيه من أحكام، فهو صراط الله المستقيم.
+هو طريق السعادة والفلاح في الدنيا والآخرة
+قال تعالى: "إِنَّ هَٰذَا الْقُرْآنَ يَهْدِي لِلَّتِي هِيَ أَقْوَمُ" (الإسراء: 9).
+         `
     }
 ]
 export const progs = [
     {
-        id: 3,
+        id: 1,
         image: image7,
-        title: 'Quran Memorization Program (Hifz) ',
-        desc: ' A foundational course for students who are new to Quran reading or want to improve their fluency. Focuses on learning to recite the Quran with proper pronunciation (Tajweed) rules.'
+        title: 'Reading Skills (Noor Al-Bayan and Al-Nouraniya) ',
+        desc: 'Unlock the foundation of Arabic literacy with our Reading Skills Program',
+        points: [
+            {
+                title: 'Who it’s for',
+                info: 'Perfect for beginners of all ages or those aiming to improve their basic reading skills.'
+            },
+            {
+                title: 'What we offer',
+                info: ': Structured lessons using the Noor Al-Bayan and Al-Nouraniya methods, with fun, engaging exercises'
+            },
+            {
+                title: 'What your child will gain',
+                info: ': A strong foundation in Arabic phonetics, letters, and fluency in reading Arabic texts, alongside with writing skills'
+            },
+        ]
     },
     {
         id: 2,
         image: image12,
-        title: 'Quran (Tajweed) for Beginners',
-        desc: 'Write about the significance of Tajweed (the rules of proper pronunciation in Quranic recitation). Explain why it’s essential for Muslims to recite the Quran correctly and provide some simple rules to follow.'
+        title: 'Qur’an Memorization Course',
+        desc: 'Help your child embark on a blessed journey of memorizing Allah’s words',
+        points: [
+            {
+                title: 'What your child will gain',
+                info: 'Memorization of the Qur’an, whether a portion or its entirety, with focus on consistent retention'
+            },
+            {
+                title: 'What we offer',
+                info: ': Individualized plans, daily revision schedules, and expert guidance to inspire confidence and dedication'
+            }
+        ]
     },
-    {
-        id: 1,
-        image: image9,
-        title: 'Quran Tafseer ',
-        desc: ' A comprehensive course focused on understanding the meanings and interpretations (Tafseer) of the Quran. This program delves into the context, history, and wisdom behind each verse.'
-    },
-    {
-        id: 4,
-        image: image10,
-        title: 'Islamic Studies Program',
-        desc: 'A program designed to teach the basic etiquettes of interacting with the Quran and Islamic teachings, including proper manners of handling and reciting the Quran.'
-    },
-    {
-        id: 5,
-        image: image11,
-        title: 'Short Courses for Specific Surahs',
-        desc: ' Short-term courses focused on memorizing and understanding specific chapters (Surahs) of the Quran, such as Surah Al-Fatiha, Surah Al-Baqarah, or Juz Amma.'
-    },
-    {
-        id: 6,
-        image: image8,
-        title: 'Quranic Arabic Course',
-        desc: 'A course that helps students understand the language of the Quran by teaching them Quranic Arabic grammar, vocabulary, and sentence structure.'
-    }
-]
-export const progsArabic = [
     {
         id: 3,
-        image: image7,
-        title: 'برنامج حفظ القرآن الكريم (حفظ)',
-        desc: ' دورة تأسيسية للطلاب الجدد في قراءة القرآن الكريم أو الراغبين في تحسين إتقانهم له، تركز على تعلم تلاوة القرآن الكريم بقواعد النطق السليم (التجويد).'
-    },
-    {
-        id: 2,
-        image: image12,
-        title: 'تجويد القرآن الكريم للمبتدئين',
-        desc: 'اكتب عن أهمية التجويد (قواعد النطق الصحيح في تلاوة القرآن الكريم). اشرح لماذا من الضروري للمسلمين تلاوة القرآن الكريم بشكل صحيح وقدم بعض القواعد البسيطة التي يجب اتباعها'
-    },
-    {
-        id: 1,
         image: image9,
-        title: 'تفسير القرآن',
-        desc: ' دورة شاملة تركز على فهم معاني وتفسير القرآن الكريم، ويتناول هذا البرنامج السياق والتاريخ والحكمة وراء كل آية.'
+        title: 'Qur’an with Tajweed Course',
+        desc: 'Beautify your child’s recitation and teach them the art of reading the Qur’an as it was revealed.',
+        points: [
+            {
+                title: 'What your child will gain',
+                info: ': Mastery of Tajweed rules, enabling them to recite the Qur’an fluently and melodiously with confidence'
+            },
+            {
+                title: 'What we offer',
+                info: 'Step-by-step lessons covering pronunciation, articulation, and recitation practices, guided by skilled tutors graduated from Al-Azhar and certified with ijazah'
+            }
+        ]
+        ,
     },
     {
         id: 4,
         image: image10,
-        title: 'برنامج الدراسات الاسلامية',
-        desc: 'برنامج يهدف إلى تعليم الآداب الأساسية للتعامل مع القرآن الكريم والتعاليم الإسلامية، بما في ذلك آداب التعامل مع القرآن الكريم وتلاوته.'
+        title: 'Modern Standard Arabic Course',
+        desc: 'Discover the beauty of the Arabic language, from its fundamentals to fluency.',
+        points: [
+            {
+                title: 'Who it’s for',
+                info: 'Perfect for learners at any level, whether they are complete beginners or intermediate students aiming to refine their skills'
+            },
+            {
+                title: 'What we offer',
+                info: ': Interactive lessons covering listening, speaking, reading, and writing, using trusted curricula like “Arabic Between Your Hands” and “Madinah Book”.'
+            }
+        ]
+        ,
     },
     {
         id: 5,
         image: image11,
-        title: 'دورات قصيرة لسور معينة',
-        desc: ' دورات قصيرة تركز على حفظ وفهم سور محددة من القرآن الكريم، مثل سورة الفاتحة، أو سورة البقرة، أو جزء عم.'
+        title: 'Arabic Through the Qur’an Course',
+        desc: 'Dive deep into the Qur’an to master Arabic while enriching your spiritual journey.',
+        points: [
+            {
+                title: 'Who it’s for',
+                info: 'Perfect for learners inspired to learn Arabic through the words of Allah'
+            },
+            {
+                title: 'What we offer',
+                info: 'Lessons focus on Qur’anic vocabulary, grammar, and sentence structure, with practical examples from the Qur’an itself'
+            }
+        ]
+        ,
     },
     {
         id: 6,
         image: image8,
-        title: 'دورة اللغة العربية القرآنية',
-        desc: 'دورة تساعد الطلاب على فهم لغة القرآن الكريم من خلال تعليمهم قواعد اللغة العربية القرآنية والمفردات وبناء الجملة.'
+        title: 'Islamic Studies for Children',
+        desc: 'From understanding the Five Pillars to practicing Islam’s essentials, this course nurtures your child’s Islamic identity in a fun and engaging way.'
+        ,
+        points: [
+            {
+                title: 'What your child will gain',
+                info: 'A strong foundation in Fiqh, Tafseer, Hadith, Du’aa, and Aqeedah all of what they can’t be ignorant of'
+            },
+            {
+                title: 'What we offer',
+                info: 'Interactive lessons with special activities and occasional free sessions for entertainment and Islamic learning'
+            }
+        ]
+        ,
     }
 ]
+export const progsArabic =
+    [
+        {
+            id: 1,
+            image: image7,
+            title: "مهارات القراءة (نور البيان والنورانية)",
+            desc: "افتح أبواب إتقان القراءة باللغة العربية مع برنامج مهارات القراءة.",
+            points: [
+                {
+                    title: "مناسب لمن؟",
+                    info: "مثالي للمبتدئين من جميع الأعمار أو لمن يسعى لتحسين القراءة الأساسية."
+                },
+                {
+                    title: "ما الذي نقدمه؟",
+                    info: "دروس منهجية باستخدام طرق نور البيان والنورانية مع تمارين ممتعة وجذابة."
+                },
+                {
+                    title: "ماذا سيكتسب طفلك؟",
+                    info: "أساس قوي في الأصوات والحروف العربية وطلاقة القراءة إلى جانب تعلم مهارات الكتابة."
+                }
+            ]
+        },
+        {
+            id: 3,
+            image: image9,
+            title: "برنامج حفظ القرآن الكريم",
+            desc: "ساعد طفلك على بدء رحلة ممتعة في حفظ كلمات الله.",
+            points: [
+                {
+                    title: "ماذا سيكتسب طفلك؟",
+                    info: "حفظ جزء من القرآن أو كامله مع التركيز على التكرار والاستمرارية."
+                },
+                {
+                    title: "ما الذي نقدمه؟",
+                    info: "خطط فردية وجداول مراجعة يومية وإرشادات من معلمين خبراء متميزين."
+                }
+            ]
+        },
+        {
+            id: 4,
+            image: image10,
+            title: "برنامج القرآن مع التجويد",
+            desc: "اجعل تلاوة طفلك أجمل وعلّمه قراءة القرآن كما أُنزل على النبي صلى الله عليه وسلم.",
+            points: [
+                {
+                    title: "ماذا سيكتسب طفلك؟",
+                    info: "إتقان قواعد التجويد والقدرة على التلاوة بثقة وجمال."
+                },
+                {
+                    title: "ما الذي نقدمه؟",
+                    info: "دروس خطوة بخطوة تشمل قواعد النطق والتلاوة وأحكام التجويد بإشراف معلمين متخصصين مجازين برواية حفص عن عاصم."
+                }
+            ]
+        },
+        {
+            id: 5,
+            image: image10,
+            title: "برنامج اللغة العربية الفصحى",
+            desc: "اكتشف جمال اللغة العربية لغة القرآن ولغة أهل الجنة من أساسيات اللغة حتى الطلاقة فيها.",
+            points: [
+                {
+                    title: "مناسب لمن؟",
+                    info: "يناسب جميع المستويات، سواء المبتدئين أو المتوسطين."
+                },
+                {
+                    title: "ما الذي نقدمه؟",
+                    info: "دروس تغطي مهارات اللغة المختلفة الاستماع، التحدث، القراءة، والكتابة باستخدام مناهج معتبرة وموثوقة مثل كتاب العربية بين يديك وكتاب المدينة."
+                }
+            ]
+        },
+        {
+            id: 6,
+            image: image11,
+            title: "برنامج تعلم اللغة العربية من خلال القرآن",
+            desc: "اغمر نفسك في القرآن لتتقن اللغة العربية بينما تعمّق رحلتك لتحصل على فهم أفضل وأجمل للمعاني في كتاب الله.",
+            points: [
+                {
+                    title: "مناسب لمن؟",
+                    info: "لمن يرغب في تعلم اللغة من خلال كلمات الله."
+                },
+                {
+                    title: "ما الذي نقدمه؟",
+                    info: "دروس تركز على مفردات القرآن وقواعد اللغة مع أمثلة عملية من النصوص القرآنية."
+                }
+            ]
+        },
+        {
+            id: 7,
+            image: image8,
+            title: "برنامج الدراسات الإسلامية للأطفال",
+            desc: "من فهم أركان الإسلام إلى تطبيقها بسهولة، هذا البرنامج يغرس هوية إسلامية قوية لدى الأطفال.",
+            points: [
+                {
+                    title: "ماذا سيكتسب طفلك؟",
+                    info: "أساسًا متينًا في الفقه، التفسير، الحديث، الدعاء، والعقيدة وكل ما لا يسع الطفل المسلم جهله."
+                },
+                {
+                    title: "ما الذي نقدمه؟",
+                    info: "دروس تفاعلية مع أنشطة خاصة وجلسات مجانية أحيانًا للتعلم والمرح."
+                }
+            ]
+        }
+    ]
 export const pricing = [
     {
         id: 1,
         image: image1,
-        title: 'Basic Package',
-        icon: <FaCheckCircle className=' text-green-500 text-[50px] mt-[-20px]' />,
-        desc: 'Perfect for beginners. Quran reading with proper pronunciation.',
-        features: [
-            '2 sessions per week',
-            '30-minute sessions',
-            'Basic Tajweed rules'
+        plan: '30 min class ',
+        classes: [
+            {
+                numberperweek: '2 classes/week',
+                cost: '40GBP/month',
+                numberpermonth: '8 classes/month',
+                costforclass: '5£/class',
+            },
+            {
+                numberperweek: '3 classes/week',
+                cost: '51GBP/month',
+                numberpermonth: '12 classes/month',
+                costforclass: '4.25£/class',
+            },
+            {
+                numberperweek: '4 classes/week',
+                cost: '64GBP/month',
+                numberpermonth: '16 classes/month',
+                costforclass: '4£/class',
+            },
+            {
+                numberperweek: '5 classes/week',
+                cost: '75GBP/month',
+                numberpermonth: '20 classes/month',
+                costforclass: '3.75£/class',
+            },
         ],
-        price: '50$/month'
     },
     {
         id: 2,
-        image: image13,
-        title: 'Intermediate Package',
-        icon: <FaMedal className=' text-[50px] mt-[-20px]' style={{ color: '#CD7F32' }} />,
-        features: [
-            '3 sessions per week',
-            '45-minute sessions',
-            ' Tajweed rules and practice',
-            'Quran memorization tips'
+        image: image1,
+        plan: '45 min class ',
+        classes: [
+            {
+                numberperweek: '1 class/week',
+                cost: '21GBP/month',
+                numberpermonth: '4 classes/month',
+                costforclass: '7£/class',
+            },
+            {
+                numberperweek: '2 classes/week',
+                cost: '52GBP/month',
+                numberpermonth: '8 classes/month',
+                costforclass: '6.50£/class',
+            },
+            {
+                numberperweek: '3 classes/week',
+                cost: '74GBP/month',
+                numberpermonth: '12 classes/month',
+                costforclass: '6.20£/class',
+            },
+            {
+                numberperweek: '4 classes/week',
+                cost: '92GBP/month',
+                numberpermonth: '16 classes/month',
+                costforclass: '5.75£/class',
+            },
         ],
-        price: '100$/month',
-        desc: 'Ideal for students who can read but need to improve their recitation.'
     },
     {
         id: 3,
-        image: image3,
-        icon: <FaCrown className=' text-[50px] mt-[-20px]' style={{ color: '#FFD700' }} />,
-        title: 'Advanced Package',
-        features: [
-            '5 sessions per week',
-            '60-minute sessions',
-            'advanced Tajweed rules'
+        image: image1,
+        plan: '60 min class ',
+        classes: [
+            {
+                numberperweek: '1 class/week',
+                cost: '40GBP/month',
+                numberpermonth: '4 classes/month',
+                costforclass: '10£/class',
+            },
+            {
+                numberperweek: '2 classes/week',
+                cost: '72GBP/month',
+                numberpermonth: '8 classes/month',
+                costforclass: '9£/class',
+            },
+            {
+                numberperweek: '3 classes/week',
+                cost: '96GBP/month',
+                numberpermonth: '12 classes/month',
+                costforclass: '8£/class',
+            },
+            {
+                numberperweek: '4 classes/week',
+                cost: '112GBP/month',
+                numberpermonth: '16 classes/month',
+                costforclass: '7£/class',
+            },
         ],
-        price: '150$/month',
-        desc: 'Best for those aiming to perfect recitation or memorize the Quran.'
     },
-    {
-        id: 4,
-        image: image2,
-        icon: <FaRocket className=' text-[50px] text-blue-500 mt-[-20px]' />,
-        features: [
-            'Flexible scheduling',
-            'Personalized curriculum',
-            'Recitation improvement and memorization help'
-        ],
-        price: '200$/month',
-        title: 'One-on-One Sessions',
-        desc: ' Tailored lessons focusing on individual progress.'
-    }
 ]
 
 export const pricingArabic = [

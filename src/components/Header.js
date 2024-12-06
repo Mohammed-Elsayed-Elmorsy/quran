@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import image from '../static/q2.png'
+import image from '../static/57.png'
 import imagelang from '../static/united-states.png'
 import imagearab from '../static/flag.png'
 import { links, linksarabic } from '../utils/data'
@@ -45,7 +45,7 @@ const Header = () => {
 
                 <div className="logo w-[200px]">
                     <Link to={'/'} className='  flex gap-1 items-center'>
-                        <img src={image} alt="logo" className={`${minmizelogo ? '' : ''} w-[100px]`} />
+                        <img src={image} alt="logo" className={`${minmizelogo ? '' : ''} `} />
                         <span className={` md:text-[22px] text-[18px]  
                         ${hidetext ? 'hide-text' : 'show-text'}  
                         font-bold text-[20px] relative`}>

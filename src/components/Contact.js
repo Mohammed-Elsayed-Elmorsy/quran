@@ -1,21 +1,121 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { medias } from '../utils/data'
 import { Link } from 'react-router-dom'
-import { FaCheck, FaCheckCircle, FaFacebook, FaGithub, FaGoogle, FaLinkedin, FaPhone } from 'react-icons/fa'
+import { FaCheck } from 'react-icons/fa'
 import { useSelector } from 'react-redux'
-
+import "intl-tel-input/build/css/intlTelInput.css";
+import intlTelInput from "intl-tel-input";
+import "intl-tel-input/build/js/utils";
 const ContactComp = () => {
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [itiInstance, setItiInstance] = useState(null);
+
+    useEffect(() => {
+        // Initialize intl-tel-input when the component mounts
+        const input = document.querySelector("#phone");
+        const instance = intlTelInput(input, {
+            preferredCountries: ["us", "gb", "in", "ae", "au"],
+        });
+        setItiInstance(instance);
+
+        // Cleanup when the component unmounts
+        return () => instance.destroy();
+    }, []);
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (itiInstance) {
+            const formattedNumber = itiInstance.getNumber();
+            alert(`Phone Number: ${formattedNumber}`);
+            setPhoneNumber(formattedNumber);
+
+        }
+    };
+    console.log(phoneNumber);
     return (
         <div className='Contact pb-[70px]'>
-            <div className=' container mx-auto px-7 md:px-[80px] lg:px-[120px]'>
+
+            <div className=' container mx-auto px-3 md:px-[70px] lg:px-[120px]'>
                 <h2 className='title'>
-
                     {state ? ' تواصل معنا' : 'contact us '}
-
-                    <FaCheck /></h2>
+                    <FaCheck />
+                </h2>
+                <div class="form-container">
+                    <form className='' onSubmit={handleSubmit}>
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" name="age" placeholder="Enter your age" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="timezone">Time Zone</label>
+                            <select id="timezone" name="timezone" required>
+                                <option value="" disabled selected>Select your time zone</option>
+                                <option value="UTC-12:00">UTC-12:00</option>
+                                <option value="UTC-11:00">UTC-11:00</option>
+                                <option value="UTC-10:00">UTC-10:00</option>
+                                <option value="UTC-09:00">UTC-09:00</option>
+                                <option value="UTC-08:00">UTC-08:00</option>
+                                <option value="UTC-07:00">UTC-07:00</option>
+                                <option value="UTC-06:00">UTC-06:00</option>
+                                <option value="UTC-05:00">UTC-05:00</option>
+                                <option value="UTC-04:00">UTC-04:00</option>
+                                <option value="UTC-03:00">UTC-03:00</option>
+                                <option value="UTC-02:00">UTC-02:00</option>
+                                <option value="UTC-01:00">UTC-01:00</option>
+                                <option value="UTC+00:00">UTC+00:00</option>
+                                <option value="UTC+01:00">UTC+01:00</option>
+                                <option value="UTC+02:00">UTC+02:00</option>
+                                <option value="UTC+03:00">UTC+03:00</option>
+                                <option value="UTC+04:00">UTC+04:00</option>
+                                <option value="UTC+05:00">UTC+05:00</option>
+                                <option value="UTC+06:00">UTC+06:00</option>
+                                <option value="UTC+07:00">UTC+07:00</option>
+                                <option value="UTC+08:00">UTC+08:00</option>
+                                <option value="UTC+09:00">UTC+09:00</option>
+                                <option value="UTC+10:00">UTC+10:00</option>
+                                <option value="UTC+11:00">UTC+11:00</option>
+                                <option value="UTC+12:00">UTC+12:00</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" name="country" placeholder="Enter your country" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" placeholder="Enter your city" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" required>
+                                <option value="" disabled selected>Select your gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-submit">Submit</button>
+                    </form>
+                </div>
                 <div>
+                    <h2 className=' text-[25px] text-center capitalize pb-5'> {state ? 'معلومات الاتصال' : 'contact information'}</h2>
                     <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:p-0 p-4'>
                         {medias.map(item => {
                             return (
@@ -37,61 +137,9 @@ const ContactComp = () => {
                             )
                         })}
                     </div>
-                    {/* <div className=' flex mt-[70px] gap-12 justify-between items-center md:flex-row flex-col'> */}
-                    {/* <div
-                            data-aos='zoom-in'
-                            className='flex-1 flex flex-col gap-3'>
-                            <h1 className=' font-bold text-[20px]'>LET'S WORK TOGETHER</h1>
-                            <p className=' text-gray-500'>
-                                Consider your development experience and when you started working on both front- and back-end development. Example: "I became interested in becoming a
-                                full-stack developer while working as a front-end developer .
-                            </p>
-                            <div className=''>
-                                <span
-                                    className='  flex  items-center gap-1 text-blue-500'><FaGoogle />sallealamohammed@gmail.com </span>
-                                <span
-                                    className=' inline-flex  items-center gap-1 text-blue-500'><FaPhone />01212659525</span>
-                            </div>
-                            <div className=' flex gap-3'>
-                                <a
-                                    className=' text-[30px] text-orange-600' href="https://www.facebook.com/profile.php?id=100079764606912"><FaFacebook /></a>
-                                <a
-                                    className=' text-[30px] text-orange-600' href="https://github.com/Mohammed-Elsayed-Elmorsy"><FaGithub /></a>
-                                <a
-                                    className=' text-[30px] text-orange-600' href="https://www.linkedin.com/in/mohammed-elmorsy-018378258/"><FaLinkedin /></a>
-                            </div>
-                            <p>
-                                All Rights Preserved
-                                &copy;
-                                <span className=' font-bold text-blue-500'>
-                                    MOHAMMED ELMORSY
-                                </span>
-                                <span className=' ml-1 text-orange-500 font-bold inline-flex items-center gap-1'>2023 <FaCheckCircle /></span>
-                            </p>
-                        </div> */}
-                    {/* <form data-aos='fade-up'
-                            className=' flex gap-3 flex-col'>
-                            <input
-                                className=' w-full'
-                                type="text"
-                                placeholder='Enter Name' />
-                            <input
-                                className=' w-full'
-                                type="email"
-                                placeholder='Enter Email' />
-                            <textarea
-                                className=' w-full'
-                                placeholder=' Enter Your Message'
-                                cols="30"
-                                rows="5">
-                            </textarea>
-                            <button
-                                className=''
-                                type='submit'>Submit</button>
-                        </form> */}
-                    {/* </div> */}
                 </div>
             </div>
+
         </div>
     )
 }

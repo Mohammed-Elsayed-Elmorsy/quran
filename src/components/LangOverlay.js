@@ -28,7 +28,7 @@ const LangOverlay = () => {
             onClick={() => hidelangover()}
             style={{ zIndex: '100000', background: 'rgba(0,0,0,0.6)' }}
             className={` 
-                        outer-overlay fixed top-0 left-0 right-0 h-full  flex justify-center items-center
+                        outer-overlay fixed top-0 left-0 right-0  h-[100vh]  flex justify-center items-center
                         w-full z-50 bottom-0 bg-slate-400  ${over ? 'show' : ''}`}>
             <div
                 onClick={(e) => e.stopPropagation()}

@@ -15,20 +15,20 @@ const Choose = () => {
         })
     }, [])
     return (
-        <div className='choose pb-[70px]' >
+        <div className='choose bg-slate-200 pb-[70px]' >
             <h2 className='title ' >
                 {!state ? 'why choose us' : 'لماذا تختارنا'}
                 <FaCheck />
             </h2>
-            <div className=' container mx-auto px-[30px] md:px-[80px] lg:px-[120px]'>
+            <div className=' text-center container mx-auto px-3 md:px-[70px] lg:px-[120px]'>
                 {state ? chooseArabic.map(item => <div className='item ' key={item.id} data-aos={item.aos}>
-                    <img className='' src={item.image} alt="" />
-                    <h2 className=''>{item.title}</h2>
-                    <p data-aos="fade-up">{item.text}</p>
+                    <img className=' w-[120px] h-[120px] object-contain mx-auto' src={item.image} alt="" />
+                    <h2 className=' font-bold text-[25px]'>{item.title}</h2>
+                    <p className=' p-2 text-[20px]' data-aos="fade-up">{item.text}</p>
                 </div>) : choose.map(item => <div className='item ' key={item.id} data-aos={item.aos}>
-                    <img className='' src={item.image} alt="" />
-                    <h2 className=' '>{item.title}</h2>
-                    <p data-aos="fade-up">{item.text}</p>
+                    <img className=' w-[120px] h-[120px] object-contain mx-auto' src={item.image} alt="" />
+                    <h2 className='font-bold text-[25px]'>{item.title}</h2>
+                    <p className='  p-2 text-[20px] ' data-aos="fade-up">{item.text}</p>
                 </div>)}
             </div>
         </div >

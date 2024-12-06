@@ -1,21 +1,21 @@
 import React from 'react'
 import { testmonials, testmonialsArabic } from '../utils/data'
 import { FaCheck, FaFacebookMessenger } from 'react-icons/fa'
-import image from '../static/last.png'
+import image from '../static/11.png'
 import { useSelector } from 'react-redux'
 const Reviews = () => {
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     return (
-        <div className='Reviews' style={{ background: '#eee' }}>
-            <div className=' container mx-auto px-7 md:px-[80px] lg:px-[120px] pb-[70px]'>
+        <div className='Reviews bg-slate-200' style={{ background: '#eee' }}>
+            <div className=' container mx-auto px-3 md:px-[70px] lg:px-[120px] pb-[70px]'>
                 <h2 className='title'>
 
                     {state ? 'آراءالطلاب' : ' students Reviews'}
 
                     <FaCheck />
                 </h2>
-                <div className=' container mx-auto gap-8 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:p-0 p-4'>
+                <div className=' container mx-auto gap-8 grid grid-cols-2  lg:grid-cols-3 md:p-0 p-4'>
                     {!state ? testmonials.map(item => {
                         return (
                             <div data-aos="flip-right" key={item.id} className=' flex flex-col gap-2 relative bg-white border shadow-sm p-2'>

@@ -17,8 +17,8 @@ const TeachersComp = () => {
                 <div className=' content grid md:grid-cols-2 lg:grid-cols-3  grid-cols-1 gap-6'>
                     {!state ? teaches.map(item =>
                         <div data-aos="zoom-in" key={item.id} className=' relative justify-between flex flex-col gap-4'>
-                            <img src={item.image} alt="" className=' object-cover h-[150px]' />
-                            <h2 className=''>{item.name}</h2>
+                            <img src={item.image} alt="" className=' object-cover h-[250px]' />
+                            <h2 className=' text-[24px] capitalize'>{item.name}</h2>
                             <p className=' text-[18px]'>{item.desc}</p>
                             <div className=' flex gap-2 items-center'>
                                 <Link className=' w-full' to={'/teachers/' + item.id}>
@@ -27,7 +27,7 @@ const TeachersComp = () => {
                             </div>
                         </div>) : teachersArabic.map(item =>
                             <div data-aos="zoom-in" key={item.id} className=' relative  flex flex-col gap-4'>
-                                <img src={item.image} alt="" className=' object-cover h-[150px]' />
+                                <img src={item.image} alt="" className=' object-cover h-[250px]' />
                                 <h2 className=''>{item.name}</h2>
                                 <p>{item.desc}</p>
                                 <div className=' flex gap-2 items-center'>

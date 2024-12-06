@@ -21,17 +21,21 @@ import { useEffect } from 'react';
 import FreeTrial from './components/FreeTrial';
 import TeachersDetails from './pages/TeachersDetails';
 import PorgDetails from './pages/PorgDetails';
+import { FaWhatsapp } from 'react-icons/fa';
 function App() {
   useEffect(() => {
     aos.init({
       duration: 900,
-      delay: 200
+      delay: 100,
     })
   }, [])
   const state = useSelector(state => state.lang.arabic)
   const lang = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : state
   return (
     <div className={`${lang ? 'arabic' : 'en'}`}>
+      <span className=' start-chat fixed text-[30px] cursor-pointer z-50 bottom-2 right-2'>
+        <FaWhatsapp />
+      </span>
       <LangOverlay />
       <FreeTrial />
       <HashRouter>
@@ -51,8 +55,10 @@ function App() {
           <Route path='/Revision' element={<Revision />}></Route>
           <Route path='/Islamic-Studies' element={<Studies />}></Route>
           <Route path='/pricing' element={<PricingPage />}></Route>
+          <Route path='/pricing/:id' element={<PricingPage />}></Route>
         </Routes>
       </HashRouter>
+
     </div >
   );
 }

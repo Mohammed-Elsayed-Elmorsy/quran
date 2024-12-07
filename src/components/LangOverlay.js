@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 const LangOverlay = () => {
     const over = useSelector(state => state.over.show)
     const lang = useSelector(state => state.lang.arabic)
+    const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     const dispatch = useDispatch()
     const hidelangover = () => {
         dispatch({ type: 'HIDE' })
@@ -35,16 +36,16 @@ const LangOverlay = () => {
                 className='p-3 flex flex-col justify-between inner-overlay 
                            w-[320px] h-[150px] bg-white shadow-lg  rounded-md' >
                 <h2 className=' text-primary text-center font-bold capitalize text-[25px] my-2'>
-                    change the language
+                    {!state ? 'Choose Language' : 'اختر لغة'}
                 </h2>
                 <div className='flex gap-3 items-center'>
-                    <span
+                    <span style={{ fontFamily: "El Messiri" }}
                         onClick={() => changetoAranbic()}
                         className='text-center  rounded-md text-[22px]
                                  hover:bg-slate-300 cursor-pointer block bg-slate-200 p-3 flex-1'>
                         اللغة العربية
                     </span>
-                    <span
+                    <span style={{ fontFamily: "Ubuntu" }}
                         onClick={() => changetoEnglish()}
                         className='text-center  rounded-md text-[22px]
                                 hover:bg-slate-300 cursor-pointer block bg-slate-200 p-3 flex-1'>

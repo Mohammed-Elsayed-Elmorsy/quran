@@ -18,8 +18,6 @@ const Home = () => {
     }, []);
     return (
         <div >
-            <TopNav />
-            <Header />
             <Landing />
             <About more={true} />
             <Choose />

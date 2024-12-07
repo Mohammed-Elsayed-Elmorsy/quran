@@ -12,8 +12,6 @@ const Teachers = () => {
     }, []);
     return (
         <div>
-            <TopNav />
-            <Header />
             <TeachersComp />
             <Footer />
         </div>

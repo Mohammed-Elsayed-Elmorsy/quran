@@ -11,8 +11,6 @@ const Programms = () => {
     }, []);
     return (
         <div >
-            <TopNav />
-            <Header />
             <ProgComp />
             <Footer />
         </div>

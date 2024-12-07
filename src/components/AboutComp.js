@@ -17,7 +17,7 @@ const AboutComp = ({ more, readmore }) => {
     }, [])
     return (
         <div className='bg-tertiary about pb-[70px] flex flex-col '>
-            <h2 className=' title' >
+            <h2 className=' title ' >
                 {!state ? ' about us' : 'اقرا عنا'}
                 <FaCheck />
             </h2>

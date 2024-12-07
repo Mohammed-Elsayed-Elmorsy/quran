@@ -14,8 +14,6 @@ const Contact = () => {
     return (
         <div >
 
-            <TopNav />
-            <Header />
             <ContactComp />
             <Footer />
 

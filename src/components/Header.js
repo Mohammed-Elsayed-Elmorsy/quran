@@ -41,7 +41,7 @@ const Header = () => {
     return (
         <header className={` transition-all ${bgToHeader ? ' shadow-md ' : ''} bg-white`}>
 
-            <div className={`container h-[110px]  flex items-center mx-auto justify-between px-5`}>
+            <div className={`container h-[100px]  flex items-center mx-auto justify-between px-5`}>
 
                 <div className="logo w-[200px]">
                     <Link to={'/'} className='  flex gap-1 items-center'>

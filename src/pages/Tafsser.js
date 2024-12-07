@@ -9,8 +9,6 @@ const Tafsser = () => {
     }, []);
     return (
         <div>
-            <TopNav />
-            <Header />
             <div>
 
                 <h2 className=' title'>

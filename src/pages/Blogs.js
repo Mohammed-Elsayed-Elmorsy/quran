@@ -11,8 +11,6 @@ const Blogs = () => {
     }, []);
     return (
         <div>
-            <TopNav />
-            <Header />
             <BlogsCOMP slider={false} />
             <Footer />
 

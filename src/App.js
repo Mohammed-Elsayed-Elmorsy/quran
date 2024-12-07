@@ -22,6 +22,8 @@ import FreeTrial from './components/FreeTrial';
 import TeachersDetails from './pages/TeachersDetails';
 import PorgDetails from './pages/PorgDetails';
 import { FaWhatsapp } from 'react-icons/fa';
+import TopNav from './components/TopNav';
+import Header from './components/Header';
 function App() {
   useEffect(() => {
     aos.init({
@@ -43,6 +45,8 @@ function App() {
           </span>
         </Link>
         <LangOverlay />
+        <TopNav />
+        <Header />
         {/* <FreeTrial /> */}
         <Toaster />
         <Routes>

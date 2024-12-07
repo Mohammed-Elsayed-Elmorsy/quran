@@ -27,8 +27,6 @@ const About = () => {
     }, [])
     return (
         <div>
-            <TopNav />
-            <Header />
             <div className=' bg-tertiary'>
                 <div className='py-[30px] container mx-auto px-5 md:px-[80px] lg:px-[120px]'>
                     {state &&

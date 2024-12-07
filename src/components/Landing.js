@@ -11,6 +11,7 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
+import Slideshow from './SlideShow';
 const Landing = () => {
     const [change, setChange] = useState(false)
     const lang = useSelector(state => state.lang.arabic)
@@ -22,7 +23,7 @@ const Landing = () => {
     }
     changebgoflanding()
     return (
-        <div className={`  z-50 landing ${change ? 'bg-change' : ''} flex justify-center items-center`}>
+        <Slideshow>
 
             {!state && <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
@@ -125,7 +126,8 @@ const Landing = () => {
                     </div>
                 </SwiperSlide>
             </Swiper>}
-        </div>
+        </Slideshow>
+        // </div>
     )
 }
 

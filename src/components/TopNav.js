@@ -1,5 +1,7 @@
 import React from 'react'
-import { FaEnvelope, FaEnvelopeSquare, FaFacebook, FaPhone, FaWhatsapp } from 'react-icons/fa'
+import { FaWhatsapp } from 'react-icons/fa'
+import { FaFacebook } from 'react-icons/fa'
+import { GoMail } from 'react-icons/go'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
@@ -7,10 +9,10 @@ const TopNav = () => {
   const lang = useSelector(state => state.lang.arabic)
   const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
   return (
-    <div className='p-2 bg-blue-500 upper-header'>
-      <div className="container mx-auto px-5  py-2 flex justify-between items-center">
+    <div className=' upper-header bg-primary'>
+      <div className="container mx-auto h-[70px]  px-8 flex justify-between items-center">
         <Link to={'/programms'}>
-          <span className=' hover:bg-white hover:text-black transition-all  bg-slate-500 rounded shadow-md block p-3 text-[20px] text-slate-100'>
+          <span className=' hover:bg-white hover:text-black transition-all  bg-secondary   block py-2 px-3 text-[20px] text-slate-100'>
             {state ? 'ابدا معنا الان' : 'Start with us now'}
           </span>
         </Link>
@@ -22,7 +24,7 @@ const TopNav = () => {
             <FaFacebook />
           </a>
           <a className=' hover:bg-white hover:text-black p-[4px] transition-all rounded' href="mailto:sallealamohammed@gmail.com" target=' _blank'>
-            <FaEnvelopeSquare />
+            <GoMail />
           </a>
         </div>
       </div>

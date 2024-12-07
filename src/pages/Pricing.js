@@ -10,8 +10,6 @@ const PricingPage = () => {
     }, []);
     return (
         <div>
-            <TopNav />
-            <Header />
             <PricingComp />
             <Footer />
         </div>

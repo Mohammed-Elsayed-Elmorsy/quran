@@ -20,8 +20,6 @@ const TeachersDetails = () => {
     }, [id])
     return (
         <div className="details-page">
-            <TopNav />
-            <Header />
             <div className="details-page-content">
 
                 <div className=' container px-7  mx-auto pb-[70px]'>

@@ -12,14 +12,14 @@ const LangOverlay = () => {
     }
     const changetoEnglish = () => {
         localStorage.setItem('lang', 'false')
-        window.location = '/'
+        window.location = 'https://mohammed-elsayed-elmorsy.github.io/learnquran/'
         setTimeout(() => {
             dispatch({ type: 'ENGLISH' })
         }, 100);
     }
     const changetoAranbic = () => {
         localStorage.setItem('lang', 'true')
-        window.location = '/'
+        window.location = 'https://mohammed-elsayed-elmorsy.github.io/learnquran/'
         setTimeout(() => {
             dispatch({ type: 'ARABIC' })
         }, 100);

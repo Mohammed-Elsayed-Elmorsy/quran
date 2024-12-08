@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
 import { teachersArabic, teaches } from '../utils/data'
 import { FaCheck } from 'react-icons/fa6'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
+
 
 const TeachersComp = () => {
     const lang = useSelector(state => state.lang.arabic)
@@ -41,6 +41,8 @@ const TeachersComp = () => {
                 </div>
             </div>
         </div>
+
+
     )
 }
 

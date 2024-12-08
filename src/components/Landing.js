@@ -41,7 +41,7 @@ const Landing = () => {
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial flex-1">
                             <h2 className=' md:text-[35px] text-[30px]'> Islamic Studies</h2>
-                            <p className=' md:text-[25px]'>Study the Islamic rulings related to daily practices and the
+                            <p className='  md:text-[25px]'>Study the Islamic rulings related to daily practices and the
                                 essentials that every Muslim must know,
                                 with enjoyable, easy, and engaging lessons suitable for both children and adults</p>
                             <button className='mt-3 btn-pri'>learn more</button>

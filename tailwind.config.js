@@ -9,7 +9,7 @@ module.exports = {
         primary: '#143d59',
         secondary: '#f4b42a',
         tertiary: '#f4b42a48',
-        quaternary: '#f4b42a1a',
+        quaternary: '#f4b42a34',
       }
     },
     plugins: [],

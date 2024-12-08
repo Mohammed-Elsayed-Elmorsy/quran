@@ -12,7 +12,7 @@
 :root{
   --main-color:#143d59;
   --second-color:#f4b42a;
-  --ter-color:#143d594d;
+  --ter-color:#f4b42a34;
   --white:#ffffff;
 }
 * {
@@ -173,20 +173,12 @@ body{
   height: calc(100vh - 170px);
     position: relative;
     z-index:1 ;
-    /* background: url('./static/mosque-6231915_1280.jpg') ; */
-    /* background-size: cover; */
     background-position: center;
 }
+.landing p {
+  color: white !important ;
+} 
 
-/* .landing.bg-change{
-  position: relative;
-  z-index:1 ;
-  background: url('./static/mosque3.png') ;
-  background-size: cover;
-  background-position: center center;
-  animation: landing-bg-change 0.3s   1 forwards  ease;
-  -webkit-animation: landing-bg-change 0.3s   1 forwards  ease;
-} */
 
 .landing::after  {
   position: absolute;
@@ -196,7 +188,7 @@ body{
   left: 0;
   top: 0;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .upper-header{
   position: relative;
@@ -652,7 +644,7 @@ padding: 10px 14px;
   flex-direction: column;
   gap: 10px;
   /* border:1px solid #d4d4d4; */
-  box-shadow: 0px 0px 10px rgb(207, 207, 207);
+  box-shadow: 0px 0px 8px rgb(192, 192, 192);
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
@@ -703,12 +695,12 @@ padding: 10px 14px;
     -ms-transition:all 0.4s ease;
     -o-transition:all 0.4s ease;
     -webkit-transition:all 0.4s ease;
-  box-shadow: 0 0 10px #d4d4d4;
+  box-shadow: 0 0 10px #d1b698;
 
 }
 
 .contact-item:hover{
-  box-shadow: 0 0 10px #a7a7a7;
+  box-shadow: 0 0 10px #999898;
 }
 
 .Contact{
@@ -1000,30 +992,29 @@ label {
 
 input, select {
   width: 100% !important;
-  padding: 12px;
-  border: 1px solid #ccc;
-  /* border-radius: 5px; */
+  padding: 14px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
   font-size: 16px;
   box-sizing: border-box;
+  border: 1px solid #e2e2e2;
 }
 
 input:focus, select:focus {
   outline: none;
   border-color: #143d59;
-  /* box-shadow: 0 0 5px rgba(20, 61, 89, 0.5); */
 }
 
 /* Submit button */
 .btn-submit {
   width: 100%;
-  /* flex: 1 30%; */
-  padding: 12px;
-  font-size: 16px;
+  padding: 14px;
+  font-size: 17px;
   font-weight: bold;
   color: white;
   background-color: #143d59;
   border: none;
-  /* border-radius: 5px; */
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -1145,3 +1136,77 @@ input:focus, select:focus {
   }
 } */
 
+.teachers-section {
+  color: #fff;
+  padding: 3rem;
+  background-color: #f4b42a49;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.teachers-carousel {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.teacher-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 150px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.teacher-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.teacher-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-bottom: 0.5rem;
+}
+
+.teacher-info {
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: visibility 0s, opacity 0.3s linear, transform 0.3s ease;
+}
+
+.teacher-card:hover .teacher-info {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.more-info-btn {
+  background: #fff;
+  color: #6a11cb;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.more-info-btn:hover {
+  background: #6a11cb;
+  color: #fff;
+}

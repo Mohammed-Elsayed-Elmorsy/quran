@@ -18,7 +18,7 @@ const ProgComp = () => {
                 {!state ? progs.map(item =>
                     <div
                         data-aos={'fade-up'}
-                        className='item  rounded-md'
+                        className='item '
                         key={item.id}>
                         <img src={item.image} alt="" className={` h-[250px]   object-cover`} />
                         <h2 className='px-4 text-[22px] font-bold'>{item.title}</h2>

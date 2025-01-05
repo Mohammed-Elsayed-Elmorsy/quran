@@ -17,7 +17,7 @@ const BlogDetails = () => {
     useEffect(() => {
         setTimeout(() => {
             setloading(false)
-        }, 1600);
+        }, 2000);
         const specificBlog = !state ? blogs.find(i => i.id.toString() === id) :
             blogsArabic.find(i => i.id.toString() === id)
         setBlog(specificBlog)

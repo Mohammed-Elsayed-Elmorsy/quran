@@ -545,7 +545,6 @@ header ul li a:hover::after{
   font-weight: bold;
   text-transform: capitalize;
   font-size: 42px; 
-  position: relative;
   z-index: 3;
 }
 
@@ -1208,10 +1207,8 @@ input:focus, select:focus {
   height: 20px;
   border-radius: 50%;
   background-color: black;
-  display: inline-block;
-  margin-right: 10px;
-  position: absolute;
-  top: 200px;
+  position: relative;
+  top: 10px;
   z-index: 1000;
 }
 
@@ -1219,37 +1216,27 @@ input:focus, select:focus {
 .first {
   background-color: rgb(238, 29, 78);
   animation: loading 1s 0.7s infinite forwards linear;
-  left: calc(50% + 30px);
-  left: 5px;
 }
 
 .second {
   background-color: rgb(24, 85, 228);
-  left: calc(50% + 55px);
-  left: 30px;
   animation: loading 1s 0.5s infinite linear forwards;
 
 }
 
 .third {
-  left: calc(50% + 80px);
-  left: 55px;
   background-color: black;
   animation: loading 1s 0.3s infinite forwards linear;
 }
 
 .fourth {
   animation: loading 1s 0.1s infinite linear forwards;
-  left: calc(50% + 105px);
-  left: 80px;
   background-color: rgb(8, 214, 90);
   color: #f7f7f7;
 }
 
 .fifth {
   animation: loading 1s infinite linear forwards;
-  left: calc(50% + 105px);
-  left: 105px;
   background-color: rgb(196, 3, 180);
 }
 
@@ -1257,25 +1244,30 @@ input:focus, select:focus {
 
   0%,
   20% {
-    top: 200px;
+    top: 10px;
   }
 
   40%,
   60% {
-    top: 180px;
+    top: 30px;
     background-color: rgb(218, 217, 217);
   }
 
   80%,
   100% {
-    top: 200px;
+    top: 10px;
     background-color: black;
   }
 }
 .loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
   position: absolute;
-  top: 200px;
-  left: 47%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  top: 100px;
+  width: 100%;
+  gap: 5px;
   z-index: 1000;
 }

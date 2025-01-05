@@ -188,7 +188,7 @@ body{
   left: 0;
   top: 0;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .upper-header{
   position: relative;
@@ -244,8 +244,8 @@ header .logo img{
   background-color: white;
     object-fit: cover;
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 95px;
+    height: 95px;
     object-fit: contain;
     z-index: 11;
 }
@@ -544,7 +544,9 @@ header ul li a:hover::after{
   gap: 8px;
   font-weight: bold;
   text-transform: capitalize;
-  font-size: 30px; 
+  font-size: 42px; 
+  position: relative;
+  z-index: 3;
 }
 
 /* choose start */
@@ -622,7 +624,24 @@ padding: 10px 14px;
   color: white;
 
 }
-
+/* .choose{
+  background-image: url(./static/30.png);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+} */
+/* .choose::before{
+  position: absolute;
+  content: '';
+  background-color: rgba(221, 102, 5, 0.356); 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2; 
+} */
 .choose .container 
 , 
 .teachers .content 
@@ -644,12 +663,12 @@ padding: 10px 14px;
   flex-direction: column;
   gap: 10px;
   /* border:1px solid #d4d4d4; */
-  box-shadow: 0px 0px 8px rgb(192, 192, 192);
-  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgb(206, 206, 206);
+  /* border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+  -o-border-radius: 8px; */
 }
 
 
@@ -921,43 +940,18 @@ div.overlay{
 }
 
 .details-page{
-  background-image: linear-gradient(to right, rgba(243, 243, 243, 0.808)   , rgb(255, 255, 255) ) ;
+  /* background-color: #ebc69d; */
 }
 .details-page-content{
   position: relative;
   z-index: 0;
 }
-/* .details-page-content::after{
-  position: absolute;
-  z-index: 1;
-  content: '';
-  height: 50%;
-  background-color: #e6e6e6;
-  width: 100%;
-  left: 0;
-  right: 0;
-  top: 0;
-} */
-.details-page-content::before{
-  position: absolute;
-  z-index: 1;
-  content: '';
-  height: 100%;
-  background-image: linear-gradient(to right,rgb(132, 138, 148),rgb(255, 255, 255));
-  width: 100%;
-  left: 0;
-  right: 0;
-  top: 0%;
-  bottom: 0%;
-}
+
 .details-page-content .container{
   position: relative;
   z-index: 2;
 }
-/* .details-page-content .container{
-  z-index: 10;
-  position: relative;
-} */
+
 
 
 
@@ -968,9 +962,6 @@ div.overlay{
   margin-bottom: 50px;
 }
 .form-container form {
-  /* border-radius: 8px; */
-  /* padding: 20px; */
-  /* box-shadow: 0 0 10px rgb(187, 186, 186); */
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
@@ -1136,77 +1127,155 @@ input:focus, select:focus {
   }
 } */
 
+
+
+
+/* teachers */
+
 .teachers-section {
-  color: #fff;
-  padding: 3rem;
-  background-color: #f4b42a49;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
+ 
 }
 
-.teachers-carousel {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-  position: relative;
+
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .teacher-card {
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  width: 150px;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  box-shadow: 0 0 10px rgb(177, 177, 177);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .teacher-card:hover {
-  transform: scale(1.1);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
 }
 
 .teacher-photo {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  border: 3px solid #fff;
-  margin-bottom: 0.5rem;
+  margin-bottom: 15px;
+  border: 3px solid #f4d03f;
+  margin: 0 auto 15px;
 }
 
-.teacher-info {
-  text-align: center;
-  visibility: hidden;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: visibility 0s, opacity 0.3s linear, transform 0.3s ease;
+.teacher-card h3 {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #f4d03f;
 }
 
-.teacher-card:hover .teacher-info {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
+.teacher-card p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 5px 0;
 }
 
-.more-info-btn {
-  background: #fff;
-  color: #6a11cb;
+.social-links a {
+  color: #f4d03f;
+  margin: 0 5px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.contact-btn {
+  background: #f4d03f;
+  color: #000;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s ease;
 }
 
-.more-info-btn:hover {
-  background: #6a11cb;
-  color: #fff;
+.contact-btn:hover {
+  background: #ffeb3b;
+}
+
+
+
+.first,
+.second,
+.third,
+.fourth,
+.fifth {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+  display: inline-block;
+  margin-right: 10px;
+  position: absolute;
+  top: 200px;
+  z-index: 1000;
+}
+
+
+.first {
+  background-color: rgb(238, 29, 78);
+  animation: loading 1s 0.7s infinite forwards linear;
+  left: calc(50% + 30px);
+  left: 5px;
+}
+
+.second {
+  background-color: rgb(24, 85, 228);
+  left: calc(50% + 55px);
+  left: 30px;
+  animation: loading 1s 0.5s infinite linear forwards;
+
+}
+
+.third {
+  left: calc(50% + 80px);
+  left: 55px;
+  background-color: black;
+  animation: loading 1s 0.3s infinite forwards linear;
+}
+
+.fourth {
+  animation: loading 1s 0.1s infinite linear forwards;
+  left: calc(50% + 105px);
+  left: 80px;
+  background-color: rgb(8, 214, 90);
+  color: #f7f7f7;
+}
+
+.fifth {
+  animation: loading 1s infinite linear forwards;
+  left: calc(50% + 105px);
+  left: 105px;
+  background-color: rgb(196, 3, 180);
+}
+
+@keyframes loading {
+
+  0%,
+  20% {
+    top: 200px;
+  }
+
+  40%,
+  60% {
+    top: 180px;
+    background-color: rgb(218, 217, 217);
+  }
+
+  80%,
+  100% {
+    top: 200px;
+    background-color: black;
+  }
+}
+.loading {
+  position: absolute;
+  top: 200px;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
 }

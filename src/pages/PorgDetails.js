@@ -6,18 +6,27 @@ import { useSelector } from 'react-redux'
 import { medias, mediasarab, progs, progsArabic } from '../utils/data'
 import { Link, useParams } from 'react-router-dom'
 import LinksOfDetails from '../components/LinksOfDetails'
-
+import Loading from '../components/Loading'
 const PorgDetails = () => {
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     const { id } = useParams()
     const [prog, setProg] = useState(null)
+    const [loading, setloading] = useState(true)
+
     useEffect(() => {
+        setTimeout(() => {
+            setloading(false)
+        }, 1600);
         const specificprog = !state ? progs.find(i => i.id.toString() === id) :
             progsArabic.find(i => i.id.toString() === id)
         setProg(specificprog)
         window.scrollTo(0, 0);
+        setloading(true)
     }, [id])
+    if (loading) {
+        return <Loading />
+    }
     return (
         <div className='details-page'>
             <div className='details-page-content'>

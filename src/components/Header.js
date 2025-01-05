@@ -15,6 +15,7 @@ const Header = () => {
     const [hidetext, setHidetext] = useState(false)
     const [minmizelogo, setMinmizelogo] = useState(false)
     const [showMenu, setShowMenu] = useState(false)
+
     const addBgToHeader = () => {
         if (window.scrollY > 100) {
             setBgToHeader(true)
@@ -50,7 +51,7 @@ const Header = () => {
                         ${hidetext ? 'hide-text' : 'show-text'}  
                         font-bold text-[20px] relative`}>
 
-                            {!state ? ' Quran way' : 'طريق القرآن'}
+                            {!state ? ' Quran way' : '   قرآن واى  '}
                         </span>
                     </Link>
                 </div>

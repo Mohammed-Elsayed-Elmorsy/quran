@@ -48,20 +48,26 @@ const PricingComp = () => {
                         {state ? pricingArabic[currentid - 1].classes.map(item =>
                             <div key={item.id}
                                 className={` ${currentid === 1 ? 'pricing-1' : currentid === 2 ? 'pricing-2' : 'pricing-3'} shadow-md rounded-md gap-2 flex-col flex gap border  bg-white p-2`}>
-                                <h3 className=' font-bold capitalize text-[20px] p-3 py-3 bg-primary text-white'>{item.numberperweek}</h3>
-                                <p className='text-[18px] bg-secondary text-white p-3'>{item.cost}</p>
+                                <h3 className=' font-bold capitalize text-[20px] p-3 py-3 bg-primary text-white'>
 
-                                <span style={{ backgroundColor: '#eee' }} className='capitalize block p-3 text-[18px]'>{item.numberpermonth}</span>
-                                <p style={{ backgroundColor: '#eee' }} className='capitalize p-3 text-[18px]'>{item.costforclass}</p>
+                                    <span className=' text-[30px] font-bold'>{item.numberperweek}</span>
+                                    الأسبوع
+
+                                </h3>
+                                <p className='text-[18px] bg-secondary text-white p-3'><span className=' text-[25px] font-bold'>{item.cost}</span>الشهر</p>
+
+                                <span style={{ backgroundColor: '#eee' }} className='capitalize block p-3 text-[18px]'><span className='text-[30px] font-bold'>{item.numberpermonth}</span>الشهر</span>
+                                <p style={{ backgroundColor: '#eee' }} className='capitalize p-3 text-[18px]'><span className='text-[30px] font-bold'>{item.costforclass}</span>الحصة</p>
                             </div>)
                             : pricing[currentid - 1].classes.map(item =>
                                 <div key={item.id}
                                     className={` ${currentid === 1 ? 'pricing-1' : currentid === 2 ? 'pricing-2' : 'pricing-3'} shadow-md rounded-md  gap-2 flex-col flex gap border  bg-white p-2`}>
-                                    <h3 className=' font-bold capitalize text-[20px] p-3 py-3 bg-primary text-white'>{item.numberperweek}</h3>
-                                    <p className='text-[18px] bg-secondary text-white p-3'>{item.cost}</p>
+                                    <h3 className=' font-bold capitalize text-[20px] p-3 py-3 bg-primary text-white'>
+                                        <span className=' text-[30px] font-bold'>{item.numberperweek}</span>week</h3>
+                                    <p className='text-[18px] bg-secondary text-white p-3'><span className=' text-[25px] font-bold'>{item.cost}</span>month</p>
 
-                                    <span style={{ backgroundColor: '#eee' }} className='capitalize block p-3 text-[18px]'>{item.numberpermonth}</span>
-                                    <p style={{ backgroundColor: '#eee' }} className='capitalize p-3 text-[18px]'>{item.costforclass}</p>
+                                    <span style={{ backgroundColor: '#eee' }} className='capitalize block p-3 text-[18px]'><span className='text-[30px] font-bold'>{item.numberpermonth}</span>month</span>
+                                    <p style={{ backgroundColor: '#eee' }} className='capitalize p-3 text-[18px]'><span className='text-[30px] font-bold'>{item.costforclass}</span>class</p>
                                 </div>)}
                     </div>
                 </div>

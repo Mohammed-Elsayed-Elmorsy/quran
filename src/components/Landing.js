@@ -40,7 +40,7 @@ const Landing = () => {
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial flex-1">
-                            <h2 className=' md:text-[35px] text-[30px]'> Islamic Studies</h2>
+                            <h2 className=' lg:text-[42px] text-[32px]'> Islamic Studies</h2>
                             <p className='  md:text-[25px]'>Study the Islamic rulings related to daily practices and the
                                 essentials that every Muslim must know,
                                 with enjoyable, easy, and engaging lessons suitable for both children and adults</p>
@@ -55,7 +55,7 @@ const Landing = () => {
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial  flex-1">
-                            <h2 className=' md:text-[35px] text-[30px]'>Mastering Tajweed and Qur'an Recitation</h2>
+                            <h2 className=' lg:text-[42px] text-[32px]'>Mastering Tajweed and Qur'an Recitation</h2>
                             <p>Learn to read the Qur'an with proper Tajweed in a simple and effective way,
                                 with specialized teachers. Our recitation sessions help you
                                 practice correct pronunciation and apply the rules of Tajweed
@@ -67,7 +67,7 @@ const Landing = () => {
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial  flex-1">
-                            <h2 className=' md:text-[35px] text-[30px]'>Arabic Language</h2>
+                            <h2 className=' lg:text-[42px] text-[32px]'>Arabic Language</h2>
                             <p>At Quran Way Academy, we offer you the opportunity to learn and
                                 practice the Arabic language,
                                 including reading, writing, listening, and speaking
@@ -96,7 +96,7 @@ const Landing = () => {
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial flex-1">
-                            <h2 className=' md:text-[35px] text-[30px]'> الدراسات الاسلامية</h2>
+                            <h2 className=' lg:text-[42px] text-[32px]'> الدراسات الاسلامية</h2>
                             <p className=' md:text-[25px]'>دراسة الأحكام الشرعية المتعلقة بالممارسات اليومية
                                 وما يجب على كل مسلم معرفته، من خلال دروس ممتعة وسهلة مناسبة للصغار والكبار</p>
                             <button className='mt-3 btn-pri'>اقرا المزيد</button>
@@ -107,7 +107,7 @@ const Landing = () => {
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial  flex-1">
-                            <h2 className=' md:text-[35px] text-[30px]'> اتقان التجويد وتلاوة القرآن  </h2>
+                            <h2 className=' lg:text-[42px] text-[32px]'> اتقان التجويد وتلاوة القرآن  </h2>
                             <p>تعلم قراءة القرآن الكريم بتجويد صحيح بطريقة بسيطة وفعّالة
                                 ، مع معلمين متخصصين. جلسات التلاوة
                                 تساعدك على ممارسة النطق السليم وتطبيق قواعد التجويد</p>
@@ -118,7 +118,7 @@ const Landing = () => {
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial  flex-1">
-                            <h2 className=' md:text-[35px] text-[30px]'>اللغة العربية</h2>
+                            <h2 className=' lg:text-[42px] text-[32px]'>اللغة العربية</h2>
                             <p>"في أكاديمية قرآن واي، نوفر لك الفرصة لتعلم وممارسة اللغة العربية، بما في ذلك القراءة، الكتابة، الاستماع، والمحادثة."</p>
                             <button className='mt-3 btn-pri'>اقرا المزيد</button>
 

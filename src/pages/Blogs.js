@@ -1,19 +1,24 @@
-import React, { useEffect } from 'react'
-import { FaCheck, FaEnvelope, FaFacebook, FaWhatsapp } from 'react-icons/fa'
+import React, { useEffect, useState } from 'react'
 import Footer from '../components/Footer'
-import Header from '../components/Header'
 import BlogsCOMP from '../components/Blogs'
-import TopNav from '../components/TopNav'
+import Loading from '../components/Loading';
 
 const Blogs = () => {
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 1400);
         window.scrollTo(0, 0);
+        setLoading(true);
     }, []);
+    if (loading) {
+        return <Loading />
+    }
     return (
         <div>
             <BlogsCOMP slider={false} />
             <Footer />
-
         </div>
     )
 }

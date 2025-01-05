@@ -2,7 +2,11 @@ import { teachersArabic, teaches } from '../utils/data'
 import { FaCheck } from 'react-icons/fa6'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-
+import img from '../static/1.png'
+import img2 from '../static/2.png'
+import img3 from '../static/3.png'
+import img4 from '../static/4.png'
+import img5 from '../static/5.png'
 
 const TeachersComp = () => {
     const lang = useSelector(state => state.lang.arabic)
@@ -41,6 +45,9 @@ const TeachersComp = () => {
                 </div>
             </div>
         </div>
+
+
+
 
 
     )

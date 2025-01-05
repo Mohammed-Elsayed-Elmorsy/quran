@@ -9,7 +9,7 @@ const Footer = () => {
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     return (
-        <div className=' footer pt-[40px] pb-[70px]'>
+        <div className=' footer pt-[40px]'>
             <footer className=' container mx-auto px-3 md:px-[70px] lg:px-[120px] pb-0'>
                 <div className="footer-container justify-between  flex-wrap   flex gap-5 ">
                     <div className=" text-slate-200 flex flex-col  gap-4">
@@ -119,7 +119,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="footer-bottom mt-5 p-10">
+                <div className="footer-bottom mt-4  p-10">
                     <p className=''>&copy; <span id="current-year"></span> MOHAMMED ELMORSY. All rights reserved.</p>
                 </div>
             </footer >

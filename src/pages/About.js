@@ -1,23 +1,26 @@
 
-import Header from '../components/Header'
 import Footer from '../components/Footer'
-import AboutComp from '../components/AboutComp'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import image from '../static/11.png'
 import image2 from '../static/5.png'
 import image3 from '../static/6.png'
 import image4 from '../static/13.png'
-import TopNav from '../components/TopNav';
 import LinksOfDetails from '../components/LinksOfDetails';
 import { FaCheck } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
+import Loading from '../components/Loading';
 import aos from 'aos'
 import 'aos/dist/aos.css'
 const About = () => {
+    const [loading, setLoading] = useState(true)
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     useEffect(() => {
+        setTimeout(() => {
+            setLoading(false)
+        }, 1600);
         window.scrollTo(0, 0);
+        setLoading(true)
     }, []);
     useEffect(() => {
         aos.init({
@@ -25,6 +28,10 @@ const About = () => {
             delay: 100
         })
     }, [])
+    if (loading) {
+        return <Loading />
+    }
+
     return (
         <div>
             <div className=' bg-tertiary'>

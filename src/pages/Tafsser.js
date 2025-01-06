@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
-import TopNav from '../components/TopNav'
-import Header from '../components/Header'
+
 import Footer from '../components/Footer'
 
 const Tafsser = () => {

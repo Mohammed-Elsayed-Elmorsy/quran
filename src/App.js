@@ -38,7 +38,7 @@ function App() {
       <HashRouter>
         <Link to={'https://wa.me/201212659525'} target='_blank'
           className=' start-chat bg-primary block rounded-md hover:bg-secondary hover:text-white
-      py-3 px-5 text-secondary fixed text-[30px] cursor-pointer z-50 bottom-10 right-10'>
+      py-3 px-5 text-secondary fixed text-[30px] cursor-pointer z-50 bottom-8 right-8'>
           <FaWhatsapp />
           <span className='start-chat-hover capitalize'>
             {lang ? 'تواصل معنا الان ' : 'start chat now'}

@@ -15,19 +15,19 @@ const Choose = () => {
         })
     }, [])
     return (
-        <div className='choose bg-tertiary pb-[70px]' >
+        <div className='choose bg-light pb-[70px]' >
             <h2 className='title ' >
                 {!state ? 'why choose us' : 'لماذا تختارنا'}
                 <FaCheck />
             </h2>
             <div className=' text-center container mx-auto px-3 md:px-[70px] lg:px-[120px]'>
-                {state ? chooseArabic.map(item => <div className='item ' key={item.id} data-aos={item.aos}>
+                {state ? chooseArabic.map(item => <div className='item  rounded-md' key={item.id} data-aos={item.aos}>
                     <img className=' w-[120px] h-[120px] object-contain mx-auto' src={item.image} alt="" />
-                    <h2 className=' font-bold text-[25px]'>{item.title}</h2>
+                    <h3 className=' font-bold text-[25px]'>{item.title}</h3>
                     <p className=' p-2 text-[20px]' data-aos="fade-up">{item.text}</p>
-                </div>) : choose.map(item => <div className='item ' key={item.id} data-aos={item.aos}>
+                </div>) : choose.map(item => <div className='item rounded-md' key={item.id} data-aos={item.aos}>
                     <img className=' w-[120px] h-[120px] object-contain mx-auto' src={item.image} alt="" />
-                    <h2 className='font-bold text-[25px]'>{item.title}</h2>
+                    <h3 className='font-bold text-[25px]'>{item.title}</h3>
                     <p className='  p-2 text-[20px] ' data-aos="fade-up">{item.text}</p>
                 </div>)}
             </div>

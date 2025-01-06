@@ -34,7 +34,7 @@ const ContactComp = () => {
     };
     console.log(phoneNumber);
     return (
-        <div className='Contact pb-[70px] bg-tertiary'>
+        <div className='Contact pb-[70px] bg-light'>
 
             <div className=' container mx-auto px-3 md:px-[70px] lg:px-[120px]'>
                 <h2 className='title'>
@@ -199,7 +199,7 @@ const ContactComp = () => {
                             return (
                                 <div data-aos='fade-down'
                                     key={item.id}
-                                    className='contact-item rounde flex flex-col gap-2 rounded-md bg-white p-2'>
+                                    className='contact-item flex flex-col gap-2 rounded-md bg-white p-2'>
                                     <Link target='_blank' to={item.to}
                                         className=' md:text-[20px] text-wrap break-all break-words  text-blue-500'>
                                         <span style={{ color: 'var(--main-color)' }}

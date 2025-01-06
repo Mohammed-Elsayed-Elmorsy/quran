@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { pricing, pricingArabic } from '../utils/data'
-import { FaCheck, FaCheckCircle } from 'react-icons/fa'
+import { FaCheck } from 'react-icons/fa'
 import { useSelector } from 'react-redux'
 import LinksOfDetails from './LinksOfDetails'
 const PricingComp = () => {
@@ -9,7 +9,7 @@ const PricingComp = () => {
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     return (
-        <div className=' pricing pb-[70px] bg-tertiary ' >
+        <div className=' pricing pb-[70px] bg-light ' >
             <h2 className=' title'>
 
                 {state ? 'اختار باقتك ' : 'pricing'}

@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import TopNav from '../components/TopNav'
-import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { useSelector } from 'react-redux'
-import { medias, mediasarab, progs, progsArabic } from '../utils/data'
-import { Link, useParams } from 'react-router-dom'
+import { progs, progsArabic } from '../utils/data'
+import { useParams } from 'react-router-dom'
 import LinksOfDetails from '../components/LinksOfDetails'
 import Loading from '../components/Loading'
 const PorgDetails = () => {
@@ -17,7 +15,7 @@ const PorgDetails = () => {
     useEffect(() => {
         setTimeout(() => {
             setloading(false)
-        }, 1600);
+        }, 2000);
         const specificprog = !state ? progs.find(i => i.id.toString() === id) :
             progsArabic.find(i => i.id.toString() === id)
         setProg(specificprog)

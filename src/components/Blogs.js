@@ -17,7 +17,7 @@ const BlogsComp = ({ slider }) => {
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     return (
-        <div className=' blogs bg-tertiary   pb-[70px]'>
+        <div className=' blogs bg-light   pb-[70px]'>
             <div className=' mx-auto px-3 md:px-[70px] lg:px-[120px] container'>
                 <div>
                     <h2 className='title ' >
@@ -49,9 +49,9 @@ const BlogsComp = ({ slider }) => {
                                                 <div className=' overflow-hidden'>
                                                     <img src={item.image} alt="" className='h-[270px] w-full object-cover' />
                                                 </div>
-                                                <h2>
+                                                <h3 className=' font-bold text-[25px]'>
                                                     {item.title}
-                                                </h2>
+                                                </h3>
                                                 <p className=''>
                                                     {item.desc.substring(0, 190)}
                                                 </p>
@@ -73,9 +73,9 @@ const BlogsComp = ({ slider }) => {
                                                 <div className=' overflow-hidden'>
                                                     <img src={item.image} alt="" className='h-[270px] w-full object-cover' />
                                                 </div>
-                                                <h2>
+                                                <h3 className=' font-bold text-[25px]'>
                                                     {item.title}
-                                                </h2>
+                                                </h3>
                                                 <p className=''>
                                                     {item.desc}
                                                 </p>
@@ -97,9 +97,9 @@ const BlogsComp = ({ slider }) => {
                                             <div className=' overflow-hidden'>
                                                 <img src={item.image} alt="" className='h-[270px] w-full object-cover' />
                                             </div>
-                                            <h2>
+                                            <h3 className=' font-bold text-[25px]'>
                                                 {item.title}
-                                            </h2>
+                                            </h3>
                                             <p className=''>
                                                 {item.desc.substring(0, 190)}
                                             </p>
@@ -117,9 +117,9 @@ const BlogsComp = ({ slider }) => {
                                             <div className=' overflow-hidden'>
                                                 <img src={item.image} alt="" className='h-[270px] w-full object-cover' />
                                             </div>
-                                            <h2>
+                                            <h3 className=' font-bold text-[25px]'>
                                                 {item.title}
-                                            </h2>
+                                            </h3>
                                             <p className=''>
                                                 {item.desc}
                                             </p>

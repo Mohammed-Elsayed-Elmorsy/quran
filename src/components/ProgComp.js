@@ -8,7 +8,7 @@ const ProgComp = () => {
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     return (
-        <div className='choose bg-tertiary Programms pb-[70px]'>
+        <div className='choose bg-light Programms pb-[70px]'>
             <h2 className='title ' >
 
                 {state ? ' برامجنا المختلفة' : 'our programms'}
@@ -21,12 +21,12 @@ const ProgComp = () => {
                         className='item '
                         key={item.id}>
                         <img src={item.image} alt="" className={` h-[250px]   object-cover`} />
-                        <h2 className='px-4 text-[22px] font-bold'>{item.title}</h2>
+                        <h3 className='px-4 text-[22px] font-bold'>{item.title}</h3>
                         <p className='px-4'>{item.desc}</p>
                         {<ul className=' list-decimal pl-[16px] pr-6 flex-col flex gap-4'>
                             {item.points.map(point =>
                                 <li className='text-sm' key={point.title}>
-                                    <h2 className=' inline text-[20px] font-bold'>{point.title}</h2>
+                                    <h3 className=' inline text-[20px] font-bold'>{point.title}</h3>
                                     <span className=' text-[18px] tracking-wider'>
                                         {point.info}
                                     </span>
@@ -44,12 +44,12 @@ const ProgComp = () => {
                         <div className='item justify-between '
                             key={item.id} data-aos={'fade-up'}>
                             <img src={item.image} alt="" className={` h-[250px]   object-cover`} />
-                            <h2 className='px-4 text-[22px] font-bold' >{item.title}</h2>
+                            <h3 className='px-4 text-[22px] font-bold' >{item.title}</h3>
                             <p className='px-4'>{item.desc}</p>
                             {<ul className=' list-decimal pr-6 pl-[16px] flex-col flex gap-4'>
                                 {item.points.map(point =>
                                     <li className='text-sm' key={point.title}>
-                                        <h2 className=' inline text-[20px] font-bold'>{point.title} </h2>
+                                        <h3 className=' inline text-[20px] font-bold'>{point.title} </h3>
                                         <span className=' text-[18px] tracking-wider'>{point.info}</span>
                                     </li>)}
                             </ul>}

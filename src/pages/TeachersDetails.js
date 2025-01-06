@@ -1,9 +1,7 @@
 import { useSelector } from "react-redux"
-import { medias, mediasarab, teachersArabic, teaches } from "../utils/data"
-import { Link, useParams } from "react-router-dom"
+import { teachersArabic, teaches } from "../utils/data"
+import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react"
-import TopNav from "../components/TopNav"
-import Header from "../components/Header"
 import Footer from "../components/Footer"
 import LinksOfDetails from "../components/LinksOfDetails"
 

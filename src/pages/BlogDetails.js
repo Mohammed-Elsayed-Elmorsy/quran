@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '../components/Footer'
-import { blogs, blogsArabic, medias, mediasarab } from '../utils/data'
+import { blogs, blogsArabic } from '../utils/data'
 import { Link, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import LinksOfDetails from '../components/LinksOfDetails'
-import { GoShare, GoCopy, GoVideo } from 'react-icons/go'
+import { GoShare, GoCopy, GoVideo, GoBell } from 'react-icons/go'
 import Loading from '../components/Loading'
 
 const BlogDetails = () => {
@@ -35,9 +35,9 @@ const BlogDetails = () => {
                         {blog?.title}
                     </h2>
                     <div className=' flex justify-between flex-col items-center'>
-                        <div className=' flex justify-between items-center w-1/2 mx-auto  py-[30px]'>
+                        <div className=' flex justify-between items-center w-full mx-auto  py-[30px]'>
                             <span className=' flex items-center gap-2'>
-                                <img src={blog?.image} className=' w-[55px] h-[55px] rounded-full object-cover' alt="" />
+                                <img src={blog?.image[0]} className=' w-[55px] h-[55px] rounded-full object-cover' alt="" />
                                 <div>
                                     <h3 className=' capitalize'>mohammed elmorsy</h3>
                                     <p className='text-gray-500'>12/12/2021</p>
@@ -47,10 +47,25 @@ const BlogDetails = () => {
                                 <GoShare />
                                 <GoVideo />
                                 <GoCopy />
+                                <GoBell />
                             </span>
                         </div>
-                        <img className=' w-full h-[500px] object-cover' src={blog?.image} alt="" />
+                        <div className='grid-area'>
+                            <div>
+                                <img className=' w-full h-full object-cover' src={blog?.image[0]} alt="" />
+                            </div>
+                            <div>
+                                <img className=' w-full h-full object-cover' src={blog?.image[1]} alt="" />
+                            </div>
+                            <div>
+                                <img className=' w-full h-full object-cover' src={blog?.image[2]} alt="" />
 
+                            </div>
+                            <div>
+                                <img className=' w-full h-full object-cover' src={blog?.image[3]} alt="" />
+
+                            </div>
+                        </div>
                         <div className=' flex items-start'>
                             <p className=' text-[20px] w-full mt-5'>
                                 {blog?.desc}{blog?.desc}{blog?.desc}{blog?.desc}
@@ -64,19 +79,17 @@ const BlogDetails = () => {
                 <div>
                     <h2 className=' text-[25px] font-bold my-[20px]'>{!state ? 'Relatd Blogs' : 'المواضيع ذات الصلة'}</h2>
                     <div className=' grid gap-2  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 '>
-                        {!state ? blogs.filter(i => i.id !== Number(id)).map(item => <div
-                            className=' border  hover:shadow-lg'>
-                            <Link to={`/blogs/${item.id}`}>
-                                <img className='p-2 w-[250px] h-[150px] object-cover' src={item.image} alt="" />
-                                <h3 className='px-2'>{item.title}</h3>
+                        {!state ? blogs.filter(i => i.id !== Number(id)).map(item =>
+                            <Link className='p-2 border border-slate-300  hover:shadow-lg ' to={`/blogs/${item.id}`}>
+                                <img className=' w-[250px] h-[150px] object-cover' src={item.image[0]} alt="" />
+                                <h6 className=' text-black mt-4 font-bold'>{item.title}</h6>
                             </Link>
-                        </div>) : blogsArabic.filter(i => i.id !== Number(id)).map(item => <div
-                            className=' border  hover:shadow-lg '>
-                            <Link to={`/blogs/${item.id}`}>
-                                <img className='p-2 w-[250px] h-[150px] object-cover' src={item.image} alt="" />
-                                <h3 className='px-2'>{item.title}</h3>
+                        ) : blogsArabic.filter(i => i.id !== Number(id)).map(item =>
+                            <Link className='border border-slate-300  hover:shadow-lg  p-2' to={`/blogs/${item.id}`}>
+                                <img className=' w-[250px] h-[150px] object-cover' src={item.image[0]} alt="" />
+                                <h6 className=' text-black mt-4 font-bold'>{item.title}</h6>
                             </Link>
-                        </div>)}
+                        )}
                     </div>
                 </div>
                 <LinksOfDetails />

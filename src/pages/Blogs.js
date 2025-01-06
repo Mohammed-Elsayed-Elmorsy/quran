@@ -8,7 +8,7 @@ const Blogs = () => {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false);
-        }, 1400);
+        }, 2000);
         window.scrollTo(0, 0);
         setLoading(true);
     }, []);

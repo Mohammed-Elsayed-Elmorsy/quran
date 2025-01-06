@@ -12,7 +12,7 @@ const TopNav = () => {
     <div className=' upper-header bg-primary'>
       <div className="container mx-auto h-[80px]  px-8 flex justify-between items-center">
         <Link to={'/programms'}>
-          <span className=' hover:bg-white hover:text-black transition-all  bg-secondary   block py-3 px-3 text-[20px] text-slate-100'>
+          <span className=' hover:bg-white hover:text-black transition-all  bg-secondary   block py-3 px-4 text-[20px] text-slate-100'>
             {state ? 'ابدا معنا الان' : 'Start with us now'}
           </span>
         </Link>

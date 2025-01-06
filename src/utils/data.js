@@ -533,37 +533,37 @@ export const mediasarab = [
 export const blogs = [
     {
         id: 1,
-        image: image1,
+        image: [image1, image2, image3, image4],
         title: 'The Virtue of the Quran ',
         desc: 'The Quran is the word of Allah, revealed to the heart of His Prophet Muhammad (PBUH) by the trustworthy Gabriel. It is revered for its recitation, miraculous in its wording and meaning, starting with Surah Al-Fatiha and ending with Surah An-Nas.It is the book that no falsehood comes to from before or behind it, a revelation from the Most Wise, the Most Praiseworthy, and the source of guidance and light for the believers .'
     },
     {
         id: 2,
-        image: image2,
+        image: [image2, image3, image4, image5],
         title: 'Definition of the Quran',
         desc: 'In the Arabic language, the word "Quran" is derived from "Qara’a," which means to gather or combine, as Allah says: "Indeed, upon Us is its collection and its recitation." (Al-Qiyama: 17), referring to combining the letters and words together.In its technical sense, the Quran is the word of Allah revealed to His Messenger Muhammad (PBUH), which is recited and preserved in its original form, passed down to us through authentic transmission, and challenged with producing even the shortest chapter from it, all written in the Mushafs.'
     },
     {
         id: 3,
-        image: image3,
+        image: [image3, image4, image5, image1],
         title: 'The Status of the Quran in Islam',
         desc: '•	The Eternal Miracle:The Quran is the enduring miracle of Islam, which Allah challenged both humans and jinn with. Allah says: "Bring forth a surah like it." (Yunus: 38).the Quran is the revelation of the Lord of the worlds'
     },
     {
         id: 4,
-        image: image4,
+        image: [image4, image5, image1, image2],
         title: 'Quran The Key to Happiness & Success',
         desc: 'The Quran is not just a book to be recited; it is a way of life to be followed, and it is the foundation of happiness in both this world and the Hereafter. Allah says: "Whoever does righteous deeds, whether male or female, while being a believer, We will surely give him a good life." (An-Nahl: 97).'
     },
     {
         id: 5,
-        image: image5,
+        image: [image5, image1, image2, image3],
         title: 'A Call to Hold Fast to the Quran',
         desc: 'let the Quran be your companion in life .Implement its rulings, for it is the straight path of Allah Allah says: "Indeed, this Quran guides to that which is most suitable." (Al-Isra: 9)'
     },
     {
         id: 6,
-        image: image6,
+        image: [image6, image2, image5, image4],
         title: 'Make the Quran the light of your life',
         desc: 'The Quran is the great blessing that Allah has given us, and it is the path to happiness and success in this world and the Hereafter. Learning it and teaching it is a great honor, and living by it brings light and blessings into your life.'
     }
@@ -571,7 +571,7 @@ export const blogs = [
 export const blogsArabic = [
     {
         id: 1,
-        image: image1,
+        image: [image1, image2, image3, image4],
         title: 'أهمية وفضل القرآن الكريم',
         desc: `
         :
@@ -583,7 +583,7 @@ export const blogsArabic = [
     },
     {
         id: 2,
-        image: image2,
+        image: [image2, image3, image4, image5],
         title: 'القرآن الكريم: شرف وكرامة',
         desc: `
 •	الشرف كل الشرف:
@@ -593,7 +593,7 @@ export const blogsArabic = [
     },
     {
         id: 3,
-        image: image5,
+        image: [image5, image1, image2, image3],
         title: 'تعريف القرآن الكريم',
         desc: `لغةً، مشتق من "قرأ" بمعنى جمع وضم، كما في قوله تعالى: "إِنَّ عَلَيْنَا جَمْعَهُ وَقُرْآنَهُ" (القيامة: 17)، أي ضم الحروف والكلمات بعضها إلى بعض.
 اصطلاحًا، هو كلام الله المنزل على رسوله محمد صلى الله عليه وسلم، المتعبد بتلاوته، المنقول إلينا بالتواتر، والمتحدى بأقصر سورة منه، والمحفوظ في المصاحف.
@@ -602,7 +602,7 @@ export const blogsArabic = [
     },
     {
         id: 4,
-        image: image3,
+        image: [image3, image4, image5, image1],
         title: 'مكانة القرآن الكريم في الإسلام',
         desc: `
 •	حفظ اللغة العربية:
@@ -616,7 +616,7 @@ export const blogsArabic = [
     },
     {
         id: 5,
-        image: image4,
+        image: [image4, image5, image1, image2],
         title: 'العمل بالقرآن: مفتاح السعادة والفلاح',
         desc: `القرآن ليس مجرد كتاب يُتلى، بل منهج حياة يُعمل به، وهو أساس السعادة في الدنيا والآخرة. قال تعالى: "مَنْ عَمِلَ صَالِحًا مِّن ذَكَرٍ أَوْ أُنثَىٰ وَهُوَ مُؤْمِنٌ فَلَنُحْيِيَنَّهُ حَيَاةً طَيِّبَةً" (النحل: 97).
  اللهم اجعل القرآن العظيم ربيع قلوبنا، ونور صدورنا، وجلاء أحزاننا، وذهاب همومنا. آمين
@@ -624,7 +624,7 @@ export const blogsArabic = [
     },
     {
         id: 6,
-        image: image6,
+        image: [image6, image2, image5, image4],
         title: 'دعوة إلى التمسك بالقرآن',
         desc: ` 
 أيها المسلم، اجعل القرآن الكريم رفيقك في حياتك:

@@ -18,7 +18,7 @@ const About = () => {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
-        }, 1600);
+        }, 2000);
         window.scrollTo(0, 0);
         setLoading(true)
     }, []);
@@ -34,7 +34,7 @@ const About = () => {
 
     return (
         <div>
-            <div className=' bg-tertiary'>
+            <div className=' bg-light'>
                 <div className='py-[30px] container mx-auto px-5 md:px-[80px] lg:px-[120px]'>
                     {state &&
                         <div className=' flex flex-col gap-5 text-[20px]'>

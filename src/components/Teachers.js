@@ -2,17 +2,12 @@ import { teachersArabic, teaches } from '../utils/data'
 import { FaCheck } from 'react-icons/fa6'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import img from '../static/1.png'
-import img2 from '../static/2.png'
-import img3 from '../static/3.png'
-import img4 from '../static/4.png'
-import img5 from '../static/5.png'
 
 const TeachersComp = () => {
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     return (
-        <div className=' teachers bg-tertiary pb-[70px]'>
+        <div className=' teachers bg-light pb-[70px]'>
             <div className=' container px-7 md:px-[80px] lg:px-[120px] mx-auto'>
                 <h2 className=' title  flex items-center gap-2'>
                     {!state ? 'Our Teachers' : 'المعلمون'}
@@ -22,7 +17,7 @@ const TeachersComp = () => {
                     {!state ? teaches.map(item =>
                         <div data-aos="zoom-in" key={item.id} className=' relative justify-between flex flex-col gap-4'>
                             <img src={item.image} alt="" className=' object-cover h-[250px]' />
-                            <h2 className=' text-[24px] capitalize'>{item.name}</h2>
+                            <h3 className=' text-[24px] capitalize'>{item.name}</h3>
                             <p className=' text-[18px]'>{item.desc}</p>
                             <div className=' flex gap-2 items-center'>
                                 <Link className=' w-full' to={'/teachers/' + item.id}>
@@ -32,7 +27,7 @@ const TeachersComp = () => {
                         </div>) : teachersArabic.map(item =>
                             <div data-aos="zoom-in" key={item.id} className=' relative  flex flex-col gap-4'>
                                 <img src={item.image} alt="" className=' object-cover h-[250px]' />
-                                <h2 className=''>{item.name}</h2>
+                                <h3 className=''>{item.name}</h3>
                                 <p>{item.desc}</p>
                                 <div className=' flex gap-2 items-center'>
                                     <Link className=' block w-full' to={'/teachers/' + item.id}>

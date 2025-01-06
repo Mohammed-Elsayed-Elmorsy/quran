@@ -16,12 +16,12 @@ const AboutComp = ({ more, readmore }) => {
         })
     }, [])
     return (
-        <div className='bg-tertiary about pb-[70px] flex flex-col '>
+        <div className='bg-light about pb-[70px] flex flex-col '>
             <h2 className=' title ' >
                 {!state ? ' about us' : 'اقرا عنا'}
                 <FaCheck />
             </h2>
-            <div className="container items-center mx-auto px-3 md:px-[70px] lg:px-[120px] flex justify-between">
+            <div className="container items-center mx-auto px-3 md:px-[70px] lg:px-[120px] flex lg:justify-between justify-center">
                 <div className='w-full lg:w-[58%] text' data-aos={state ? 'fade-down' : 'fade-up'}>
                     {!state ? <p className='md:text-[20px]'>
                         Welcome to <h2 className='inline text-[25px] font-bold'>
@@ -43,7 +43,7 @@ const AboutComp = ({ more, readmore }) => {
                             في أكادميتنا نبذل كل جهد ممكن، ونستخدم كل وسيلة متاحة، لنقل رسالة القرآن وتعاليمه، غير مبالين بالتعب أو الجهد، نهب وقتنا وطاقتنا لإيصال آيات الله إلى القلوب.
 
                         </p>}
-                    <div className='   mt-[20px] flex gap-4 justify-between"'>
+                    <div className='   mt-[20px] flex gap-4 lg:justify-start justify-center'>
                         {more ? <Link to={'/about'}>
                             <button className='btn-pri'>{!state ? 'Learn More' : 'اقرا المزيد'}</button>
                         </Link> : null}
@@ -52,8 +52,8 @@ const AboutComp = ({ more, readmore }) => {
                     </div>
                 </div>
                 <div data-aos={state ? 'fade-up' : 'fade-down'}
-                    className={`image hidden lg:block relative ${state ? 'left-[0px]' : 'right-[0px]'} `}>
-                    <img src={image} alt="" className=' rounded-lg' />
+                    className={`image hidden lg:block relative p-2 bg-white ${state ? 'left-[0px]' : 'right-[0px]'} `}>
+                    <img src={image} alt="" className='' />
                 </div>
             </div>
             {readmore &&

@@ -1,7 +1,7 @@
 import image1 from '../static/12.png'
 import image2 from '../static/37.png'
-import image3 from '../static/35.png'
-import image4 from '../static/9.png'
+import image3 from '../static/20.png'
+import image4 from '../static/28.png'
 import image5 from '../static/4.png'
 import image6 from '../static/14.png'
 import image7 from '../static/44.png'
@@ -283,96 +283,270 @@ export const teaches = [
     {
         id: 1,
         image: image1,
-        name: 'mohammed elmorsy ',
-        desc: 'Teachers Nameholds certifications in Quranic studies and Tajweed, ensuring that each student receives authentic and accurate teachings. With a commitment to preserving the sacred tradition of Quranic recitation,'
+        name: 'Muhammed Kormod',
+        desc: `Assalamu Alykum wa Rahmatullah, 
+        I'm Ustadh Muhammed Kormod, and I am a passionate educator, 
+        a lifelong learner, and a devoted servant of the Qur’an. 
+        Having earned an Ijazah and studied at Al-Azhar University, 
+        I have dedicated myself to teaching Qur’an,
+         Tajweed, Islamic studies, and Arabic language to students worldwide.
+         `,
+        details: `
+         Assalamu Alykum wa Rahmatullah,
+
+I'm Ustadh Muhammed Kormod, and I am a passionate educator, a lifelong learner, and a devoted servant of the Qur’an. Having earned an Ijazah and studied at Al-Azhar University, I have dedicated myself to teaching Qur’an, Tajweed, Islamic studies, and Arabic language to students worldwide.
+
+Over the past few years, I have had the honor of guiding both Arabic and non-Arabic speakers on their journey to connect with the Book of Allah. My teaching style focuses on more than just memorization; I aim to inspire a deep understanding of the Qur’an, a love for its words, and the ability to apply its teachings in everyday life.
+
+I am particularly proud of my ability to adapt to my students’ needs, whether young children, teenagers, or adults. I use creative techniques like games, discussions, and personalized lessons to make learning both effective and enjoyable. As someone who values empathy and understanding, I also prioritize the emotional and psychological well-being of my students, ensuring they feel supported every step of the way.
+
+Beyond teaching, I am deeply committed to continuous improvement. Whether it’s refining my teaching methods, learning new skills, or exploring fresh approaches to Tajweed and Arabic, I strive to ensure my students receive the best experience possible.
+
+For me, teaching is more than a profession—it’s a way to serve Allah, build lasting connections, and leave behind a legacy of goodness through education. My ultimate vision is to nurture students who not only excel academically but also embody the teachings of the Qur’an in their daily lives, becoming beacons of light in their communities.
+
+Assalamu Alykum wa Rahmatullah.
+         
+         `
     },
     {
         id: 2,
         image: image4,
-        name: 'mohammed kormod',
-        desc: '[Teachers Name holds certifications in Quranic studies and Tajweed, ensuring that each student receives authentic and accurate teachings. With a commitment to preserving the sacred tradition of Quranic recitation,.'
+        name: 'Maryam El-Sayed',
+        desc: `
+                My name is Maryam El-Sayed. 
+I am a teacher of Qur'an, Tajweed, and Arabic grammar for both native and non-native Arabic speakers.
+By Allah’s grace and mercy, 
+He facilitated this path for me after I obtained my Ijazah from my teacher, 
+Madeeha Abdel-Moneim, nearly four years ago.
+
+        `
+        ,
+        details: `
+        My name is Maryam El-Sayed. 
+I am a teacher of Qur'an, Tajweed, and Arabic grammar for both native and non-native Arabic speakers.
+By Allah’s grace and mercy, 
+He facilitated this path for me after I obtained my Ijazah from my teacher, 
+Madeeha Abdel-Moneim, nearly four years ago. My journey began with teaching Arabs, 
+starting with a group of mothers. It was a beautiful beginning, marked by the 
+diligence of the students and the blessings of Allah in 
+enabling me to teach Tajweed and correct their recitation.
+
+Later, I had the opportunity to teach young girls. I used to give each one of them individual lessons, but I was keen to gather them once a week to introduce them to one another and encourage healthy competition among them. This fostered a beautiful spirit of rivalry adorned with the manners of the People of the Qur’an. For those who could grasp meanings, I explained some interpretations of verses. As for those who struggled significantly with reading, even though they were native Arabic speakers, I would repeat with them until they left the lesson having memorized at least 70% of what we covered.
+
+Their families would often share how their academic performance had improved, and this brought me immense joy, knowing that I had helped make things easier for them.
+
+As time went on, I joined a faculty at Al-Azhar University. My trust in Allah deepened, and I became more certain that He would guide others through me and that this path would be better for me than the finest worldly possessions. I resolved to become a means of making things easier for those who were even more in need than before – those whose tongues were not Arabic at all. I relied on Allah, seeking His aid, and He opened the door for me to work at Maqra’a Noor Al-Sudoor, which focuses on correcting recitation for non-Arabic-speaking sisters, alongside providing simple explanations of rules to make the process easier.
+
+In the beginning, it was a daunting task. The responsibility before Allah was immense, and the matter was not simple. It required more knowledge and expertise in determining the best approach to present the information. But with Allah’s help, I persisted, and to this day, I remain with the Maqra’a. It has become a door to success for me by Allah’s grace. I have mastered the art of correcting recitation for non-Arabic speakers and have conducted individual lessons to teach Tajweed, Qur'an memorization, and Nooraniyah to build a solid foundation that supports accurate recitation.
+
+At the start of my lessons, I always try to check on my students, ask about their well-being and their day, and discuss together some Arabic words and how to use them. We then proceed to the Qur'an, followed by something engaging to refresh their energy and make the lesson enjoyable. I assign follow-up tasks as homework and conclude with the supplication of concluding a gathering.
+
+This has been my journey in teaching, and I have enjoyed it immensely and thanked Allah for it greatly. I am always delighted by the thought that teaching someone the Book of Allah may become an ongoing charity for me – as they teach others, and those others teach more, and so the cycle continues, multiplying Allah’s blessings upon us by His grace.
+
+Assalamu Alykum wa Rahmatullah.
+        
+        `
     },
     {
         id: 3,
         image: image3,
-        name: 'osama elsayed',
-        desc: '[Teachers Name holds certifications in Quranic studies and Tajweed, ensuring that each student receives authentic and accurate teachings. With a commitment to preserving the sacred tradition of Quranic recitation, .'
-    }
-    ,
-    {
-        id: 4,
-        image: image5,
-        name: 'ahmed elgammal',
-        desc: '[Teachers Name holds certifications in Quranic studies and Tajweed, ensuring that each student receives authentic and accurate teachings. With a commitment to preserving the sacred tradition of Quranic recitation, .'
+        name: 'Tasneem El-Sayed',
+        desc: `
+        Assalamu Alykum wa Rahmatullah,
+
+I am Tasneem El-Sayed, born and raised in Egypt. My journey is a blend of two worlds – 
+the world of medicine, having graduated from the Faculty of Medicine 
+at Al-Azhar University, and the world of teaching, where my heart truly lies.
+        
+        `
+        ,
+        details: `
+Assalamu Alykum wa Rahmatullah,
+
+I am Tasneem El-Sayed, born and raised in Egypt. My journey is a blend of two worlds – the world of medicine, having graduated from the Faculty of Medicine at Al-Azhar University, and the world of teaching, where my heart truly lies.
+
+For over two years, I have been blessed to teach the Qur'an and Islamic studies to a diverse range of students. My passion for teaching began with children, young girls, and mothers, where I introduced them to the beauty of the Qur'an, the rules of Tajweed, and the richness of the Arabic language. I believe that every lesson is an opportunity to connect hearts to the Book of Allah, not just through recitation but by understanding its meanings and applying them in daily life.
+
+Teaching non-Arabic speakers has been one of the most rewarding experiences of my journey. I focus on simplifying complex concepts, whether it’s Arabic grammar or Islamic rulings. I help my students distinguish between halal and haram, emphasizing the wisdom behind these rulings. For me, teaching is not about mere memorization – it’s about nurturing a deeper connection to faith and understanding.
+
+I love starting my lessons by building a bond with my students. I ask about their day, their feelings, and their struggles. This simple gesture creates a warm, welcoming environment. From there, we dive into the Qur'an, practice Tajweed, and even explore conversational Arabic through practical dialogues. I tailor every session to the needs and personalities of my students, using games, activities, and stories to make the lessons enjoyable and impactful.
+
+My medical background has given me a unique perspective on teaching. It helps me understand the psychological and emotional needs of my students, especially those living abroad and dealing with the pressures of being far from home. I consider it my responsibility to not only teach but also to offer support, ease their burdens, and strengthen their bond with their families through the Qur’an.
+
+One of my greatest joys is seeing my students grow – not just academically but spiritually and emotionally. I’ve witnessed their patience and perseverance as they embark on their Qur'anic journey. I’ve seen them embrace the meanings of the Qur’an and apply its teachings in their lives. Every time a student tells me they’ve found happiness or strength through the Qur’an, I feel a deep sense of fulfillment.
+
+My vision is to make Qur'anic education a source of pride and joy for my students. I want them to understand that learning the Qur'an is not just a task but a lifelong journey of effort, growth, and transformation. I strive to foster a sense of commitment and consistency in their learning, ensuring that they excel not only in their studies but also in their connection to their Creator.
+
+I am committed to continuous self-improvement. I regularly update my knowledge of Tajweed, Fiqh, and Arabic language studies to ensure that I can provide the best for my students. Teaching is not just a profession for me – it’s my calling, my passion, and my way of serving Allah.
+
+Every student I teach is a part of my story, and every lesson is a chance to leave a lasting impact. With Allah’s guidance, I hope to continue this journey, connecting hearts to His words and making the Qur’an a source of light for generations to come.
+
+Assalamu Alykum wa Rahmatullah.
+        
+        `
     }
 ]
 export const teachersArabic = [
     {
         id: 1,
         image: image1,
-        name: 'محمد المرسي ',
-        desc: 'يحمل المعلمون شهادات في الدراسات القرآنية والتجويد، مما يضمن حصول كل طالب على تعاليم أصيلة ودقيقة. مع الالتزام بالحفاظ على التقليد المقدس لتلاوة القرآن الكريم'
+        name: 'محمد قرمد',
+        desc: `
+        السلام عليكم ورحمة الله وبركاته
+أنا محمد قرمد، وأنا معلم شغوف بتعليم القرآن الكريم، التجويد، واللغة العربية. أعمل في هذا المجال منذ سنوات، حيث أتيحت لي الفرصة لتدريس طلاب من مختلف الأعمار والخلفيات الثقافية، سواء كانوا ناطقين بالعربية أو غير ناطقين بها.
+        منّ الله عليّ بفضله وكرمه ويسّر لي هذا السبيل بعد أن حصلت على الإجازة على يد معلمتي مديحة عبد المنعم منذ ما يقارب أربع سنوات. بدأت رحلتي بتعليم العرب، وكانت بدايتي مع حلقة للأمهات، وكانت أجمل البدايات بما رأيته من حرص الطالبات وتوفيق الله لي في شرح التجويد وتصحيح التلاوة.
+
+`
+        ,
+        details: `السلام عليكم ورحمة الله وبركاته
+أنا محمد قرمد، وأنا معلم شغوف بتعليم القرآن الكريم، التجويد، واللغة العربية. أعمل في هذا المجال منذ سنوات، حيث أتيحت لي الفرصة لتدريس طلاب من مختلف الأعمار والخلفيات الثقافية، سواء كانوا ناطقين بالعربية أو غير ناطقين بها.
+
+خلال مسيرتي التعليمية، سعيت دائمًا لإيجاد طرق مبتكرة تسهم في تسهيل الفهم وحبّ المعرفة لدى طلابي. أؤمن أن التعليم هو عملية مستمرة من التفاعل المتبادل بين المعلم والطالب، وأنه يجب أن يكون ذو تأثير إيجابي يتعدى حدود الصف الدراسي.
+
+من خلال تعليمي للقرآن الكريم، أركز على إرشاد طلابي لفهم معاني آياته الكريمة وتطبيقها في حياتهم اليومية. كما أنني أهتم بتعليمهم قواعد التجويد بشكل عملي ونظري، وتوجيههم نحو بناء علاقة أعمق مع القرآن.
+
+بالإضافة إلى ذلك، أسعى دائمًا لاستخدام أساليب تعليمية تواكب العصر، مثل استخدام الألعاب التعليمية، الأنشطة التفاعلية، والوسائل التكنولوجية، بما يساعد على تقديم الدروس بشكل ممتع وفعّال.
+
+من خلال تجربتي العملية، تعلمت أهمية التواصل مع الطلاب على مستوى شخصي، والاهتمام بتقديم الدعم النفسي لهم، خاصة أولئك الذين قد يواجهون تحديات في حياتهم اليومية. كما أعتبر أنه من واجبي أن أساعدهم على التفاعل مع أسرهم وبيئتهم بشكل إيجابي.
+
+رؤيتي في التعليم هي أن أساهم في بناء أجيال قادرة على فهم الدين بشكل صحيح، وعيش تعاليم القرآن في حياتهم العملية، وأن أكون جزءًا من تحقيق النجاح والتفوق لدى كل طالب أتعامل معه.
+
+أنا ملتزم بالتطور المستمر في مجالي، وأسعى دائمًا لتحسين أساليب تدريسي وتوسيع معارفي في مجالات القرآن والتجويد والدراسات الإسلامية.
+
+السلام عليكم ورحمة الله وبركاته.`
     },
     {
         id: 2,
         image: image4,
-        name: 'محمد قرمد',
-        desc: 'يحمل مدرسو اسم المعلم شهادات في الدراسات القرآنية والتجويد، مما يضمن حصول كل طالب على تعاليم أصيلة ودقيقة. مع الالتزام بالحفاظ على التقليد المقدس لتلاوة القرآن الكريم,.'
+        name: ' مريم السيد عبد الرحمن',
+        desc: `
+        السلام عليكم ورحمة الله وبركاته
+اسمي مريم السيد عبد الرحمن، معلمة للقرآن الكريم والتجويد
+ وقواعد اللغة العربية لغير الناطقين بالعربية وكذلك للناطقين بها.
+
+منّ الله عليّ بفضله وكرمه ويسّر لي هذا السبيل بعد أن حصلت على الإجازة
+ على يد معلمتي مديحة عبد المنعم منذ ما يقارب أربع سنوات. بدأت رحلتي بتعليم العرب،
+ وكانت بدايتي مع حلقة للأمهات، وكانت أجمل البدايات بما
+ رأيته من حرص الطالبات وتوفيق الله لي في شرح التجويد وتصحيح التلاوة.
+        
+        `
+        ,
+        details: `
+        منّ الله عليّ بفضله وكرمه ويسّر لي هذا السبيل بعد أن حصلت على الإجازة على يد معلمتي مديحة عبد المنعم منذ ما يقارب أربع سنوات. بدأت رحلتي بتعليم العرب، وكانت بدايتي مع حلقة للأمهات، وكانت أجمل البدايات بما رأيته من حرص الطالبات وتوفيق الله لي في شرح التجويد وتصحيح التلاوة.
+
+ثم تيسّر لي بعد ذلك العمل مع حلقة صغيرات السن. كنت أعطي كل واحدة منهن حصة فردية، وحرصت على جمعهن في يوم واحد من كل أسبوع لتعريفهن ببعضهن البعض وتشجيعهن بروح تنافس جميلة متخلقة بأخلاق أهل القرآن. كنت أشرح لبعضهن ممن يستوعب المعاني تفسير بعض الآيات. أما من كانت تواجه صعوبة كبيرة في القراءة رغم لسانها العربي، كنت أردد معها حتى تنهي الحصة وقد حفظت بنسبة تتجاوز 70%.
+
+كنت أُبشّر من أهل الطالبات بتحسن أدائهن الدراسي، وكان ذلك غاية سعادتي، لأنني شعرت بأنني قد يسّرت على معسر.
+
+ومع مرور الأيام، التحقت بكلية في جامعة الأزهر، وازداد يقيني بالله عز وجل أنه سيجعلني سببًا في الهداية وأنه سيجعل هذا العمل خيرًا لي من حُمر النعم. عزمت على أن أكون بابًا لتيسير تعليم القرآن لغير الناطقين بالعربية، فاستعنت بالله، وبدأت العمل في "مقرأة نور الصدور" التي تركز على تصحيح التلاوة للأخوات غير الناطقات بالعربية مع شرح بسيط لبعض القواعد لتسهيل الأمر عليهن.
+
+كان الأمر في بدايته صعبًا جدًا، فالمسؤولية كبيرة أمام الله، والتعامل مع طالبات غير ناطقات بالعربية يتطلب معرفة وخبرة في اختيار أنسب الطرق لتوصيل المعلومات. ومع ذلك، بفضل الله وكرمه، أصبحت هذه المقرأة بابًا للفتح عليّ. أتقنت تصحيح التلاوة، وبدأت العمل في حصص فردية لتعليم التجويد وتحفيظ القرآن، بالإضافة إلى تعليم النورانية لبناء أساس صحيح في القراءة.
+
+دائمًا ما أبدأ حصصي بالاطمئنان على الطالبات وسؤالهن عن أحوالهن ويومهن، ثم نناقش بعض معاني الكلمات العربية وكيفية استخدامها. بعد ذلك نبدأ بتلاوة القرآن، ثم نأخذ شيئًا يُجدّد نشاط الطالبات ويضفي المتعة على الدرس. أختم بتحديد واجب منزلي للمتابعة، وأدعو بدعاء ختام المجلس.
+
+كانت هذه رحلتي في التعليم، وكم استمتعت بها وحمدت الله عليها كثيرًا. أسعد دائمًا بفكرة أن تعليم أحدهم لكتاب الله قد يكون صدقة جارية لي، حيث يعلّم الطالب غيره، وهكذا تستمر السلسلة، ويكرمنا الله بفضله وكرمه.
+
+والسلام عليكم ورحمة الله وبركاته
+        
+        `
     },
     {
         id: 3,
         image: image3,
-        name: 'اسامة السيد',
-        desc: 'يحمل مدرسو اسم المعلم شهادات في الدراسات القرآنية والتجويد، مما يضمن حصول كل طالب على تعاليم أصيلة ودقيقة. مع الالتزام بالحفاظ على التقليد المقدس لتلاوة القرآن الكريم'
-    }
-    ,
-    {
-        id: 4,
-        image: image5,
-        name: 'محمد الجمال',
-        desc: 'يحمل مدرسو اسم المعلم شهادات في الدراسات القرآنية والتجويد، مما يضمن حصول كل طالب على تعاليم أصيلة ودقيقة. مع الالتزام بالحفاظ على التقليد المقدس لتلاوة القرآن الكريم'
+        name: 'تسنيم السيد ',
+        desc: `
+        السلام عليكم ورحمة الله وبركاته،
+
+أنا تسنيم السيد، وُلدت ونشأت في مصر. رحلتي هي مزيج بين عالمين
+ – عالم الطب، حيث تخرجت في كلية الطب بجامعة الأزهر، وعالم التعليم، حيث يكمن شغفي الحقيقي.
+
+على مدار أكثر من عامين، وفقني الله لتعليم القرآن الكريم والدراسات الإسلامية
+ لمجموعة متنوعة من الطلاب.
+  بدأ شغفي بالتعليم مع الأطفال والفتيات والأمهات، حيث عرّفتهم بجمال القرآن، وقواعد التجويد،
+  وغنى اللغة العربية. أؤمن أن كل درس هو فرصة لربط القلوب بكتاب الله،
+  ليس فقط من خلال التلاوة ولكن بفهم معانيه وتطبيقها في الحياة اليومية.
+        
+        `
+        ,
+        details: `
+       السلام عليكم ورحمة الله وبركاته،
+
+أنا تسنيم السيد، وُلدت ونشأت في مصر. رحلتي هي مزيج بين عالمين – عالم الطب، حيث تخرجت في كلية الطب بجامعة الأزهر، وعالم التعليم، حيث يكمن شغفي الحقيقي.
+
+على مدار أكثر من عامين، وفقني الله لتعليم القرآن الكريم والدراسات الإسلامية لمجموعة متنوعة من الطلاب. بدأ شغفي بالتعليم مع الأطفال والفتيات والأمهات، حيث عرّفتهم بجمال القرآن، وقواعد التجويد، وغنى اللغة العربية. أؤمن أن كل درس هو فرصة لربط القلوب بكتاب الله، ليس فقط من خلال التلاوة ولكن بفهم معانيه وتطبيقها في الحياة اليومية.
+
+لقد كانت تجربة تعليم غير الناطقين بالعربية واحدة من أكثر التجارب متعة وإفادة في مسيرتي. أركز على تبسيط المفاهيم الصعبة، سواء كانت قواعد اللغة العربية أو الأحكام الشرعية. أساعد طلابي على التمييز بين الحلال والحرام، مع توضيح الحكمة وراء هذه الأحكام. بالنسبة لي، التعليم ليس مجرد حفظ؛ بل هو وسيلة لزرع ارتباط أعمق بالإيمان والفهم.
+
+أحب أن أبدأ حصصي ببناء علاقة ودية مع طلابي. أسألهم عن يومهم، وكيف يشعرون، وما يواجهونه من تحديات. هذا التواصل البسيط يخلق بيئة دافئة ومرحبة. من هناك، ننتقل إلى القرآن، ونمارس التجويد، وحتى نغوص في المحادثات باللغة العربية. أصمم كل جلسة لتتناسب مع احتياجات وشخصيات طلابي، باستخدام الألعاب والأنشطة والقصص لجعل الدروس ممتعة ومؤثرة.
+
+لقد منحني تخصصي الطبي رؤية مميزة في التعليم. فهو يساعدني على فهم الاحتياجات النفسية والعاطفية لطلابي، خاصة أولئك الذين يعيشون في الغربة ويواجهون ضغوط الحياة بعيدًا عن وطنهم. أعتبر أن مسؤوليتي لا تقتصر على التعليم فقط، بل تشمل تقديم الدعم والتخفيف عنهم، وتقوية علاقتهم بأسرهم من خلال القرآن.
+
+واحدة من أعظم لحظات السعادة في حياتي هي رؤية طلابي ينمون – ليس فقط أكاديميًا بل أيضًا روحيًا وعاطفيًا. لقد شاهدت صبرهم ومثابرتهم وهم يخوضون رحلة تعلم القرآن. لقد رأيتهم يطبقون معاني القرآن في حياتهم اليومية. وكل مرة يخبرني طالب أنه وجد السعادة أو القوة من خلال القرآن، أشعر برضا عميق وسعادة كبيرة.
+
+رؤيتي هي أن أجعل تعليم القرآن الكريم مصدر فخر وسعادة لطلابي. أريدهم أن يفهموا أن تعلم القرآن ليس مجرد مهمة، بل هو رحلة حياة مليئة بالجهد والنمو والتحول. أسعى دائمًا لغرس روح الالتزام والاستمرارية في التعلم، لضمان تفوقهم ليس فقط في دراستهم، ولكن أيضًا في علاقتهم بخالقهم.
+
+أنا ملتزمة بالتطور المستمر. أعمل على تحديث معرفتي في علوم التجويد والفقه ودراسات اللغة العربية، لضمان تقديم أفضل ما لدي لطلابي. بالنسبة لي، التعليم ليس مجرد وظيفة – إنه ندائي، شغفي، ووسيلتي لخدمة الله.
+
+كل طالب أدرسه هو جزء من قصتي، وكل درس هو فرصة لترك أثر دائم. مع توفيق الله، آمل أن أستمر في هذه الرحلة، أربط القلوب بكلماته، وأجعل القرآن مصدر نور لأجيال قادمة.
+
+السلام عليكم ورحمة الله وبركاته. 
+        
+        `
+
     }
 ]
 export const testmonials = [
     {
         id: 1,
-        name: 'Sarah Johnson',
-        content: 'Dr. Elmorsy and his team are fantastic. They made me feel comfortable and provided excellent care throughout my treatment.',
+        name: 'Tanvir Kareem',
+        state: 'UK',
+        content: `By the grace of Allah, I’d say that I’ve met with the perfect Qur’an teacher, because he starts off with analysing or checking what level and based on that he comes up with a plan gradually perfecting the makhraj, the tajwid, the ghunna etc… you don’t even realise that you’re reading has improved a lot. 
+
+My lessons were so much fun, wallahi I enjoyed every minute of it. He’s not harsh with his students, he gentle and easygoing.  `
     },
     {
         id: 2,
-        name: 'David Brown',
-        content: 'The staff at Mohammed Elmorsy Medical Services are always friendly and attentive. I feel well taken care of every time I visit.',
+        name: 'Umm Arfaz',
+        state: 'KSA',
+        content: `
+        Ustadh Muhammed is an excellent teacher who is friendly, punctual, and deeply dedicated to his students. His classes are always engaging and interactive, creating an environment where my son feels motivated and eager to learn. He takes the time to explain concepts clearly, making sure the student is able to grasp the material effectively.
+        `
     },
     {
         id: 3,
-        name: 'Emily Davis',
-        content: 'I ve been a patient of Dr. Elmorsy for years. His expertise and compassion are unmatched. Highly recommend!'
-    },
-    {
+        name: 'Tuba Hakeem Khan',
+        content: `
+        I just wanted to say thank you Teacher Maryam for teaching me Arabic. Your classes are always engaging and interactive, you made learning fun and accessible.
+Your patience, dedication and passion for teaching is truly inspiring, and I feel fortunate to have had the opportunity to learn from you.
+        `,
+        state: 'India'
+    }
+    , {
         id: 4,
-        name: ' Michael Wilson',
-        content: 'The level of professionalism and care at Mohammed Elmorsy Medical Services is top-notch. I always feel like Im in good hands',
+        name: ' Umm Muhammad',
+        state: 'India',
+        content: `
+        The class was very good, teacher Muhammad was teaching in a very good way, Muhammad was also happy and liked it very much.👍👍
+        `
     },
     {
         id: 5,
-        name: '  John Harris',
-        content: 'Dr. Elmorsy is a fantastic doctor. He listens to his patients and provides the best possible care. Highly recommended!',
+        name: ' Anisa',
+        state: 'USA',
+        content: `
+        Thank you, Teacher Tasneem, for being an amazing teacher and helping me with my hijab journey. I’m overjoyed that you’re proud of me. You’re like the older sister I never had, and I’ll always look up to your recitation, beauty, motivation, intelligence, and how great of a Muslim you are. You’ve truly been such an inspiring part of my life. And yes, you finally won tic-tac-toe! 💚.
+        Tasneem,
+Thankful, amazing, surprising, nice, exciting, exiling, and mindful
+        `
+
     },
     {
         id: 6,
-        name: ' Karen White',
-        content: 'Im grateful for the excellent care I received at Mohammed Elmorsy Medical Services. The team is outstanding',
-    },
-    {
-        id: 7,
-        name: 'Hamed Elzayat',
-        content: 'Dr. Elmorsy is a fantastic doctor. He listens to his patients and provides the best possible care. Highly recommended!',
-    },
-    {
-        id: 8,
-        name: 'Mohammed Elsayed',
-        content: 'Dr. Elmorsy is a fantastic doctor. He listens to his patients and provides the best possible care. Highly recommended!',
+        name: 'Laila',
+        state: 'USA',
+        content: `
+        Thank you, Teacher Tasneem, for being there for me and teaching me. You’re one of my favorite teachers—the best teacher and the best doctor ever. Thank you for all your help; you’ve made me a better Muslim. You are so much more than you think, and inshallah, you will go to Jannah
+        `
     }
 ]
 export const testmonialsArabic = [

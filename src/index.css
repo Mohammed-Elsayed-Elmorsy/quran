@@ -1282,7 +1282,6 @@ input:focus, select:focus {
   grid-column-end: 10;
   grid-row-start: 1;
   grid-row-end: 4;
-  background-color: #f4b42a;
 }
 
 .grid-area div:nth-child(2) {
@@ -1290,7 +1289,6 @@ input:focus, select:focus {
   grid-column-end: 13;
   grid-row-start: 1;
   grid-row-end: 2;
-  background-color: #ffdf6b;
 }
 
 .grid-area div:nth-child(3) {
@@ -1298,7 +1296,6 @@ input:focus, select:focus {
   grid-column-end: 13;
   grid-row-start: 2;
   grid-row-end: 3;
-  background-color: #d3d3d3;
 }
 
 .grid-area div:nth-child(4) {
@@ -1306,6 +1303,25 @@ input:focus, select:focus {
   grid-column-end: 13;
   grid-row-start: 3;
   grid-row-end: 4;
-  background-color: #333;
-  color: #fff;
+}
+
+.after-before {
+  position: relative;
+}
+
+.after-before::before,
+.after-before::after {
+  content: '';
+  display: inline-block;
+  width: 40px;
+  height: 4px;
+  background-color: #f4b42a;
+  margin: 0 8px;
+  border-radius: 2px;
+}
+.after-before::before {
+  margin-left: 8px;
+}
+.after-before::after {
+  margin-right: 8px;
 }

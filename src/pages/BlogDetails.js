@@ -31,7 +31,7 @@ const BlogDetails = () => {
         <div className='details-page'>
             <div className=' details-page-content'>
                 <div className=' container px-7 md:px-[120px] mx-auto pb-[30px]'>
-                    <h2 className=' title mb-[-60px] mt-[-20px]'>
+                    <h2 className=' title lg:mb-[-130px] mb-[-70px] mt-[0px]'>
                         {blog?.title}
                     </h2>
                     <div className=' flex justify-between flex-col items-center'>
@@ -52,17 +52,17 @@ const BlogDetails = () => {
                         </div>
                         <div className='grid-area'>
                             <div>
-                                <img className=' w-full h-full object-cover' src={blog?.image[0]} alt="" />
+                                <img className='rounded-lg w-full h-full object-cover' src={blog?.image[0]} alt="" />
                             </div>
                             <div>
-                                <img className=' w-full h-full object-cover' src={blog?.image[1]} alt="" />
+                                <img className='rounded-lg w-full h-full object-cover' src={blog?.image[1]} alt="" />
                             </div>
                             <div>
-                                <img className=' w-full h-full object-cover' src={blog?.image[2]} alt="" />
+                                <img className='rounded-lg w-full h-full object-cover' src={blog?.image[2]} alt="" />
 
                             </div>
                             <div>
-                                <img className=' w-full h-full object-cover' src={blog?.image[3]} alt="" />
+                                <img className='rounded-lg w-full h-full object-cover' src={blog?.image[3]} alt="" />
 
                             </div>
                         </div>

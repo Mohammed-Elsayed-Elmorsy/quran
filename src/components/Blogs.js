@@ -95,7 +95,7 @@ const BlogsComp = ({ slider }) => {
                                     return (
                                         <div className='blog-item flex flex-col  justify-between gap-2 bg-white p-2'>
                                             <div className=' overflow-hidden'>
-                                                <img src={item.image} alt="" className='h-[270px] w-full object-cover' />
+                                                <img src={item.image[0]} alt="" className='h-[270px] w-full object-cover' />
                                             </div>
                                             <h3 className=' font-bold text-[25px]'>
                                                 {item.title}
@@ -115,7 +115,7 @@ const BlogsComp = ({ slider }) => {
                                     return (
                                         <div className='blog-item flex flex-col   rounded-md gap-2 justify-between bg-white p-2'>
                                             <div className=' overflow-hidden'>
-                                                <img src={item.image} alt="" className='h-[270px] w-full object-cover' />
+                                                <img src={item.image[0]} alt="" className='h-[270px] w-full object-cover' />
                                             </div>
                                             <h3 className=' font-bold text-[25px]'>
                                                 {item.title}

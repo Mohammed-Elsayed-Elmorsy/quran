@@ -23,9 +23,9 @@ const Reviews = () => {
                                 <p className=' md:text-[18px] break-words  text-gray-700'>{item.content}</p>
                                 <div style={{ background: '#EEE' }}
                                     className=' p-[7px] absolute w-[70px] h-[70px] rounded-full bg-white top-[-10%] right-[-9%]'>
-                                    <div className=' overflow-hidden text-center leading-[40px] font-bold bg-white w-full h-full rounded-full'>
-                                        <img src={image} alt="" className='w-full h-full' />
-                                        <FaFacebookMessenger className=' font-bold text-blue-500' />
+                                    <div className=' flex justify-center items-center
+                                    overflow-hidden text-center leading-[40px] font-bold bg-white w-full h-full rounded-full'>
+                                        {item.state}
                                     </div>
                                 </div>
                             </div>

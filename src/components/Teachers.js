@@ -17,9 +17,9 @@ const TeachersComp = () => {
                     {!state ? teaches.map(item =>
                         <div data-aos="zoom-in" key={item.id} className=' relative justify-between flex flex-col gap-4'>
                             <img src={item.image} alt="" className=' object-cover h-[250px]' />
-                            <h3 className=' text-[24px] capitalize'>{item.name}</h3>
+                            <h3 className='text-[25px] font-bold px-1  capitalize'>{item.name}</h3>
                             <p className=' text-[18px]'>{item.desc}</p>
-                            <div className=' flex gap-2 items-center'>
+                            <div className=' mt-auto'>
                                 <Link className=' w-full' to={'/teachers/' + item.id}>
                                     <button className='w-full btn-pri'>read more</button>
                                 </Link>
@@ -27,14 +27,14 @@ const TeachersComp = () => {
                         </div>) : teachersArabic.map(item =>
                             <div data-aos="zoom-in" key={item.id} className=' relative  flex flex-col gap-4'>
                                 <img src={item.image} alt="" className=' object-cover h-[250px]' />
-                                <h3 className=''>{item.name}</h3>
-                                <p>{item.desc}</p>
-                                <div className=' flex gap-2 items-center'>
+                                <h3 className='text-[25px] font-bold px-1'>{item.name}</h3>
+                                <p className=' text-[18px]'>{item.desc}</p>
+                                <div className=' mt-auto'>
                                     <Link className=' block w-full' to={'/teachers/' + item.id}>
                                         <button className='w-full btn-pri'>
-
                                             اقرا المزيد
-                                        </button></Link>
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>)}
                 </div>

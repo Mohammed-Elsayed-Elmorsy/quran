@@ -30,7 +30,7 @@ const BlogDetails = () => {
     return (
         <div className='details-page'>
             <div className=' details-page-content'>
-                <div className=' container px-7 md:px-[120px] mx-auto pb-[30px]'>
+                <div className=' container px-8 md:px-[120px] mx-auto pb-[30px]'>
                     <h2 className=' title lg:mb-[-130px] mb-[-70px] mt-[0px]'>
                         {blog?.title}
                     </h2>
@@ -74,7 +74,7 @@ const BlogDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className=' container px-7  md:px-[120px] mx-auto pb-[70px]'>
+            <div className=' container px-8  md:px-[120px] mx-auto pb-[70px]'>
 
                 <div>
                     <h2 className=' text-[25px] font-bold my-[20px]'>{!state ? 'Relatd Blogs' : 'المواضيع ذات الصلة'}</h2>

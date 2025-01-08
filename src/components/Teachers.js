@@ -8,7 +8,7 @@ const TeachersComp = () => {
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     return (
         <div className=' teachers bg-light pb-[70px]'>
-            <div className=' container px-5 md:px-[80px] lg:px-[120px] mx-auto'>
+            <div className=' container px-7 md:px-[80px] lg:px-[120px] mx-auto'>
                 <h2 className=' title  flex items-center gap-2'>
                     {!state ? 'Our Teachers' : 'المعلمون'}
                     <FaCheck className=' font-bold ' />

@@ -20,7 +20,7 @@ const Choose = () => {
                 {!state ? 'why choose us' : 'لماذا تختارنا'}
                 <FaCheck />
             </h2>
-            <div className=' text-center container mx-auto px-5 md:px-[70px] lg:px-[120px]'>
+            <div className=' text-center container mx-auto px-8 md:px-[70px] lg:px-[120px]'>
                 {state ? chooseArabic.map(item => <div className='item ' key={item.id} data-aos={item.aos}>
                     <img className=' w-[120px] h-[120px] object-contain mx-auto' src={item.image} alt="" />
                     <h3 className=' font-bold lg:text-[25px] text-[22px]'>{item.title}</h3>

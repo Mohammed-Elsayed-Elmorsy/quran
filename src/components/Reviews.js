@@ -8,7 +8,7 @@ const Reviews = () => {
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     return (
         <div className='Reviews bg-light'>
-            <div className=' container mx-auto px-3 md:px-[70px] lg:px-[120px] pb-[70px]'>
+            <div className=' container mx-auto px-8 md:px-[70px] lg:px-[120px] pb-[70px]'>
                 <h2 className='title'>
 
                     {state ? 'آراءالطلاب' : ' students Reviews'}

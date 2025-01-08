@@ -254,8 +254,8 @@ header .logo img{
   background-color: white;
     object-fit: cover;
     position: relative;
-    width: 100px;
-    height: 100px;
+    /* width: 100px;
+    height: 100px; */
     object-fit: contain;
     z-index: 11;
 }
@@ -563,7 +563,7 @@ header ul li a:hover::after{
 @media (max-width: 768px) {
   .title {
     font-size: 32px; /* Smaller size for tablets */
-  padding: 30px 0;
+  padding: 25px 0;
   }
   .btn-pri , .btn-sec{
     font-size: 18px;

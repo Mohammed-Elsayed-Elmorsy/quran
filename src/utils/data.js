@@ -1206,7 +1206,7 @@ export const pricingArabic = [
         plan: 'حصة  60 دقيقة',
         classes: [
             {
-                numberperweek: 'حصة واحدة/',
+                numberperweek: 'حصة/',
                 cost: '40 جنيه إسترليني/',
                 numberpermonth: '4 حصص/',
                 costforclass: '10£/',

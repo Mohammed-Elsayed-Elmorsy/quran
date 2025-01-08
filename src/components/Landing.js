@@ -12,6 +12,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import Slideshow from './SlideShow';
+import { Link } from 'react-router-dom';
 const Landing = () => {
     const [change, setChange] = useState(false)
     const lang = useSelector(state => state.lang.arabic)
@@ -44,7 +45,8 @@ const Landing = () => {
                             <p className=' text-[20px] md:text-[25px]'>Study the Islamic rulings related to daily practices and the
                                 essentials that every Muslim must know,
                                 with enjoyable, easy, and engaging lessons suitable for both children and adults</p>
-                            <button className='mt-3 btn-pri'>start learning now</button>
+                            <a href='https://wa.me/201013864939' target='_blank '>
+                                <button className='mt-3 btn-pri'>Start your free trail now!</button></a>
 
                         </div>
                     </div>
@@ -57,7 +59,8 @@ const Landing = () => {
                                 with specialized teachers. Our recitation sessions help you
                                 practice correct pronunciation and apply the rules of Tajweed
                             </p>
-                            <button className='mt-3 btn-pri'>start learning now</button>
+                            <a href='https://wa.me/201013864939' target='_blank '>
+                                <button className='mt-3 btn-pri'>Start your free trail now!</button></a>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -69,7 +72,8 @@ const Landing = () => {
                                 practice the Arabic language,
                                 including reading, writing, listening, and speaking
                             </p>
-                            <button className='mt-3 btn-pri capitalize'>start learning now</button>
+                            <a href='https://wa.me/201013864939' target='_blank '>
+                                <button className='mt-3 btn-pri capitalize'>Start your free trail now!</button></a>
 
                         </div>
                     </div>
@@ -93,8 +97,9 @@ const Landing = () => {
                             <h2 className=' lg:text-[42px] text-[32px]'> الدراسات الاسلامية</h2>
                             <p className=' text-[20px] md:text-[25px]'>دراسة الأحكام الشرعية المتعلقة بالممارسات اليومية
                                 وما يجب على كل مسلم معرفته، من خلال دروس ممتعة وسهلة مناسبة للصغار والكبار</p>
-                            <button className='mt-3 btn-pri'> ابدأ معنا الان</button>
-
+                            <a href='https://wa.me/201013864939' target='_blank '>
+                                <button className='mt-3 btn-pri'>ابدأ حصتك التجريبية الآن</button>
+                            </a>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -105,8 +110,9 @@ const Landing = () => {
                             <p className=' text-[20px] md:text-[25px]'>تعلم قراءة القرآن الكريم بتجويد صحيح بطريقة بسيطة وفعّالة
                                 ، مع معلمين متخصصين. جلسات التلاوة
                                 تساعدك على ممارسة النطق السليم وتطبيق قواعد التجويد</p>
-                            <button className='mt-3 btn-pri'> ابدأ معنا الان</button>
-                        </div>
+                            <a href='https://wa.me/201013864939' target='_blank '>
+                                <button className='mt-3 btn-pri'>ابدأ حصتك التجريبية الآن</button>
+                            </a>                        </div>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide >
@@ -114,8 +120,9 @@ const Landing = () => {
                         <div className="testimonial  flex-1">
                             <h2 className=' lg:text-[42px] text-[32px]'>اللغة العربية</h2>
                             <p className=' text-[20px] md:text-[25px]'>"في أكاديمية قرآن واي، نوفر لك الفرصة لتعلم وممارسة اللغة العربية، بما في ذلك القراءة، الكتابة، الاستماع، والمحادثة."</p>
-                            <button className='mt-3 btn-pri'> ابدأ معنا الان</button>
-
+                            <a href='https://wa.me/201013864939' target='_blank '>
+                                <button className='mt-3 btn-pri'>ابدأ حصتك التجريبية الآن</button>
+                            </a>
                         </div>
                     </div>
                 </SwiperSlide>

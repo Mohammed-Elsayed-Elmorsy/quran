@@ -16,13 +16,13 @@ const PricingComp = () => {
 
                 <FaCheck />
             </h2>
-            <div className=' container mx-auto px-3 md:px-[70px] lg:px-[120px] '>
+            <div className=' container mx-auto px-8 md:px-[70px] lg:px-[120px] '>
                 <div>
                     <div className='flex justify-between gap-3 mb-6'>
                         {!state ? pricing.map(item =>
                             <Link id={item.id} onClick={(e) => setCurrentid((Number(e.target.id))
                             )}
-                                className={`p-2 md:p-3 text-[16px] md:text-[20px] lg:text-[22px] ${item.id === currentid ? 'bg-secondary text-white' : ' bg-white text-primary'}
+                                className={`p-2 md:p-3 text-[15px] md:text-[20px] lg:text-[22px] ${item.id === currentid ? 'bg-secondary text-white' : ' bg-white text-primary'}
                             border capitalize font-bold 
                              flex-1 text-center 
                              transition-all duration-300 ease-in-out`}
@@ -32,7 +32,7 @@ const PricingComp = () => {
                         ) : pricingArabic.map(item =>
                             <Link id={item.id} onClick={(e) => setCurrentid((Number(e.target.id))
                             )}
-                                className={` p-2 md:p-3 text-[16px] md:text-[20px] lg:text-[22px] ${item.id === currentid ? 'bg-secondary text-white' : ' bg-white text-primary'}
+                                className={` p-2 md:p-3 text-[15px] md:text-[20px] lg:text-[22px] ${item.id === currentid ? 'bg-secondary text-white' : ' bg-white text-primary'}
                             border capitalize font-bold 
                              flex-1 text-center 
                              transition-all duration-300 ease-in-out`}
@@ -47,28 +47,28 @@ const PricingComp = () => {
                     <div className='  grid ld:grid-cols-3 xl:grid-cols-4  grid-cols-2 gap-4'>
                         {state ? pricingArabic[currentid - 1].classes.map(item =>
                             <div key={item.id}
-                                className={` ${currentid === 1 ? 'pricing-1' : currentid === 2 ? 'pricing-2' : 'pricing-3'} rev-item gap-2  flex-col flex gap border  bg-white p-2`}>
-                                <h3 className=' font-bold capitalize lg:text-[20px] text-[16px] p-3 py-3 bg-primary text-white'>
+                                className={` ${currentid === 1 ? 'pricing-1' : currentid === 2 ? 'pricing-2' : 'pricing-3'}  gap-2  flex-col flex gap border border-gray-300  bg-white p-2`}>
+                                <h3 className=' font-bold capitalize lg:text-[20px] text-[15px] p-3 py-3 bg-primary text-white'>
 
                                     <span className=' lg:text-[25px] text-[18px] font-bold'>{item.numberperweek}</span>
                                     الأسبوع
 
                                 </h3>
-                                <p className='lg:text-[18px] text-[16px] bg-secondary text-white p-3'>
+                                <p className='lg:text-[18px] text-[15px] bg-secondary text-white p-3'>
                                     <span className=' lg:text-[25px] text-[18px] font-bold'>{item.cost}</span>الشهر</p>
 
                                 <span style={{ backgroundColor: '#eee' }}
-                                    className='capitalize block p-3 lg:text-[18px] text-[16px]'>
+                                    className='capitalize block p-3 lg:text-[18px] text-[15px]'>
                                     <span className='lg:text-[25px] text-[18px] font-bold'>{item.numberpermonth}
                                     </span>الشهر</span>
                                 <p style={{ backgroundColor: '#eee' }}
-                                    className='capitalize p-3 lg:text-[20px] text-[16px]'>
+                                    className='capitalize p-3 lg:text-[20px] text-[15px]'>
                                     <span className='lg:text-[25px] text-[18px] font-bold'>{item.costforclass}</span>الحصة</p>
                             </div>)
                             : pricing[currentid - 1].classes.map(item =>
                                 <div key={item.id}
-                                    className={` ${currentid === 1 ? 'pricing-1' : currentid === 2 ? 'pricing-2' : 'pricing-3'} rev-item gap-2   flex-col flex gap border  bg-white p-2`}>
-                                    <h3 className=' font-normal capitalize lg:text-[20px] text-[16px] p-3 py-3 bg-primary text-white'>
+                                    className={` ${currentid === 1 ? 'pricing-1' : currentid === 2 ? 'pricing-2' : 'pricing-3'}  gap-2   flex-col flex gap border border-gray-300 bg-white p-2`}>
+                                    <h3 className=' font-normal capitalize lg:text-[20px] text-[15px] p-3 py-3 bg-primary text-white'>
                                         <span className=' lg:text-[25px] text-[18px] font-bold'>
                                             {item.numberperweek}
                                         </span>
@@ -78,10 +78,10 @@ const PricingComp = () => {
                                         <span className='lg:text-[25px] text-[18px] font-bold'>{item.cost}</span>month</p>
 
                                     <span style={{ backgroundColor: '#eee' }}
-                                        className='capitalize block p-3 lg:text-[20px] text-[16px]'>
+                                        className='capitalize block p-3 lg:text-[20px] text-[15px]'>
                                         <span className='lg:text-[25px] text-[18px] font-bold'>{item.numberpermonth}</span>month</span>
                                     <p style={{ backgroundColor: '#eee' }}
-                                        className='capitalize p-3 lg:text-[20px] text-[16px]'>
+                                        className='capitalize p-3 lg:text-[20px] text-[15px]'>
                                         <span className='lg:text-[25px] text-[18px] font-bold'>{item.costforclass}</span>class</p>
                                 </div>)}
                     </div>

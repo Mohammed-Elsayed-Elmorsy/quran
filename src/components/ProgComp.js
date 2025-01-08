@@ -14,7 +14,7 @@ const ProgComp = () => {
                 {state ? ' برامجنا المختلفة' : 'our programms'}
                 <FaCheck />
             </h2>
-            <div className=' container mx-auto px-3 md:px-[70px] lg:px-[120px]'>
+            <div className=' container mx-auto px-8 md:px-[70px] lg:px-[120px]'>
                 {!state ? progs.map(item =>
                     <div
                         data-aos={'fade-up'}

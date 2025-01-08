@@ -199,7 +199,7 @@ const ContactComp = () => {
                             return (
                                 <div data-aos='fade-down'
                                     key={item.id}
-                                    className='contact-item flex flex-col gap-2 rounded-md bg-white p-2'>
+                                    className=' flex flex-col gap-2 rev-item bg-white p-2'>
                                     <Link target='_blank' to={item.to}
                                         className=' md:text-[20px] text-wrap break-all break-words  text-blue-500'>
                                         <span style={{ color: 'var(--main-color)' }}

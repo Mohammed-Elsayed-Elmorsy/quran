@@ -10,7 +10,7 @@ module.exports = {
         secondary: '#f4b42a',
         tertiary: '#f4b42a48',
         quaternary: '#f4b42a34',
-        light: '#f1f1f1',
+        light: '#eee',
       }
     },
     plugins: [],

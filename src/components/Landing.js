@@ -40,27 +40,24 @@ const Landing = () => {
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial flex-1">
-                            <h2 className=' lg:text-[42px] text-[32px]'> Islamic Studies</h2>
-                            <p className='  md:text-[25px]'>Study the Islamic rulings related to daily practices and the
+                            <h2 className=' lg:text-[45px] text-[32px]'> Islamic Studies</h2>
+                            <p className=' text-[20px] md:text-[25px]'>Study the Islamic rulings related to daily practices and the
                                 essentials that every Muslim must know,
                                 with enjoyable, easy, and engaging lessons suitable for both children and adults</p>
-                            <button className='mt-3 btn-pri'>learn more</button>
+                            <button className='mt-3 btn-pri'>start learning now</button>
 
                         </div>
-                        {/* <div className=' hidden lg:block flex-1' id='image'>
-                            <img src={image} alt="" />
-                        </div> */}
                     </div>
                 </SwiperSlide>
                 <SwiperSlide >
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial  flex-1">
                             <h2 className=' lg:text-[42px] text-[32px]'>Mastering Tajweed and Qur'an Recitation</h2>
-                            <p>Learn to read the Qur'an with proper Tajweed in a simple and effective way,
+                            <p className=' text-[20px] md:text-[25px]'>Learn to read the Qur'an with proper Tajweed in a simple and effective way,
                                 with specialized teachers. Our recitation sessions help you
                                 practice correct pronunciation and apply the rules of Tajweed
                             </p>
-                            <button className='mt-3 btn-pri'>learn more</button>
+                            <button className='mt-3 btn-pri'>start learning now</button>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -68,16 +65,13 @@ const Landing = () => {
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial  flex-1">
                             <h2 className=' lg:text-[42px] text-[32px]'>Arabic Language</h2>
-                            <p>At Quran Way Academy, we offer you the opportunity to learn and
+                            <p className=' text-[20px] md:text-[25px]'>At Quran Way Academy, we offer you the opportunity to learn and
                                 practice the Arabic language,
                                 including reading, writing, listening, and speaking
                             </p>
-                            <button className='mt-3 btn-pri'>learn more</button>
+                            <button className='mt-3 btn-pri capitalize'>start learning now</button>
 
                         </div>
-                        {/* <div className=' hidden lg:block flex-1' id='image'>
-                            <img src={image3} alt="" />
-                        </div> */}
                     </div>
                 </SwiperSlide>
             </Swiper>}
@@ -97,9 +91,9 @@ const Landing = () => {
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial flex-1">
                             <h2 className=' lg:text-[42px] text-[32px]'> الدراسات الاسلامية</h2>
-                            <p className=' md:text-[25px]'>دراسة الأحكام الشرعية المتعلقة بالممارسات اليومية
+                            <p className=' text-[20px] md:text-[25px]'>دراسة الأحكام الشرعية المتعلقة بالممارسات اليومية
                                 وما يجب على كل مسلم معرفته، من خلال دروس ممتعة وسهلة مناسبة للصغار والكبار</p>
-                            <button className='mt-3 btn-pri'>اقرا المزيد</button>
+                            <button className='mt-3 btn-pri'> ابدأ معنا الان</button>
 
                         </div>
                     </div>
@@ -108,10 +102,10 @@ const Landing = () => {
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial  flex-1">
                             <h2 className=' lg:text-[42px] text-[32px]'> اتقان التجويد وتلاوة القرآن  </h2>
-                            <p>تعلم قراءة القرآن الكريم بتجويد صحيح بطريقة بسيطة وفعّالة
+                            <p className=' text-[20px] md:text-[25px]'>تعلم قراءة القرآن الكريم بتجويد صحيح بطريقة بسيطة وفعّالة
                                 ، مع معلمين متخصصين. جلسات التلاوة
                                 تساعدك على ممارسة النطق السليم وتطبيق قواعد التجويد</p>
-                            <button className='mt-3 btn-pri'>اقرا المزيد</button>
+                            <button className='mt-3 btn-pri'> ابدأ معنا الان</button>
                         </div>
                     </div>
                 </SwiperSlide>
@@ -119,8 +113,8 @@ const Landing = () => {
                     <div className=' flex justify-between items-center'>
                         <div className="testimonial  flex-1">
                             <h2 className=' lg:text-[42px] text-[32px]'>اللغة العربية</h2>
-                            <p>"في أكاديمية قرآن واي، نوفر لك الفرصة لتعلم وممارسة اللغة العربية، بما في ذلك القراءة، الكتابة، الاستماع، والمحادثة."</p>
-                            <button className='mt-3 btn-pri'>اقرا المزيد</button>
+                            <p className=' text-[20px] md:text-[25px]'>"في أكاديمية قرآن واي، نوفر لك الفرصة لتعلم وممارسة اللغة العربية، بما في ذلك القراءة، الكتابة، الاستماع، والمحادثة."</p>
+                            <button className='mt-3 btn-pri'> ابدأ معنا الان</button>
 
                         </div>
                     </div>

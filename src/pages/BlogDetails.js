@@ -52,23 +52,23 @@ const BlogDetails = () => {
                         </div>
                         <div className='grid-area'>
                             <div>
-                                <img className='rounded-lg w-full h-full object-cover' src={blog?.image[0]} alt="" />
+                                <img className=' w-full h-full object-cover' src={blog?.image[0]} alt="" />
                             </div>
                             <div>
-                                <img className='rounded-lg w-full h-full object-cover' src={blog?.image[1]} alt="" />
+                                <img className=' w-full h-full object-cover' src={blog?.image[1]} alt="" />
                             </div>
                             <div>
-                                <img className='rounded-lg w-full h-full object-cover' src={blog?.image[2]} alt="" />
+                                <img className=' w-full h-full object-cover' src={blog?.image[2]} alt="" />
 
                             </div>
                             <div>
-                                <img className='rounded-lg w-full h-full object-cover' src={blog?.image[3]} alt="" />
+                                <img className=' w-full h-full object-cover' src={blog?.image[3]} alt="" />
 
                             </div>
                         </div>
                         <div className=' flex items-start'>
                             <p className=' text-[20px] w-full mt-5'>
-                                {blog?.desc}{blog?.desc}{blog?.desc}{blog?.desc}
+                                {blog?.desc}
                             </p>
                         </div>
                     </div>

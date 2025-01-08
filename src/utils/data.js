@@ -1,7 +1,7 @@
 import image1 from '../static/12.png'
 import image2 from '../static/37.png'
-import image3 from '../static/20.png'
-import image4 from '../static/28.png'
+import image3 from '../static/35.png'
+import image4 from '../static/9.png'
 import image5 from '../static/4.png'
 import image6 from '../static/14.png'
 import image7 from '../static/44.png'
@@ -10,20 +10,26 @@ import image9 from '../static/11.png'
 import image10 from '../static/41.png'
 import image11 from '../static/17.png'
 import image12 from '../static/18.png'
-import image54 from '../static/54.png'
+import image32 from '../static/32.png'
 import image47 from '../static/47.png'
 import image48 from '../static/48.png'
 import image49 from '../static/49.png'
 import image50 from '../static/50.png'
-import image51 from '../static/51.png'
+import image52 from '../static/52.png'
+import image53 from '../static/53.png'
 import image55 from '../static/55.png'
-import image56 from '../static/56.png'
+import image58 from '../static/58.png'
+import teacher1 from '../static/12.png'
+import teacher2 from '../static/20.png'
+import teacher3 from '../static/28.png'
 import {
-    FaCheckCircle, FaCrown,
-    FaEnvelope, FaFacebook, FaGithub,
-    FaLinkedin, FaPhone,
-    FaMedal, FaRocket, FaWhatsapp, FaYoutube,
-    FaTelegram
+    FaEnvelope,
+    FaFacebook,
+    FaPhone,
+    FaWhatsapp,
+    FaYoutube,
+    FaTelegram,
+    FaInstagram
 }
     from 'react-icons/fa'
 export const SliderSett = {
@@ -113,7 +119,7 @@ export const linksarabic = [
     },
     {
         id: 2,
-        text: 'اقرا عنا', to: 'about'
+        text: 'اقرأ عنا', to: 'about'
     },
     {
         id: 3, to: 'blogs',
@@ -163,7 +169,7 @@ export const linksarabic = [
 export const choose =
     [
         {
-            image: image51,
+            image: image48,
             aos: "fade-up",
             id: 1,
             title: "Expert Male and Female Tutors",
@@ -177,14 +183,14 @@ export const choose =
             text: "Our curriculum is carefully designed to be adjustable for different learning needs, ensuring a personalized educational journey for every student."
         },
         {
-            image: image48,
+            image: image58,
             aos: "fade-up",
             id: 3,
             title: "Wide Range of Experience",
             text: "All our tutors have at least 4 years of experience teaching Quran, Tajweed, and Islamic Studies, both online and offline."
         },
         {
-            image: image56,
+            image: image52,
             aos: "fade-up",
             id: 4,
             title: "One-To-One Classes",
@@ -212,7 +218,7 @@ export const choose =
             text: "Receive detailed progress reports and certificates of completion as you advance through each level."
         },
         {
-            image: image54,
+            image: image53,
             aos: "fade-up",
             id: 8,
             title: "24/7 Support",
@@ -222,7 +228,7 @@ export const choose =
 
 export const chooseArabic = [
     {
-        image: image51,
+        image: image48,
         aos: "fade-up",
         id: 1,
         title: "معلمون ومعلمات خبراء من الناطقين باللغة العربية",
@@ -236,14 +242,14 @@ export const chooseArabic = [
         text: "تم تصميم مناهجنا بعناية لتكون قابلة للتكيف مع احتياجات التعلم المختلفة، مما يضمن تجربة تعليمية مخصصة لكل طالب."
     },
     {
-        image: image48,
+        image: image58,
         aos: "fade-up",
         id: 3,
         title: "خبرة واسعة",
         text: "جميع معلمينا يتمتعون بخبرة لا تقل عن 4 سنوات في تدريس القرآن الكريم، التجويد، والدراسات الإسلامية، سواء عبر الإنترنت أو على أرض الواقع."
     },
     {
-        image: image56,
+        image: image52,
         aos: "fade-up",
         id: 4,
         title: "حصص فردية",
@@ -271,7 +277,7 @@ export const chooseArabic = [
         text: "احصل على تقارير تفصيلية عن تقدمك وشهادات عند إكمال كل مستوى من مستويات الدراسة."
     },
     {
-        image: image54,
+        image: image53,
         aos: "fade-up",
         id: 8,
         title: "دعم متواصل على مدار الساعة",
@@ -282,8 +288,8 @@ export const chooseArabic = [
 export const teaches = [
     {
         id: 1,
-        image: image1,
-        name: 'Muhammed Kormod',
+        image: teacher1,
+        name: 'Ustadh.Muhammed Kormod',
         desc: `Assalamu Alykum wa Rahmatullah, 
         I'm Ustadh Muhammed Kormod, and I am a passionate educator, 
         a lifelong learner, and a devoted servant of the Qur’an. 
@@ -308,10 +314,49 @@ Assalamu Alykum wa Rahmatullah.
          
          `
     },
+
     {
         id: 2,
-        image: image4,
-        name: 'Maryam El-Sayed',
+        image: teacher3,
+        name: 'Teacher.Tasneem El-Sayed',
+        desc: `
+        Assalamu Alykum wa Rahmatullah,
+
+I am Tasneem El-Sayed, born and raised in Egypt. My journey is a blend of two worlds – 
+the world of medicine, having graduated from the Faculty of Medicine 
+at Al-Azhar University, and the world of teaching, where my heart truly lies.
+        
+        `
+        ,
+        details: `
+Assalamu Alykum wa Rahmatullah,
+
+I am Tasneem El-Sayed, born and raised in Egypt. My journey is a blend of two worlds – the world of medicine, having graduated from the Faculty of Medicine at Al-Azhar University, and the world of teaching, where my heart truly lies.
+
+For over two years, I have been blessed to teach the Qur'an and Islamic studies to a diverse range of students. My passion for teaching began with children, young girls, and mothers, where I introduced them to the beauty of the Qur'an, the rules of Tajweed, and the richness of the Arabic language. I believe that every lesson is an opportunity to connect hearts to the Book of Allah, not just through recitation but by understanding its meanings and applying them in daily life.
+
+Teaching non-Arabic speakers has been one of the most rewarding experiences of my journey. I focus on simplifying complex concepts, whether it’s Arabic grammar or Islamic rulings. I help my students distinguish between halal and haram, emphasizing the wisdom behind these rulings. For me, teaching is not about mere memorization – it’s about nurturing a deeper connection to faith and understanding.
+
+I love starting my lessons by building a bond with my students. I ask about their day, their feelings, and their struggles. This simple gesture creates a warm, welcoming environment. From there, we dive into the Qur'an, practice Tajweed, and even explore conversational Arabic through practical dialogues. I tailor every session to the needs and personalities of my students, using games, activities, and stories to make the lessons enjoyable and impactful.
+
+My medical background has given me a unique perspective on teaching. It helps me understand the psychological and emotional needs of my students, especially those living abroad and dealing with the pressures of being far from home. I consider it my responsibility to not only teach but also to offer support, ease their burdens, and strengthen their bond with their families through the Qur’an.
+
+One of my greatest joys is seeing my students grow – not just academically but spiritually and emotionally. I’ve witnessed their patience and perseverance as they embark on their Qur'anic journey. I’ve seen them embrace the meanings of the Qur’an and apply its teachings in their lives. Every time a student tells me they’ve found happiness or strength through the Qur’an, I feel a deep sense of fulfillment.
+
+My vision is to make Qur'anic education a source of pride and joy for my students. I want them to understand that learning the Qur'an is not just a task but a lifelong journey of effort, growth, and transformation. I strive to foster a sense of commitment and consistency in their learning, ensuring that they excel not only in their studies but also in their connection to their Creator.
+
+I am committed to continuous self-improvement. I regularly update my knowledge of Tajweed, Fiqh, and Arabic language studies to ensure that I can provide the best for my students. Teaching is not just a profession for me – it’s my calling, my passion, and my way of serving Allah.
+
+Every student I teach is a part of my story, and every lesson is a chance to leave a lasting impact. With Allah’s guidance, I hope to continue this journey, connecting hearts to His words and making the Qur’an a source of light for generations to come.
+
+Assalamu Alykum wa Rahmatullah.
+        
+        `
+    },
+    {
+        id: 3,
+        image: teacher2,
+        name: 'Teacher.Maryam El-Sayed',
         desc: `
                 My name is Maryam El-Sayed. 
 I am a teacher of Qur'an, Tajweed, and Arabic grammar for both native and non-native Arabic speakers.
@@ -347,54 +392,15 @@ Assalamu Alykum wa Rahmatullah.
         
         `
     },
-    {
-        id: 3,
-        image: image3,
-        name: 'Tasneem El-Sayed',
-        desc: `
-        Assalamu Alykum wa Rahmatullah,
-
-I am Tasneem El-Sayed, born and raised in Egypt. My journey is a blend of two worlds – 
-the world of medicine, having graduated from the Faculty of Medicine 
-at Al-Azhar University, and the world of teaching, where my heart truly lies.
-        
-        `
-        ,
-        details: `
-Assalamu Alykum wa Rahmatullah,
-
-I am Tasneem El-Sayed, born and raised in Egypt. My journey is a blend of two worlds – the world of medicine, having graduated from the Faculty of Medicine at Al-Azhar University, and the world of teaching, where my heart truly lies.
-
-For over two years, I have been blessed to teach the Qur'an and Islamic studies to a diverse range of students. My passion for teaching began with children, young girls, and mothers, where I introduced them to the beauty of the Qur'an, the rules of Tajweed, and the richness of the Arabic language. I believe that every lesson is an opportunity to connect hearts to the Book of Allah, not just through recitation but by understanding its meanings and applying them in daily life.
-
-Teaching non-Arabic speakers has been one of the most rewarding experiences of my journey. I focus on simplifying complex concepts, whether it’s Arabic grammar or Islamic rulings. I help my students distinguish between halal and haram, emphasizing the wisdom behind these rulings. For me, teaching is not about mere memorization – it’s about nurturing a deeper connection to faith and understanding.
-
-I love starting my lessons by building a bond with my students. I ask about their day, their feelings, and their struggles. This simple gesture creates a warm, welcoming environment. From there, we dive into the Qur'an, practice Tajweed, and even explore conversational Arabic through practical dialogues. I tailor every session to the needs and personalities of my students, using games, activities, and stories to make the lessons enjoyable and impactful.
-
-My medical background has given me a unique perspective on teaching. It helps me understand the psychological and emotional needs of my students, especially those living abroad and dealing with the pressures of being far from home. I consider it my responsibility to not only teach but also to offer support, ease their burdens, and strengthen their bond with their families through the Qur’an.
-
-One of my greatest joys is seeing my students grow – not just academically but spiritually and emotionally. I’ve witnessed their patience and perseverance as they embark on their Qur'anic journey. I’ve seen them embrace the meanings of the Qur’an and apply its teachings in their lives. Every time a student tells me they’ve found happiness or strength through the Qur’an, I feel a deep sense of fulfillment.
-
-My vision is to make Qur'anic education a source of pride and joy for my students. I want them to understand that learning the Qur'an is not just a task but a lifelong journey of effort, growth, and transformation. I strive to foster a sense of commitment and consistency in their learning, ensuring that they excel not only in their studies but also in their connection to their Creator.
-
-I am committed to continuous self-improvement. I regularly update my knowledge of Tajweed, Fiqh, and Arabic language studies to ensure that I can provide the best for my students. Teaching is not just a profession for me – it’s my calling, my passion, and my way of serving Allah.
-
-Every student I teach is a part of my story, and every lesson is a chance to leave a lasting impact. With Allah’s guidance, I hope to continue this journey, connecting hearts to His words and making the Qur’an a source of light for generations to come.
-
-Assalamu Alykum wa Rahmatullah.
-        
-        `
-    }
 ]
 export const teachersArabic = [
     {
         id: 1,
-        image: image1,
-        name: 'محمد قرمد',
+        image: teacher1,
+        name: 'أ.محمد قرمد',
         desc: `
-        السلام عليكم ورحمة الله وبركاته
+       السلام عليكم ورحمة الله وبركاته
 أنا محمد قرمد، وأنا معلم شغوف بتعليم القرآن الكريم، التجويد، واللغة العربية. أعمل في هذا المجال منذ سنوات، حيث أتيحت لي الفرصة لتدريس طلاب من مختلف الأعمار والخلفيات الثقافية، سواء كانوا ناطقين بالعربية أو غير ناطقين بها.
-        منّ الله عليّ بفضله وكرمه ويسّر لي هذا السبيل بعد أن حصلت على الإجازة على يد معلمتي مديحة عبد المنعم منذ ما يقارب أربع سنوات. بدأت رحلتي بتعليم العرب، وكانت بدايتي مع حلقة للأمهات، وكانت أجمل البدايات بما رأيته من حرص الطالبات وتوفيق الله لي في شرح التجويد وتصحيح التلاوة.
 
 `
         ,
@@ -417,18 +423,15 @@ export const teachersArabic = [
     },
     {
         id: 2,
-        image: image4,
-        name: ' مريم السيد عبد الرحمن',
+        image: teacher2,
+        name: 'أ. تسنيم السيد   ',
         desc: `
         السلام عليكم ورحمة الله وبركاته
 اسمي مريم السيد عبد الرحمن، معلمة للقرآن الكريم والتجويد
  وقواعد اللغة العربية لغير الناطقين بالعربية وكذلك للناطقين بها.
 
 منّ الله عليّ بفضله وكرمه ويسّر لي هذا السبيل بعد أن حصلت على الإجازة
- على يد معلمتي مديحة عبد المنعم منذ ما يقارب أربع سنوات. بدأت رحلتي بتعليم العرب،
- وكانت بدايتي مع حلقة للأمهات، وكانت أجمل البدايات بما
- رأيته من حرص الطالبات وتوفيق الله لي في شرح التجويد وتصحيح التلاوة.
-        
+ على يد معلمتي مديحة عبد المنعم منذ ما يقارب أربع سنوات.         
         `
         ,
         details: `
@@ -452,8 +455,8 @@ export const teachersArabic = [
     },
     {
         id: 3,
-        image: image3,
-        name: 'تسنيم السيد ',
+        image: teacher3,
+        name: 'أ. مريم السيد  ',
         desc: `
         السلام عليكم ورحمة الله وبركاته،
 
@@ -461,11 +464,7 @@ export const teachersArabic = [
  – عالم الطب، حيث تخرجت في كلية الطب بجامعة الأزهر، وعالم التعليم، حيث يكمن شغفي الحقيقي.
 
 على مدار أكثر من عامين، وفقني الله لتعليم القرآن الكريم والدراسات الإسلامية
- لمجموعة متنوعة من الطلاب.
-  بدأ شغفي بالتعليم مع الأطفال والفتيات والأمهات، حيث عرّفتهم بجمال القرآن، وقواعد التجويد،
-  وغنى اللغة العربية. أؤمن أن كل درس هو فرصة لربط القلوب بكتاب الله،
-  ليس فقط من خلال التلاوة ولكن بفهم معانيه وتطبيقها في الحياة اليومية.
-        
+ لمجموعة متنوعة من الطلاب.   
         `
         ,
         details: `
@@ -500,9 +499,9 @@ export const testmonials = [
         id: 1,
         name: 'Tanvir Kareem',
         state: 'UK',
-        content: `By the grace of Allah, I’d say that I’ve met with the perfect Qur’an teacher, because he starts off with analysing or checking what level and based on that he comes up with a plan gradually perfecting the makhraj, the tajwid, the ghunna etc… you don’t even realise that you’re reading has improved a lot. 
+        content: `By the grace of Allah, I’d say that I’ve met with the best Qur’an teacher, because he starts off with analysing or checking what level and based on that he comes up with a plan gradually perfecting the makhraj, the tajwid, etc… you don’t even realise that you’re reading has improved a lot. 
 
-My lessons were so much fun, wallahi I enjoyed every minute of it. He’s not harsh with his students, he gentle and easygoing.  `
+My lessons were so much fun, I enjoyed every minute of it. He’s not harsh with his students, he gentle and easygoing.  `
     },
     {
         id: 2,
@@ -552,155 +551,177 @@ Thankful, amazing, surprising, nice, exciting, exiling, and mindful
 export const testmonialsArabic = [
     {
         id: 1,
-        name: 'Sarah Johnson',
-        content: 'كان الأستاذ محمد المرسي ​​مدرسًا رائعًا للقرآن الكريم. أسلوبه في التدريس واضح ومتعاطف ومحفز. لقد تعلمت الكثير من دروسه، ليس فقط في قراءة القرآن الكريم ولكن أيضًا في فهم معانيه بعمق. صبره وتفانيه يجعلان التعلم ممتعًا وفعالًا!',
+        name: 'تنفير كريم', state: ' المملكة المتحدة  ',
+        content: `
+  يمكنني القول إنني وجدت المعلم المثالي للقرآن
+ يبدأ بتحليل مستوى الطالب ثم يضع خطة تدريجية لتحسين المخارج،
+ التجويد،  وغيرها ودون أن تشعر، تجد  تلاوتك قد تحسنت كثيرًا.
+ والله لقد استمتعت بكل دقيقة منها. المعلم ليس صارمًا مع طلابه؛ بل لطيف وسهل التعامل.
+أنصح بشدة أن يكون هو معلم القرآن أعتقد أنه في غضون شهر واحد، يمكن للطالب أن يتحسن مئة مرة أكثر مقارنة بالذهاب إلى مدرسة يتعامل فيها معلمين مفرطين في الصرامة.
+
+        `
     },
     {
         id: 2,
-        name: 'David Brown',
-        content: 'لقد كان تعلم القرآن الكريم مع الشيخ محمد تجربة غيرت حياتي. فهو يخصص الوقت لشرح الدروس ويضمن تقدم كل طالب بالوتيرة التي تناسبه. إن شغفه بالتدريس ملهم حقًا.',
+        name: 'أم أرفاز', state: 'السعودية  ',
+        content: `
+      الأستاذ محمد معلم ممتاز يتمتع بشخصية ودودة منضبطة ومتفانٍ للغاية مع طلابه. دروسه دائمًا شيقة وتفاعلية، مما يخلق بيئة تجعل ابني متحمسًا وشغوفًا للتعلم. يأخذ الوقت الكافي لشرح المفاهيم بوضوح، مما يضمن أن يستوعب الطالب المادة بفعالية.
+  `
     },
     {
         id: 3,
-        name: 'Emily Davis',
-        content: 'لقد تحسنت مهاراتي في التجويد بشكل كبير تحت إشراف الأستاذ محمد. دروسه منظمة وجذابة ومليئة بالأمثلة العملية التي تساعدك على حفظ وفهم القرآن الكريم بشكل أفضل'
+        name: ' توبة حكيم خان',
+        state: 'الهند  ',
+        content: `
+        أود أن أشكر المعلمة مريم على تعليمي اللغة العربية. دروسك دائمًا ممتعة وتفاعلية، وقد جعلتِ التعلم ممتعًا وسهل المنال.
+صبركِ، تفانيكِ، وشغفكِ بالتعليم ملهمة حقًا، وأشعر بأنني محظوظة لأنني حظيت بفرصة التعلم منكِ.
+رؤيتكِ ومعرفتكِ لم تساعداني فقط على تحسين مهاراتي اللغوية، بل أيضًا على تقدير أعمق للتراث الثقافي الغني للعالم العربي.
+شكرًا مرة أخرى على تعليمكِ ودعمكِ.
+        
+        `
     },
     {
         id: 4,
-        name: ' Michael Wilson',
-        content: 'لقد كان تعلم القرآن الكريم مع الشيخ محمد تجربة غيرت حياتي. فهو يخصص الوقت لشرح الدروس ويضمن تقدم كل طالب بالوتيرة التي تناسبه. إن شغفه بالتدريس ملهم حقًا',
+        name: 'أم محمد ', state: '  الهند',
+        content: `
+        وعليكم السلام ورحمة الله وبركاته
+كانت الحصة جيدة جدًا. كان الأستاذ محمد يشرح بطريقة ممتازة، وكان محمد سعيدًا جدًا واستمتع بها. 👍👍
+
+        `,
     },
     {
         id: 5,
-        name: '  John Harris',
-        content: 'إن الطريقة التي يعلم بها الأستاذ محمد القرآن الكريم ملهمة ومؤثرة في نفس الوقت. فهو يجعل الدروس تفاعلية وشخصية، مما يساعدني على التواصل بشكل عميق مع القرآن الكريم. إن شغفه بالتدريس معدٍ',
+        name: 'أنيسة',
+        state: 'الولايات المتحدة ',
+        content: `
+        
+شكرًا لكِ، المعلمة تسنيم، على كونك معلمة مذهلة ومساعدتي في رحلتي مع الحجاب. أنا سعيدة للغاية لأنكِ فخورة بي. أنتِ كالأخت الكبرى التي لم أحظَ بها، وسأظل دائمًا أقتدي بتلاوتكِ، جمالكِ، تحفيزكِ، ذكائكِ، ومدى كونكِ مسلمة رائعة. لقد كنتِ جزءًا ملهمًا جدًا في حياتي. وأخيرًا، فزتِ في لعبة إكس-أو!
+
+        `
     },
     {
         id: 6,
-        name: ' Karen White',
-        content: 'لقد تحسنت مهاراتي في التجويد بشكل كبير تحت إشراف الأستاذ محمد. دروسه منظمة وجذابة ومليئة بالأمثلة العملية التي تساعدك على حفظ وفهم القرآن الكريم بشكل أفضل',
-    },
-    {
-        id: 7,
-        name: 'Hamed Elzayat',
-        content: 'الشيخ محمد المرسي ​​هو مدرس قرآن رائع يجلب فهمًا عميقًا للقرآن في كل درس. حماسته ووضوحه يجعلان حتى الموضوعات المعقدة أسهل في الفهم. يوصى به بشدة لأي شخص يتطلع إلى تعميق دراساته القرآنية!',
-    },
-    {
-        id: 8,
-        name: 'Mohammed Elsayed',
-        content: 'لقد تحسنت مهاراتي في التجويد بشكل كبير تحت إشراف الأستاذ محمد. دروسه منظمة وجذابة ومليئة بالأمثلة العملية التي تساعدك على حفظ وفهم القرآن الكريم بشكل أفضل',
+        name: ' ليلى', state: 'الولايات المتحدة ',
+        content: `
+        
+        
+شكرًا لكِ، المعلمة تسنيم، على وجودكِ بجانبي وتعليمي. أنتِ واحدة من معلماتي المفضلات - أفضل معلمة وأفضل طبيبة على الإطلاق. شكرًا لكِ على كل مساعدتكِ؛ لقد جعلتِ مني مسلمة أفضل. أنتِ أكثر بكثير مما تعتقدين، وإن شاء الله ستذهبين إلى الجنة.`
     }
 ]
 export const medias = [
     {
         id: 1, color: '#1e8af0', back: '#1e8af03a',
         title: 'Facebook',
-        content: ' Mohammed Elmorsy',
-        to: 'https://www.facebook.com/profile.php?id=100079764606912',
+        content: 'quranyway',
+        to: 'https://www.facebook.com/share/1Uh7Wnc2QH/',
         icon: <FaFacebook />
     },
     {
         id: 2, color: 'green', back: '#0080002a',
         title: 'WhatsApp',
-        content: '+20 012 1265 9525',
-        to: 'https://wa.me/201212659525',
+        content: '+2 010 1386 4939',
+        to: 'https://wa.me/201013864939',
         icon: <FaWhatsapp />
-    },
+    }
+    ,
     {
-        id: 3, color: '#035eb4', back: '#035eb431',
-        title: 'Linkendin',
-        content: 'linkedin/mohammed-elmorsy',
-        to: 'https://www.linkedin.com/in/mohammed-elmorsy-018378258/',
-        icon: <FaLinkedin />
-    },
-    {
-        id: 4, color: '#fd7403', back: '#fd74034b',
-        title: 'Githup',
-        content: 'github/Mohammed-Elmorsy',
-        to: 'https://github.com/Mohammed-Elsayed-Elmorsy',
-        icon: <FaGithub />
+        id: 8, color: 'purple', back: '#ea00ff3d',
+        title: 'Instagram',
+        content: 'quran way academy',
+        icon: <FaInstagram />,
+        to: 'https://www.instagram.com/quranwayacademy/profilecard/?igsh=Nm50eWZoeHdzdThm'
     },
     {
         id: 5, color: 'black', back: '#0202022a',
         title: 'Email',
-        content: 'sallealamohammed@gmail',
-        to: 'mailto:sallealamohammed@gmail.com',
+        content: 'quranyway@gmail',
+        to: 'quranyway@gmail.com',
         icon: <FaEnvelope />
     },
     {
         id: 6, color: '#006797', back: '#035eb423',
         title: 'Telegram',
-        content: 'Muhammad_550',
+        content: 'quranwayacademy',
         icon: <FaTelegram />,
-        to: 'https://t.me/Muhammad_550'
+        to: 'https://t.me/quranwayacademy'
     },
     {
         id: 7, color: '#0490a8', back: '#048fa82c',
         title: 'Phone',
-        content: '01554701926',
+        content: '+201013864939',
         icon: <FaPhone />
     },
     {
         id: 8, color: 'red', back: '#ff000027',
         title: 'Youtube',
-        content: 'Youtube',
-        icon: <FaYoutube />
-    },
+        content: 'quranwayacademy',
+        icon: <FaYoutube />,
+        to: 'https://www.youtube.com/@quranwayacademy'
+    }
+    ,
 ]
 export const mediasarab = [
     {
         id: 1, color: '#1e8af0', back: '#1e8af03a',
         title: 'الفيسبوك',
         content: ' Mohammed-Elmorsy',
-        to: 'https://www.facebook.com/profile.php?id=100079764606912',
+        to: 'https://www.facebook.com/share/1Uh7Wnc2QH/',
         icon: <FaFacebook />
     },
     {
         id: 2, color: 'green', back: '#0080002a',
         title: 'واتساب',
-        content: '+20 012 1265 9525',
-        to: 'https://wa.me/201212659525',
+        content: '+2 010 1386 4939',
+        to: 'https://wa.me/201013864939',
         icon: <FaWhatsapp />
     },
-    {
-        id: 3, color: '#035eb4', back: '#035eb431',
-        title: 'لينكدان',
-        content: 'linkedin/mohammed-elmorsy',
-        to: 'https://www.linkedin.com/in/mohammed-elmorsy-018378258/',
-        icon: <FaLinkedin />
-    },
-    {
-        id: 4, color: '#fd7403', back: '#ff44006b',
-        title: 'حيت هاب',
-        content: 'github/Mohammed-Elmorsy',
-        to: 'https://github.com/Mohammed-Elsayed-Elmorsy',
-        icon: <FaGithub />
-    },
+    // {
+    //     id: 3, color: '#035eb4', back: '#035eb431',
+    //     title: 'لينكدان',
+    //     content: 'linkedin/mohammed-elmorsy',
+    //     to: 'https://www.linkedin.com/in/mohammed-elmorsy-018378258/',
+    //     icon: <FaLinkedin />
+    // },
+    // {
+    //     id: 4, color: '#fd7403', back: '#ff44006b',
+    //     title: 'حيت هاب',
+    //     content: 'github/Mohammed-Elmorsy',
+    //     to: 'https://github.com/Mohammed-Elsayed-Elmorsy',
+    //     icon: <FaGithub />
+    // },
     {
         id: 5, color: 'black', back: '#0202022a',
         title: 'الجميل',
-        content: 'sallealamohammed@gmail',
-        to: 'mailto:sallealamohammed@gmail.com',
+        content: 'quranyway@gmail',
+        to: 'mailto:quranyway@gmail.com',
         icon: <FaEnvelope />
     },
     {
         id: 6, color: '#006797', back: '#035eb423',
         title: 'التلجرام',
-        content: 'Muhammad_550',
+        content: 'quranwayacademy',
         icon: <FaTelegram />,
-        to: 'https://t.me/Muhammad_550'
+        to: 'https://t.me/quranwayacademy'
     },
     {
         id: 7, color: '#0490a8', back: '#048fa82c',
         title: 'التلفون',
-        content: '01554701926',
+        content: '+201013864939',
         icon: <FaPhone />
     },
     {
         id: 8, color: 'red', back: '#ff000027',
         title: 'اليوتيوب',
         content: 'Youtube',
-        icon: <FaYoutube />
+        icon: <FaYoutube />,
+        to: 'https://www.youtube.com/@quranwayacademy'
+    },
+    {
+        id: 8, color: 'purple', back: '#ea00ff3d',
+        title: 'انستجرام',
+        content: 'انستجرام',
+        icon: <FaInstagram />,
+        to: 'https://www.instagram.com/quranwayacademy/profilecard/?igsh=Nm50eWZoeHdzdThm'
     },
 ]
 
@@ -726,7 +747,7 @@ export const blogs = [
     {
         id: 4,
         image: [image4, image5, image1, image2],
-        title: 'Quran The Key to Happiness & Success',
+        title: 'Quran The Key to Happiness',
         desc: 'The Quran is not just a book to be recited; it is a way of life to be followed, and it is the foundation of happiness in both this world and the Hereafter. Allah says: "Whoever does righteous deeds, whether male or female, while being a believer, We will surely give him a good life." (An-Nahl: 97).'
     },
     {
@@ -738,7 +759,7 @@ export const blogs = [
     {
         id: 6,
         image: [image6, image2, image5, image4],
-        title: 'Make the Quran the light of your life',
+        title: 'Make the Quran light of your life',
         desc: 'The Quran is the great blessing that Allah has given us, and it is the path to happiness and success in this world and the Hereafter. Learning it and teaching it is a great honor, and living by it brings light and blessings into your life.'
     }
 ]
@@ -818,16 +839,16 @@ export const progs = [
         desc: 'Unlock the foundation of Arabic literacy with our Reading Skills Program',
         points: [
             {
-                title: 'Who it’s for',
+                title: 'Who it’s for : ',
                 info: 'Perfect for beginners of all ages or those aiming to improve their basic reading skills.'
             },
             {
-                title: 'What we offer',
-                info: ': Structured lessons using the Noor Al-Bayan and Al-Nouraniya methods, with fun, engaging exercises'
+                title: 'What we offer : ',
+                info: 'Structured lessons using the Noor Al-Bayan and Al-Nouraniya methods, with fun, engaging exercises'
             },
             {
-                title: 'What your child will gain',
-                info: ': A strong foundation in Arabic phonetics, letters, and fluency in reading Arabic texts, alongside with writing skills'
+                title: 'What your child will gain : ',
+                info: 'A strong foundation in Arabic phonetics, letters, and fluency in reading Arabic texts, alongside with writing skills'
             },
         ]
     },
@@ -838,12 +859,12 @@ export const progs = [
         desc: 'Help your child embark on a blessed journey of memorizing Allah’s words',
         points: [
             {
-                title: 'What your child will gain',
+                title: 'What your child will gain : ',
                 info: 'Memorization of the Qur’an, whether a portion or its entirety, with focus on consistent retention'
             },
             {
-                title: 'What we offer',
-                info: ': Individualized plans, daily revision schedules, and expert guidance to inspire confidence and dedication'
+                title: 'What we offer : ',
+                info: 'Individualized plans, daily revision schedules, and expert guidance to inspire confidence and dedication'
             }
         ]
     },
@@ -854,11 +875,11 @@ export const progs = [
         desc: 'Beautify your child’s recitation and teach them the art of reading the Qur’an as it was revealed.',
         points: [
             {
-                title: 'What your child will gain',
-                info: ': Mastery of Tajweed rules, enabling them to recite the Qur’an fluently and melodiously with confidence'
+                title: 'What your child will gain : ',
+                info: 'Mastery of Tajweed rules, enabling them to recite the Qur’an fluently and melodiously with confidence'
             },
             {
-                title: 'What we offer',
+                title: 'What we offer : ',
                 info: 'Step-by-step lessons covering pronunciation, articulation, and recitation practices, guided by skilled tutors graduated from Al-Azhar and certified with ijazah'
             }
         ]
@@ -871,12 +892,12 @@ export const progs = [
         desc: 'Discover the beauty of the Arabic language, from its fundamentals to fluency.',
         points: [
             {
-                title: 'Who it’s for',
+                title: 'Who it’s for : ',
                 info: 'Perfect for learners at any level, whether they are complete beginners or intermediate students aiming to refine their skills'
             },
             {
-                title: 'What we offer',
-                info: ': Interactive lessons covering listening, speaking, reading, and writing, using trusted curricula like “Arabic Between Your Hands” and “Madinah Book”.'
+                title: 'What we offer : ',
+                info: 'Interactive lessons covering listening, speaking, reading, and writing, using trusted curricula like “Arabic Between Your Hands” and “Madinah Book”.'
             }
         ]
         ,
@@ -888,11 +909,11 @@ export const progs = [
         desc: 'Dive deep into the Qur’an to master Arabic while enriching your spiritual journey.',
         points: [
             {
-                title: 'Who it’s for',
+                title: 'Who it’s for : ',
                 info: 'Perfect for learners inspired to learn Arabic through the words of Allah'
             },
             {
-                title: 'What we offer',
+                title: 'What we offer : ',
                 info: 'Lessons focus on Qur’anic vocabulary, grammar, and sentence structure, with practical examples from the Qur’an itself'
             }
         ]
@@ -906,11 +927,11 @@ export const progs = [
         ,
         points: [
             {
-                title: 'What your child will gain',
+                title: 'What your child will gain : ',
                 info: 'A strong foundation in Fiqh, Tafseer, Hadith, Du’aa, and Aqeedah all of what they can’t be ignorant of'
             },
             {
-                title: 'What we offer',
+                title: 'What we offer : ',
                 info: 'Interactive lessons with special activities and occasional free sessions for entertainment and Islamic learning'
             }
         ]
@@ -941,7 +962,7 @@ export const progsArabic =
         },
         {
             id: 3,
-            image: image9,
+            image: image11,
             title: "برنامج حفظ القرآن الكريم",
             desc: "ساعد طفلك على بدء رحلة ممتعة في حفظ كلمات الله.",
             points: [
@@ -957,7 +978,7 @@ export const progsArabic =
         },
         {
             id: 4,
-            image: image10,
+            image: image9,
             title: "برنامج القرآن مع التجويد",
             desc: "اجعل تلاوة طفلك أجمل وعلّمه قراءة القرآن كما أُنزل على النبي صلى الله عليه وسلم.",
             points: [
@@ -989,7 +1010,7 @@ export const progsArabic =
         },
         {
             id: 6,
-            image: image11,
+            image: image32,
             title: "برنامج تعلم اللغة العربية من خلال القرآن",
             desc: "اغمر نفسك في القرآن لتتقن اللغة العربية بينما تعمّق رحلتك لتحصل على فهم أفضل وأجمل للمعاني في كتاب الله.",
             points: [
@@ -1120,7 +1141,7 @@ export const pricingArabic = [
     {
         id: 1,
         image: image1,
-        plan: 'حصة لمدة 30 دقيقة',
+        plan: 'حصة  30 دقيقة',
         classes: [
             {
                 numberperweek: 'حصتان/',
@@ -1151,10 +1172,10 @@ export const pricingArabic = [
     {
         id: 2,
         image: image1,
-        plan: 'حصة لمدة 45 دقيقة',
+        plan: 'حصة  45 دقيقة',
         classes: [
             {
-                numberperweek: 'حصة واحدة/',
+                numberperweek: 'حصة /',
                 cost: '21 جنيه إسترليني/',
                 numberpermonth: '4 حصص/',
                 costforclass: '7£/',
@@ -1162,13 +1183,13 @@ export const pricingArabic = [
             {
                 numberperweek: 'حصتان/',
                 cost: '52 جنيه إسترليني/',
-                numberpermonth: '8 حصص/الشهر',
+                numberpermonth: '8 حصص/',
                 costforclass: '6.50£/',
             },
             {
                 numberperweek: '3 حصص/',
                 cost: '74 جنيه إسترليني/',
-                numberpermonth: '12 حصة/الشهر',
+                numberpermonth: '12 حصة/',
                 costforclass: '6.20£/',
             },
             {
@@ -1182,7 +1203,7 @@ export const pricingArabic = [
     {
         id: 3,
         image: image1,
-        plan: 'حصة لمدة 60 دقيقة',
+        plan: 'حصة  60 دقيقة',
         classes: [
             {
                 numberperweek: 'حصة واحدة/',

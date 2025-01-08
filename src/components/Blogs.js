@@ -20,9 +20,9 @@ const BlogsComp = ({ slider }) => {
         <div className=' blogs bg-light   pb-[70px]'>
             <div className=' mx-auto px-3 md:px-[70px] lg:px-[120px] container'>
                 <div>
-                    <h2 className='title ' >
+                    <h2 className='title md:m-0 mb-5' >
                         {state ? 'المدونات' : 'Our Blogs'}
-                        <FaCheck />
+                        <FaCheck className=' hidden md:inline-block' />
                     </h2>
                     <div className=' container content mx-auto '>
                         {slider ?

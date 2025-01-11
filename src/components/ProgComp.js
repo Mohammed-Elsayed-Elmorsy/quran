@@ -37,6 +37,9 @@ const ProgComp = () => {
                             <Link to={'/contact'} className=' flex-1'>
                                 <button className=' w-full btn-pri'>contact us</button>
                             </Link>
+                            <Link to={'/programms/' + item.id} className=' flex-1 hidden xl:inline-block'>
+                                <button className=' w-full btn-pri'>read more</button>
+                            </Link>
                         </div>
                     </div>) : progsArabic.map(item =>
                         <div className='item shadow-lg'
@@ -56,6 +59,12 @@ const ProgComp = () => {
                                     <button className=' w-full btn-pri'>
 
                                         {state ? 'تواصل معنا' : 'contact us'}
+                                    </button>
+                                </Link>
+                                <Link to={'/programms/' + item.id} className=' flex-1 hidden xl:inline-block'>
+                                    <button className=' w-full btn-pri'>
+
+                                        {state ? ' اقرأ المزيد' : 'read  more'}
                                     </button>
                                 </Link>
                             </div>

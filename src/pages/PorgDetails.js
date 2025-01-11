@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Footer from '../components/Footer'
 import { useSelector } from 'react-redux'
-import { progs, progsArabic } from '../utils/data'
-import { useParams } from 'react-router-dom'
+import { progs, progsArabic, teachersArabic, teaches } from '../utils/data'
+import { Link, useParams } from 'react-router-dom'
 import LinksOfDetails from '../components/LinksOfDetails'
 import Loading from '../components/Loading'
 const PorgDetails = () => {
@@ -26,35 +26,44 @@ const PorgDetails = () => {
         return <Loading />
     }
     return (
-        <div className='details-page'>
-            <div className='details-page-content'>
-                <div className=' container px-7  mx-auto pb-[70px]'>
-                    <h2 className=' title '>{prog?.title}</h2>
-                    <p className=' text-[20px]'>{prog?.desc}
-                        Lorem, ipsum dolor sit amet consectetur
-                        adipisicing elit. Odit libero minus vel ratione
-                        repellat modi veritatis laboriosam dicta? Pariatur, aliquam.
-                        Eligendi consectetur error ullam
-                        perferendis quidem alias voluptatibus iure sit.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Fugit harum necessitatibus dolor. A doloremque inventore quaerat rem,
-                        suscipit alias! Minima in, consequuntur libero fugiat eveniet ipsa earum totam expedita, ipsum,
-                        assumenda debitis hic eius vel explicabo iusto ipsam dolorum omnis.
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Dolorum qui sit laborum corrupti, obcaecati voluptates eveniet quaerat, magni veritatis
-                        fuga, saepe vero. Obcaecati totam,
-                        exercitationem repellendus unde et eos dolores.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquid necessitatibus,
-                        quisquam ipsam facilis
-                        assumenda!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, deserunt!
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, quod?
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, quasi?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sint non
-                        praesentium enim totam, modi culpa necessitatibus perspiciatis illum adipisci
-                        pariatur aut. Dolorem officia, aliquid vitae aut
-                        totam sunt nisi.
-                    </p>
+        <div className='details-page bg-light'>
+            <div className='details-page-content container  mx-auto px-8'>
+                <h2 className=' title '>{prog?.title}</h2>
+                <div className=' p-5 bg-white border border-gray-300  flex justify-between items-stretch  gap-2   '>
+                    <img src={prog?.image} className='md:w-[50%] lg:w-[45%] xl:w-[40%] object-cover hidden lg:block' alt="" />
+                    <div className='xl:w-[58%] md:w-[100%] lg:w-[54%] w-full'>
+                        <p className=' text-[20px] font-bold py-4'>
+                            {prog?.desc}
+                        </p>
+                        <ul>
+                            {prog?.points.map((point, index) => (
+                                <li key={index} className=' text-[20px]'>
+                                    <h4>
+                                        {point.title}
+                                    </h4>
+                                    <span>
+                                        {point.info}
+                                    </span>
+                                </li>
+                            ))}
+                        </ul>
+                        <h4 className='text-[20px] mt-[20px] md:text-[26px] font-bold'>{state ? 'المعلمون المختصون لهذا البرنامج' : 'Teachers for the program'}</h4>
+                        <div className='flex gap-4 flex-col md:flex-row'>
+                            {state ? teachersArabic.map((teacher, index) => (
+                                <Link to={`/teachers/${teacher.id}`} key={index} className='flex items-center gap-1 '>
+                                    <img src={teacher.image} className='w-[50px] h-[50px] rounded-full object-cover ' alt="" />
+                                    <span className=' underline font-bold text-[16px]'>{teacher.name}</span>
+                                </Link>
+                            ))
+                                :
+                                teaches.map((teacher, index) => (
+                                    <Link to={`/teachers/${teacher.id}`} key={index} className='flex items-center gap-1'>
+                                        <img src={teacher.image} className='w-[50px] h-[50px] rounded-full object-cover ' alt="" />
+                                        <span className=' underline font-bold text-[16px]'>{teacher.name}</span>
+                                    </Link>
+                                ))}
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className=' pb-[70px]'>

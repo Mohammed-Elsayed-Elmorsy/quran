@@ -137,7 +137,6 @@ const About = () => {
                     <LinksOfDetails />
                 </div>
             </div>
-            {/* <AboutComp more={false} readmore={true} /> */}
             <Footer />
         </div>
     )

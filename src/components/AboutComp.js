@@ -1,12 +1,11 @@
 import { FaCheck } from 'react-icons/fa'
 import image from '../static/2.png'
-import image2 from '../static/5.png'
 import aos from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-const AboutComp = ({ more, readmore }) => {
+const AboutComp = ({ more }) => {
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     useEffect(() => {
@@ -21,7 +20,7 @@ const AboutComp = ({ more, readmore }) => {
                 {!state ? ' about us' : 'اقرأ عنا'}
                 <FaCheck />
             </h2>
-            <div className="container  mx-auto px-5 md:px-[70px] lg:px-[120px] flex lg:justify-between justify-center">
+            <div className="container  mx-auto px-8 md:px-[70px] lg:px-[120px] flex lg:justify-between justify-center">
                 <div className='w-full flex flex-col justify-between lg:w-[58%] text' data-aos={state ? 'fade-down' : 'fade-up'}>
                     {!state ?
                         <p className='md:text-[20px] pb-4'>
@@ -69,39 +68,6 @@ const AboutComp = ({ more, readmore }) => {
                     <img src={image} alt="" className=' h-full w-full object-cover ' />
                 </div>
             </div>
-            {readmore &&
-                <div className="container items-center mx-auto px-5 md:px-[80px] lg:px-[120px] flex justify-between">
-                    <div data-aos={state ? 'fade-up' : 'fade-down'}
-                        className={`image hidden lg:block relative ${state ? 'left-[0px]' : 'right-[0px]'} `}>
-                        <img src={image2} alt="" className=' rounded-md' />
-                    </div>
-                    <div className='w-full lg:w-[58%] text' data-aos={state ? 'fade-down' : 'fade-up'}>
-                        {!state ? <p className='md:text-[20px] text-gray-500'>
-                            Using creative and innovative teaching methods, we make learning engaging, accessible,
-                            and effective for students of all ages and proficiency levels.
-                            At Quran Way Academy, we believe that our mission goes beyond education.
-                            We aim to strengthen Muslim families and communities by imparting Islamic knowledge, values, and character.
-                            Through our programs, we aspire to inspire positive change, foster unity, and help you and your
-                            family become the best
-                            versions of yourselves as Muslims.
-                            Join us on this transformative journey and take the first step toward a deeper
-                            understanding of your faith and a brighter
-                            future for your family.
-                        </p> :
-                            <p className='md:text-[20px] text-gray-500'>
-                                . جعلنا غايتنا الأولى تعليم القرآن الكريم، فهو أسمى أهدافنا وأغلى أمانينا،
-                                ويحتل مركز اهتمامنا وأولى حاجاتنا. نحمل على عاتقنا مسؤولية عظيمة، وهي أن يكون طلابنا
-                                ، بإذن الله، صالحين ومصلحين، راشدين يسعدون بالقرآن في الدنيا وينعمون ببركته
-                                في الآخرة. وندعو الله أن يبلغ صوتنا آفاق الأرض، ترتيلًا وتعليمًا وهداية وإصلاحًا،
-                                حاملين في قلوبنا عزيمة لا تلين، طمعًا في الأجر من الله والثواب العظيم
-                                ملتزمون بتغذية عقول وقلوب طلابنا على حد سواء، باستخدام أساليب تدريس مبتكرة
-                                ومبدعة، مما يجعل التعلم ممتعًا، سهل الوصول، وفعّالًا لجميع الأعمار والمستويات
-                            </p>
-                        }
-                    </div>
-
-                </div>
-            }
 
         </div>
     )

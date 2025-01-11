@@ -25,14 +25,46 @@ const TeachersDetails = () => {
         return <Loading />
     }
     return (
-        <div className="details-page">
+        <div className="details-page bg-light">
             <div className="details-page-content">
 
-                <div className=' container px-5  mx-auto pb-[70px]'>
-                    <h2 className='  title after-before'>{blog?.name}</h2>
-                    <p className=' lg:text-xl text-[18px]'>
-                        {blog?.details}
-                    </p>
+                <div className=' container pt-12 px-8 md:px-[80px] lg:px-[120px]  mx-auto pb-[70px]'>
+
+
+                    <div className=" bg-white flex items-center justify-center  p-5 border border-gray-300">
+                        <div className=" overflow-hidden w-[250px] h-[250px]">
+                            <img src={blog?.image} alt=""
+                                className=" object-cover relative left-[-20px]" />
+                        </div>
+
+                        <ul className="relative left-[-30px] ">
+                            <li className=" font-bold text-[22px] capitalize">
+                                {blog?.name}
+                            </li>
+                            <li className=" underline ">
+                                Certified Quran Teacher
+                            </li>
+                            <li>
+                                10+ years of teaching
+                            </li>
+                            <li>
+                                Cairo, Egypt
+                            </li>
+                            <li>
+                                AL_Azher University
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+                    <div className=" mt-5">
+                        <h3 className=" title ]">{state ? " تفاصيل المعلم" : "about the teacher"} </h3>
+                        <p className=' bg-white p-3 lg:text-xl text-[18px]'>
+                            {blog?.details}
+                        </p>
+                    </div>
+
                 </div>
             </div>
             <div className=" pb-[70px]">

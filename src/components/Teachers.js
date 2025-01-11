@@ -8,7 +8,7 @@ const TeachersComp = () => {
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     return (
         <div className=' teachers bg-light pb-[70px]'>
-            <div className=' container px-7 md:px-[80px] lg:px-[120px] mx-auto'>
+            <div className=' container px-8 md:px-[80px] lg:px-[120px] mx-auto'>
                 <h2 className=' title  flex items-center gap-2'>
                     {!state ? 'Our Teachers' : 'المعلمون'}
                     <FaCheck className=' font-bold ' />
@@ -16,8 +16,10 @@ const TeachersComp = () => {
                 <div className=' content grid md:grid-cols-2 lg:grid-cols-3  grid-cols-1 gap-6'>
                     {!state ? teaches.map(item =>
                         <div data-aos="zoom-in" key={item.id} className=' relative justify-between flex flex-col gap-4'>
-                            <img src={item.image} alt="" className=' object-cover h-[250px]' />
-                            <h3 className='lg:text-[25px] text-[22px] font-bold px-1  capitalize'>{item.name}</h3>
+                            <div className='  overflow-hidden'>
+                                <img src={item.image} alt="" className=' object-cover' />
+                            </div>
+                            <h3 className='lg:text-[25px] text-[22px] font-bold px-1 text-center  capitalize'>{item.name}</h3>
                             <p className=' lg:text-[18px] text-[16px]'>{item.desc.substring(0, 214) + '...'}</p>
                             <div className=' mt-auto'>
                                 <Link className=' w-full' to={'/teachers/' + item.id}>
@@ -26,8 +28,10 @@ const TeachersComp = () => {
                             </div>
                         </div>) : teachersArabic.map(item =>
                             <div data-aos="zoom-in" key={item.id} className=' relative  flex flex-col gap-4'>
-                                <img src={item.image} alt="" className=' object-cover h-[250px]' />
-                                <h3 className='lg:text-[25px] text-[22px] font-bold px-1'>{item.name}</h3>
+                                <div className=' overflow-hidden'>
+                                    <img src={item.image} alt="" className=' object-cover ' />
+                                </div>
+                                <h3 className='lg:text-[25px] text-[22px] text-center font-bold px-1'>{item.name}</h3>
                                 <p className=' lg:text-[18px] text-[16px]'>{item.desc.substring(0, 214) + '...'}</p>
                                 <div className=' mt-auto'>
                                     <Link className=' block w-full' to={'/teachers/' + item.id}>

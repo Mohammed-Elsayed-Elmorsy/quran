@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Landing from '../components/Landing'
 import Footer from '../components/Footer'
 import Choose from '../components/Choose'
@@ -9,11 +9,20 @@ import Contact from '../components/Contact'
 import Blogs from '../components/Blogs'
 import PricingComp from '../components/PricingComp'
 import ProgComp from '../components/ProgComp'
+import Loading from '../components/Loading'
 
 const Home = () => {
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
+        setTimeout(() => {
+            setLoading(false);
+        }, 1600);
         window.scrollTo(0, 0);
+        setLoading(true);
     }, []);
+    if (loading) {
+        return <Loading />
+    }
     return (
         <div >
             <Landing />

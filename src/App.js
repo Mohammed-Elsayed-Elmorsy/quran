@@ -7,10 +7,6 @@ import Teachers from './pages/Teachers';
 import BlogDetails from './pages/BlogDetails';
 import Contact from './pages/Contact';
 import Programms from './pages/Programms';
-import Tafsser from './pages/Tafsser';
-import Tajweed from './pages/Tajweed';
-import Revision from './pages/Revision';
-import Studies from './pages/Studies';
 import { Toaster } from 'react-hot-toast';
 import PricingPage from './pages/Pricing';
 import { useSelector } from 'react-redux';
@@ -59,10 +55,6 @@ function App() {
           <Route path='/contact' element={<Contact />}></Route>
           <Route path='/teachers' element={<Teachers />}></Route>
           <Route path='/teachers/:id' element={<TeachersDetails />}></Route>
-          <Route path='/tafseer' element={<Tafsser />}></Route>
-          <Route path='/tajweed' element={<Tajweed />}></Route>
-          <Route path='/Revision' element={<Revision />}></Route>
-          <Route path='/Islamic-Studies' element={<Studies />}></Route>
           <Route path='/pricing' element={<PricingPage />}></Route>
           <Route path='/pricing/:id' element={<PricingPage />}></Route>
         </Routes>

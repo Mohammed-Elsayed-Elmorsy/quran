@@ -17,13 +17,16 @@ const TopNav = () => {
           </span>
         </Link>
         <div className=' flex gap-3 items-center text-[28px] upper-span'>
-          <a className=' hover:bg-white hover:text-black p-[4px] transition-all rounded' href="https://wa.me/201212659525" target=' _blank'>
+          <a className=' hover:bg-white hover:text-black p-[4px] transition-all rounded'
+            href="https://wa.me/201013864939" target=' _blank'>
             <FaWhatsapp />
           </a>
-          <a className=' hover:bg-white hover:text-black p-[4px] transition-all rounded' href="https://www.facebook.com/yourprofile" target=' _blank'>
+          <a className=' hover:bg-white hover:text-black p-[4px] transition-all rounded'
+            href="https://www.facebook.com/share/1Uh7Wnc2QH/" target=' _blank'>
             <FaFacebook />
           </a>
-          <a className=' hover:bg-white hover:text-black p-[4px] transition-all rounded' href="mailto:sallealamohammed@gmail.com" target=' _blank'>
+          <a className=' hover:bg-white hover:text-black p-[4px] transition-all rounded'
+            href="mailto:quranyway@gmail.com" target=' _blank'>
             <GoMail />
           </a>
         </div>

@@ -119,62 +119,32 @@ span.show-text{
   animation: animate-logo2 0.7s 1  forwards ease;
   -webkit-animation: animate-logo2 0.7s 1  forwards ease;
 }
-span.hide-arabic{
-  animation: animate-logo3 0.7s 1  forwards ease;
-  -webkit-animation: animate-logo3 0.7s 1  forwards ease;
-}
-span.show-arabic{
-  animation: animate-logo4 0.7s 1  forwards ease;
-  -webkit-animation: animate-logo4 0.7s 1  forwards ease;
-}
+
 @keyframes animate-logo {
   from{
     opacity: 1;
     z-index: 1;
-    left: 0px;
+    left: -5px;
   }
   to{
     opacity: 0;
     z-index: -1;
-    left: -110px;
+    left: -102px;
   }
 }
 @keyframes animate-logo2 {
   from{
     opacity: 0;
     z-index: -1;
-    left: -110px;
+    left: -102px;
   }
   to{
     opacity: 1;
     z-index: 1;
-    left: 0px;
+    left: -5px;
   }
 }
-@keyframes animate-logo3 {
-  from{
-    opacity: 0;
-    z-index: -1;
-    right: 0px;
-  }
-  to{
-    opacity: 1;
-    z-index: 1;
-    right: -110px;
-  }
-}
-@keyframes animate-logo4 {
-  from{
-    opacity: 0;
-    z-index: -1;
-    right: -110px;
-  }
-  to{
-    opacity: 1;
-    z-index: 1;
-    right: 0px;
-  }
-}
+
 body{
   overflow-x: hidden;
 }
@@ -217,7 +187,7 @@ header{
     width: 100%;
     height: 120px;
     direction: ltr !important;
-    border-bottom:1px solid #e2e2e2 ;
+    border-bottom:1px solid #dddddd ;
 }
 .bars{
   transition: 0.3s;

@@ -46,10 +46,10 @@ const Header = () => {
 
                 <div className="logo w-[200px]">
                     <Link to={'/'} className='  flex gap-1 items-center'>
-                        <img src={image} alt="logo" className={`${minmizelogo ? '' : ''} h-[80px] w-[80px] md:h-[100px] md:w-[100px] `} />
+                        <img src={image} alt="logo" className={`${minmizelogo ? '' : ''} h-[75px] w-[85px] md:h-[100px] md:w-[100px] `} />
                         <span className={` md:text-[22px] text-[18px]  
                         ${hidetext ? 'hide-text' : 'show-text'}  
-                        font-bold text-[20px] relative`}>
+                        font-bold text-[20px] relative left-[-10px]`}>
 
                             {!state ? ' Quran way' : '   قرآن واى  '}
                         </span>

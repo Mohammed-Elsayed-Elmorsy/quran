@@ -28,39 +28,59 @@ const TeachersDetails = () => {
         <div className="details-page bg-light">
             <div className="details-page-content">
 
-                <div className=' container pt-12 px-8 md:px-[80px] lg:px-[120px]  mx-auto pb-[70px]'>
+                <div className=' container pt-5 px-6 md:px-[80px] lg:px-[120px]  mx-auto pb-[70px]'>
 
 
-                    <div className=" bg-white flex items-center justify-center  p-5 border border-gray-300">
-                        <div className=" overflow-hidden w-[250px] h-[250px]">
-                            <img src={blog?.image} alt=""
-                                className=" object-cover relative left-[-20px]" />
+                    <div className=" bg-white flex items-center justify-center  p-2 border border-gray-300">
+                        <div className="  overflow-hidden w-[130px] h-[170px] md:w-[240px] md:h-[250px] lg:w-[320px] lg:h-[350px]">
+                            <img src={blog?.imaged} alt=""
+                                className=" object-contain w-full h-full" />
                         </div>
 
-                        <ul className="relative left-[-30px] ">
-                            <li className=" font-bold text-[22px] capitalize">
+                        <ul className="">
+                            <li className=" font-bold md:text-[28px] text-[18px] capitalize">
                                 {blog?.name}
                             </li>
-                            <li className=" underline ">
-                                Certified Quran Teacher
-                            </li>
+
+                            {!state ?
+                                <li className=" underline md:text-[18px] text-[16px] text-gray-800 ">
+                                    Certified Quran Teacher
+                                </li>
+                                :
+                                <li className=" underline text-[18px] text-gray-800 ">
+                                    {blog?.id === 1 ? " معلم قران معتمد" : " معلمة قران معتمدة"}
+                                </li>
+                            }
                             <li>
-                                10+ years of teaching
+                                {blog?.experience}
                             </li>
-                            <li>
-                                Cairo, Egypt
-                            </li>
-                            <li>
-                                AL_Azher University
-                            </li>
+                            {!state ?
+                                <li>
+                                    Cairo, Egypt
+                                </li>
+                                :
+                                <li>
+                                    القاهرة، مصر
+                                </li>
+                            }
+                            {!state ?
+                                <li>
+                                    AL_Azher University
+                                </li>
+                                :
+                                <li>
+                                    جامعة الأزهر
+                                </li>
+                            }
+
                         </ul>
                     </div>
 
 
 
-                    <div className=" mt-5">
-                        <h3 className=" title ]">{state ? " تفاصيل المعلم" : "about the teacher"} </h3>
-                        <p className=' bg-white p-3 lg:text-xl text-[18px]'>
+                    <div>
+                        <h3 className=" title ]">{state ? " المزيد عن المعلم" : "about the teacher"} </h3>
+                        <p className=' bg-white p-3 lg:text-lg text-[16px]'>
                             {blog?.details}
                         </p>
                     </div>

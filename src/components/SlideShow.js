@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import img from '../static/mosque6.jpg'
-import img2 from '../static/mosque4.png'
-import img3 from '../static/mosque1.png'
-import img4 from '../static/mosque3.png'
+import img1 from '../static/mosque1.png'
+import img2 from '../static/mosque2.png'
+import img3 from '../static/mosque3.png'
+import img4 from '../static/mosque4.png'
+import img5 from '../static/mosque5.png'
+import img6 from '../static/mosque6.jpg'
+import img7 from '../static/mosque7.png'
+import img8 from '../static/mosque8.png'
 const Slideshow = ({ children }) => {
-    const images = [img, img2, img3, img4];
+    const images = [img1, img2, img3, img4, img5, img6, img7, img8];
     const [currentIndex, setCurrentIndex] = useState(0);
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 5000);
+        }, 6000);
         return () => clearInterval(interval);
     }, []);
 

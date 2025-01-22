@@ -34,9 +34,9 @@ const ContactComp = () => {
     };
     console.log(phoneNumber);
     return (
-        <div className='Contact pb-[70px] bg-light'>
+        <div className='Contact pb-[40px] bg-light'>
 
-            <div className=' container mx-auto px-3 md:px-[70px] lg:px-[120px]'>
+            <div className=' container mx-auto p-6 md:px-[70px] lg:px-[120px]'>
                 <h2 className='title'>
                     {state ? ' تواصل معنا' : 'contact us '}
                     <FaCheck />
@@ -109,7 +109,6 @@ const ContactComp = () => {
                                     <option value="" disabled selected>اختر جنسك</option>
                                     <option value="male">ذكر</option>
                                     <option value="female">أنثى</option>
-                                    <option value="other">آخر</option>
                                 </select>
                             </div>
                             <button type="submit" class="btn-submit">إرسال</button>
@@ -183,7 +182,6 @@ const ContactComp = () => {
                                     <option value="" disabled selected>Select your gender</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
-                                    <option value="other">Other</option>
                                 </select>
                             </div>
                             <button type="submit" class="btn-submit">Submit</button>
@@ -193,17 +191,19 @@ const ContactComp = () => {
 
 
                 <div className=' text-center'>
-                    <h2 className='title text-[25px] text-center capitalize pb-5'> {state ? 'معلومات الاتصال' : 'contact information'}</h2>
-                    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:p-0 p-4'>
+                    <h2 className='title text-[22px] text-center capitalize pb-5'> {state ? 'معلومات الاتصال' : 'contact information'}</h2>
+                    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:p-0 '>
                         {medias.map(item => {
                             return (
                                 <div data-aos='fade-down'
                                     key={item.id}
                                     className=' flex flex-col gap-2 rev-item bg-white p-2'>
-                                    <Link target='_blank' to={item.to}
-                                        className=' md:text-[20px] text-wrap break-all break-words  text-blue-500'>
+                                    <Link target={item.title.indexOf('Email') !== -1
+                                        || item.title.indexOf('hone') !== -1 ?
+                                        '' : '_blank'} to={item.title.indexOf('Email') !== -1 ? '' : item.to}
+                                        className=' text-wrap break-all break-words  text-blue-500'>
                                         <span style={{ color: 'var(--main-color)' }}
-                                            className='text-[50px] flex justify-center items-center'>
+                                            className='text-[35px] flex justify-center items-center'>
                                             {item.icon}
                                         </span>
                                         <h3 style={{ color: 'var(--second-color)' }} className=' font-bold'>
@@ -218,7 +218,7 @@ const ContactComp = () => {
                 </div>
             </div>
 
-        </div>
+        </div >
     )
 }
 

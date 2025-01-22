@@ -29,10 +29,10 @@ const PorgDetails = () => {
         <div className='details-page bg-light'>
             <div className='details-page-content container  mx-auto px-8'>
                 <h2 className=' title '>{prog?.title}</h2>
-                <div className=' p-5 bg-white border border-gray-300  flex justify-between items-stretch  gap-2   '>
-                    <img src={prog?.image} className='md:w-[50%] lg:w-[45%] xl:w-[40%] object-cover hidden lg:block' alt="" />
+                <div className=' p-4 bg-white border border-gray-300  flex justify-between items-stretch  gap-2   '>
+                    <img src={prog?.image} className='md:w-[50%] border lg:w-[45%] xl:w-[40%] object-cover hidden lg:block' alt="" />
                     <div className='xl:w-[58%] md:w-[100%] lg:w-[54%] w-full'>
-                        <p className=' text-[20px] font-bold py-4'>
+                        <p className=' text-[20px] font-bold pb-4'>
                             {prog?.desc}
                         </p>
                         <ul>
@@ -47,26 +47,12 @@ const PorgDetails = () => {
                                 </li>
                             ))}
                         </ul>
-                        <h4 className='text-[20px] mt-[20px] md:text-[26px] font-bold'>{state ? 'المعلمون المختصون لهذا البرنامج' : 'Teachers for the program'}</h4>
-                        <div className='flex gap-4 flex-col md:flex-row'>
-                            {state ? teachersArabic.map((teacher, index) => (
-                                <Link to={`/teachers/${teacher.id}`} key={index} className='flex items-center gap-1 '>
-                                    <img src={teacher.image} className='w-[50px] h-[50px] rounded-full object-cover ' alt="" />
-                                    <span className=' underline font-bold text-[16px]'>{teacher.name}</span>
-                                </Link>
-                            ))
-                                :
-                                teaches.map((teacher, index) => (
-                                    <Link to={`/teachers/${teacher.id}`} key={index} className='flex items-center gap-1'>
-                                        <img src={teacher.image} className='w-[50px] h-[50px] rounded-full object-cover ' alt="" />
-                                        <span className=' underline font-bold text-[16px]'>{teacher.name}</span>
-                                    </Link>
-                                ))}
-                        </div>
+
+
                     </div>
                 </div>
             </div>
-            <div className=' pb-[70px]'>
+            <div className=' py-[70px]'>
                 <LinksOfDetails />
             </div>
             <Footer />

@@ -43,7 +43,7 @@ const About = () => {
                                 {!state ? ' who we are ' : 'من نحن '}
                                 <FaCheck />
                             </h2>
-                            <p className='bg-white shadow-md p-2 text-[16px] md:text-[18px]' data-aos={'fade-up'}>مرحبًا بكم في أكاديمية قرآن واي طريقكم الموثوق لتعلم القرآن الكريم، واللغة العربية،
+                            <p className='bg-white shadow-md p-2 text-[16px] md:text-[18px]' data-aos={'fade-up'}>مرحبًا بكم في أكاديمية شذا القرآن طريقكم الموثوق لتعلم القرآن الكريم، واللغة العربية،
                                 والتفسير، والدراسات الإسلامية. نفخر في بتقديم خدماتنا التعليمية لطلابنا في جميع أنحاء العالم
                                 ، بما في ذلك الولايات المتحدة الأمريكية، المملكة المتحدة، كندا، أستراليا،
                                 الإمارات العربية المتحدة، الهند، المملكة العربية السعودية، وغيرهم.
@@ -55,10 +55,10 @@ const About = () => {
                                 غير مبالين بالتعب أو الجهد، نهب وقتنا وطاقتنا لإيصال آيات الله إلى القلوب.
                             </p>
                             <div className=' grid grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 text-center'>
-                                <img data-aos={'fade-up'} src={image} alt="" className='p-2 bg-white   h-[200px]  xl:h-[250px] object-cover' />
-                                <img data-aos={'fade-down'} src={image2} alt="" className='p-2 bg-white   h-[200px]  xl:h-[250px] object-cover' />
-                                <img data-aos={'fade-up'} src={image3} alt="" className='p-2 bg-white   h-[200px]  xl:h-[250px] object-cover' />
-                                <img data-aos={'fade-down'} src={image4} alt="" className='p-2 bg-white   h-[200px]  xl:h-[250px] object-cover' />
+                                <img data-aos={'fade-up'} src={image} alt="" className='p-1 bg-white   h-[150px]  xl:h-[250px] object-cover' />
+                                <img data-aos={'fade-down'} src={image2} alt="" className='p-1 bg-white   h-[150px]  xl:h-[250px] object-cover' />
+                                <img data-aos={'fade-up'} src={image3} alt="" className='p-1 bg-white   h-[150px]  xl:h-[250px] object-cover' />
+                                <img data-aos={'fade-down'} src={image4} alt="" className='p-1 bg-white   h-[150px]  xl:h-[250px] object-cover' />
                             </div>
                             <p className='bg-white shadow-md p-2 text-[16px] md:text-[18px]' data-aos={'fade-right'}>
                                 . جعلنا غايتنا الأولى تعليم القرآن الكريم،
@@ -77,7 +77,7 @@ const About = () => {
                                 سهل الوصول، وفعّالًا لجميع الأعمار والمستويات
                             </p>
                             <p className='bg-white shadow-md p-2 text-[16px] md:text-[18px] mt-[-20px]' data-aos={'fade-up'}>
-                                في أكاديمية قرآن واي، نؤمن أن رسالتنا تتجاوز مجرد التعليم. نحن نسعى إلى تعزيز الأسر والمجتمعات
+                                في أكاديمية شذا القرآن نؤمن أن رسالتنا تتجاوز مجرد التعليم. نحن نسعى إلى تعزيز الأسر والمجتمعات
                                 المسلمة بنقل المعرفة الإسلامية والقيم والأخلاق. من خلال برامجنا، نطمح إلى خلق التغيير
                                 الإيجابي، وتعزيز الوحدة بين المسلمين، محاولين أن نكون عوناً
                                 لهم ليكونوا في طريقهم إلى الله.
@@ -85,7 +85,7 @@ const About = () => {
                             <p data-aos={'fade-up'} className=' flex justify-between items-center  font-bold text-[20px]'>
                                 سارعو بالانضمام لأكادميتنا، واخطوا الخطوة الأولى لعلاقة أفضل وأقرب لكتاب الله.
                             </p>
-                            <Link to='/programms' className='btn-pri w-fit '>
+                            <Link to='/programms' className='btn-pri md:w-fit w-full text-center'>
                                 ابدا  معنا الان
                             </Link>
                         </div>}
@@ -94,7 +94,8 @@ const About = () => {
                             {!state ? ' who we are ' : 'من نحن '}
                             <FaCheck />
                         </h2>
-                        <p className='bg-white shadow-md p-2 text-[16px] md:text-[18px]' data-aos={'fade-up'}>Welcome to Quran Way Academy,
+                        <p className='bg-white shadow-md p-2 text-[16px] md:text-[18px]' data-aos={'fade-up'}>
+                            Welcome to <span className=' font-bold text-[18px]'>Shatha Alqur’an</span> Academy,
                             your trusted path to learning the Qur’an,
                             Arabic, Tafseer, and Islamic studies. We proudly serve students across the globe,
                             including the USA, UK, Canada, Australia, UAE,
@@ -110,13 +111,13 @@ const About = () => {
                             and effective for students of all ages and proficiency levels
                         </p>
                         <div className=' grid grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 text-center'>
-                            <img data-aos={'fade-up'} src={image} alt="" className='p-2 bg-white   h-[200px]  xl:h-[250px] object-cover' />
-                            <img data-aos={'fade-up'} src={image2} alt="" className='p-2 bg-white   h-[200px]  xl:h-[250px] object-cover' />
-                            <img data-aos={'fade-up'} src={image3} alt="" className='p-2 bg-white   h-[200px]  xl:h-[250px] object-cover' />
-                            <img data-aos={'fade-up'} src={image4} alt="" className='p-2 bg-white   h-[200px]  xl:h-[250px] object-cover' />
+                            <img data-aos={'fade-up'} src={image} alt="" className='p-1 bg-white   h-[150px]  xl:h-[250px] object-cover' />
+                            <img data-aos={'fade-up'} src={image2} alt="" className='p-1 bg-white   h-[150px]  xl:h-[250px] object-cover' />
+                            <img data-aos={'fade-up'} src={image3} alt="" className='p-1 bg-white   h-[150px]  xl:h-[250px] object-cover' />
+                            <img data-aos={'fade-up'} src={image4} alt="" className='p-1 bg-white   h-[150px]  xl:h-[250px] object-cover' />
                         </div>
                         <p className='bg-white shadow-md p-2 text-[16px] md:text-[18px]' data-aos={'fade-up'}>
-                            At Quran Way Academy, we believe that our mission goes beyond education.
+                            At <span className=' font-bold text-[18px]'>Shatha Alqur’an Academy</span>, we believe that our mission goes beyond education.
                             We aim to strengthen Muslim families and communities by imparting Islamic knowledge, values,
                             and character.
                             Through our programs, we aspire to inspire positive change, foster unity,
@@ -127,14 +128,17 @@ const About = () => {
                             Join us on this transformative journey and take
                             the first step toward a deeper understanding of your faith and
                             a brighter future for your family.
+                            Become one of the people of the Quran… they are the people of Allah and His chosen ones
 
                         </p>
-                        <Link to='/programms' className='btn-pri w-fit'>
+                        <Link to='/programms' className='btn-pri text-center md:w-fit w-full'>
                             start now
                         </Link>
 
                     </div>}
-                    <LinksOfDetails />
+                    <div className=' pt-[30px]'>
+                        <LinksOfDetails />
+                    </div>
                 </div>
             </div>
             <Footer />

@@ -32,9 +32,9 @@ function App() {
   return (
     <div className={`${lang ? 'arabic' : 'en'}`}>
       <HashRouter>
-        <Link to={'https://wa.me/201212659525'} target='_blank'
-          className=' start-chat bg-primary block rounded-md hover:bg-secondary hover:text-white
-      py-3 px-5 text-secondary fixed text-[30px] cursor-pointer z-50 bottom-8 right-8'>
+        <Link to={'https://wa.me/201013864939'} target='_blank'
+          className=' start-chat bg-primary block hover:bg-secondary hover:text-white
+      py-3 px-4 text-secondary fixed text-[22px] cursor-pointer z-50 bottom-5 right-5'>
           <FaWhatsapp />
           <span className='start-chat-hover capitalize'>
             {lang ? 'تواصل معنا الان ' : 'start chat now'}

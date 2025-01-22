@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Footer from '../components/Footer'
 import PricingComp from '../components/PricingComp'
 import Loading from '../components/Loading';
@@ -14,10 +14,13 @@ const PricingPage = () => {
     if (loading) {
         return <Loading />
     }
+
     return (
         <div>
+
             <PricingComp />
             <Footer />
+
         </div>
     )
 }

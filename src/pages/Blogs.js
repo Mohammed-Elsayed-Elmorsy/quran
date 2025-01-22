@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Footer from '../components/Footer'
 import BlogsCOMP from '../components/Blogs'
 import Loading from '../components/Loading';
+import LinksOfDetails from '../components/LinksOfDetails';
 
 const Blogs = () => {
     const [loading, setLoading] = useState(true);
@@ -18,7 +19,9 @@ const Blogs = () => {
     return (
         <div>
             <BlogsCOMP slider={false} />
+
             <Footer />
+
         </div>
     )
 }

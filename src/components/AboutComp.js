@@ -15,26 +15,29 @@ const AboutComp = ({ more }) => {
         })
     }, [])
     return (
-        <div className='bg-light about pb-[70px] flex flex-col '>
+        <div className='bg-light about pb-[40px] flex flex-col '>
             <h2 className=' title ' >
                 {!state ? ' about us' : 'اقرأ عنا'}
-                <FaCheck />
+                {/* <FaCheck /> */}
             </h2>
-            <div className="container  mx-auto px-8 md:px-[70px] lg:px-[120px] flex lg:justify-between justify-center">
-                <div className='w-full flex flex-col justify-between lg:w-[58%] text' data-aos={state ? 'fade-down' : 'fade-up'}>
+            <div className="container  mx-auto px-8 md:px-[60px] lg:px-[80px] xl:px-[120px] flex lg:justify-between justify-center">
+                <div className='w-full flex flex-col justify-between lg:w-[54%] text' data-aos={state ? 'fade-down' : 'fade-up'}>
                     {!state ?
-                        <p className='md:text-[20px] pb-4'>
-                            Welcome to <h2 className='inline text-[25px] font-bold'>
-                                {!state ? ' Quran Way Academy' : ' أكاديمية قرآن واي '}
-                            </h2> your trusted path to learning the Qur’an, Arabic, Tafseer, and Islamic studies. We proudly serve students across the globe, including the USA, UK, Canada, Australia, UAE, India, Saudi Arabia, and beyond.
+                        <p className=' pb-3'>
+                            Welcome to
+
+                            <h2 className='  border-b-[2px] md:border-none border-white block md:inline  m-2 md:m-1 text-[18px] font-bold'>
+                                Shatha  Alqur’an Academy
+                            </h2>
+                            your trusted path to learning the Qur’an, Arabic, Tafseer, and Islamic studies. We proudly serve students across the globe, including the USA, UK, Canada, Australia, UAE, India, Saudi Arabia, and beyond.
                             Our team of highly qualified and experienced teachers, all graduates of the Al-Azhar University and qualified with ijazah and Hifz, is committed to nurturing both the minds and hearts of our students.
                             Using creative and innovative teaching methods,
                             we make learning engaging, accessible,
                             and effective for students of all ages and proficiency levels
                         </p> :
-                        <p className='md:text-[20px] text-gray-800 pb-4'>مرحبًا بكم في
-                            <h2 className=' inline text-[25px] font-bold'>
-                                {!state ? ' Quran Way Academy' : ' أكاديمية قرآن واي '}
+                        <p className=' text-gray-800 pb-3'>مرحبًا بكم في
+                            <h2 className='  border-b-[2px] md:border-none border-white block md:inline m-2  md:m-1 text-[20px] font-bold'>
+                                أكاديمية شذا القرآن
                             </h2> طريقكم الموثوق لتعلم القرآن الكريم، واللغة العربية، والتفسير، والدراسات الإسلامية. نفخر في بتقديم خدماتنا التعليمية لطلابنا في جميع أنحاء العالم، بما في ذلك الولايات المتحدة الأمريكية، المملكة المتحدة، كندا، أستراليا،
                             الإمارات العربية المتحدة، الهند، المملكة العربية السعودية، وغيرهم.
                             يضم فريقنا معلمين ومعلمات مؤهلين وذوي خبرة عالية،
@@ -64,7 +67,7 @@ const AboutComp = ({ more }) => {
                     </div>
                 </div>
                 <div data-aos={state ? 'fade-up' : 'fade-down'}
-                    className={`image  hidden lg:block relative p-2 bg-white ${state ? 'left-[0px]' : 'right-[0px]'} `}>
+                    className={`  hidden lg:w-[45%] lg:block relative p-2 bg-white ${state ? 'left-[0px]' : 'right-[0px]'} `}>
                     <img src={image} alt="" className=' h-full w-full object-cover ' />
                 </div>
             </div>

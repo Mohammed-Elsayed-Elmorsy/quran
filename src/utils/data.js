@@ -5,7 +5,7 @@ import image4 from '../static/9.png'
 import image5 from '../static/4.png'
 import image6 from '../static/14.png'
 import image7 from '../static/44.png'
-import image8 from '../static/3.png'
+import image8 from '../static/31.png'
 import image9 from '../static/11.png'
 import image10 from '../static/41.png'
 import image11 from '../static/17.png'
@@ -19,9 +19,11 @@ import image52 from '../static/52.png'
 import image53 from '../static/53.png'
 import image55 from '../static/55.png'
 import image58 from '../static/58.png'
-import teacher1 from '../static/1.jpg'
-import teacher2 from '../static/2.jpg'
-import teacher3 from '../static/3.jpg'
+import teacher1 from '../static/teacher5.jpg'
+import teacher1d from '../static/teacherdetails2.jpg'
+import teacher2d from '../static/teacherdetails1.jpg'
+import teacher2 from '../static/teacher6.jpg'
+import teacher3 from '../static/teacher6.jpg'
 import {
     FaEnvelope,
     FaFacebook,
@@ -86,7 +88,7 @@ export const links = [
             },
             {
                 path: 'Islamic-Studies', id: 4,
-                text: 'arabic course', to: 'Islamic-Studies'
+                text: 'arabic ', to: 'Islamic-Studies'
             }
             ,
             {
@@ -162,7 +164,7 @@ export const linksarabic = [
     },
     {
         id: 6, to: 'teachers',
-        text: 'المعلمين'
+        text: 'المعلمون'
     },
 
 ]
@@ -231,7 +233,7 @@ export const chooseArabic = [
         image: image48,
         aos: "fade-up",
         id: 1,
-        title: "معلمون ومعلمات خبراء من الناطقين باللغة العربية",
+        title: "معلمون ومعلمات خبراء    ",
         text: "معلمونا خريجو جامعة الأزهر ومعتمدون بشهادة الإجازة في روايتي حفص وشعبة عن عاصم. نضمن لك أعلى معايير التدريس من خلال اختيار أفضل المعلمين."
     },
     {
@@ -289,6 +291,7 @@ export const teaches = [
     {
         id: 1,
         image: teacher1,
+        imaged: teacher1d,
         name: 'Ustadh.Muhammed Kormod',
         desc: `Assalamu Alykum wa Rahmatullah, 
         I'm Ustadh Muhammed Kormod, and I am a passionate educator, 
@@ -312,12 +315,13 @@ For me, teaching is more than a profession—it’s a way to serve Allah, build 
 
 Assalamu Alykum wa Rahmatullah.
          
-         `
+         `,
+        experience: '+8 years of teaching'
     },
-
     {
         id: 2,
         image: teacher2,
+        imaged: teacher2d,
         name: 'Teacher.Tasneem El-Sayed',
         desc: `
         Assalamu Alykum wa Rahmatullah,
@@ -351,11 +355,12 @@ Every student I teach is a part of my story, and every lesson is a chance to lea
 
 Assalamu Alykum wa Rahmatullah.
         
-        `
+        `,
+        experience: '+6 years of teaching '
     },
     {
         id: 3,
-        image: teacher3,
+        image: teacher3, imaged: teacher2d,
         name: 'Teacher.Maryam El-Sayed',
         desc: `
                 My name is Maryam El-Sayed. 
@@ -390,19 +395,24 @@ This has been my journey in teaching, and I have enjoyed it immensely and thanke
 
 Assalamu Alykum wa Rahmatullah.
         
-        `
+        `,
+        experience: '+7 years of teaching '
+
     },
 ]
 export const teachersArabic = [
     {
         id: 1,
         image: teacher1,
+        imaged: teacher1d,
         name: 'أ.محمد قرمد',
         desc: `
        السلام عليكم ورحمة الله وبركاته
 أنا محمد قرمد، وأنا معلم شغوف بتعليم القرآن الكريم، التجويد، واللغة العربية. أعمل في هذا المجال منذ سنوات، حيث أتيحت لي الفرصة لتدريس طلاب من مختلف الأعمار والخلفيات الثقافية، سواء كانوا ناطقين بالعربية أو غير ناطقين بها.
 
 `
+        ,
+        experience: 'خبرة لاكثر من 8 سنوات'
         ,
         details: `السلام عليكم ورحمة الله وبركاته
 أنا محمد قرمد، وأنا معلم شغوف بتعليم القرآن الكريم، التجويد، واللغة العربية. أعمل في هذا المجال منذ سنوات، حيث أتيحت لي الفرصة لتدريس طلاب من مختلف الأعمار والخلفيات الثقافية، سواء كانوا ناطقين بالعربية أو غير ناطقين بها.
@@ -424,6 +434,7 @@ export const teachersArabic = [
     {
         id: 2,
         image: teacher2,
+        imaged: teacher2d,
         name: 'أ. تسنيم السيد  ',
         desc: `
         السلام عليكم ورحمة الله وبركاته،
@@ -459,10 +470,12 @@ export const teachersArabic = [
 السلام عليكم ورحمة الله وبركاته. 
         
         `
-
+        ,
+        experience: 'خبرة لاكثر من 7 سنوات'
     },
     {
         id: 3,
+        imaged: teacher2d,
         image: teacher3,
         name: 'أ. مريم السيد   ',
         desc: `
@@ -492,6 +505,8 @@ export const teachersArabic = [
 والسلام عليكم ورحمة الله وبركاته
         
         `
+        ,
+        experience: 'خبرة لاكثر من 6 سنوات'
     }
 ]
 export const testmonials = [
@@ -534,11 +549,11 @@ Your patience, dedication and passion for teaching is truly inspiring, and I fee
         state: 'USA',
         content: `
         Thank you, Teacher Tasneem for being an amazing teacher helping me with my hijab journey. 
-        I’m overjoyed that you’re proud of me. You’re like the older sister I never had, 
-        and I’ll always look up to your recitation, 
-        beauty, motivation, intelligence, and how a great Muslim you are. You’ve been such an inspiring part of my life. And yes, you finally won tic-tac-toe! 💚.
+        I’m overjoyed that you’re proud of me.You’re like the older sister I never had, 
+        and I’ll always look to your recitation, 
+        beauty,motivation,intelligence,and how a great Muslim you are.You’ve been such an inspiring part of my life. And yes, you finally won tic-tac-toe! 💚.
         Tasneem,
-Thankful, surprising, nice, exciting, and mindful
+Thankful,surprising,exciting,and mindful
         `
 
     },
@@ -615,8 +630,8 @@ export const medias = [
     {
         id: 1, color: '#1e8af0', back: '#1e8af03a',
         title: 'Facebook',
-        content: 'quranyway',
-        to: 'https://www.facebook.com/share/1Uh7Wnc2QH/',
+        content: 'shatha alquran ',
+        to: 'https://www.facebook.com/share/1EiyVKbBTt/',
         icon: <FaFacebook />
     },
     {
@@ -628,25 +643,25 @@ export const medias = [
     }
     ,
     {
-        id: 8, color: 'purple', back: '#ea00ff3d',
+        id: 3, color: 'purple', back: '#ea00ff3d',
         title: 'Instagram',
-        content: 'quran way academy',
+        content: ' shatha.alquran.academy',
         icon: <FaInstagram />,
-        to: 'https://www.instagram.com/quranwayacademy/profilecard/?igsh=Nm50eWZoeHdzdThm'
+        to: 'https://www.instagram.com/shatha.alquran?igsh=MWg3OWc5Y3NtMzcwNA=='
     },
     {
         id: 5, color: 'black', back: '#0202022a',
         title: 'Email',
-        content: 'quranyway@gmail',
-        to: 'quranyway@gmail.com',
+        content: 'shathaquran.academy@gmail',
+        to: 'shathaquran.academy@gmail.com',
         icon: <FaEnvelope />
     },
     {
         id: 6, color: '#006797', back: '#035eb423',
         title: 'Telegram',
-        content: 'quranwayacademy',
+        content: 'shatha_alquran.academy',
         icon: <FaTelegram />,
-        to: 'https://t.me/quranwayacademy'
+        to: 'https://t.me/shatha_alquran'
     },
     {
         id: 7, color: '#0490a8', back: '#048fa82c',
@@ -657,9 +672,9 @@ export const medias = [
     {
         id: 8, color: 'red', back: '#ff000027',
         title: 'Youtube',
-        content: 'quranwayacademy',
+        content: 'shatha.alquran',
         icon: <FaYoutube />,
-        to: 'https://www.youtube.com/@quranwayacademy'
+        to: 'https://youtube.com/@shathaalquran?si=NyM9EfrFyzhPcQch'
     }
     ,
 ]
@@ -668,7 +683,7 @@ export const mediasarab = [
         id: 1, color: '#1e8af0', back: '#1e8af03a',
         title: 'الفيسبوك',
         content: ' Mohammed-Elmorsy',
-        to: 'https://www.facebook.com/share/1Uh7Wnc2QH/',
+        to: 'https://www.facebook.com/share/1EiyVKbBTt/',
         icon: <FaFacebook />
     },
     {
@@ -678,20 +693,7 @@ export const mediasarab = [
         to: 'https://wa.me/201013864939',
         icon: <FaWhatsapp />
     },
-    // {
-    //     id: 3, color: '#035eb4', back: '#035eb431',
-    //     title: 'لينكدان',
-    //     content: 'linkedin/mohammed-elmorsy',
-    //     to: 'https://www.linkedin.com/in/mohammed-elmorsy-018378258/',
-    //     icon: <FaLinkedin />
-    // },
-    // {
-    //     id: 4, color: '#fd7403', back: '#ff44006b',
-    //     title: 'حيت هاب',
-    //     content: 'github/Mohammed-Elmorsy',
-    //     to: 'https://github.com/Mohammed-Elsayed-Elmorsy',
-    //     icon: <FaGithub />
-    // },
+
     {
         id: 5, color: 'black', back: '#0202022a',
         title: 'الجميل',
@@ -702,9 +704,9 @@ export const mediasarab = [
     {
         id: 6, color: '#006797', back: '#035eb423',
         title: 'التلجرام',
-        content: 'quranwayacademy',
+        content: 'shatha_alquran',
         icon: <FaTelegram />,
-        to: 'https://t.me/quranwayacademy'
+        to: 'https://t.me/shatha_alquran'
     },
     {
         id: 7, color: '#0490a8', back: '#048fa82c',
@@ -717,14 +719,14 @@ export const mediasarab = [
         title: 'اليوتيوب',
         content: 'Youtube',
         icon: <FaYoutube />,
-        to: 'https://www.youtube.com/@quranwayacademy'
+        to: 'https://youtube.com/@shathaalquran?si=NyM9EfrFyzhPcQch'
     },
     {
-        id: 8, color: 'purple', back: '#ea00ff3d',
+        id: 9, color: 'purple', back: '#ea00ff3d',
         title: 'انستجرام',
         content: 'انستجرام',
         icon: <FaInstagram />,
-        to: 'https://www.instagram.com/quranwayacademy/profilecard/?igsh=Nm50eWZoeHdzdThm'
+        to: 'https://www.instagram.com/shatha.alquran?igsh=MWg3OWc5Y3NtMzcwNA=='
     },
 ]
 
@@ -733,7 +735,19 @@ export const blogs = [
         id: 1,
         image: [image1, image2, image3, image4],
         title: 'The Virtue of the Quran ',
-        desc: 'The Quran is the word of Allah, revealed to the heart of His Prophet Muhammad (PBUH) by the trustworthy Gabriel. It is revered for its recitation, miraculous in its wording and meaning, starting with Surah Al-Fatiha and ending with Surah An-Nas.It is the book that no falsehood comes to from before or behind it, a revelation from the Most Wise, the Most Praiseworthy, and the source of guidance and light for the believers .'
+        desc: `1.	Guidance and Light:
+    The Quran is the light that brought humanity out of the darkness of ignorance into the light of faith. Allah says: "With it, Allah guides those who seek His pleasure to the paths of peace." (Al-Maidah: 16).
+    2.	Healing and Mercy:
+    It is a cure for the soul and heart from doubts and desires. Allah says: "And We send down from the Quran that which is healing and mercy for the believers." (Al-Isra: 82).
+    3.	The Stronghold of the Believers:
+     The Quran is the fortress that protects the believers from trials and deviations. It is the strong rope, and whoever holds onto it is saved. The Prophet (PBUH) said: "The Book of Allah contains guidance and light; whoever clings to it will be guided, and whoever abandons it will be misled." (Muslim).
+    4.	Elevation in This World and the Hereafter:
+    The Quran elevates its reciter to the highest ranks in this world and the Hereafter. The Prophet (PBUH) said: "It will be said to the companion of the Quran: ‘Recite and ascend, and recite as you used to in the world, for your status is at the last verse you recite.’" (Tirmidhi).
+    5.	The Virtue of Recitation:
+    Reciting the Quran is a great act of worship, and for every letter recited, the believer is rewarded with a good deed. The Prophet (PBUH) said: "Whoever recites a letter from the Book of Allah will have a good deed, and a good deed is multiplied by ten." (Tirmidhi).
+   ______________________
+   The Quran is the word of Allah, revealed to the heart of His Prophet Muhammad (PBUH) by the trustworthy Gabriel. It is revered for its recitation, miraculous in its wording and meaning, starting with Surah Al-Fatiha and ending with Surah An-Nas.It is the book that no falsehood comes to from before or behind it, a revelation from the Most Wise, the Most Praiseworthy, and the source of guidance and light for the believers .'
+        `
     },
     {
         id: 2,
@@ -745,25 +759,57 @@ export const blogs = [
         id: 3,
         image: [image3, image4, image5, image1],
         title: 'The Status of the Quran in Islam',
-        desc: '•	The Eternal Miracle:The Quran is the enduring miracle of Islam, which Allah challenged both humans and jinn with. Allah says: "Bring forth a surah like it." (Yunus: 38).the Quran is the revelation of the Lord of the worlds'
+        desc: `Preserving the Arabic Language:
+The Quran is the primary reference for the Arabic language, preserving it from distortion and decay throughout the ages.
+•	A Constitution for the Nation:
+It is the straight path of Allah and the true constitution, organizing the life of the individual and society and establishing justice and righteousness.
+•	The Eternal Miracle:
+The Quran is the enduring miracle of Islam, which Allah challenged both humans and jinn with. Allah says: "Bring forth a surah like it." (Yunus: 38).
+'`
     },
     {
         id: 4,
         image: [image4, image5, image1, image2],
         title: 'Quran The Key to Happiness',
-        desc: 'The Quran is not just a book to be recited; it is a way of life to be followed, and it is the foundation of happiness in both this world and the Hereafter. Allah says: "Whoever does righteous deeds, whether male or female, while being a believer, We will surely give him a good life." (An-Nahl: 97).'
+        desc: `
+        The Quran is not just a book to be recited; it is a way of life to be followed, and it is the foundation of happiness in both this world and the Hereafter. Allah says: "Whoever does righteous deeds, whether male or female, while being a believer, We will surely give him a good life." (An-Nahl: 97).
+        The Quran is the great blessing that Allah has given us, and it is the path to happiness and success in this world and the Hereafter. Learning it and teaching it is a great honor, and living by it brings light and blessings into your life.
+        •	Honor in Abundance:
+The Quran is the source of honor for anyone who carries it in their heart, learns it, and teaches it. The Prophet (PBUH) said: "The best of you are those who learn the Quran and teach it." (Bukhari).
+Everyone who listens to it or contributes to its teaching and spreading, whether through effort, time, or money, receives a share of its light and blessings
+•	Dignity in Its Greatest Form:
+There is no greater dignity than having the Quran in your heart, speaking it with your tongue, and letting its light illuminate your life and the lives of those around you. The Prophet (PBUH) said: "Allah raises some people with this Book and lowers others with it." (Muslim).
+
+        `
     },
     {
         id: 5,
         image: [image5, image1, image2, image3],
         title: 'A Call to Hold Fast to the Quran',
-        desc: 'let the Quran be your companion in life .Implement its rulings, for it is the straight path of Allah Allah says: "Indeed, this Quran guides to that which is most suitable." (Al-Isra: 9)'
+        desc: `O Muslim, let the Quran be your companion in life:
+•	Strive to recite it daily and reflect on its verses.
+•	Memorize as much of it as you can, for memorization is light and blessings.
+•	Implement its rulings, for it is the straight path of Allah.
+Allah says: "Indeed, this Quran guides to that which is most suitable." (Al-Isra: 9).
+
+        
+        The Quran is the greatest blessing that Allah has bestowed upon His servants, and it is our path to salvation and success. Let us make an effort to learn it, teach it, and act upon it, for it is our honor, dignity, and glory.
+O Allah, make the great Quran the spring of our hearts, the light of our breasts, the relief of our sorrows, and the removal of our worries. Ameen.
+
+        `
     },
     {
         id: 6,
         image: [image6, image2, image5, image4],
         title: 'Make the Quran light of your life',
-        desc: 'The Quran is the great blessing that Allah has given us, and it is the path to happiness and success in this world and the Hereafter. Learning it and teaching it is a great honor, and living by it brings light and blessings into your life.'
+        desc: `The Quran is the great blessing that Allah has given us, and it is the path to happiness and success in this world and the Hereafter. Learning it and teaching it is a great honor, and living by it brings light and blessings into your life.
+If you wish to learn the Quran with mastery, or desire to memorize it and deepen your understanding of its recitation and Tajweed, we invite you to join the "The Quran Way Academy."
+We offer specialized programs for Quran memorization, Tajweed, and the teaching of its sciences, delivered by qualified scholars and teachers using advanced educational tools that cater to all ages and levels.
+
+The Quran is the greatest blessing that Allah has bestowed upon His servants, and it is our path to salvation and success. Let us make an effort to learn it, teach it, and act upon it, for it is our honor, dignity, and glory.
+O Allah, make the great Quran the spring of our hearts, the light of our breasts, the relief of our sorrows, and the removal of our worries. Ameen.
+
+`
     }
 ]
 export const blogsArabic = [
@@ -772,30 +818,38 @@ export const blogsArabic = [
         image: [image1, image2, image3, image4],
         title: 'أهمية وفضل القرآن الكريم',
         desc: `
-        :
+        :1.	هداية ونور:
 القرآن الكريم هو النور الذي أخرج البشرية من ظلمات الجهل إلى نور الإيمان. قال تعالى: "يَهْدِي بِهِ اللَّهُ مَنِ اتَّبَعَ رِضْوَانَهُ سُبُلَ السَّلَامِ" (المائدة: 16).
 2.	الشفاء والرحمة:
-وهو سبيلنا إلى النجاة والفلاح. فلنحرص على تعلمه وتعليمه
-هو شفاء للأرواح والقلوب من الشبهات والشهوات.
+هو شفاء للأرواح والقلوب من الشبهات والشهوات. قال تعالى: "وَنُنَزِّلُ مِنَ الْقُرْآنِ مَا هُوَ شِفَاءٌ وَرَحْمَةٌ لِلْمُؤْمِنِينَ" (الإسراء: 82).
+3.	الحصن المتين:
+القرآن هو حصن المؤمنين من الفتن والضلالات، فهو الحبل المتين الذي من تمسك به نجا. قال صلى الله عليه وسلم: "كتاب الله، فيه الهدى والنور، من استمسك به كان على الهدى، ومن تركه كان على الضلالة" (رواه مسلم).
+4.	رفعة في الدنيا والآخرة:
+يحمل القرآن حامله إلى مراتب عليا في الدنيا والآخرة. قال صلى الله عليه وسلم: "يُقال لصاحب القرآن: اقرأ وارقَ ورتل كما كنت ترتل في الدنيا، فإن منزلتك عند آخر آية تقرؤها" (رواه الترمذي).
+5.	فضل التلاوة:
+تلاوة القرآن هي عبادة عظيمة، ويكتب للمؤمن بكل حرف حسنة. قال صلى الله عليه وسلم: "من قرأ حرفًا من كتاب الله فله حسنة، والحسنة بعشر أمثالها" (رواه الترمذي).
+
         `
     },
     {
         id: 2,
         image: [image2, image3, image4, image5],
         title: 'القرآن الكريم: شرف وكرامة',
-        desc: `
-•	الشرف كل الشرف:
+        desc: `•	الشرف كل الشرف:
 القرآن الكريم هو مصدر التشريف لمن حمله في قلبه، أو تعلمه وعلَّمه. قال النبي صلى الله عليه وسلم: "خيركم من تعلم القرآن وعلَّمه" (رواه البخاري).
-يتشرف كل من سمعه، أو ساهم في تعليمه ونشره، سواء بالجهد أو الوقت أو المال، فيناله نصيب من نور القرآن وبركاته
+يتشرف كل من سمعه، أو ساهم في تعليمه ونشره، سواء بالجهد أو الوقت أو المال، فيناله نصيب من نور القرآن وبركاته.
+•	الكرامة كل الكرامة:
+لا كرامة أعظم من أن يحمل المؤمن القرآن في صدره، ويجري على لسانه، ويُضيء بنوره حياته وحياة من حوله. قال صلى الله عليه وسلم: "إن الله يرفع بهذا الكتاب أقوامًا ويضع به آخرين" (رواه مسلم).
 `
     },
     {
         id: 3,
         image: [image5, image1, image2, image3],
         title: 'تعريف القرآن الكريم',
-        desc: `لغةً، مشتق من "قرأ" بمعنى جمع وضم، كما في قوله تعالى: "إِنَّ عَلَيْنَا جَمْعَهُ وَقُرْآنَهُ" (القيامة: 17)، أي ضم الحروف والكلمات بعضها إلى بعض.
+        desc: `
+        لغةً، مشتق من "قرأ" بمعنى جمع وضم، كما في قوله تعالى: "إِنَّ عَلَيْنَا جَمْعَهُ وَقُرْآنَهُ" (القيامة: 17)، أي ضم الحروف والكلمات بعضها إلى بعض.
 اصطلاحًا، هو كلام الله المنزل على رسوله محمد صلى الله عليه وسلم، المتعبد بتلاوته، المنقول إلينا بالتواتر، والمتحدى بأقصر سورة منه، والمحفوظ في المصاحف.
-
+القرآن الكريم هو النعمة العظمى التي منحنا الله إياها، وهو طريق السعادة والفلاح في الدنيا والآخرة. تعلمه وتعليمه شرف عظيم، والعمل به نور وبركة في حياتك
      `
     },
     {
@@ -815,16 +869,19 @@ export const blogsArabic = [
     {
         id: 5,
         image: [image4, image5, image1, image2],
-        title: 'العمل بالقرآن: مفتاح السعادة والفلاح',
+        title: 'العمل بالقرآن: مفتاح السعادة ',
         desc: `القرآن ليس مجرد كتاب يُتلى، بل منهج حياة يُعمل به، وهو أساس السعادة في الدنيا والآخرة. قال تعالى: "مَنْ عَمِلَ صَالِحًا مِّن ذَكَرٍ أَوْ أُنثَىٰ وَهُوَ مُؤْمِنٌ فَلَنُحْيِيَنَّهُ حَيَاةً طَيِّبَةً" (النحل: 97).
- اللهم اجعل القرآن العظيم ربيع قلوبنا، ونور صدورنا، وجلاء أحزاننا، وذهاب همومنا. آمين
+القرآن الكريم هو النعمة العظمى التي منَّ الله بها على عباده، وهو سبيلنا إلى النجاة والفلاح. فلنحرص على تعلمه وتعليمه والعمل به، فإنه شرفنا وعزنا وكرامتنا.
+اللهم اجعل القرآن العظيم ربيع قلوبنا، ونور صدورنا، وجلاء أحزاننا، وذهاب همومنا. آمين
         `
     },
     {
         id: 6,
         image: [image6, image2, image5, image4],
         title: 'دعوة إلى التمسك بالقرآن',
-        desc: ` 
+        desc: ` القرآن الكريم هو النعمة العظمى التي منَّ الله بها على عباده، وهو سبيلنا إلى النجاة والفلاح. فلنحرص على تعلمه وتعليمه والعمل به، فإنه شرفنا وعزنا وكرامتنا.
+اللهم اجعل القرآن العظيم ربيع قلوبنا، ونور صدورنا، وجلاء أحزاننا، وذهاب همومنا. آمين
+
 أيها المسلم، اجعل القرآن الكريم رفيقك في حياتك:
 •	احرص على تلاوته يوميًا وتدبر آياته.
 •	احفظ ما استطعت منه، فالحفظ نور وبركة.
@@ -1014,7 +1071,7 @@ export const progsArabic =
         {
             id: 6,
             image: image32,
-            title: "برنامج تعلم اللغة العربية من خلال القرآن",
+            title: " تعلم اللغة العربية من خلال القرآن",
             desc: "اغمر نفسك في القرآن لتتقن اللغة العربية بينما تعمّق رحلتك لتحصل على فهم أفضل وأجمل للمعاني في كتاب الله.",
             points: [
                 {

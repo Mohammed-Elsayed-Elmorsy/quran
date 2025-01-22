@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import image from '../static/57.png'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+import image from '../static/Quran.jpg'
 import imagelang from '../static/united-states.png'
 import imagearab from '../static/flag.png'
 import { links, linksarabic } from '../utils/data'
@@ -10,6 +10,7 @@ const Header = () => {
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     const dispatch = useDispatch()
+    const navigate = useNavigate();
     const location = useLocation();
     const [bgToHeader, setBgToHeader] = useState(false)
     const [hidetext, setHidetext] = useState(false)
@@ -37,21 +38,35 @@ const Header = () => {
     const showlangover = () => {
         dispatch({ type: 'SHOW' })
     }
+    const NavigateToThisLink = (link) => {
+        navigate(link)
+    }
     window.addEventListener('scroll', addBgToHeader)
     window.addEventListener('scroll', removelogotext)
     return (
-        <header className={` transition-all ${bgToHeader ? ' shadow-md ' : ''} bg-white`}>
+        <header className={` transition-all ${bgToHeader ? ' shadow-md ' : ''} `}>
 
-            <div className={`container h-[120px]  flex items-center mx-auto justify-between px-5`}>
+            <div className={`container h-[90px]  flex items-center mx-auto justify-between px-4 md:px-[50px] xl:px-[100px]`}>
 
-                <div className="logo w-[200px]">
-                    <Link to={'/'} className='  flex gap-1 items-center'>
-                        <img src={image} alt="logo" className={`${minmizelogo ? '' : ''} h-[75px] w-[85px] md:h-[100px] md:w-[100px] `} />
-                        <span className={` md:text-[22px] text-[18px]  
-                        ${hidetext ? 'hide-text' : 'show-text'}  
-                        font-bold text-[20px] relative left-[-10px]`}>
+                <div className="logo flex-1">
+                    <Link to={'/'} className='flex gap-1 items-center'>
+                        <img src={image} alt="logo" className={` relative bottom-[5px] h-[55px] w-[55px] md:h-[60px] md:w-[60px] `} />
+                        <span
+                            className={` md:text-[18px] text-[16px]  
+                        ${hidetext ? 'hide-text' : 'show-text'}   
+                        font-bold  text-[18px] relative left-[-15px]  `}>
+                            {!state
+                                ?
+                                <span className=' flex flex-col relative left-[5px] top-[5px] md:top-[6px]'>
+                                    <span>Shatha</span>
+                                    <span className=' mt-[-12px] '>Alqur'an</span>
+                                </span>
+                                :
 
-                            {!state ? ' Quran way' : '   قرآن واى  '}
+                                <span className='left-[5px] relative top-[5px]'>
+                                    شذا القرآن
+                                </span>
+                            }
                         </span>
                     </Link>
                 </div>
@@ -63,7 +78,7 @@ const Header = () => {
 
                                     className={` ${link.chilren ? 'dropdown ' : ''} 
                                     ${location.pathname === (link.to === '/' ? '/' : '/' + link.to) ? 'active' : ''} 
-                                    relative  transition capitalize flex items-center  text-[20px]`}
+                                    relative  transition capitalize flex items-center  text-[16px]`}
                                     to={link.to == '/' ? '/' : link.id === 4 ? '#' : '/' + link.to}>
                                     {link.text == '/' ? 'home' : link.text}
                                     {link.chilren && <FaAngleRight className='hide' />}
@@ -72,7 +87,7 @@ const Header = () => {
                                         {link.chilren ? link.chilren.map(i =>
                                             <Link
                                                 to={!i.id ? '/' + i.path : '/programms/' + i.id}
-                                                className=' text-[18px]'
+                                                className=' text-[16px]'
                                                 key={i.text}>
                                                 {i.text}
                                             </Link>) : null}
@@ -85,7 +100,7 @@ const Header = () => {
                                 <Link
                                     className={` ${link.chilren ? 'dropdown ' : ''} 
                                     ${location.pathname === (link.to === '/' ? '/' : '/' + link.to) ? 'active' : ''} 
-                                    relative  transition capitalize flex items-center  text-[20px]`}
+                                    relative  transition capitalize flex items-center  text-[16px]`}
                                     to={link.to == '/' ? '/' : link.id === 4 ? '#' : '/' + link.to}>
                                     {link.text == '/' ? 'home' : link.text}
                                     {link.chilren && <FaAngleRight className='hide' />}
@@ -94,7 +109,7 @@ const Header = () => {
                                         {link.chilren ? link.chilren.map(i =>
                                             <Link
                                                 to={!i.id ? '/' + i.path : '/programms/' + i.id}
-                                                className=' text-[18px]'
+                                                className=' text-[16px]'
                                                 key={i.text}>
                                                 {i.text}
                                             </Link>) : null}
@@ -113,7 +128,7 @@ const Header = () => {
                         </div>
                     </ul>
                 </nav>
-                <div onClick={() => setShowMenu(!showMenu)} className='bars relative lg:hidden block'>
+                <div onClick={() => setShowMenu(!showMenu)} className='bars mr-4 relative lg:hidden block'>
                     <FaBars />
                     <nav className={`nav-in-small ${showMenu ? 'show' : ''} lg:hidden right-[0]`}>
                         <ul className=' flex flex-col items-center'>

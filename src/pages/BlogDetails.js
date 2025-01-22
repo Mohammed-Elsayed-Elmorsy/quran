@@ -28,71 +28,82 @@ const BlogDetails = () => {
         return <Loading />
     }
     return (
-        <div className='details-page'>
+        <div className='details-page bg-light'>
             <div className=' details-page-content'>
-                <div className=' container px-8 md:px-[120px] mx-auto pb-[30px]'>
-                    <h2 className=' title lg:mb-[-130px] mb-[-70px] mt-[0px]'>
+                <div className=' container px-6 md:px-[120px] mx-auto pb-[30px]'>
+                    <h2 className=' title lg:mb-[-130px] mb-[-50px] mt-[0px]'>
                         {blog?.title}
                     </h2>
                     <div className=' flex justify-between flex-col items-center'>
+
                         <div className=' flex justify-between items-center w-full mx-auto  py-[30px]'>
                             <span className=' flex items-center gap-2'>
                                 <img src={blog?.image[0]} className=' w-[55px] h-[55px] rounded-full object-cover' alt="" />
                                 <div>
-                                    <h3 className=' capitalize'>mohammed elmorsy</h3>
-                                    <p className='text-gray-500'>12/12/2021</p>
+                                    <h3 className=' capitalize md:text-[18px] text-[15px]'>shatha Alqur'an</h3>
+                                    <p className='md:text-[18px] text-[15px] text-gray-500'>12/12/2021</p>
                                 </div>
                             </span>
-                            <span className=' flex items-center gap-5 text-[20px]'>
+                            <span className=' flex items-center gap-3 md:text-[20px] text-[18px]'>
                                 <GoShare />
                                 <GoVideo />
                                 <GoCopy />
                                 <GoBell />
                             </span>
                         </div>
+
                         <div className='grid-area'>
                             <div>
-                                <img className=' w-full h-full object-cover' src={blog?.image[0]} alt="" />
+                                <img className=' p-1 rev-item bg-white w-full h-full object-cover' src={blog?.image[0]} alt="" />
                             </div>
                             <div>
-                                <img className=' w-full h-full object-cover' src={blog?.image[1]} alt="" />
+                                <img className=' p-1 rev-item bg-white w-full h-full object-cover' src={blog?.image[1]} alt="" />
                             </div>
                             <div>
-                                <img className=' w-full h-full object-cover' src={blog?.image[2]} alt="" />
+                                <img className=' p-1 rev-item bg-white w-full h-full object-cover' src={blog?.image[2]} alt="" />
 
                             </div>
                             <div>
-                                <img className=' w-full h-full object-cover' src={blog?.image[3]} alt="" />
+                                <img className=' p-1 rev-item bg-white w-full h-full object-cover' src={blog?.image[3]} alt="" />
 
                             </div>
                         </div>
+
                         <div className=' flex items-start'>
-                            <p className=' text-[20px] w-full mt-5'>
+                            <p className='text-[16px] w-full mt-5 p-3 border border-slate-300 bg-white'>
                                 {blog?.desc}
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className=' container px-8  md:px-[120px] mx-auto pb-[70px]'>
+            <div className=' container px-6  md:px-[120px] mx-auto pb-[70px]'>
 
                 <div>
                     <h2 className=' text-[25px] font-bold my-[20px]'>{!state ? 'Relatd Blogs' : 'المواضيع ذات الصلة'}</h2>
                     <div className=' grid gap-2  grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 '>
                         {!state ? blogs.filter(i => i.id !== Number(id)).map(item =>
-                            <Link className='p-2 border border-slate-300  hover:shadow-lg ' to={`/blogs/${item.id}`}>
-                                <img className=' w-[250px] h-[150px] object-cover' src={item.image[0]} alt="" />
+                            <Link className='p-1 border border-gray-300 bg-white  hover:shadow-lg '
+                                to={`/blogs/${item.id}`}>
+                                <img
+
+                                    src={item.image[0]} alt="" />
                                 <h6 className=' text-black mt-4 font-bold'>{item.title}</h6>
                             </Link>
                         ) : blogsArabic.filter(i => i.id !== Number(id)).map(item =>
-                            <Link className='border border-slate-300  hover:shadow-lg  p-2' to={`/blogs/${item.id}`}>
-                                <img className=' w-[250px] h-[150px] object-cover' src={item.image[0]} alt="" />
+                            <Link className='border border-gray-300 bg-white  hover:shadow-lg  p-1'
+                                to={`/blogs/${item.id}`}>
+                                <img
+
+                                    src={item.image[0]} alt="" />
                                 <h6 className=' text-black mt-4 font-bold'>{item.title}</h6>
                             </Link>
                         )}
                     </div>
                 </div>
-                <LinksOfDetails />
+                <div className=' pt-[70px]'>
+                    <LinksOfDetails />
+                </div>
             </div>
             <Footer />
 

@@ -1,7 +1,9 @@
 import { combineReducers, createStore } from "redux";
-import { langreducer, overreducer } from "./LangReducher";
+import { langreducer, overreducer, modeReducer, overModereducer } from "./LangReducher";
 const reducers = combineReducers({
+    over: overreducer,
+    modeOver: overModereducer,
     lang: langreducer,
-    over: overreducer
+    mode: modeReducer,
 })
 export const langStore = createStore(reducers)

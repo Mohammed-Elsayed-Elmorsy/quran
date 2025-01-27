@@ -30,18 +30,18 @@ const BlogDetails = () => {
     return (
         <div className='details-page bg-light'>
             <div className=' details-page-content'>
-                <div className=' container px-6 md:px-[120px] mx-auto pb-[30px]'>
-                    <h2 className=' title lg:mb-[-130px] mb-[-50px] mt-[0px]'>
+                <div className=' container px-6 md:px-[50px] lg:px-[70px] xl:px-[100px] mx-auto pb-[30px]'>
+                    <h2 className=' title lg:mb-[-110px] mb-[-50px] mt-[0px]'>
                         {blog?.title}
                     </h2>
                     <div className=' flex justify-between flex-col items-center'>
 
                         <div className=' flex justify-between items-center w-full mx-auto  py-[30px]'>
                             <span className=' flex items-center gap-2'>
-                                <img src={blog?.image[0]} className=' w-[55px] h-[55px] rounded-full object-cover' alt="" />
+                                <img src={blog?.image[0]} className=' p-[3px] bg-white w-[50px] h-[48px]  object-cover' alt="" />
                                 <div>
-                                    <h3 className=' capitalize md:text-[18px] text-[15px]'>shatha Alqur'an</h3>
-                                    <p className='md:text-[18px] text-[15px] text-gray-500'>12/12/2021</p>
+                                    <h3 className=' capitalize  text-[15px]'>shatha Alqur'an</h3>
+                                    <p className='text-[15px] text-gray-500'>12/12/2021</p>
                                 </div>
                             </span>
                             <span className=' flex items-center gap-3 md:text-[20px] text-[18px]'>
@@ -77,7 +77,7 @@ const BlogDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className=' container px-6  md:px-[120px] mx-auto pb-[70px]'>
+            <div className=' container px-6  md:px-[100px] mx-auto pb-[70px]'>
 
                 <div>
                     <h2 className=' text-[25px] font-bold my-[20px]'>{!state ? 'Relatd Blogs' : 'المواضيع ذات الصلة'}</h2>
@@ -101,7 +101,7 @@ const BlogDetails = () => {
                         )}
                     </div>
                 </div>
-                <div className=' pt-[70px]'>
+                <div className=' pt-[50px]'>
                     <LinksOfDetails />
                 </div>
             </div>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { medias } from '../utils/data'
+import { medias, mediasarab } from '../utils/data'
 import { Link } from 'react-router-dom'
-import { FaCheck } from 'react-icons/fa'
 import { useSelector } from 'react-redux'
 import "intl-tel-input/build/css/intlTelInput.css";
 import intlTelInput from "intl-tel-input";
@@ -9,7 +8,7 @@ import "intl-tel-input/build/js/utils";
 const ContactComp = () => {
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
-    const [phoneNumber, setPhoneNumber] = useState("");
+    const [setPhoneNumber] = useState("");
     const [itiInstance, setItiInstance] = useState(null);
 
     useEffect(() => {
@@ -20,7 +19,6 @@ const ContactComp = () => {
         });
         setItiInstance(instance);
 
-        // Cleanup when the component unmounts
         return () => instance.destroy();
     }, []);
     const handleSubmit = (e) => {
@@ -29,45 +27,41 @@ const ContactComp = () => {
             const formattedNumber = itiInstance.getNumber();
             alert(`Phone Number: ${formattedNumber}`);
             setPhoneNumber(formattedNumber);
-
         }
     };
-    console.log(phoneNumber);
     return (
-        <div className='Contact pb-[40px] bg-light'>
-
-            <div className=' container mx-auto p-6 md:px-[70px] lg:px-[120px]'>
+        <div className='Contact pb-[30px] bg-light'>
+            <div className=' container mx-auto px-6 md:px-[70px] lg:px-[100px]'>
                 <h2 className='title'>
                     {state ? ' تواصل معنا' : 'contact us '}
-                    <FaCheck />
                 </h2>
                 {state ?
-                    <div class="form-container" dir='rtl'>
+                    <div className="form-container" dir='rtl'>
                         <form className=' ' onSubmit={handleSubmit}>
-                            <div class="form-group" data-aos="flip-left">
-                                <label for="firstName">الاسم الأول</label>
+                            <div className="form-group" data-aos="flip-left">
+                                <label htmlFor="firstName">الاسم الأول</label>
                                 <input type="text" id="firstName" name="firstName" placeholder="ادخل اسمك الأول" required />
                             </div>
-                            <div class="form-group" data-aos="flip-left">
-                                <label for="lastName">الاسم الأخير</label>
+                            <div className="form-group" data-aos="flip-left">
+                                <label htmlFor="lastName">الاسم الأخير</label>
                                 <input type="text" id="lastName" name="lastName" placeholder="ادخل اسمك الأخير" required />
                             </div>
-                            <div class="form-group" data-aos="flip-left">
-                                <label for="age">العمر</label>
+                            <div className="form-group" data-aos="flip-left">
+                                <label htmlFor="age">العمر</label>
                                 <input type="number" id="age" name="age" placeholder="ادخل عمرك" required />
                             </div>
-                            <div class="form-group" data-aos="flip-left">
-                                <label for="email">البريد الإلكتروني</label>
+                            <div className="form-group" data-aos="flip-left">
+                                <label htmlFor="email">البريد الإلكتروني</label>
                                 <input type="email" id="email" name="email" placeholder="ادخل بريدك الإلكتروني" required />
                             </div>
-                            <div class="form-group z-50" data-aos="flip-left">
-                                <label for="phone">رقم الهاتف</label>
+                            <div className="form-group z-50" data-aos="flip-left">
+                                <label htmlFor="phone">رقم الهاتف</label>
                                 <input type="tel" id="phone" name="phone" placeholder="ادخل رقم هاتفك" required />
                             </div>
-                            <div class="form-group" data-aos="flip-left">
-                                <label for="timezone">المنطقة الزمنية</label>
+                            <div className="form-group" data-aos="flip-left">
+                                <label htmlFor="timezone">المنطقة الزمنية</label>
                                 <select id="timezone" name="timezone" required>
-                                    <option value="" disabled selected>اختر منطقتك الزمنية</option>
+                                    <option defaultValue=" اختر منطقتك الزمنية" hidden>اختر منطقتك الزمنية</option>
                                     <option value="UTC-12:00">UTC-12:00</option>
                                     <option value="UTC-11:00">UTC-11:00</option>
                                     <option value="UTC-10:00">UTC-10:00</option>
@@ -95,18 +89,18 @@ const ContactComp = () => {
                                     <option value="UTC+12:00">UTC+12:00</option>
                                 </select>
                             </div>
-                            <div class="form-group" data-aos="flip-left">
-                                <label for="country">الدولة</label>
+                            <div className="form-group" data-aos="flip-left">
+                                <label htmlFor="country">الدولة</label>
                                 <input type="text" id="country" name="country" placeholder="ادخل دولتك" required />
                             </div>
-                            <div class="form-group" data-aos="flip-left">
-                                <label for="city">المدينة</label>
+                            <div className="form-group" data-aos="flip-left">
+                                <label htmlFor="city">المدينة</label>
                                 <input type="text" id="city" name="city" placeholder="ادخل مدينتك" required />
                             </div>
-                            <div class="form-group" data-aos="flip-left">
-                                <label for="gender">الجنس</label>
+                            <div className="form-group" data-aos="flip-left">
+                                <label htmlFor="gender">الجنس</label>
                                 <select id="gender" name="gender" required>
-                                    <option value="" disabled selected>اختر جنسك</option>
+                                    <option defaultValue="  اختر جنسك" hidden    >اختر جنسك</option>
                                     <option value="male">ذكر</option>
                                     <option value="female">أنثى</option>
                                 </select>
@@ -115,32 +109,32 @@ const ContactComp = () => {
                         </form>
                     </div>
                     :
-                    <div class="form-container">
+                    <div className="form-container">
                         <form className=' ' onSubmit={handleSubmit}>
-                            <div class="form-group" data-aos="flip-left">
-                                <label for="firstName">First Name</label>
+                            <div className="form-group" data-aos="flip-left">
+                                <label htmlFor="firstName">First Name</label>
                                 <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required />
                             </div>
-                            <div class="form-group" data-aos="flip-left">
-                                <label for="lastName">Last Name</label>
+                            <div className="form-group" data-aos="flip-left">
+                                <label htmlFor="lastName">Last Name</label>
                                 <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required />
                             </div>
-                            <div class="form-group" data-aos="flip-left">
-                                <label for="age">Age</label>
+                            <div className="form-group" data-aos="flip-left">
+                                <label htmlFor="age">Age</label>
                                 <input type="number" id="age" name="age" placeholder="Enter your age" required />
                             </div>
-                            <div class="form-group" data-aos="flip-left">
-                                <label for="email">Email</label>
+                            <div className="form-group" data-aos="flip-left">
+                                <label htmlFor="email">Email</label>
                                 <input type="email" id="email" name="email" placeholder="Enter your email" required />
                             </div>
-                            <div class="form-group z-50" data-aos="flip-left">
-                                <label for="phone">Phone</label>
+                            <div className="form-group z-50" data-aos="flip-left">
+                                <label htmlFor="phone">Phone</label>
                                 <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
                             </div>
-                            <div class="form-group" data-aos="flip-left">
-                                <label for="timezone">Time Zone</label>
+                            <div className="form-group" data-aos="flip-left">
+                                <label htmlFor="timezone">Time Zone</label>
                                 <select id="timezone" name="timezone" required>
-                                    <option value="" disabled selected>Select your time zone</option>
+                                    <option defaultValue="Select your time zone" hidden>Select your time zone</option>
                                     <option value="UTC-12:00">UTC-12:00</option>
                                     <option value="UTC-11:00">UTC-11:00</option>
                                     <option value="UTC-10:00">UTC-10:00</option>
@@ -168,23 +162,23 @@ const ContactComp = () => {
                                     <option value="UTC+12:00">UTC+12:00</option>
                                 </select>
                             </div>
-                            <div class="form-group" data-aos="flip-left">
-                                <label for="country">Country</label>
+                            <div className="form-group" data-aos="flip-left">
+                                <label htmlFor="country">Country</label>
                                 <input type="text" id="country" name="country" placeholder="Enter your country" required />
                             </div>
-                            <div class="form-group" data-aos="flip-left">
-                                <label for="city">City</label>
+                            <div className="form-group" data-aos="flip-left">
+                                <label htmlFor="city">City</label>
                                 <input type="text" id="city" name="city" placeholder="Enter your city" required />
                             </div>
-                            <div class="form-group" data-aos="flip-left">
-                                <label for="gender">Gender</label>
+                            <div className="form-group" data-aos="flip-left">
+                                <label htmlFor="gender">Gender</label>
                                 <select id="gender" name="gender" required>
-                                    <option value="" disabled selected>Select your gender</option>
+                                    <option defaultValue="Select your gender" hidden >Select your gender</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                 </select>
                             </div>
-                            <button type="submit" class="btn-submit">Submit</button>
+                            <button type="submit" className="btn-submit">Submit</button>
                         </form>
                     </div>
                 }
@@ -192,16 +186,16 @@ const ContactComp = () => {
 
                 <div className=' text-center'>
                     <h2 className='title text-[22px] text-center capitalize pb-5'> {state ? 'معلومات الاتصال' : 'contact information'}</h2>
-                    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:p-0 '>
-                        {medias.map(item => {
+                    <div className='grid grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 md:p-0 '>
+                        {!state ? medias.map(item => {
                             return (
                                 <div data-aos='fade-down'
                                     key={item.id}
-                                    className=' flex flex-col gap-2 rev-item bg-white p-2'>
+                                    className=' flex flex-col gap-2 border border-slate-300 hover:bg-slate-300  bg-white'>
                                     <Link target={item.title.indexOf('Email') !== -1
                                         || item.title.indexOf('hone') !== -1 ?
                                         '' : '_blank'} to={item.title.indexOf('Email') !== -1 ? '' : item.to}
-                                        className=' text-wrap break-all break-words  text-blue-500'>
+                                        className=' p-2'>
                                         <span style={{ color: 'var(--main-color)' }}
                                             className='text-[35px] flex justify-center items-center'>
                                             {item.icon}
@@ -209,7 +203,26 @@ const ContactComp = () => {
                                         <h3 style={{ color: 'var(--second-color)' }} className=' font-bold'>
                                             {item.title}
                                         </h3>
-                                        {item.content}
+                                        {/* {item.content} */}
+                                    </Link>
+                                </div>
+                            )
+                        }) : mediasarab.map(item => {
+                            return (
+                                <div data-aos='fade-down'
+                                    key={item.id}
+                                    className=' flex flex-col gap-2 border  border-slate-300 hover:bg-slate-300 bg-white'>
+                                    <Link target={item.title.indexOf('Email') !== -1
+                                        || item.title.indexOf('hone') !== -1 ?
+                                        '' : '_blank'} to={item.title.indexOf('Email') !== -1 ? '' : item.to}
+                                        className='p-2'>
+                                        <span style={{ color: 'var(--main-color)' }}
+                                            className='text-[35px] flex justify-center items-center'>
+                                            {item.icon}
+                                        </span>
+                                        <h3 style={{ color: 'var(--second-color)' }} className=' font-bold'>
+                                            {item.title}
+                                        </h3>
                                     </Link>
                                 </div>
                             )

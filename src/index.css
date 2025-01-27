@@ -14,7 +14,7 @@
   --second-color:#f4b42a;
   --ter-color:#f4b42a34;
   --white:#f1f1f1;
-  --whfgite:#e4e4e4;
+  --whfgite:#0f141f;
 }
 * {
   box-sizing: border-box;
@@ -91,7 +91,6 @@ header nav ul li a:hover{
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
   text-transform: capitalize;
-
 }
 .btn-pri{
   color: #ffffff;
@@ -110,12 +109,12 @@ header nav ul li a:hover{
   color: #ffffff;
   background:var(--main-color) ;
 }
-span.hide-text{
+h1.hide-text{
 
   animation: animate-logo 0.7s 1  forwards ease;
   -webkit-animation: animate-logo 0.7s 1  forwards ease;
 }
-span.show-text{
+h1.show-text{
   animation: animate-logo2 0.7s 1  forwards ease;
   -webkit-animation: animate-logo2 0.7s 1  forwards ease;
 }
@@ -192,11 +191,11 @@ header{
 }
 .bars{
   transition: 0.3s;
-  font-size: 22px;
+  font-size: 25px;
   color: var(--main-color);
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   display: flex;
   background-color: #e4e4e4;
   justify-content: center;
@@ -217,7 +216,7 @@ header .logo {
     z-index: 10;
 }
 
-header .logo span {
+header .logo h1 {
     position: relative !important;
   z-index: 10;
 }
@@ -415,7 +414,7 @@ header ul li a:hover::after{
     position: relative;
   }
   .dropdown:hover .drop,.dropdown:hover .drop-arabic{
-    height: 200px;
+    height: 187px;
     border: 1px solid rgb(189, 189, 189);
 
   }
@@ -520,7 +519,7 @@ header ul li a:hover::after{
 }
 .title{
   color: var(--main-color) !important;
-  padding: 35px 0;
+  padding: 30px 0;
   display: flex ;
   justify-content: center;
   align-items: center;
@@ -534,7 +533,7 @@ header ul li a:hover::after{
 
 @media (max-width: 768px) {
   .title {
-    font-size: 32px; /* Smaller size for tablets */
+    font-size: 25px; /* Smaller size for tablets */
   padding: 25px 0;
   }
   .btn-pri , .btn-sec{
@@ -545,7 +544,7 @@ header ul li a:hover::after{
 
 @media (max-width: 480px) {
   .title {
-    font-size: 25px; /* Optimal size for small screens */
+    font-size: 23px; /* Optimal size for small screens */
   }
 }
 
@@ -621,13 +620,13 @@ padding: 10px 14px;
 
 }
 
-.choose .container 
+.choose .container , .Programms .container 
 {
   position: relative;
   z-index: 3;
   display: grid;
   grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
-  gap: 16px;
+  gap: 20px;
 }
 @media screen and (max-width:480px) {
   .choose .container 
@@ -639,14 +638,23 @@ padding: 10px 14px;
   box-shadow: 2px 2px 10px rgb(173, 173, 173);
 } 
 .choose .container .item{
-  padding: 6px;
+  padding-bottom: 5px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #cccbcb;
+  
+}
+
+.Programms .container .item{
+  padding: 5px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 5px;
-  box-shadow: 2px 2px 10px rgb(190, 190, 190);
-}
+  border: 1px solid #cccbcb;
 
+}
 
 /* choose end */
 
@@ -668,7 +676,7 @@ padding: 10px 14px;
   position: relative;
   z-index: 0;
   overflow: hidden;
-  padding: 10px;
+  padding: 4px;
   background-color: #ffffff;
   box-shadow: 2px 2px 10px rgb(172, 172, 172);
 } 
@@ -906,8 +914,8 @@ padding: 10px 14px;
 
 
 .form-container {
-  /* background-color: white; */
-  margin-bottom: 50px;
+  
+  margin-bottom: 30px;
 }
 .form-container form {
   display: flex;
@@ -932,11 +940,7 @@ label {
 input, select {
   width: 100% !important;
   padding: 10px;
-  border: 1px solid #ffffff;
-  border-radius: 5px;
   font-size: 16px;
-  box-sizing: border-box;
-  border: 1px solid #e2e2e2;
 }
 
 input:focus, select:focus {
@@ -953,7 +957,6 @@ input:focus, select:focus {
   color: white;
   background-color: #143d59;
   border: none;
-  /* border-radius: 5px; */
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -1027,14 +1030,15 @@ input:focus, select:focus {
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    top: -50px;
-    right: 70px;
+    top: -38px;
+    right: 48px;
     background-color: #143d59;
     color: white;
     width: max-content;
     padding: 10px;
     font-size: 16px;
-
+border-top-left-radius: 6px;
+border-bottom-right-radius: 6px;
     transition: 0.3s;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
@@ -1155,8 +1159,8 @@ input:focus, select:focus {
 .third,
 .fourth,
 .fifth {
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   background-color: black;
   position: relative;

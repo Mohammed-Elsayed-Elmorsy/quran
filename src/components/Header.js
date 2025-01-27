@@ -1,24 +1,25 @@
 import React, { useState } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import image from '../static/Quran.jpg'
 import imagelang from '../static/united-states.png'
 import imagearab from '../static/flag.png'
 import { links, linksarabic } from '../utils/data'
 import { FaAngleRight, FaBars } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
+import { GoMoon, GoSun } from 'react-icons/go'
 const Header = () => {
+    const { dark } = useSelector(state => state.mode)
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
+    const mode = localStorage.getItem('dark') ? JSON.parse(localStorage.getItem('dark')) : dark
     const dispatch = useDispatch()
-    const navigate = useNavigate();
     const location = useLocation();
     const [bgToHeader, setBgToHeader] = useState(false)
     const [hidetext, setHidetext] = useState(false)
-    const [minmizelogo, setMinmizelogo] = useState(false)
     const [showMenu, setShowMenu] = useState(false)
 
     const addBgToHeader = () => {
-        if (window.scrollY > 100) {
+        if (window.scrollY > 120) {
             setBgToHeader(true)
         }
         else {
@@ -26,32 +27,33 @@ const Header = () => {
         }
     }
     const removelogotext = () => {
-        if (window.scrollY > 150) {
+        if (window.scrollY > 250) {
             setHidetext(true)
-            setMinmizelogo(true)
         }
         else {
             setHidetext(false)
-            setMinmizelogo(false)
         }
     }
     const showlangover = () => {
-        dispatch({ type: 'SHOW' })
+        dispatch({ type: 'SHOWLANG' })
     }
-    const NavigateToThisLink = (link) => {
-        navigate(link)
+    const showModeover = () => {
+        dispatch({ type: 'SHOWMODE' })
     }
     window.addEventListener('scroll', addBgToHeader)
     window.addEventListener('scroll', removelogotext)
     return (
         <header className={` transition-all ${bgToHeader ? ' shadow-md ' : ''} `}>
 
-            <div className={`container h-[90px]  flex items-center mx-auto justify-between px-4 md:px-[50px] xl:px-[100px]`}>
+            <div className={`container h-[90px]  flex items-center mx-auto justify-between px-4 md:px-[50px] lg:px-[70px] xl:px-[100px]`}>
 
                 <div className="logo flex-1">
                     <Link to={'/'} className='flex gap-1 items-center'>
-                        <img src={image} alt="logo" className={` relative bottom-[5px] h-[55px] w-[55px] md:h-[60px] md:w-[60px] `} />
-                        <span
+                        <img
+                            src={image}
+                            alt="Shatha Quran Logo"
+                            className={` relative bottom-[5px] h-[55px] w-[55px] md:h-[60px] md:w-[60px] `} />
+                        <h1
                             className={` md:text-[18px] text-[16px]  
                         ${hidetext ? 'hide-text' : 'show-text'}   
                         font-bold  text-[18px] relative left-[-15px]  `}>
@@ -67,7 +69,7 @@ const Header = () => {
                                     شذا القرآن
                                 </span>
                             }
-                        </span>
+                        </h1>
                     </Link>
                 </div>
                 <nav className=' hidden lg:block'>
@@ -79,15 +81,15 @@ const Header = () => {
                                     className={` ${link.chilren ? 'dropdown ' : ''} 
                                     ${location.pathname === (link.to === '/' ? '/' : '/' + link.to) ? 'active' : ''} 
                                     relative  transition capitalize flex items-center  text-[16px]`}
-                                    to={link.to == '/' ? '/' : link.id === 4 ? '#' : '/' + link.to}>
-                                    {link.text == '/' ? 'home' : link.text}
+                                    to={link.to === '/' ? '/' : link.id === 4 ? '#' : '/' + link.to}>
+                                    {link.text === '/' ? 'home' : link.text}
                                     {link.chilren && <FaAngleRight className='hide' />}
                                     {link.chilren ? <div
                                         className='drop'>
                                         {link.chilren ? link.chilren.map(i =>
                                             <Link
                                                 to={!i.id ? '/' + i.path : '/programms/' + i.id}
-                                                className=' text-[16px]'
+                                                className=' text-[14px]'
                                                 key={i.text}>
                                                 {i.text}
                                             </Link>) : null}
@@ -98,18 +100,18 @@ const Header = () => {
                         ) : links.map(link =>
                             <li key={link.id}>
                                 <Link
-                                    className={` ${link.chilren ? 'dropdown ' : ''} 
+                                    className={`  ${link.chilren ? 'dropdown ' : ''} 
                                     ${location.pathname === (link.to === '/' ? '/' : '/' + link.to) ? 'active' : ''} 
                                     relative  transition capitalize flex items-center  text-[16px]`}
-                                    to={link.to == '/' ? '/' : link.id === 4 ? '#' : '/' + link.to}>
-                                    {link.text == '/' ? 'home' : link.text}
+                                    to={link.to === '/' ? '/' : link.id === 4 ? '#' : '/' + link.to}>
+                                    {link.text === '/' ? 'home' : link.text}
                                     {link.chilren && <FaAngleRight className='hide' />}
                                     {link.chilren ? <div
                                         className='drop'>
                                         {link.chilren ? link.chilren.map(i =>
                                             <Link
                                                 to={!i.id ? '/' + i.path : '/programms/' + i.id}
-                                                className=' text-[16px]'
+                                                className=' text-[14px]'
                                                 key={i.text}>
                                                 {i.text}
                                             </Link>) : null}
@@ -119,7 +121,8 @@ const Header = () => {
                             </li>
                         )}
                         <div className='languages'>
-                            <span className='p-2 block w-[50px] h-[50px] cursor-pointer hover:bg-slate-200'
+                            <span className='p-[8px] block w-[45px] h-[45px] cursor-pointer transition
+                             hover:bg-slate-200  '
                                 onClick={() => showlangover()}>
                                 {state ?
                                     <img src={imagearab} style={{ width: '50px' }} alt="" /> :
@@ -133,24 +136,42 @@ const Header = () => {
                     <nav className={`nav-in-small ${showMenu ? 'show' : ''} lg:hidden right-[0]`}>
                         <ul className=' flex flex-col items-center'>
                             {state ? linksarabic.map(link => <li key={link.id}>
-                                <Link className={``} to={link.to == '/' ? '/' : '/' + link.to}>
-                                    {link.text == '/' ? 'home' : link.text}
+                                <Link className={``} to={link.to === '/' ? '/' : '/' + link.to}>
+                                    {link.text === '/' ? 'home' : link.text}
                                 </Link>
                             </li>) : links.map(link => <li key={link.id}>
-                                <Link className={``} to={link.text == '/' ? '/' : '/' + link.text}>
-                                    {link.text == '/' ? 'home' : link.text}
+                                <Link className={``} to={link.text === '/' ? '/' : '/' + link.text}>
+                                    {link.text === '/' ? 'home' : link.text}
                                 </Link>
                             </li>)}
                         </ul>
                     </nav>
                 </div>
-                <div className={`lg:hidden block ${state ? '' : ''}`}>
-                    <span className='p-2 block w-[50px] h-[50px] cursor-pointer hover:bg-slate-200'
+                <div className='lg:hidden block '>
+                    <span className='p-[8px] block w-[45px] h-[45px] cursor-pointer transition
+                              hover:bg-slate-200 '
                         onClick={() => showlangover()}>
                         {state ?
                             <img src={imagearab} style={{ width: '50px' }} alt="" /> :
                             <img src={imagelang} style={{ width: '50px' }} alt="" />}
                     </span>
+                </div>
+                <div onClick={() => showModeover()}>
+                    {mode ?
+                        <span
+                            className='text-[24px] flex justify-center 
+                            items-center w-[45px] h-[45px] cursor-pointer transition
+                              hover:bg-slate-200 '>
+                            <GoSun />
+                        </span>
+                        :
+                        <span
+
+                            className='text-[24px] flex justify-center
+                    items-center w-[45px] h-[45px] cursor-pointer transition
+                              hover:bg-slate-200 '>
+                            <GoMoon />
+                        </span>}
                 </div>
             </div>
         </header >

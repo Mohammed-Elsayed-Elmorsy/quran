@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Link, Route, Routes } from 'react-router-dom';
+import { HashRouter, Link, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home'
 import About from './pages/About'
@@ -14,12 +14,12 @@ import LangOverlay from './components/LangOverlay';
 import aos from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react';
-import FreeTrial from './components/FreeTrial';
 import TeachersDetails from './pages/TeachersDetails';
 import PorgDetails from './pages/PorgDetails';
 import { FaWhatsapp } from 'react-icons/fa';
 import TopNav from './components/TopNav';
 import Header from './components/Header';
+import ModeOverlay from './components/ModeOver';
 function App() {
   useEffect(() => {
     aos.init({
@@ -33,13 +33,14 @@ function App() {
     <div className={`${lang ? 'arabic' : 'en'}`}>
       <HashRouter>
         <Link to={'https://wa.me/201013864939'} target='_blank'
-          className=' start-chat bg-primary block hover:bg-secondary hover:text-white
-      py-3 px-4 text-secondary fixed text-[22px] cursor-pointer z-50 bottom-5 right-5'>
+          className=' start-chat bg-secondary text-white  hover:bg-blue-500 
+      w-[50px] h-[50px] rounded-[50%] flex justify-center items-center fixed text-[22px] cursor-pointer z-50 bottom-5 lg:bottom-8 right-5 lg:right-8'>
           <FaWhatsapp />
           <span className='start-chat-hover capitalize'>
             {lang ? 'تواصل معنا الان ' : 'start chat now'}
           </span>
         </Link>
+        {/* <ModeOverlay /> */}
         <LangOverlay />
         <TopNav />
         <Header />

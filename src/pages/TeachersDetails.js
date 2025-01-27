@@ -28,7 +28,7 @@ const TeachersDetails = () => {
         <div className="details-page bg-light">
             <div className="details-page-content">
 
-                <div className=' container pt-5 px-6 md:px-[80px] lg:px-[120px]  mx-auto pb-[70px]'>
+                <div className=' container pt-5 px-6 md:px-[60px] lg:px-[80px] xl:px-[100px] mx-auto pb-[70px]'>
 
 
                     <div className=" bg-white flex items-center justify-center  p-2 border border-gray-300">
@@ -38,12 +38,12 @@ const TeachersDetails = () => {
                         </div>
 
                         <ul className="">
-                            <li className=" font-bold md:text-[28px] text-[18px] capitalize">
+                            <li className=" font-bold md:text-[25px] text-[17px] capitalize">
                                 {blog?.name}
                             </li>
 
                             {!state ?
-                                <li className=" underline md:text-[18px] text-[16px] text-gray-800 ">
+                                <li className=" underline md:text-[17px] text-[16px] text-gray-800 ">
                                     Certified Quran Teacher
                                 </li>
                                 :
@@ -80,7 +80,7 @@ const TeachersDetails = () => {
 
                     <div>
                         <h3 className=" title ]">{state ? " المزيد عن المعلم" : "about the teacher"} </h3>
-                        <p className=' bg-white p-3 lg:text-lg text-[16px]'>
+                        <p className=' bg-white p-3 '>
                             {blog?.details}
                         </p>
                     </div>

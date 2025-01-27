@@ -21,9 +21,8 @@ const BlogsComp = ({ slider }) => {
         <div className=' blogs bg-light   pb-[40px]'>
             <div className=' mx-auto px-7 md:px-[60px] lg:px-[100px] container'>
                 <div>
-                    <h2 className='title' style={slider ? { marginBottom: '30px' } : { marginBottom: '0' }}>
+                    <h2 className={`title ${slider ? '!pb-0' : ''}`} style={slider ? { marginBottom: '10px' } : { marginBottom: '0' }}>
                         {state ? 'المدونات' : 'Our Blogs'}
-                        {/* <FaCheck className=' hidden md:inline-block' /> */}
                     </h2>
                     <div className=' container content mx-auto '>
                         {slider ?
@@ -46,14 +45,14 @@ const BlogsComp = ({ slider }) => {
                                             key={item.id}
 
                                         >
-                                            <div className='blog-item flex flex-col  justify-between gap-2 bg-white p-2'>
+                                            <div className='blog-item  flex flex-col  justify-between gap-2 bg-white p-1'>
                                                 <div className=' overflow-hidden'>
                                                     <img src={item.image[0]} alt="" className='h-[220px] w-full object-cover' />
                                                 </div>
-                                                <h3 className=' font-bold text-[19px]'>
+                                                <h3 className=' font-bold px-1 text-[19px]'>
                                                     {item.title}
                                                 </h3>
-                                                <p className=' text-[15px]'>
+                                                <p className='text-[15px] px-1'>
                                                     {item.desc.substring(0, 210) + '.......'}
                                                 </p>
                                                 <Link className=' flex' to={`/blogs/${item.id}`}>
@@ -70,14 +69,14 @@ const BlogsComp = ({ slider }) => {
                                         <SwiperSlide
                                             key={item.id}
                                         >
-                                            <div className=' flex flex-col  rev-item gap-2 bg-white p-2'>
+                                            <div className=' flex flex-col   rev-item gap-2 bg-white p-1'>
                                                 <div className=' overflow-hidden'>
                                                     <img src={item.image[0]} alt="" className='h-[220px] w-full object-cover' />
                                                 </div>
-                                                <h3 className=' font-bold text-[19px]'>
+                                                <h3 className=' px-1 font-bold px-1 text-[19px]'>
                                                     {item.title}
                                                 </h3>
-                                                <p className='text-[15px] h-[85px]'>
+                                                <p className='text-[15px] px-1 px-1 h-[85px]'>
                                                     {item.desc.substring(0, 235) + '...'}
                                                 </p>
                                                 <Link className='mt-auto flex' to={`/blogs/${item.id}`}>
@@ -94,15 +93,15 @@ const BlogsComp = ({ slider }) => {
                             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                                 {!state ? blogs.map(item => {
                                     return (
-                                        <div className='blog-item flex flex-col  justify-between gap-2 bg-white p-2'>
+                                        <div className='blog-item flex flex-col   justify-between gap-2 bg-white p-1'>
                                             <div className=' overflow-hidden'>
                                                 <img src={item.image[0]} alt="" className='h-[220px] w-full object-cover' />
                                             </div>
-                                            <h3 className=' font-bold text-[19px]'>
+                                            <h3 className=' font-bold px-1 text-[19px]'>
                                                 {item.title}
                                             </h3>
-                                            <p className='text-[15px]'>
-                                                {item.desc.substring(0, 230) + '.......'}
+                                            <p className='text-[15px] px-1 px-1'>
+                                                {item.desc.substring(0, 220) + '.......'}
                                             </p>
                                             <Link className=' flex' to={`/blogs/${item.id}`}>
                                                 <button
@@ -114,14 +113,14 @@ const BlogsComp = ({ slider }) => {
                                     )
                                 }) : blogsArabic.map(item => {
                                     return (
-                                        <div className='flex flex-col  rev-item gap-2 bg-white p-2'>
+                                        <div className='flex flex-col  rev-item gap-2  bg-white p-1'>
                                             <div className=' overflow-hidden'>
                                                 <img src={item.image[0]} alt="" className='h-[220px] w-full object-cover' />
                                             </div>
-                                            <h3 className=' font-bold text-[20px]'>
+                                            <h3 className=' font-bold px-1 text-[20px]'>
                                                 {item.title}
                                             </h3>
-                                            <p className=' text-[15px]'>
+                                            <p className=' text-[15px] px-1'>
                                                 {item.desc.substring(0, 235) + '...'}
                                             </p>
                                             <Link className=' flex mt-auto' to={`/blogs/${item.id}`}>
@@ -149,11 +148,11 @@ const SliderBtns = () => {
         <div
             className='btns'
             style={{ position: 'absolute', right: '-6px', top: '0px', width: '100%' }}>
-            <button
+            <button className=''
                 onClick={() => Swiper.slidePrev()}>
                 {!state ? <FaAngleLeft /> : <FaAngleRight />}
             </button>
-            <button
+            <button className=''
                 onClick={() => Swiper.slideNext()}>
                 {!state ? <FaAngleRight /> : <FaAngleLeft />}
             </button>

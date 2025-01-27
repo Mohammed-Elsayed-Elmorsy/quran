@@ -11,6 +11,8 @@ module.exports = {
         tertiary: '#f4b42a48',
         quaternary: '#f4b42a34',
         light: '#e4e4e4',
+        dark: '#121212',
+        lighter: '#292929',
       }
     },
     plugins: [],

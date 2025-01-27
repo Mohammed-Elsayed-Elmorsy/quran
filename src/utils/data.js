@@ -93,7 +93,7 @@ export const links = [
             ,
             {
                 path: 'programms',
-                text: 'all ', to: 'programms',
+                text: 'all programms', to: 'programms',
             }
         ]
     },
@@ -653,7 +653,7 @@ export const medias = [
         id: 5, color: 'black', back: '#0202022a',
         title: 'Email',
         content: 'shathaquran.academy@gmail',
-        to: 'shathaquran.academy@gmail.com',
+        to: 'mailto:shathaquran.academy@gmail.com',
         icon: <FaEnvelope />
     },
     {
@@ -663,12 +663,7 @@ export const medias = [
         icon: <FaTelegram />,
         to: 'https://t.me/shatha_alquran'
     },
-    {
-        id: 7, color: '#0490a8', back: '#048fa82c',
-        title: 'Phone',
-        content: '+201013864939',
-        icon: <FaPhone />
-    },
+
     {
         id: 8, color: 'red', back: '#ff000027',
         title: 'Youtube',
@@ -697,8 +692,8 @@ export const mediasarab = [
     {
         id: 5, color: 'black', back: '#0202022a',
         title: 'الجميل',
-        content: 'quranyway@gmail',
-        to: 'mailto:quranyway@gmail.com',
+        content: 'shathaquran.academy',
+        to: 'mailto:shathaquran.academy@gmail.com',
         icon: <FaEnvelope />
     },
     {
@@ -708,12 +703,7 @@ export const mediasarab = [
         icon: <FaTelegram />,
         to: 'https://t.me/shatha_alquran'
     },
-    {
-        id: 7, color: '#0490a8', back: '#048fa82c',
-        title: 'التلفون',
-        content: '+201013864939',
-        icon: <FaPhone />
-    },
+
     {
         id: 8, color: 'red', back: '#ff000027',
         title: 'اليوتيوب',
@@ -895,7 +885,7 @@ export const progs = [
     {
         id: 1,
         image: image7,
-        title: 'Reading Skills (Noor Al-Bayan and Al-Nouraniya) ',
+        title: 'Reading Skills (Noor Al-Bayan and Al-Nouraniya)',
         desc: 'Unlock the foundation of Arabic literacy with our Reading Skills Program',
         points: [
             {

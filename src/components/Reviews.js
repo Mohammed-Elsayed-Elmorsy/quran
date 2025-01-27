@@ -18,14 +18,14 @@ const Reviews = () => {
                 <div className=' container mx-auto gap-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 md:p-0 p-1'>
                     {!state ? testmonials.map(item => {
                         return (
-                            <div data-aos="flip-right" key={item.id} className={`rev-item flex flex-col gap-2 relative bg-white  p-2`} >
+                            <div data-aos="flip-right" key={item.id} className={`rev-item  flex flex-col gap-2 relative bg-white  p-2`} >
                                 <h3 style={{ color: 'var(--main-color)' }}
                                     className='text-[18px] capitalize font-bold'>{item.name} :</h3>
                                 <p className=' md:text-[16px] break-words  text-gray-700'>
                                     {item.content.substring(0, 150) + '...'}
                                 </p>
                                 <span onClick={() => setShowReview(item.id)}
-                                    className='bg-blue-500 text-white p-2 inline-block cursor-pointer mt-auto'>read more</span>
+                                    className='bg-blue-500  hover:bg-blue-700 text-white p-2 inline-block cursor-pointer mt-auto'>read more</span>
                                 <div style={{ background: '#e4e4e4' }}
                                     className=' p-[7px] absolute w-[70px] h-[70px] rounded-full bg-white top-[-10%] right-[-5%]'>
                                     <div className=' shadow-md flex justify-center items-center
@@ -43,11 +43,11 @@ const Reviews = () => {
                         )
                     }) : testmonialsArabic.map(item => {
                         return (
-                            <div data-aos="flip-right" key={item.id} className='rev-item flex flex-col gap-2 relative bg-white  p-2'>
+                            <div data-aos="flip-right" key={item.id} className='rev-item  flex flex-col gap-2 relative bg-white  p-2'>
                                 <h3 style={{ color: 'var(--main-color)' }} className='text-[18px] capitalize font-bold'>{item.name} :</h3>
                                 <p className=' md:text-[16px] break-words  text-gray-700'>{item.content.substring(0, 170) + '...'}</p>
                                 <span onClick={() => setShowReview(item.id)}
-                                    className='bg-blue-500 text-white p-2 inline-block cursor-pointer mt-auto'>
+                                    className='bg-blue-500  hover:bg-blue-700 text-white p-2 inline-block cursor-pointer mt-auto'>
                                     اقرأ المزيد</span>
                                 <div style={{ background: '#e4e4e4' }}
                                     className={` p-[7px] absolute w-[70px] h-[70px] rounded-full bg-white top-[-10%] ${!state ? 'right-[-9%]' : 'left-[-5%]'}`}>

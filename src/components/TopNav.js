@@ -10,25 +10,30 @@ const TopNav = () => {
   const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
   return (
     <div className=' upper-header bg-primary'>
-      <div className="container mx-auto h-[60px]  px-6 md:px-[50px] xl:px-[100px] flex justify-between items-center">
+      <div className="container mx-auto h-[60px]  px-4 md:px-[50px] xl:px-[100px] flex justify-between items-center">
         <Link to={'/programms'}>
-          <span className=' hover:bg-white hover:text-black transition-all  bg-secondary   block py-2 px-3 text-slate-100'>
+          <span className=' hover:bg-white  hover:text-black transition-all  bg-secondary   block py-2 px-3 text-slate-100'>
             {state ? 'ابدأ معنا الان' : 'Start with us now'}
           </span>
         </Link>
         <div className=' flex gap-3 items-center text-[20px] upper-span'>
-          <a className=' hover:bg-white hover:text-black p-[4px] transition-all '
+          <a className=' hover:bg-white bg-secondary hover:text-black p-[7px] rounded-tl rounded-br transition-all '
             href="https://wa.me/201013864939" target=' _blank'>
             <FaWhatsapp />
           </a>
-          <a className=' hover:bg-white hover:text-black p-[4px] transition-all '
+          <a className=' hover:bg-white bg-secondary hover:text-black p-[7px] rounded-tl rounded-br transition-all '
             href="https://www.facebook.com/share/1Uh7Wnc2QH/" target=' _blank'>
             <FaFacebook />
           </a>
-          <a className=' hover:bg-white hover:text-black p-[4px] transition-all '
-            href="mailto:quranyway@gmail.com" target=' _blank'>
+          <a
+            className="hover:bg-white bg-secondary hover:text-black p-[7px] rounded-tl rounded-br transition-all"
+            href="mailto:shathaquran.academy@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <GoMail />
           </a>
+
         </div>
       </div>
     </div>

@@ -23,12 +23,12 @@ const Footer = () => {
             )}
             {state ? (
               <div className=" text-slate-200 capitalize flex flex-col gap-2">
-                <Link to="/programms/4"> التجويد</Link>
-                <Link to="/programms/3">حفظ القرآن</Link>
-                <Link to="/programms/2">الدراسات الاسلامية</Link>
+                <Link to="/programms/3"> التجويد</Link>
+                <Link to="/programms/2">حفظ القرآن</Link>
+                <Link to="/programms/6">الدراسات الاسلامية</Link>
                 <Link to="/programms/1">مهارات القراءة</Link>
-                <Link to="/programms/5">العربية الفصحى</Link>
-                <Link to="/programms/6"> تعلم العربية</Link>
+                <Link to="/programms/4">العربية الفصحى</Link>
+                <Link to="/programms/5"> تعلم العربية</Link>
               </div>
             ) : (
               <div className=" text-slate-200 capitalize flex flex-col gap-2">

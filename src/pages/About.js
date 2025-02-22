@@ -12,13 +12,14 @@ import Loading from '../components/Loading';
 import aos from 'aos'
 import 'aos/dist/aos.css'
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 const About = () => {
     const [loading, setLoading] = useState(true)
     const lang = useSelector(state => state.lang.arabic)
     const { dark } = useSelector(state => state.mode)
-
-    const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
     const mode = localStorage.getItem('dark') ? JSON.parse(localStorage.getItem('dark')) : dark
+    const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
+
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
@@ -26,44 +27,55 @@ const About = () => {
         window.scrollTo(0, 0);
         setLoading(true)
     }, []);
+
     useEffect(() => {
         aos.init({
             duration: 900,
             delay: 100
         })
     }, [])
+
     if (loading) {
         return <Loading />
     }
 
     return (
         <div>
+            <Helmet>
+                <title>Learn Quran Online | About Us - Shatha Alquran</title>
+                <meta name="description"
+                    content="Learn about Shatha Alquran Academy, your trusted platform for Quran learning, 
+                Arabic studies, and Islamic education with expert teachers worldwide." />
+                <meta name="keywords"
+                    content="Quran learning, 
+                    online Quran classes, Islamic studies, Arabic language, Shatha Alquran" />
+            </Helmet>
             <div className={`${mode ? ' bg-dark' : 'bg-light'}`}>
-                <div className='py-[26px] container mx-auto px-8 md:px-[80px] lg:px-[100px]'>
+                <div className='py-[26px] container mx-auto px-7 md:px-[60px] lg:px-[80px] xl:px-[150px]'>
                     {state &&
                         <div className=' flex flex-col gap-5 '>
                             <h2 className=' flex items-center gap-2 font-bold text-[25px]' >
-                                {!state ? ' who we are ' : 'من نحن '}
+                                {state ? 'من نحن ' : 'who we are'}
                                 <FaCheck />
                             </h2>
-                            <p className={`${mode ? 'text-white bg-lighter' : 'bg-white text-black shadow-md'}   p-2`} data-aos={'fade-up'}>مرحبًا بكم في أكاديمية شذا القرآن طريقكم الموثوق لتعلم القرآن الكريم، واللغة العربية،
+                            <p className={`${mode ? 'text-textDark bg-lighter' : 'bg-white text-black shadow-md'}   p-2`} data-aos={'fade-up'}>مرحبًا بكم في أكاديمية شذا القرآن طريقكم الموثوق لتعلم القرآن الكريم، واللغة العربية،
                                 والتفسير، والدراسات الإسلامية. نفخر في بتقديم خدماتنا التعليمية لطلابنا في جميع أنحاء العالم
                                 ، بما في ذلك الولايات المتحدة الأمريكية، المملكة المتحدة، كندا، أستراليا،
                                 الإمارات العربية المتحدة، الهند، المملكة العربية السعودية، وغيرهم.
                             </p>
-                            <p className={`${mode ? 'text-white bg-lighter' : 'bg-white text-black shadow-md'}  mt-[-20px]  p-2`} data-aos={'fade-left'}>يضم فريقنا معلمين ومعلمات مؤهلين وذوي خبرة عالية، خريجو جامعة الأزهر الشريف،
+                            <p className={`${mode ? 'text-textDark bg-lighter' : 'bg-white text-black shadow-md'}  mt-[-20px]  p-2`} data-aos={'fade-left'}>يضم فريقنا معلمين ومعلمات مؤهلين وذوي خبرة عالية، خريجو جامعة الأزهر الشريف،
                                 حاصلون على الإجازة في التلاوة والاقراء وحفظ القرآن الكريم. معلمون كرّسوا أنفسهم لخدمة القرآن الكريم،
                                 فهو نورٌ يملأ الصدور ويضيء الأنفاس، يهدي به الله كل من يسعى لعلمه ، كباراً وصغاراً رجالاَ ونساءاً.
                                 في أكادميتنا نبذل كل جهد ممكن، ونستخدم كل وسيلة متاحة، لنقل رسالة القرآن وتعاليمه،
                                 غير مبالين بالتعب أو الجهد، نهب وقتنا وطاقتنا لإيصال آيات الله إلى القلوب.
                             </p>
-                            <div className=' grid grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 text-center'>
-                                <img data-aos={'fade-up'} src={image} alt="" className={`p-1 ${mode ? ' bg-lighter' : 'bg-white'}   h-[150px]   xl:h-[230px] object-cover`} />
-                                <img data-aos={'fade-down'} src={image2} alt="" className={`p-1 ${mode ? ' bg-lighter' : 'bg-white'}   h-[150px]   xl:h-[230px] object-cover`} />
-                                <img data-aos={'fade-up'} src={image3} alt="" className={`p-1 ${mode ? ' bg-lighter' : 'bg-white'}   h-[150px]   xl:h-[230px] object-cover`} />
-                                <img data-aos={'fade-down'} src={image4} alt="" className={`p-1 ${mode ? ' bg-lighter' : 'bg-white'}   h-[150px]   xl:h-[230px] object-cover`} />
+                            <div className=' grid grid-cols-2  md:grid-cols-3 xl:grid-cols-4 auto-rows-fr auto-cols-fr gap-4 text-center'>
+                                <img data-aos={'fade-up'} src={image} alt="" className={`p-1 ${mode ? ' bg-lighter' : 'bg-white'}  w-full h-[150px]   xl:h-[200px] object-cover`} />
+                                <img data-aos={'fade-down'} src={image2} alt="" className={`p-1 ${mode ? ' bg-lighter' : 'bg-white'} w-full  h-[150px]   xl:h-[200px] object-cover`} />
+                                <img data-aos={'fade-up'} src={image3} alt="" className={`p-1 ${mode ? ' bg-lighter' : 'bg-white'}  w-full h-[150px]   xl:h-[200px] object-cover`} />
+                                <img data-aos={'fade-down'} src={image4} alt="" className={`p-1 ${mode ? ' bg-lighter' : 'bg-white'} w-full  h-[150px]   xl:h-[200px] object-cover`} />
                             </div>
-                            <p className={`${mode ? 'text-white bg-lighter' : 'bg-white text-black shadow-md'}   p-2`} data-aos={'fade-right'}>
+                            <p className={`${mode ? 'text-textDark bg-lighter' : 'bg-white text-black shadow-md'}   p-2`} data-aos={'fade-right'}>
                                 . جعلنا غايتنا الأولى تعليم القرآن الكريم،
                                 فهو أسمى أهدافنا وأغلى أمانينا، ويحتل مركز اهتمامنا وأولى حاجاتنا. نحمل على عاتقنا مسؤولية عظيمة،
                                 وهي أن يكون طلابنا، بإذن الله، صالحين ومصلحين، راشدين يسعدون بالقرآن في الدنيا وينعمون ببركته في الآخرة.
@@ -74,18 +86,18 @@ const About = () => {
                                 وفعّالًا لجميع الأعمار والمستويات
 
                             </p>
-                            <p className={`${mode ? 'text-white bg-lighter' : 'bg-white text-black shadow-md'}  mt-[-20px] p-2`} data-aos={'fade-up'}>
+                            <p className={`${mode ? 'text-textDark bg-lighter' : 'bg-white text-black shadow-md'}  mt-[-20px] p-2`} data-aos={'fade-up'}>
                                 ملتزمون بتغذية عقول وقلوب طلابنا على حد سواء، باستخدام
                                 أساليب تدريس مبتكرة ومبدعة، مما يجعل التعلم ممتعًا،
                                 سهل الوصول، وفعّالًا لجميع الأعمار والمستويات
                             </p>
-                            <p className={`${mode ? 'text-white bg-lighter' : 'bg-white text-black shadow-md'}  mt-[-20px] p-2`} data-aos={'fade-up'}>
+                            <p className={`${mode ? 'text-textDark bg-lighter' : 'bg-white text-black shadow-md'}  mt-[-20px] p-2`} data-aos={'fade-up'}>
                                 في أكاديمية شذا القرآن نؤمن أن رسالتنا تتجاوز مجرد التعليم. نحن نسعى إلى تعزيز الأسر والمجتمعات
                                 المسلمة بنقل المعرفة الإسلامية والقيم والأخلاق. من خلال برامجنا، نطمح إلى خلق التغيير
                                 الإيجابي، وتعزيز الوحدة بين المسلمين، محاولين أن نكون عوناً
                                 لهم ليكونوا في طريقهم إلى الله.
                             </p>
-                            <p data-aos={'fade-up'} className={`${mode ? 'text-white' : ' text-black'} flex justify-between items-center  font-bold text-[20px]`}>
+                            <p data-aos={'fade-up'} className={`${mode ? 'text-textDark' : ' text-black'} flex justify-between items-center  font-bold text-[20px]`}>
                                 سارعو بالانضمام لأكادميتنا، واخطوا الخطوة الأولى لعلاقة أفضل وأقرب لكتاب الله.
                             </p>
                             <Link to='/programms' className='btn-pri md:w-fit w-full text-center'>
@@ -97,14 +109,14 @@ const About = () => {
                             {!state ? ' who we are ' : 'من نحن '}
                             <FaCheck />
                         </h2>
-                        <p className={`${mode ? 'text-white bg-lighter' : 'bg-white text-black shadow-md'}  p-2`} data-aos={'fade-up'}>
+                        <p className={`${mode ? 'text-textDark bg-lighter' : 'bg-white text-black shadow-md'}  p-2`} data-aos={'fade-up'}>
                             Welcome to <span className=' font-bold text-[18px]'>Shatha Alqur’an</span> Academy,
                             your trusted path to learning the Qur’an,
                             Arabic, Tafseer, and Islamic studies. We proudly serve students across the globe,
                             including the USA, UK, Canada, Australia, UAE,
                             India, Saudi Arabia, and beyond
                         </p>
-                        <p className={`${mode ? 'text-white bg-lighter' : 'bg-white text-black shadow-md'}  mt-[-20px] p-2`} data-aos={'fade-up'}
+                        <p className={`${mode ? 'text-textDark bg-lighter' : 'bg-white text-black shadow-md'}  mt-[-20px] p-2`} data-aos={'fade-up'}
                         >
                             Our team of highly qualified and experienced teachers,
                             all graduates of the Al-Azhar University and qualified with
@@ -113,20 +125,20 @@ const About = () => {
                             we make learning engaging, accessible,
                             and effective for students of all ages and proficiency levels
                         </p>
-                        <div className=' grid grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 text-center'>
-                            <img data-aos={'fade-up'} src={image} alt="" className={`p-1 ${mode ? ' bg-lighter' : 'bg-white'}   h-[150px]   xl:h-[230px] object-cover`} />
-                            <img data-aos={'fade-up'} src={image2} alt="" className={`p-1 ${mode ? ' bg-lighter' : 'bg-white'}   h-[150px]   xl:h-[230px] object-cover`} />
-                            <img data-aos={'fade-up'} src={image3} alt="" className={`p-1 ${mode ? ' bg-lighter' : 'bg-white'}   h-[150px]   xl:h-[230px] object-cover`} />
-                            <img data-aos={'fade-up'} src={image4} alt="" className={`p-1 ${mode ? ' bg-lighter' : 'bg-white'}   h-[150px]   xl:h-[230px] object-cover`} />
+                        <div className=' grid grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-4 auto-rows-fr auto-cols-fr text-center'>
+                            <img data-aos={'fade-up'} src={image} alt="" className={`p-1 ${mode ? ' bg-lighter' : 'bg-white'}   h-[150px] w-full   xl:h-[210px] object-cover`} />
+                            <img data-aos={'fade-up'} src={image2} alt="" className={`p-1 ${mode ? ' bg-lighter' : 'bg-white'}   h-[150px] w-full   xl:h-[210px] object-cover`} />
+                            <img data-aos={'fade-up'} src={image3} alt="" className={`p-1 ${mode ? ' bg-lighter' : 'bg-white'}   h-[150px] w-full   xl:h-[210px] object-cover`} />
+                            <img data-aos={'fade-up'} src={image4} alt="" className={`p-1 ${mode ? ' bg-lighter' : 'bg-white'}   h-[150px] w-full   xl:h-[210px] object-cover`} />
                         </div>
-                        <p className={`${mode ? 'text-white bg-lighter' : 'bg-white text-black '} shadow-md p-2 `} data-aos={'fade-up'}>
+                        <p className={`${mode ? 'text-textDark bg-lighter' : 'bg-white text-black '} shadow-md p-2 `} data-aos={'fade-up'}>
                             At <span className=' font-bold text-[18px]'>Shatha Alqur’an Academy</span>, we believe that our mission goes beyond education.
                             We aim to strengthen Muslim families and communities by imparting Islamic knowledge, values,
                             and character.
                             Through our programs, we aspire to inspire positive change, foster unity,
                             and help you and your family become the best versions of yourselves as Muslims.
                         </p>
-                        <p data-aos={'fade-up'} className={`${mode ? 'text-white' : ' text-black'} font-bold`}>
+                        <p data-aos={'fade-up'} className={`${mode ? 'text-textDark' : ' text-black'} font-bold`}>
 
                             Join us on this transformative journey and take
                             the first step toward a deeper understanding of your faith and

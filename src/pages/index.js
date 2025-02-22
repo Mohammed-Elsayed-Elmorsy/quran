@@ -1,0 +1,10 @@
+export { default as About } from './About';
+export { default as BlogDetails } from './BlogDetails';
+export { default as PricingPage } from './Pricing';
+export { default as Home } from './Home';
+export { default as Contact } from './Contact';
+export { default as Blogs } from './Blogs';
+export { default as Teachers } from './Teachers';
+export { default as TeachersDetails } from './TeachersDetails';
+export { default as Programms } from './Programms';
+export { default as PorgDetails } from './PorgDetails';

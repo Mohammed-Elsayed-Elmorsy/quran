@@ -6,4 +6,4 @@ const reducers = combineReducers({
     lang: langreducer,
     mode: modeReducer,
 })
-export const langStore = createStore(reducers)
+export const store = createStore(reducers)

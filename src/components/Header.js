@@ -1,17 +1,18 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import image from '../static/Quran.jpg'
+import logoDark from '../static/Quran__4_-removebg-preview.png'
+import logoLight from '../static/Quran.png'
 import imagelang from '../static/united-states.png'
 import imagearab from '../static/flag.png'
 import { links, linksarabic } from '../utils/data'
 import { FaAngleRight, FaBars } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
-import { GoMoon, GoSun } from 'react-icons/go'
+import { BiMoon, BiSun } from 'react-icons/bi'
 const Header = () => {
     const { dark } = useSelector(state => state.mode)
+    const mode = localStorage.getItem('dark') ? JSON.parse(localStorage.getItem('dark')) : dark
     const lang = useSelector(state => state.lang.arabic)
     const state = localStorage.getItem('lang') ? JSON.parse(localStorage.getItem('lang')) : lang
-    const mode = localStorage.getItem('dark') ? JSON.parse(localStorage.getItem('dark')) : dark
     const dispatch = useDispatch()
     const location = useLocation();
     const [bgToHeader, setBgToHeader] = useState(false)
@@ -19,7 +20,7 @@ const Header = () => {
     const [showMenu, setShowMenu] = useState(false)
 
     const addBgToHeader = () => {
-        if (window.scrollY > 120) {
+        if (window.scrollY > 85) {
             setBgToHeader(true)
         }
         else {
@@ -27,7 +28,7 @@ const Header = () => {
         }
     }
     const removelogotext = () => {
-        if (window.scrollY > 250) {
+        if (window.scrollY > 220) {
             setHidetext(true)
         }
         else {
@@ -43,29 +44,29 @@ const Header = () => {
     window.addEventListener('scroll', addBgToHeader)
     window.addEventListener('scroll', removelogotext)
     return (
-        <header className={` transition-all ${bgToHeader ? ' shadow-md ' : ''} `}>
-
-            <div className={`container h-[90px]  flex items-center mx-auto justify-between px-4 md:px-[50px] lg:px-[70px] xl:px-[100px]`}>
-
+        <header className={` transition-all
+        ${bgToHeader && mode ? 'shadow-header-dark' : bgToHeader && !mode ? ' shadow-header-light' : ''}  
+        ${mode ? ' bg-dark border-b border-lighter' : ' bg-white'} `}>
+            <div className={`container h-[100px]  flex items-center mx-auto justify-between 
+                px-4  md:px-[40px] lg:px-[100px] xl:px-[140px]`}>
                 <div className="logo flex-1">
                     <Link to={'/'} className='flex gap-1 items-center'>
                         <img
-                            src={image}
+                            src={mode ? logoDark : logoLight}
                             alt="Shatha Quran Logo"
-                            className={` relative bottom-[5px] h-[55px] w-[55px] md:h-[60px] md:w-[60px] `} />
+                            className={` h-[70px] md:h-[88px] ${mode ? '' : ' rounded-full'}`} />
                         <h1
-                            className={` md:text-[18px] text-[16px]  
+                            className={` md:text-[17px] text-[16px]  
                         ${hidetext ? 'hide-text' : 'show-text'}   
-                        font-bold  text-[18px] relative left-[-15px]  `}>
+                        font-bold  text-[17px] relative left-[-15px]  `}>
                             {!state
                                 ?
-                                <span className=' flex flex-col relative left-[5px] top-[5px] md:top-[6px]'>
+                                <span className=' flex flex-col relative left-[5px]  '>
                                     <span>Shatha</span>
-                                    <span className=' mt-[-12px] '>Alqur'an</span>
+                                    <span className=' mt-[-10px] '>Alqur'an</span>
                                 </span>
                                 :
-
-                                <span className='left-[5px] relative top-[5px]'>
+                                <span className='left-[5px] relative '>
                                     شذا القرآن
                                 </span>
                             }
@@ -77,7 +78,6 @@ const Header = () => {
                         {state ? linksarabic.map(link =>
                             <li key={link.id}>
                                 <Link
-
                                     className={` ${link.chilren ? 'dropdown ' : ''} 
                                     ${location.pathname === (link.to === '/' ? '/' : '/' + link.to) ? 'active' : ''} 
                                     relative  transition capitalize flex items-center  text-[16px]`}
@@ -85,7 +85,7 @@ const Header = () => {
                                     {link.text === '/' ? 'home' : link.text}
                                     {link.chilren && <FaAngleRight className='hide' />}
                                     {link.chilren ? <div
-                                        className='drop'>
+                                        className={`drop ${mode ? 'bg-lighter border-lighter shadow-md shadow-black' : 'bg-white shadow-md '}`}>
                                         {link.chilren ? link.chilren.map(i =>
                                             <Link
                                                 to={!i.id ? '/' + i.path : '/programms/' + i.id}
@@ -94,7 +94,6 @@ const Header = () => {
                                                 {i.text}
                                             </Link>) : null}
                                     </div> : null}
-
                                 </Link>
                             </li>
                         ) : links.map(link =>
@@ -107,7 +106,7 @@ const Header = () => {
                                     {link.text === '/' ? 'home' : link.text}
                                     {link.chilren && <FaAngleRight className='hide' />}
                                     {link.chilren ? <div
-                                        className='drop'>
+                                        className={`drop ${mode ? 'bg-lighter shadow-md shadow-black' : 'bg-white shadow-md '}`}>
                                         {link.chilren ? link.chilren.map(i =>
                                             <Link
                                                 to={!i.id ? '/' + i.path : '/programms/' + i.id}
@@ -121,7 +120,7 @@ const Header = () => {
                             </li>
                         )}
                         <div className='languages'>
-                            <span className='p-[8px] block w-[45px] h-[45px] cursor-pointer transition
+                            <span className='p-[8px] block w-[40px] h-[40px] cursor-pointer transition
                              hover:bg-slate-200  '
                                 onClick={() => showlangover()}>
                                 {state ?
@@ -132,8 +131,8 @@ const Header = () => {
                     </ul>
                 </nav>
                 <div onClick={() => setShowMenu(!showMenu)} className='bars mr-4 relative lg:hidden block'>
-                    <FaBars />
-                    <nav className={`nav-in-small ${showMenu ? 'show' : ''} lg:hidden right-[0]`}>
+                    <FaBars className={`${mode ? 'text-white' : ' '}`} />
+                    <nav className={`nav-in-small ${mode ? 'bg-white' : ' bg-white'} ${showMenu ? 'show' : ''} lg:hidden right-[0]`}>
                         <ul className=' flex flex-col items-center'>
                             {state ? linksarabic.map(link => <li key={link.id}>
                                 <Link className={``} to={link.to === '/' ? '/' : '/' + link.to}>
@@ -148,7 +147,7 @@ const Header = () => {
                     </nav>
                 </div>
                 <div className='lg:hidden block '>
-                    <span className='p-[8px] block w-[45px] h-[45px] cursor-pointer transition
+                    <span className='p-[8px] block w-[40px] h-[40px] cursor-pointer transition
                               hover:bg-slate-200 '
                         onClick={() => showlangover()}>
                         {state ?
@@ -159,18 +158,18 @@ const Header = () => {
                 <div onClick={() => showModeover()}>
                     {mode ?
                         <span
-                            className='text-[24px] flex justify-center 
-                            items-center w-[45px] h-[45px] cursor-pointer transition
-                              hover:bg-slate-200 '>
-                            <GoSun />
+                            className={`text-[24px] flex justify-center 
+                            items-center w-[40px] h-[40px] cursor-pointer transition
+                               ${mode ? ' text-white hover:bg-slate-200 hover:text-black' : 'text-black hover:bg-slate-200'}`}>
+                            <BiSun />
                         </span>
                         :
                         <span
 
-                            className='text-[24px] flex justify-center
-                    items-center w-[45px] h-[45px] cursor-pointer transition
-                              hover:bg-slate-200 '>
-                            <GoMoon />
+                            className={`text-[24px] flex justify-center
+                    items-center w-[40px] h-[40px] cursor-pointer transition
+                               ${mode ? ' text-white hover:bg-slate-200 hover:text-black' : 'text-black hover:bg-slate-200'}`}>
+                            <BiMoon />
                         </span>}
                 </div>
             </div>

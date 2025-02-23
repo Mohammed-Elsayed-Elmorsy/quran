@@ -31,8 +31,8 @@ const Landing = () => {
                 spaceBetween={40}
                 slidesPerView={1}
                 navigation
-                // pagination={{ clickable: true }}
-                autoplay={{ delay: 7000 }}
+                pagination={{ clickable: true }}
+                autoplay={{ delay: 5000 }}
                 loop={true}
                 className='mySwiper' style={{ zIndex: '1000' }}
             >

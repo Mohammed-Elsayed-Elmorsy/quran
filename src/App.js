@@ -31,8 +31,8 @@ function App() {
           to={'https://wa.me/201013864939'}
           target='_blank'
           className=' start-chat bg-green-500 text-white  hover:bg-blue-500 
-      w-[50px] h-[50px] rounded-[50%] flex justify-center items-center fixed text-[22px] 
-      cursor-pointer z-50 bottom-5 lg:bottom-8 right-5 lg:right-8'>
+              w-[50px] h-[50px] rounded-[50%] flex justify-center items-center fixed text-[22px] 
+              cursor-pointer z-50 bottom-5 lg:bottom-8 right-5 lg:right-8'>
           <FaWhatsapp />
           <span className='start-chat-hover capitalize'>
             {lang ? 'تواصل معنا الان ' : 'start chat now'}

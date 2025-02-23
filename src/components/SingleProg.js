@@ -5,7 +5,8 @@ const SingleProg = ({ id, desc, title, image, mode, state }) => {
     return (
         <div
             data-aos={'fade-up'}
-            className={`flex flex-col shadow-lg p-2 gap-2 ${mode ? 'bg-lighter  text-textDark' : ' bg-white'}`}
+            className={`flex flex-col p-2 gap-2 
+                ${mode ? 'bg-lighter shadow shadow-black text-textDark' : 'shadow shadow-slate-400 bg-white'}`}
             key={id}>
             <img src={image} alt="" className={`prog-image h-[180px]    object-cover`} />
             <h3 className='px-2 text-[18px] font-bold'>{title}</h3>

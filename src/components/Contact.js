@@ -15,12 +15,11 @@ const ContactComp = () => {
     const text = state ? 'تواصل معنا ' : 'contact us '
     const [displayText, setDisplayText] = useState("");
     const [index, setIndex] = useState(0);
-    const [isDeleting, setIsDeleting] = useState(false);
 
     useEffect(() => {
 
         const timeout = setTimeout(() => {
-            if (!isDeleting && index < text.length) {
+            if (index < text.length) {
                 // Typing forward
                 setDisplayText((prev) => prev + text.charAt(index));
                 setIndex((prev) => prev + 1);
@@ -29,7 +28,7 @@ const ContactComp = () => {
         }, 130);
 
         return () => clearTimeout(timeout);
-    }, [index, isDeleting, text]);
+    }, [index, text]);
     useEffect(() => {
         // Initialize intl-tel-input className={mode?'bg-lighter':'bg-white'} when the component mounts
         const input = document.querySelector("#phone");
@@ -44,7 +43,6 @@ const ContactComp = () => {
         e.preventDefault();
         if (itiInstance) {
             const formattedNumber = itiInstance.getNumber();
-            alert(`Phone Number: ${formattedNumber}`);
             setPhoneNumber(formattedNumber);
         }
     };
@@ -56,30 +54,32 @@ const ContactComp = () => {
                 </h2>
                 {state ?
                     <div className="form-container" dir='rtl'>
-                        <form className=' ' onSubmit={handleSubmit}>
+
+                        <form >
                             <div className="form-group" data-aos="flip-left">
                                 <label htmlFor="firstName">الاسم الأول</label>
-                                <input className={mode ? 'bg-lighter text-textDark border border-gray-800 focus:border-white' : 'bg-white border border-gray-400 focus:border-primary'} type="text" id="firstName" name="firstName" placeholder="ادخل اسمك الأول" required />
+                                <input
+                                    className={mode ? 'bg-lighter text-textDark shadow shadow-black focus:outline' : 'bg-white shadow shadow-slate-400 focus:outline focus:outline-slate-300'} type="text" id="firstName" name="firstName" placeholder="ادخل اسمك الأول" required />
                             </div>
                             <div className="form-group" data-aos="flip-left">
                                 <label htmlFor="lastName">الاسم الأخير</label>
-                                <input className={mode ? 'bg-lighter text-textDark border border-gray-800 focus:border-white' : 'bg-white border border-gray-400 focus:border-primary'} type="text" id="lastName" name="lastName" placeholder="ادخل اسمك الأخير" required />
+                                <input className={mode ? 'bg-lighter text-textDark shadow shadow-black focus:outline' : 'bg-white shadow shadow-slate-400 focus:outline focus:outline-slate-300'} type="text" id="lastName" name="lastName" placeholder="ادخل اسمك الأخير" required />
                             </div>
                             <div className="form-group" data-aos="flip-left">
                                 <label htmlFor="age">العمر</label>
-                                <input className={mode ? 'bg-lighter text-textDark border border-gray-800 focus:border-white' : 'bg-white border border-gray-400 focus:border-primary'} type="number" id="age" name="age" placeholder="ادخل عمرك" required />
+                                <input className={mode ? 'bg-lighter text-textDark shadow shadow-black focus:outline' : 'bg-white shadow shadow-slate-400 focus:outline focus:outline-slate-300'} type="number" id="age" name="age" placeholder="ادخل عمرك" required />
                             </div>
                             <div className="form-group" data-aos="flip-left">
                                 <label htmlFor="email">البريد الإلكتروني</label>
-                                <input className={mode ? 'bg-lighter text-textDark border border-gray-800 focus:border-white' : 'bg-white border border-gray-400 focus:border-primary'} type="email" id="email" name="email" placeholder="ادخل بريدك الإلكتروني" required />
+                                <input className={mode ? 'bg-lighter text-textDark shadow shadow-black focus:outline' : 'bg-white shadow shadow-slate-400 focus:outline focus:outline-slate-300'} type="email" id="email" name="email" placeholder="ادخل بريدك الإلكتروني" required />
                             </div>
                             <div className="form-group z-50" data-aos="flip-left">
                                 <label htmlFor="phone">رقم الهاتف</label>
-                                <input className={mode ? 'bg-lighter text-textDark border border-gray-800 focus:border-white' : 'bg-white border border-gray-400 focus:border-primary'} type="tel" id="phone" name="phone" placeholder="ادخل رقم هاتفك" required />
+                                <input className={mode ? 'bg-lighter text-textDark shadow shadow-black focus:outline' : 'bg-white shadow shadow-slate-400 focus:outline focus:outline-slate-300'} type="tel" id="phone" name="phone" placeholder="ادخل رقم هاتفك" required />
                             </div>
                             <div className="form-group" data-aos="flip-left">
                                 <label htmlFor="timezone">المنطقة الزمنية</label>
-                                <select className={mode ? 'bg-lighter text-gray-600 focus:text-textDark border border-gray-800 focus:border-white' : 'bg-white border border-gray-400 focus:border-primary'} id="timezone" name="timezone" required>
+                                <select className={mode ? 'bg-lighter text-gray-600 focus:text-textDark shadow shadow-black focus:outline' : 'bg-white shadow shadow-slate-400 focus:outline focus:outline-slate-300'} id="timezone" name="timezone" required>
                                     <option defaultValue=" اختر منطقتك الزمنية" hidden>اختر منطقتك الزمنية</option>
                                     <option value="UTC-12:00">UTC-12:00</option>
                                     <option value="UTC-11:00">UTC-11:00</option>
@@ -110,11 +110,11 @@ const ContactComp = () => {
                             </div>
                             <div className="form-group" data-aos="flip-left">
                                 <label htmlFor="country">الدولة</label>
-                                <input className={mode ? 'bg-lighter text-textDark border border-gray-800 focus:border-white' : 'bg-white border border-gray-400 focus:border-primary'} type="text" id="country" name="country" placeholder="ادخل دولتك" required />
+                                <input className={mode ? 'bg-lighter text-textDark shadow shadow-black focus:outline' : 'bg-white shadow shadow-slate-400 focus:outline focus:outline-slate-300'} type="text" id="country" name="country" placeholder="ادخل دولتك" required />
                             </div>
                             <div className="form-group" data-aos="flip-left">
                                 <label htmlFor="gender">الجنس</label>
-                                <select className={mode ? 'bg-lighter text-gray-600 focus:text-textDark border border-gray-800 focus:border-white' : 'bg-white border border-gray-400 focus:border-primary'} id="gender" name="gender" required>
+                                <select className={mode ? 'bg-lighter text-gray-600 focus:text-textDark shadow shadow-black focus:outline' : 'bg-white shadow shadow-slate-400 focus:outline focus:outline-slate-300'} id="gender" name="gender" required>
                                     <option defaultValue="  اختر جنسك" hidden    >اختر جنسك</option>
                                     <option value="male">ذكر</option>
                                     <option value="female">أنثى</option>
@@ -128,30 +128,30 @@ const ContactComp = () => {
                     </div>
                     :
                     <div className="form-container">
-                        <form className=' ' onSubmit={handleSubmit}>
+                        <form >
                             <div className="form-group" data-aos="flip-left">
                                 <label htmlFor="firstName">First Name</label>
-                                <input className={mode ? 'bg-lighter text-textDark border border-gray-800 focus:border-white' : 'bg-white border border-gray-400 focus:border-primary'} type="text" id="firstName" name="firstName" placeholder="Enter your first name" required />
+                                <input className={mode ? 'bg-lighter text-textDark shadow shadow-black focus:outline' : 'bg-white shadow shadow-slate-400 focus:outline focus:outline-slate-300'} type="text" id="firstName" name="firstName" placeholder="Enter your first name" required />
                             </div>
                             <div className="form-group" data-aos="flip-left">
                                 <label htmlFor="lastName">Last Name</label>
-                                <input className={mode ? 'bg-lighter text-textDark border border-gray-800 focus:border-white' : 'bg-white border border-gray-400 focus:border-primary'} type="text" id="lastName" name="lastName" placeholder="Enter your last name" required />
+                                <input className={mode ? 'bg-lighter text-textDark shadow shadow-black focus:outline' : 'bg-white shadow shadow-slate-400 focus:outline focus:outline-slate-300'} type="text" id="lastName" name="lastName" placeholder="Enter your last name" required />
                             </div>
                             <div className="form-group" data-aos="flip-left">
                                 <label htmlFor="age">Age</label>
-                                <input className={mode ? 'bg-lighter text-textDark border border-gray-800 focus:border-white' : 'bg-white border border-gray-400 focus:border-primary'} type="number" id="age" name="age" placeholder="Enter your age" required />
+                                <input className={mode ? 'bg-lighter text-textDark shadow shadow-black focus:outline' : 'bg-white shadow shadow-slate-400 focus:outline focus:outline-slate-300'} type="number" id="age" name="age" placeholder="Enter your age" required />
                             </div>
                             <div className="form-group" data-aos="flip-left">
                                 <label htmlFor="email">Email</label>
-                                <input className={mode ? 'bg-lighter text-textDark border border-gray-800 focus:border-white' : 'bg-white border border-gray-400 focus:border-primary'} type="email" id="email" name="email" placeholder="Enter your email" required />
+                                <input className={mode ? 'bg-lighter text-textDark shadow shadow-black focus:outline' : 'bg-white shadow shadow-slate-400 focus:outline focus:outline-slate-300'} type="email" id="email" name="email" placeholder="Enter your email" required />
                             </div>
                             <div className="form-group z-50" data-aos="flip-left">
                                 <label htmlFor="phone">Phone</label>
-                                <input className={mode ? 'bg-lighter text-textDark border border-gray-800 focus:border-white' : 'bg-white border border-gray-400 focus:border-primary'} type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+                                <input className={mode ? 'bg-lighter text-textDark shadow shadow-black focus:outline' : 'bg-white shadow shadow-slate-400 focus:outline focus:outline-slate-300'} type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
                             </div>
                             <div className="form-group" data-aos="flip-left">
                                 <label htmlFor="timezone">Time Zone</label>
-                                <select className={mode ? 'bg-lighter text-gray-600 focus:text-textDark border border-gray-800 focus:border-white' : 'bg-white border border-gray-400 focus:border-primary'} id="timezone" name="timezone" required>
+                                <select className={mode ? 'bg-lighter text-gray-600 focus:text-textDark shadow shadow-black focus:outline' : 'bg-white shadow shadow-slate-400 focus:outline focus:outline-slate-300'} id="timezone" name="timezone" required>
                                     <option defaultValue="Select your time zone" hidden>Select your time zone</option>
                                     <option value="UTC-12:00">UTC-12:00</option>
                                     <option value="UTC-11:00">UTC-11:00</option>
@@ -182,12 +182,12 @@ const ContactComp = () => {
                             </div>
                             <div className="form-group" data-aos="flip-left">
                                 <label htmlFor="country">Country</label>
-                                <input className={mode ? 'bg-lighter text-textDark border border-gray-800 focus:border-white' : 'bg-white border border-gray-400 focus:border-primary'} type="text" id="country" name="country" placeholder="Enter your country" required />
+                                <input className={mode ? 'bg-lighter text-textDark shadow shadow-black focus:outline' : 'bg-white shadow shadow-slate-400 focus:outline focus:outline-slate-300'} type="text" id="country" name="country" placeholder="Enter your country" required />
                             </div>
 
                             <div className="form-group" data-aos="flip-left">
                                 <label htmlFor="gender">Gender</label>
-                                <select className={mode ? 'bg-lighter text-gray-600 focus:text-textDark border border-gray-800 focus:border-white' : 'bg-white border border-gray-400 focus:border-primary'} id="gender" name="gender" required>
+                                <select className={mode ? 'bg-lighter text-gray-600 focus:text-textDark shadow shadow-black focus:outline' : 'bg-white shadow shadow-slate-400 focus:outline focus:outline-slate-300'} id="gender" name="gender" required>
                                     <option defaultValue="Select your gender" hidden >Select your gender</option>
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
@@ -207,48 +207,46 @@ const ContactComp = () => {
                     <div className='grid grid-cols-2 md:grid-cols-3  gap-4 md:p-0 '>
                         {!state ? medias.map(item => {
                             return (
-                                <div data-aos='fade-down'
+                                <Link data-aos='fade-down'
                                     key={item.id}
-                                    className={`flex items-center justify-center gap-2 ${mode ? 'bg-lighter hover:bg-graymy' : 'bg-white border border-gray-300 focus:border-primary'}`}>
-                                    <Link target={item.title.indexOf('Email') !== -1
+                                    className={`flex items-center justify-center p-2 gap-2 
+                                        ${mode ? 'bg-lighter shadow shadow-black hover:bg-graymy' :
+                                            'bg-white hover:bg-slate-300 shadow shadow-slate-400'}`}
+                                    target={item.title.indexOf('Email') !== -1
                                         || item.title.indexOf('hone') !== -1 ?
                                         '' : '_blank'} to={item.title.indexOf('Email') !== -1 ? '' : item.to}
-                                        className='flex items-center justify-center gap-2 p-2'>
-                                        <h3 style={{ color: 'var(--second-color)' }} className=' font-bold'>
-                                            {item.title}
-                                        </h3>
-                                        <span style={!mode ? { color: 'var(--main-color)' } : { color: '#F5F5DC' }}
-                                            className='text-[35px] flex justify-center items-center'>
-                                            {item.icon}
-                                        </span>
-                                        {/* {item.content} */}
-                                    </Link>
-                                </div>
+                                >
+                                    <h3 style={{ color: 'var(--second-color)' }} className=' font-bold'>
+                                        {item.title}
+                                    </h3>
+                                    <span style={!mode ? { color: 'var(--main-color)' } : { color: '#F5F5DC' }}
+                                        className='text-[35px] flex justify-center items-center'>
+                                        {item.icon}
+                                    </span>
+                                </Link>
                             )
                         }) : mediasarab.map(item => {
                             return (
-                                <div data-aos='fade-down'
-                                    key={item.id}
-                                    className={`flex items-center justify-center gap-2   ${mode ? 'bg-lighter shadow-md shadow-dark hover:bg-graymy' : 'bg-white shadow-md hover:bg-slate-300'}`}>
-                                    <Link target={item.title.indexOf('Email') !== -1
+                                <Link key={item.id} data-aos='fade-down'
+                                    className={`flex items-center justify-center gap-2 p-2  
+                                        ${mode ? 'bg-lighter shadow shadow-black hover:bg-graymy' : 'bg-white shadow shadow-slate-400 hover:bg-slate-300'}`}
+                                    target={item.title.indexOf('Email') !== -1
                                         || item.title.indexOf('hone') !== -1 ?
                                         '' : '_blank'} to={item.title.indexOf('Email') !== -1 ? '' : item.to}
-                                        className='p-2 flex items-center justify-center gap-2'>
-                                        <h3 style={{ color: 'var(--second-color)' }} className=' font-bold'>
-                                            {item.title}
-                                        </h3>
-                                        <span style={!mode ? { color: 'var(--main-color)' } : { color: '#F5F5DC' }}
-                                            className='text-[35px] flex justify-center items-center'>
-                                            {item.icon}
-                                        </span>
-                                    </Link>
-                                </div>
+                                >
+                                    <h3 style={{ color: 'var(--second-color)' }} className=' font-bold'>
+                                        {item.title}
+                                    </h3>
+                                    <span style={!mode ? { color: 'var(--main-color)' } : { color: '#F5F5DC' }}
+                                        className='text-[35px] flex justify-center items-center'>
+                                        {item.icon}
+                                    </span>
+                                </Link>
                             )
                         })}
                     </div>
                 </div>
             </div>
-
         </div >
     )
 }

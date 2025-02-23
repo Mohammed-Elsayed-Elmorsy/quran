@@ -53,8 +53,8 @@ const Header = () => {
                     <Link to={'/'} className='flex gap-1 items-center'>
                         <img
                             src={mode ? logoDark : logoLight}
-                            alt="Shatha Quran Logo"
-                            className={` h-[70px] md:h-[88px] ${mode ? '' : ' rounded-full'}`} />
+                            alt="Shatha Quran شذا القرآن"
+                            className={` h-[70px] ${mode ? '' : ' rounded-full'}`} />
                         <h1
                             className={` md:text-[17px] text-[16px]  
                         ${hidetext ? 'hide-text' : 'show-text'}   
@@ -83,9 +83,9 @@ const Header = () => {
                                     relative  transition capitalize flex items-center  text-[16px]`}
                                     to={link.to === '/' ? '/' : link.id === 4 ? '#' : '/' + link.to}>
                                     {link.text === '/' ? 'home' : link.text}
-                                    {link.chilren && <FaAngleRight className='hide' />}
+                                    {link.chilren && <FaAngleRight className='hide mb-1' />}
                                     {link.chilren ? <div
-                                        className={`drop ${mode ? 'bg-lighter border-lighter shadow-md shadow-black' : 'bg-white shadow-md '}`}>
+                                        className={`drop ${mode ? 'bg-lighter shadow shadow-black' : 'bg-white shadow shadow-slate-400 '}`}>
                                         {link.chilren ? link.chilren.map(i =>
                                             <Link
                                                 to={!i.id ? '/' + i.path : '/programms/' + i.id}
@@ -104,9 +104,9 @@ const Header = () => {
                                     relative  transition capitalize flex items-center  text-[16px]`}
                                     to={link.to === '/' ? '/' : link.id === 4 ? '#' : '/' + link.to}>
                                     {link.text === '/' ? 'home' : link.text}
-                                    {link.chilren && <FaAngleRight className='hide' />}
+                                    {link.chilren && <FaAngleRight className='hide mt-[2px]' />}
                                     {link.chilren ? <div
-                                        className={`drop ${mode ? 'bg-lighter shadow-md shadow-black' : 'bg-white shadow-md '}`}>
+                                        className={`drop ${mode ? 'bg-lighter shadow shadow-black' : 'bg-white shadow shadow-slate-400'}`}>
                                         {link.chilren ? link.chilren.map(i =>
                                             <Link
                                                 to={!i.id ? '/' + i.path : '/programms/' + i.id}
@@ -120,8 +120,9 @@ const Header = () => {
                             </li>
                         )}
                         <div className='languages'>
-                            <span className='p-[8px] block w-[40px] h-[40px] cursor-pointer transition
-                             hover:bg-slate-200  '
+                            <span className={` p-2
+                             w-[40px] h-[40px] cursor-pointer transition
+                               ${mode ? ' text-white hover:bg-lighter' : 'text-black hover:bg-slate-200'}`}
                                 onClick={() => showlangover()}>
                                 {state ?
                                     <img src={imagearab} style={{ width: '50px' }} alt="" /> :
@@ -147,8 +148,9 @@ const Header = () => {
                     </nav>
                 </div>
                 <div className='lg:hidden block '>
-                    <span className='p-[8px] block w-[40px] h-[40px] cursor-pointer transition
-                              hover:bg-slate-200 '
+                    <span className={`text-[24px] flex justify-center 
+                            items-center w-[40px] h-[40px] p-2 cursor-pointer transition
+                               ${mode ? ' text-white hover:bg-lighter' : 'text-black hover:bg-slate-200'}`}
                         onClick={() => showlangover()}>
                         {state ?
                             <img src={imagearab} style={{ width: '50px' }} alt="" /> :
@@ -160,7 +162,7 @@ const Header = () => {
                         <span
                             className={`text-[24px] flex justify-center 
                             items-center w-[40px] h-[40px] cursor-pointer transition
-                               ${mode ? ' text-white hover:bg-slate-200 hover:text-black' : 'text-black hover:bg-slate-200'}`}>
+                               ${mode ? ' text-white hover:bg-lighter' : 'text-black hover:bg-slate-200'}`}>
                             <BiSun />
                         </span>
                         :
@@ -168,7 +170,7 @@ const Header = () => {
 
                             className={`text-[24px] flex justify-center
                     items-center w-[40px] h-[40px] cursor-pointer transition
-                               ${mode ? ' text-white hover:bg-slate-200 hover:text-black' : 'text-black hover:bg-slate-200'}`}>
+                               ${mode ? ' text-white hover:bg-lighter' : 'text-black hover:bg-slate-200'}`}>
                             <BiMoon />
                         </span>}
                 </div>

@@ -78,7 +78,7 @@ const BlogDetails = () => {
                             <span className='flex items-center gap-1'>
                                 <img
                                     src={blog?.image[1]}
-                                    className={`p-[3px] ${mode ? 'bg-lighter' : 'bg-white '} 
+                                    className={`p-[3px] ${mode ? 'bg-lighter shadow shadow-black' : 'bg-white shadow shadow-slate-400'} 
                                                 w-[40px] h-[38px] rounded-full object-cover`}
                                     alt={blog?.title} />
                                 <div>
@@ -99,22 +99,22 @@ const BlogDetails = () => {
                         <div className='grid-area'>
                             <div>
                                 <img className={`p-1
-                                    ${mode ? 'bg-lighter shadow-md shadow-black' : 'bg-white'} w-full h-full `}
+                                    ${mode ? 'bg-lighter shadow shadow-black' : 'bg-white shadow shadow-slate-400'} w-full h-full `}
                                     src={blog?.image[0]} alt="" />
                             </div>
                             <div>
                                 <img className={`p-1 
-                                    ${mode ? 'bg-lighter shadow-md shadow-black' : 'bg-white'} w-full h-full object-cover`}
+                                    ${mode ? 'bg-lighter shadow shadow-black' : 'bg-white shadow shadow-slate-400'} w-full h-full object-cover`}
                                     src={blog?.image[1]} alt="" />
                             </div>
                             <div>
                                 <img className={`p-1 transition 
-                                    ${mode ? 'bg-lighter shadow-md shadow-black' : 'bg-white'} w-full h-full object-cover`}
+                                    ${mode ? 'bg-lighter shadow shadow-black' : 'bg-white shadow shadow-slate-400'} w-full h-full object-cover`}
                                     src={blog?.image[2]} alt="" />
                             </div>
                             <div>
                                 <img className={`p-1 
-                                    ${mode ? 'bg-lighter shadow-md shadow-black' : 'bg-white'} w-full h-full object-cover`}
+                                    ${mode ? 'bg-lighter shadow shadow-black' : 'bg-white shadow shadow-slate-400'} w-full h-full object-cover`}
                                     src={blog?.image[3]} alt="" />
                             </div>
                         </div>

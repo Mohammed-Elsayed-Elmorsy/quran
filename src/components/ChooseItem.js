@@ -3,7 +3,7 @@ const ChooseItem = ({ mode, imageDark, image, text, title, id, aos }) => {
     return (
         <div
             className={`flex flex-col pb-1
-            ${mode ? "bg-lighter shadow-md" : "bg-white border border-gray-300"}`}
+            ${mode ? "bg-lighter shadow shadow-dark " : "bg-white shadow shadow-slate-400"}`}
             key={id}
             data-aos={aos}>
             <img

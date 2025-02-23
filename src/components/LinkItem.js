@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 
 const LinkItem = ({ title, to, id, back, color, icon, mode }) => {
     return (
-        <Link className=' hover:bg-lighter w-[103px] text-[14px] '
+        <Link className={`hover:bg-lighter w-[103px] text-[14px] 
+            ${mode ? 'shadow shadow-black' : ' shadow shadow-slate-500'} `}
             target={title.indexOf('Email') !== -1
                 || title.indexOf('hone') !== -1 ?
                 '' : '_blank'}

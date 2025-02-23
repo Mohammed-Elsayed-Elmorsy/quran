@@ -6,8 +6,8 @@ const PricingItem = ({ costforclass, id, state, numberperweek, numberpermonth, c
             className={`  
             ${currentid === 1 ? 'pricing-1' :
                     currentid === 2 ? 'pricing-2' : 'pricing-3'}  
-                    ${mode ? 'bg-lighter shadow-md' : 'bg-white border'}  
-                    flex-col flex   border-gray-300 shadow-md `}>
+                    ${mode ? 'bg-lighter shadow shadow-black' : 'bg-white shadow shadow-slate-400'}  
+                    flex-col flex   border-gray-300 `}>
             <div
                 className=' font-normal capitalize text-[15px] p-[6px] py-2 bg-primary text-light'>
                 <span

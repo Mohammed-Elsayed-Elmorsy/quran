@@ -5,7 +5,7 @@ const TeacherComp = ({ id, desc, imagedark, name, image, mode, state }) => {
             data-aos="zoom-in"
             key={id}
             className={`relative teacher-item flex p-2 flex-col 
-                                            ${mode ? 'bg-lighter after:bg-lighter  text-textDark' : 'after-light shadow-md bg-white'} gap-3`}>
+                                            ${mode ? 'bg-lighter shadow shadow-black after:bg-lighter  text-textDark' : 'after-light shadow shadow-slate-400 bg-white'} gap-3`}>
             <div className={` overflow-hidden flex justify-center items-center  p-2`}>
                 <img
                     src={!mode ? image : imagedark}

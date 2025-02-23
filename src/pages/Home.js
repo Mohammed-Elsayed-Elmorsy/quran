@@ -25,14 +25,14 @@ const Home = () => {
         <div>
             {/* Helmet for SEO Metadata */}
             <Helmet>
-                <title>Shatha Alquran - Learn Quran Online</title>
+                {/* <title>Shatha Alquran - Learn Quran Online</title> */}
                 <meta
                     name="description"
                     content="Join Shatha Alquran Academy for expert Quran learning, Tajweed, and 
                     Islamic studies. Sign up today for free trial classes!" />
                 <meta
                     name="keywords"
-                    content="Quran classes, online Quran school, learn Tajweed, Islamic education" />
+                    content="Quran classes, online Quran learning, learn Tajweed, Islamic education" />
                 <meta
                     name="author"
                     content="Shatha Alquran Academy" />
@@ -44,7 +44,6 @@ const Home = () => {
                     content="Join expert Quran teachers for online learning and Tajweed. 
                     Start your journey today!" />
             </Helmet>
-            {/* Page Components */}
             <Landing />
             <About more={true} />
             <Choose />

@@ -6,7 +6,12 @@ const BlogItem = ({ title, mode, image, id, desc, state, slider }) => {
         <>
             {slider ?
                 <Link to={`/blogs/${id}`}
-                    className={`blog-item flex-col flex gap-2 ${mode ? 'bg-lighter text-textDark shadow-md  ' : 'bg-white blog-item'} p-2 flex flex-col  justify-between gap-2 `}>
+                    className={`blog-item flex-col flex gap-2 
+                        ${mode ?
+                            'bg-lighter shadow shadow-black text-textDark ' :
+                            'bg-white blog-item shadow shadow-slate-500'
+                        } 
+                        p-2 flex flex-col  justify-between gap-2 `}>
                     <div className=' overflow-hidden'>
                         <img src={image[0]} alt="" className='h-[182px] w-full object-cover transition' />
                     </div>
@@ -16,14 +21,10 @@ const BlogItem = ({ title, mode, image, id, desc, state, slider }) => {
                     <p className='text-[15px] px-1'>
                         {state ? desc.substring(0, 121) + '.......' : desc.substring(0, 115) + '.......'}
                     </p>
-                    {/* <Link className=' flex' to={`/blogs/${id}`}>
-                        <button
-                            className=' flex-1 btn-pri'>
-                            {state ? ' اقرأ المزيد' : 'Read More'}
-                        </button>
-                    </Link> */}
                 </Link> :
-                <div className={`blog-item flex-col flex gap-2 ${mode ? 'bg-lighter text-textDark shadow-md  ' : 'bg-white blog-item'} p-2 flex flex-col  justify-between gap-2 `}>
+                <div className={`blog-item flex-col flex gap-2 ${mode ?
+                    'bg-lighter shadow shadow-black text-textDark ' : 'bg-white shadow shadow-slate-400'} 
+                 p-2 flex flex-col  justify-between gap-2 `}>
                     <div className=' overflow-hidden'>
                         <img src={image[0]} alt="" className='h-[182px] w-full object-cover transition' />
                     </div>

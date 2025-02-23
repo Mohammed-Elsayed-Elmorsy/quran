@@ -5,7 +5,7 @@ const ReviewsItem = ({ setShowReview, id, name, state, country, mode, content, s
         <div
             data-aos="flip-right"
             key={id}
-            className={`${mode ? 'bg-lighter text-textDark' : 'bg-white rev-item'}  
+            className={`${mode ? 'bg-lighter shadow shadow-black text-textDark' : 'bg-white shadow shadow-slate-500'} '}  
             flex flex-col gap-2 relative   p-2`} >
             <h3 style={{ color: 'var(--main-color)' }}
                 className=' capitalize font-bold '>{name} :</h3>
@@ -14,8 +14,8 @@ const ReviewsItem = ({ setShowReview, id, name, state, country, mode, content, s
             </p>
             <span onClick={() => setShowReview(id)}
                 className={`
-                    ${mode ? 'bg-graymy hover:bg-slate-500 ' :
-                        'bg-light hover:bg-blue-500 hover:text-white text-black'} text-center   
+                    ${mode ? 'bg-graymy hover:bg-slate-500 shadow shadow-black ' :
+                        'bg-light hover:bg-blue-500 shadow shadow-slate-500 hover:text-white text-black'} text-center   
                 p-2 inline-block cursor-pointer mt-auto`}>
                 {!state ? 'read more' : 'اقرأ المزيد'}
             </span>
@@ -25,14 +25,14 @@ const ReviewsItem = ({ setShowReview, id, name, state, country, mode, content, s
                 <div
                     className={` text-[13px] flex justify-center items-center
                                             overflow-hidden text-center font-bold 
-                                            ${mode ? 'bg-lighter shadow-md shadow-dark text-light' :
-                            'bg-white shadow-md'} 
+                                            ${mode ? 'bg-lighter shadow shadow-black text-light' :
+                            'bg-white shadow shadow-slate-500'} 
                                             w-full h-full rounded-full`}>
                     {country}
                 </div>
             </div>
             <div className={` 
-                                            review ${mode ? 'bg-lighter ' : 'bg-white'}
+                                            review ${mode ? 'bg-lighter shadow shadow-black ' : 'bg-white shadow shadow-slate-500'}
                                             ${showReview === id ? 'show ' : 'hide'}`}>
                 {content}
                 <span className={`${!state ? 'right-[-12px] md:right-[-20px]' : 'left-[-12px] md:left-[-20px]'}   flex justify-center items-center '`}

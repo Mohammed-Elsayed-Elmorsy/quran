@@ -29,9 +29,6 @@ import image55 from '../static/55.png'
 import image55dark from '../static/55-removebg-preview.png'
 import image58 from '../static/58.png'
 import image58dark from '../static/58-removebg-preview.png'
-import teacher1 from '../static/teacher5.jpg'
-import teacher2 from '../static/teacher6.jpg'
-import teacher3 from '../static/teacher6.jpg'
 import teacher1dark from '../static/teacher5-removebg-preview.png'
 import teacher2dark from '../static/teacher6-removebg-preview.png'
 import teacher1d from '../static/teacherdetails2.jpg'
@@ -50,13 +47,6 @@ import {
 export const Slides = [
     {
         id: 1,
-        title: "Islamic studies",
-        text: `Study the Islamic rulings related to daily practices and the
-                                essentials that every Muslim must know,
-                                with enjoyable, easy, and engaging lessons suitable for both children and adults`,
-    },
-    {
-        id: 2,
         title: "Mastering Tajweed and Qur'an Recitation",
         text: `Learn to read the Qur'an with proper Tajweed in a simple and effective way,
                                 with specialized teachers. Our recitation sessions help you
@@ -64,6 +54,14 @@ export const Slides = [
         
         `,
     },
+    {
+        id: 2,
+        title: "Islamic studies",
+        text: `Study the Islamic rulings related to daily practices and the
+                                essentials that every Muslim must know,
+                                with enjoyable, easy, and engaging lessons suitable for both children and adults`,
+    },
+
     {
         id: 3,
         title: "Arabic Language",
@@ -78,12 +76,6 @@ export const Slides = [
 export const SlidesArabic = [
     {
         id: 1,
-        title: "الدراسات الاسلامية",
-        text: `دراسة الأحكام الشرعية المتعلقة بالممارسات اليومية
-                                وما يجب على كل مسلم معرفته، من خلال دروس ممتعة وسهلة مناسبة للصغار والكبار`,
-    },
-    {
-        id: 2,
         title: "اتقان التجويد وتلاوة القرآن",
         text: `تعلم قراءة القرآن الكريم بتجويد صحيح بطريقة بسيطة وفعّالة
                                 ، مع معلمين متخصصين. جلسات التلاوة
@@ -91,6 +83,13 @@ export const SlidesArabic = [
         
         `,
     },
+    {
+        id: 2,
+        title: "الدراسات الاسلامية",
+        text: `دراسة الأحكام الشرعية المتعلقة بالممارسات اليومية
+                                وما يجب على كل مسلم معرفته، من خلال دروس ممتعة وسهلة مناسبة للصغار والكبار`,
+    },
+
     {
         id: 3,
         title: "اللغة العربية",
@@ -182,7 +181,7 @@ export const links = [
 export const linksarabic = [
     {
         id: 1,
-        text: 'الصفحة الرئيسية', to: '/'
+        text: ' الرئيسية', to: '/'
     },
     {
         id: 2,

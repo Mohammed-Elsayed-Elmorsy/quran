@@ -1,6 +1,5 @@
 import React from 'react'
 import { choose, chooseArabic } from '../utils/data'
-import { FaCheck } from 'react-icons/fa'
 import aos from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
@@ -21,9 +20,8 @@ const Choose = () => {
     }, [])
     return (
         <div className={` ${mode ? "bg-dark" : "bg-light"} pb-[50px]`} >
-            <h2 className='title ' >
+            <h2 className='title section-title relative' >
                 {!state ? 'why choose us' : 'لماذا تختارنا'}
-                <FaCheck />
             </h2>
             <div className=' text-center container 
                             mx-auto px-7  md:px-[60px] lg:px-[80px] xl:px-[150px]

@@ -29,7 +29,7 @@ const AboutComp = ({ more }) => {
                     data-aos={state ? "fade-down" : "fade-up"}
                 >
                     {!state ? (
-                        <p className={`p-3 ${mode ? "bg-lighter text-textDark" : "bg-white"} mb-3`}>
+                        <p className={`p-3 ${mode ? "bg-lighter shadow shadow-black text-textDark" : "bg-white shadow shadow-slate-400"} mb-3`}>
                             Welcome to
                             <span className={`inline m-1 text-[18px] font-bold`}>
                                 Shatha Alqur’an Academy
@@ -44,7 +44,8 @@ const AboutComp = ({ more }) => {
                             methods
                         </p>
                     ) : (
-                        <p className={`p-2 mb-3 ${mode ? "bg-lighter text-textDark" : "bg-white"} `}>
+                        <p className={`p-2 mb-3 
+                        ${mode ? "bg-lighter shadow shadow-black text-textDark" : "bg-white shadow shadow-slate-400"} `}>
                             مرحبًا بكم في
                             <h2
                                 className=" text-[18px] m-1 inline font-bold">
@@ -78,7 +79,9 @@ const AboutComp = ({ more }) => {
                 </div>
                 <div
                     data-aos={state ? "fade-up" : "fade-down"}
-                    className={`  hidden lg:w-[45%] lg:block relative  p-2 ${mode ? "bg-lighter" : "bg-white"} ${state ? "left-[0px]" : "right-[0px]"
+                    className={`  hidden lg:w-[45%] lg:block relative  p-2 
+                        ${mode ? "bg-lighter shadow shadow-black" : "bg-white  shadow shadow-slate-400"} 
+                        ${state ? "left-[0px]" : "right-[0px]"
                         } `}
                 >
                     <img src={image} alt="" className=" h-full w-full object-cover " />

@@ -11,11 +11,11 @@ const SliderBtns = () => {
         <div
             className='btns'
             style={{ position: 'absolute', right: '-6px', top: '0px', width: '100%' }}>
-            <button className=''
+            <button
                 onClick={() => Swiper.slidePrev()}>
                 {!state ? <FaAngleLeft /> : <FaAngleRight />}
             </button>
-            <button className=''
+            <button
                 onClick={() => Swiper.slideNext()}>
                 {!state ? <FaAngleRight /> : <FaAngleLeft />}
             </button>
